@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow staging / utility files (if any leak)
+Disallow: /_*
+Disallow: /*.py$
+
+# Sitemap
+Sitemap: https://ar-elia.com/sitemap.xml
