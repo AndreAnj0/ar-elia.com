@@ -2550,14 +2550,19 @@ gtag('config', 'G-7SKWWCWMZV', {
   }
 })();
 
-// ── CAROUSEL ──
+// ── CAROUSEL (defensive — only runs if slides exist) ──
 var current = 1;
 var autoTimer;
 
 function goToSlide(n){
   if(n === current) return;
-  document.getElementById('slide-'+current).classList.remove('active');
-  document.getElementById('dot-'+current).classList.remove('active');
+  var oldSlide = document.getElementById('slide-'+current);
+  var oldDot   = document.getElementById('dot-'+current);
+  var newSlide = document.getElementById('slide-'+n);
+  var newDot   = document.getElementById('dot-'+n);
+  if(!newSlide || !newDot) return; // slide does not exist — abort silently
+  if(oldSlide) oldSlide.classList.remove('active');
+  if(oldDot)   oldDot.classList.remove('active');
   for(var i=1; i<=3; i++){
     var f = document.getElementById('fill-'+i);
     if(f) f.classList.remove('filled');
@@ -2567,8 +2572,8 @@ function goToSlide(n){
     if(fj) fj.classList.add('filled');
   }
   current = n;
-  document.getElementById('slide-'+n).classList.add('active');
-  document.getElementById('dot-'+n).classList.add('active');
+  newSlide.classList.add('active');
+  newDot.classList.add('active');
   resetAutoPlay();
 }
 
@@ -2578,7 +2583,8 @@ function resetAutoPlay(){
     goToSlide(current >= 4 ? 1 : current + 1);
   }, 5000);
 }
-resetAutoPlay();
+// Only start the auto-play if at least one slide is present on the page
+if(document.getElementById('slide-1')){ resetAutoPlay(); }
 
 // ── MODAL ──
 function openModal(){
