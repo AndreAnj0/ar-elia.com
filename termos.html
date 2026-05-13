@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Termos &amp; Condições — ARELIA Lavandaria Industrial</title>
+<meta name="description" content="Termos e condições de utilização do website e de prestação dos serviços de lavandaria industrial da Arelia. Conformidade legal portuguesa."/>
+<link rel="icon" type="image/png" href="img/favicon.png"/>
+<link rel="apple-touch-icon" href="img/favicon.png"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+:root{
+  --navy:#0C1A2C; --navy-light:#162A40; --navy-deep:#080F18;
+  --gold:#C4A86A; --gold-dark:#A8872A; --gold-light:#D4BC8A;
+  --linen:#F4F0E6; --linen-dark:#EAE6DB;
+  --steel:#6B8A9A; --white:#FFFFFF;
+  --text-muted:rgba(12,26,44,0.55);
+  --border-dark:rgba(12,26,44,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Space Grotesk',sans-serif;
+  background:var(--linen); color:var(--navy);
+  -webkit-font-smoothing:antialiased; line-height:1.7;
+}
+::selection{background:var(--gold); color:var(--navy)}
+
+nav{position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(12,26,44,0.95); backdrop-filter:blur(20px) saturate(160%); -webkit-backdrop-filter:blur(20px) saturate(160%); padding:0 56px; height:76px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(196,168,106,0.18)}
+.nav-logo{display:flex; align-items:center; gap:14px; text-decoration:none; transition:opacity .25s}
+.nav-logo:hover{opacity:.82}
+.nav-icon{width:44px; height:44px; object-fit:contain; flex-shrink:0}
+.nav-wordmark{display:flex; flex-direction:column; gap:2px; line-height:1}
+.nav-wordmark-name{font-family:'Playfair Display',serif; font-size:22px; font-weight:500; letter-spacing:4px; text-transform:uppercase; color:var(--linen)}
+.nav-wordmark-sub{font-size:8.5px; font-weight:500; letter-spacing:3.5px; text-transform:uppercase; color:var(--gold); opacity:.9}
+.nav-links{display:flex; align-items:center; gap:38px}
+.nav-links a{font-size:12px; font-weight:500; letter-spacing:2.5px; text-transform:uppercase; color:rgba(244,240,230,0.7); text-decoration:none; transition:color .25s}
+.nav-links a:hover{color:var(--gold)}
+.btn-nav{background:var(--gold); color:var(--navy); border:none; padding:11px 26px; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; letter-spacing:2.8px; text-transform:uppercase; cursor:pointer; transition:all .25s; text-decoration:none}
+.btn-nav:hover{background:var(--gold-light); transform:translateY(-1px)}
+.hamburger{display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px}
+.hamburger span{display:block; width:26px; height:2px; background:var(--linen)}
+.mobile-drawer{position:fixed; top:76px; left:0; right:0; background:var(--navy); padding:32px 28px 40px; border-bottom:1px solid rgba(196,168,106,0.2); transform:translateY(-110%); transition:transform .35s ease; z-index:99; display:flex; flex-direction:column; gap:22px}
+.mobile-drawer.open{transform:translateY(0)}
+.mobile-drawer a{font-size:14px; font-weight:500; letter-spacing:2.5px; text-transform:uppercase; color:rgba(244,240,230,0.85); text-decoration:none; padding:8px 0; border-bottom:1px solid rgba(196,168,106,0.1)}
+
+.legal-hero{padding:160px 56px 60px; background:linear-gradient(180deg,var(--linen) 0%, var(--white) 100%); text-align:center; position:relative; overflow:hidden}
+.legal-hero::before{content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:900px; height:900px; background:radial-gradient(circle, rgba(196,168,106,0.08) 0%, transparent 60%); pointer-events:none}
+.eyebrow{display:inline-block; font-size:11px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:24px}
+.eyebrow::before, .eyebrow::after{content:''; display:inline-block; width:36px; height:1px; background:var(--gold); vertical-align:middle; margin:0 16px; opacity:.6}
+.legal-hero h1{font-family:'Playfair Display',serif; font-weight:500; font-size:clamp(2.4rem, 5vw, 3.8rem); line-height:1.1; color:var(--navy); letter-spacing:-1px; margin-bottom:18px; max-width:880px; margin-left:auto; margin-right:auto}
+.legal-hero h1 em{font-style:italic; font-weight:400; color:var(--gold-dark)}
+.legal-meta{font-size:13px; color:var(--text-muted); letter-spacing:1.5px; text-transform:uppercase}
+
+.legal-body{background:var(--white); padding:80px 56px 120px}
+.legal-inner{max-width:820px; margin:0 auto}
+.legal-section{margin-bottom:48px; padding-bottom:48px; border-bottom:1px solid var(--border-dark)}
+.legal-section:last-child{border-bottom:none}
+.legal-section h2{font-family:'Playfair Display',serif; font-size:clamp(1.4rem,2.2vw,1.85rem); font-weight:500; color:var(--navy); margin-bottom:6px; letter-spacing:-0.3px; display:flex; align-items:baseline; gap:14px}
+.legal-section h2 .num{font-size:12px; font-weight:600; letter-spacing:3px; color:var(--gold-dark); font-family:'Space Grotesk',sans-serif}
+.legal-section .lead{font-size:14px; color:var(--text-muted); margin-bottom:22px; line-height:1.6}
+.legal-section h3{font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:600; color:var(--navy); margin-top:24px; margin-bottom:10px; letter-spacing:0.5px}
+.legal-section p{font-size:15px; line-height:1.85; color:var(--steel); margin-bottom:14px}
+.legal-section ul{margin:8px 0 18px 0; padding-left:0; list-style:none}
+.legal-section ul li{font-size:15px; line-height:1.8; color:var(--steel); padding-left:22px; position:relative; margin-bottom:8px}
+.legal-section ul li::before{content:''; position:absolute; left:0; top:11px; width:8px; height:1px; background:var(--gold)}
+.legal-section a{color:var(--gold-dark); text-decoration:none; border-bottom:1px solid rgba(168,135,42,0.3); transition:border-color .25s}
+.legal-section a:hover{border-color:var(--gold-dark)}
+.legal-section strong{color:var(--navy); font-weight:600}
+
+.notice-box{background:var(--linen); border-left:3px solid var(--gold); padding:24px 28px; margin:18px 0}
+.notice-box p{margin-bottom:6px}
+.notice-box p:last-child{margin-bottom:0}
+
+footer{background:var(--navy-deep); color:var(--linen); padding:60px 56px 32px}
+.footer-inner{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:48px; max-width:1320px; margin:0 auto 48px}
+.footer-name{font-family:'Playfair Display',serif; font-size:22px; font-weight:500; letter-spacing:5px; text-transform:uppercase; color:var(--linen); text-decoration:none}
+.footer-tagline{font-size:13px; line-height:1.7; color:rgba(244,240,230,0.55); margin:14px 0}
+.footer-since{font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); opacity:.7}
+.footer-col-title{display:block; font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:18px}
+.footer-link{display:block; font-size:13px; color:rgba(244,240,230,0.6); text-decoration:none; margin-bottom:10px; transition:color .2s}
+.footer-link:hover{color:var(--gold)}
+.footer-address{display:block; font-size:13px; color:rgba(244,240,230,0.6); margin-top:4px}
+.footer-bottom{max-width:1320px; margin:0 auto; padding-top:24px; border-top:1px solid rgba(244,240,230,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px}
+.footer-copy{font-size:11px; color:rgba(244,240,230,0.4)}
+.footer-legal{display:flex; gap:24px}
+.footer-legal a{font-size:11px; color:rgba(244,240,230,0.4); text-decoration:none; transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+
+@media (max-width:1100px){
+  nav{padding:0 28px}
+  .legal-hero, .legal-body{padding-left:28px; padding-right:28px}
+  footer{padding-left:28px; padding-right:28px}
+}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .legal-hero{padding-top:130px}
+  .footer-inner{grid-template-columns:1fr 1fr; gap:36px}
+  .footer-bottom{flex-direction:column; align-items:flex-start}
+}
+@media (max-width:560px){
+  nav{padding:0 20px; height:68px}
+  .nav-icon{width:38px; height:38px}
+  .nav-wordmark-name{font-size:18px; letter-spacing:3px}
+  .nav-wordmark-sub{font-size:7.5px; letter-spacing:3px}
+  .mobile-drawer{top:68px; padding:24px 20px 32px}
+  .legal-hero{padding:110px 20px 48px}
+  .legal-hero h1{font-size:1.9rem}
+  .legal-body{padding:56px 20px 80px}
+  .legal-section h2{font-size:1.3rem; gap:10px; flex-wrap:wrap}
+  .legal-section ul li, .legal-section p{font-size:14px}
+  .footer-inner{grid-template-columns:1fr; gap:28px}
+  footer{padding:48px 20px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img class="nav-icon" src="img/favicon.png" alt="Arelia"/>
+    <span class="nav-wordmark">
+      <span class="nav-wordmark-name">Arelia</span>
+      <span class="nav-wordmark-sub">Lavandaria Industrial</span>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Início</a>
+    <a href="index.html#sobre">Sobre</a>
+    <a href="arelia-roi.html">Calcular ROI</a>
+    <a href="arelia-recursos.html">Recursos</a>
+    <a href="equipa.html">Equipa</a>
+    <a class="btn-nav" href="index.html#contacto">Pedir proposta</a>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Início</a>
+  <a href="index.html#sobre">Sobre</a>
+  <a href="arelia-roi.html">Calcular ROI</a>
+  <a href="arelia-recursos.html">Recursos</a>
+  <a href="equipa.html">Equipa</a>
+  <a href="index.html#contacto">Pedir proposta</a>
+</div>
+
+<section class="legal-hero">
+  <span class="eyebrow">Documento Legal</span>
+  <h1>Termos &amp; <em>Condições</em></h1>
+  <p class="legal-meta">Última atualização: 13 de maio de 2026</p>
+</section>
+
+<section class="legal-body">
+  <div class="legal-inner">
+
+    <div class="legal-section">
+      <h2><span class="num">01</span> Aceitação e âmbito</h2>
+      <p>Os presentes Termos e Condições (doravante "Termos") regulam a utilização do website <strong>ar-elia.com</strong> e a prestação dos serviços comerciais oferecidos pela <strong>Arelia — Lavandaria Industrial</strong> (doravante "Arelia").</p>
+      <p>Ao aceder e utilizar este website, ao solicitar uma proposta comercial ou ao contratar qualquer dos nossos serviços, declara ter lido, compreendido e aceite integralmente estes Termos. Caso não concorde com alguma das disposições, deverá abster-se de utilizar o site e os serviços.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">02</span> Objeto e serviços</h2>
+      <p>A Arelia presta serviços profissionais de lavandaria industrial direcionados ao segmento <strong>B2B</strong>, com foco em hotelaria, restauração e setores afins. Os serviços disponíveis incluem, sem caráter exaustivo:</p>
+      <ul>
+        <li>Lavagem, desinfeção e acabamento de rouparia hoteleira (lençóis, fronhas, toalhas, atoalhados)</li>
+        <li>Tratamento de fardamentos profissionais e rouparia de restauração</li>
+        <li>Serviço de recolha e entrega em todo o território do Algarve e zonas a definir contratualmente</li>
+        <li>Renting de têxteis (sujeito a contrato específico)</li>
+        <li>Consultoria operacional e análise de ROI</li>
+      </ul>
+      <p>O detalhe técnico de cada serviço, preçário, prazos e SLA encontram-se na proposta comercial individualizada emitida para cada cliente após análise das suas necessidades.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">03</span> Pedidos de proposta e contratação</h2>
+      <p>Os formulários disponíveis no website constituem um <strong>pedido de informação não vinculativo</strong>. A receção de um pedido não cria, por si só, qualquer obrigação contratual para a Arelia.</p>
+      <p>A relação comercial entre a Arelia e o cliente inicia-se com a assinatura de uma <strong>proposta comercial</strong> ou <strong>contrato de prestação de serviços</strong> específico, no qual ficarão definidos: âmbito do serviço, preçário, condições de pagamento, prazos, SLA, responsabilidades e demais cláusulas aplicáveis.</p>
+      <p>A Arelia reserva-se o direito de aceitar ou recusar qualquer pedido, designadamente por motivos de capacidade operacional, área geográfica ou compatibilidade do serviço pretendido.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">04</span> Calculadora de ROI</h2>
+      <p>A ferramenta "Calcular ROI" disponibilizada no website fornece estimativas <strong>meramente indicativas</strong>, baseadas em pressupostos médios do setor e nos dados que o utilizador escolhe introduzir.</p>
+      <p>Os valores calculados <strong>não constituem oferta comercial</strong> nem podem ser invocados como vinculativos. A proposta final pode variar em função de fatores específicos da operação real do cliente, da localização, do volume efetivo e das condições contratuais negociadas.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">05</span> Propriedade intelectual</h2>
+      <p>Todo o conteúdo do website — incluindo textos, imagens, vídeos, logótipos, identidade visual, código-fonte, ícones e a marca "<strong>Arelia</strong>" — é propriedade da Arelia ou dos seus licenciadores, e está protegido pelas leis portuguesas e europeias de propriedade intelectual e industrial.</p>
+      <p>É expressamente proibida a reprodução, distribuição, modificação, comunicação pública ou qualquer outro uso não autorizado, total ou parcial, dos conteúdos do site, sem o consentimento prévio e escrito da Arelia.</p>
+      <p>Para pedidos de utilização legítima (imprensa, parcerias, materiais institucionais), contacte-nos via <a href="mailto:AAnjo@ar-elia.com">AAnjo@ar-elia.com</a>.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">06</span> Utilização aceitável do website</h2>
+      <p>Ao utilizar este website, o utilizador compromete-se a:</p>
+      <ul>
+        <li>Fornecer informação verdadeira, exata e atualizada nos formulários disponíveis</li>
+        <li>Não utilizar o site para fins ilegais, fraudulentos ou prejudiciais a terceiros</li>
+        <li>Não tentar aceder a áreas não públicas ou interferir com o funcionamento técnico do site</li>
+        <li>Não enviar conteúdos com malware, scripts maliciosos ou tentativas de injeção</li>
+        <li>Não recolher dados de outros utilizadores nem realizar engenharia reversa do código</li>
+      </ul>
+      <p>A Arelia reserva-se o direito de bloquear o acesso e/ou tomar as ações legais cabíveis em caso de violação destas regras.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">07</span> Limitação de responsabilidade</h2>
+      <p>A Arelia envida os melhores esforços para que a informação publicada no website seja precisa e atualizada, mas não garante a ausência de erros, omissões ou interrupções temporárias do serviço por motivos técnicos, de manutenção ou de força maior.</p>
+      <p>Na máxima extensão permitida pela legislação aplicável, a Arelia <strong>não será responsável</strong> por:</p>
+      <ul>
+        <li>Decisões tomadas com base exclusivamente em conteúdos informativos do website (ex: artigos do centro de recursos, estimativas da calculadora)</li>
+        <li>Danos indiretos, lucros cessantes ou perda de oportunidades de negócio decorrentes da utilização ou indisponibilidade do site</li>
+        <li>Conteúdos de websites terceiros para os quais possamos remeter via hiperligações</li>
+      </ul>
+      <p>A responsabilidade pela <strong>prestação efetiva dos serviços de lavandaria industrial</strong> rege-se pelos termos do contrato comercial específico celebrado com o cliente, e pelas regras gerais do Código Civil e Comercial portugueses.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">08</span> Proteção de dados pessoais</h2>
+      <p>O tratamento dos seus dados pessoais é regulado pela nossa <a href="privacidade.html">Política de Privacidade</a>, que faz parte integrante destes Termos. Ao aceitar os Termos, declara ter tomado conhecimento da referida Política.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">09</span> Alterações aos Termos</h2>
+      <p>A Arelia pode atualizar estes Termos a qualquer momento, refletindo alterações legais, técnicas ou operacionais. As alterações entram em vigor a partir da data indicada no topo deste documento. A utilização continuada do website após a publicação de uma versão atualizada implica a aceitação dos novos Termos.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">10</span> Lei aplicável e foro</h2>
+      <p>Os presentes Termos regem-se pela <strong>lei portuguesa</strong>. Para a resolução de qualquer litígio emergente da sua aplicação ou interpretação, é competente, com renúncia expressa a qualquer outro foro, o <strong>foro da Comarca de Faro</strong>, sem prejuízo das normas imperativas aplicáveis a consumidores ao abrigo do Decreto-Lei n.º 446/85 ou legislação equivalente.</p>
+      <p>Em alternativa, os litígios relativos a relações de consumo podem ser submetidos a entidades de resolução alternativa de litígios de consumo (RAL). Mais informação em <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">www.consumidor.gov.pt</a>.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">11</span> Contacto</h2>
+      <p>Para qualquer questão relacionada com estes Termos, contacte-nos:</p>
+      <div class="notice-box">
+        <p><strong>Arelia — Lavandaria Industrial</strong></p>
+        <p>Email: <a href="mailto:AAnjo@ar-elia.com">AAnjo@ar-elia.com</a></p>
+        <p>Telefone: <a href="tel:+351918166311">+351 918 166 311</a></p>
+        <p>Morada: Algarve, Portugal</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a class="footer-name" href="index.html">Arelia</a>
+      <p class="footer-tagline">Lavandaria industrial<br>para hotelaria premium.</p>
+      <p class="footer-since">Desde 1993 · Portugal</p>
+    </div>
+    <div>
+      <span class="footer-col-title">Contacto</span>
+      <a class="footer-link" href="mailto:AAnjo@ar-elia.com">AAnjo@ar-elia.com</a>
+      <a class="footer-link" href="tel:+351918166311">+351 918 166 311</a>
+      <span class="footer-address">Algarve, Portugal</span>
+    </div>
+    <div>
+      <span class="footer-col-title">Navegação</span>
+      <a class="footer-link" href="index.html">Início</a>
+      <a class="footer-link" href="arelia-roi.html">Calcular ROI</a>
+      <a class="footer-link" href="arelia-recursos.html">Recursos</a>
+      <a class="footer-link" href="equipa.html">Equipa</a>
+    </div>
+    <div>
+      <span class="footer-col-title">Empresa</span>
+      <a class="footer-link" href="index.html#sobre">Sobre nós</a>
+      <a class="footer-link" href="index.html#contacto">Pedir proposta</a>
+      <a class="footer-link" href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© <span id="yr"></span> Arelia · Lavandaria Industrial · Todos os direitos reservados</span>
+    <div class="footer-legal">
+      <a href="privacidade.html">Política de privacidade</a>
+      <a href="termos.html">Termos &amp; condições</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('mobileDrawer').classList.toggle('open');
+}
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
