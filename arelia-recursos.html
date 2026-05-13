@@ -884,5 +884,30 @@ gtag('config', 'G-7SKWWCWMZV', {
 </script>
 <!-- /Cookie banner -->
 
+<!-- Arelia GA4 event tracking -->
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  function track(eventName, params){
+    try { gtag('event', eventName, params || {}); } catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a || !a.href) return;
+    var href = a.href.toLowerCase();
+    if (href.indexOf('mailto:') === 0){
+      track('email_click', {link_url: a.href, link_text: (a.textContent||'').trim().slice(0,80)});
+    } else if (href.indexOf('tel:') === 0){
+      track('phone_click', {link_url: a.href, link_text: (a.textContent||'').trim().slice(0,80)});
+    } else if (href.indexOf('linkedin.com') !== -1){
+      track('linkedin_click', {link_url: a.href, link_text: (a.textContent||'').trim().slice(0,80)});
+    } else if (a.target === '_blank' && href.indexOf(location.hostname) === -1){
+      track('outbound_click', {link_url: a.href, link_domain: (function(){try{return new URL(a.href).hostname;}catch(e){return '';}})()});
+    }
+  });
+})();
+</script>
+<!-- /Arelia GA4 event tracking -->
+
 </body>
 </html>
