@@ -793,26 +793,23 @@ footer {
   font-size: 13px; color: var(--text-muted); line-height: 1.7;
 }
 
-/* ── ANIMATIONS ── */
-.reveal {
-  opacity: 0; transform: translateY(32px);
-  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+/* ── SCROLL REVEAL ── */
+.reveal, .reveal-left, .reveal-right {
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(.16,1,.3,1), transform 0.85s cubic-bezier(.16,1,.3,1);
 }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-left {
-  opacity: 0; transform: translateX(-32px);
-  transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
-}
-.reveal-left.visible { opacity: 1; transform: translateX(0); }
-.reveal-right {
-  opacity: 0; transform: translateX(32px);
-  transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
-}
-.reveal-right.visible { opacity: 1; transform: translateX(0); }
-.d1 { transition-delay: .05s; }
-.d2 { transition-delay: .15s; }
-.d3 { transition-delay: .25s; }
-.d4 { transition-delay: .35s; }
+.reveal          { transform: translateY(32px); }
+.reveal-left     { transform: translateX(-32px); }
+.reveal-right    { transform: translateX(32px); }
+.reveal.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
+.reveal.instant, .reveal-left.instant, .reveal-right.instant { transition: none; }
+/* process-card has its own transform (perspective+rotate), so we append the Y offset */
+.process-card.reveal { transform: perspective(1600px) rotateX(0deg) rotateY(0deg) translateY(32px); }
+.process-card.reveal.visible { transform: perspective(1600px) rotateX(0deg) rotateY(0deg); }
+.d1.visible { transition-delay: .06s; }
+.d2.visible { transition-delay: .18s; }
+.d3.visible { transition-delay: .30s; }
+.d4.visible { transition-delay: .42s; }
 
 /* ── HERO PARTICLES ── */
 #hero-particles {
@@ -822,13 +819,6 @@ footer {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
 
 .hero-anim {
   opacity: 0; animation: fadeUp .9s cubic-bezier(.16,1,.3,1) forwards;
@@ -1244,7 +1234,7 @@ img, video { max-width: 100%; }
   cursor: default;
   transform-style: preserve-3d;
   transform: perspective(1600px) rotateX(0deg) rotateY(0deg);
-  transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s;
+  transition: opacity 0.85s cubic-bezier(.16,1,.3,1), transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s;
   box-shadow:
     0 1px 1px rgba(12,26,44,0.04),
     0 6px 12px -4px rgba(12,26,44,0.12),
@@ -2706,15 +2696,27 @@ setTimeout(function(){
 }, 600);
 
 // ── SCROLL REVEAL ──
-var revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
-function checkReveal(){
-  revealEls.forEach(function(el){
-    if(el.getBoundingClientRect().top < window.innerHeight * 0.88)
-      el.classList.add('visible');
+(function(){
+  var els = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+  // Elements already visible on load: show instantly without transition
+  els.forEach(function(el){
+    var r = el.getBoundingClientRect();
+    if(r.top < window.innerHeight && r.bottom > 0){
+      el.classList.add('instant','visible');
+    }
   });
-}
-window.addEventListener('scroll', checkReveal);
-checkReveal();
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  els.forEach(function(el){
+    if(!el.classList.contains('visible')) obs.observe(el);
+  });
+})();
 
 // ── MARQUEE ──
 (function(){
