@@ -2530,8 +2530,8 @@ gtag('config', 'G-7SKWWCWMZV', {
         <circle cx="30" cy="30" r="28" fill="none" stroke="#0C1A2C" stroke-width="1.5"/>
         <polyline points="18,30 26,38 42,22" fill="none" stroke="#C4A86A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <h3>Proposta enviada!</h3>
-      <p>Recebemos o seu pedido.<br>Entraremos em contacto em menos de 24h.</p>
+      <h3>Obrigado pelo contacto.</h3>
+      <p>O seu pedido foi recebido com sucesso.<br>Receberá uma resposta personalizada em menos de 24h.</p>
     </div>
   </div>
 </div>
@@ -2617,15 +2617,15 @@ document.addEventListener('keydown', function(e){
 });
 
 function submitForm(){
-  var nome     = document.getElementById('f-nome').value.trim();
-  var email    = document.getElementById('f-email').value.trim();
-  var empresa  = document.getElementById('f-empresa').value.trim();
-  var tipo     = document.getElementById('f-tipo').value;
-  var quartos  = document.getElementById('f-quartos').value;
-  var kg       = document.getElementById('f-kg').value;
-  var local    = document.getElementById('f-local').value;
-  var renting  = document.getElementById('f-renting').value;
-  var msg      = document.getElementById('f-msg').value;
+  var nome    = document.getElementById('f-nome').value.trim();
+  var email   = document.getElementById('f-email').value.trim();
+  var empresa = document.getElementById('f-empresa').value.trim();
+  var tipo    = document.getElementById('f-tipo').value;
+  var quartos = document.getElementById('f-quartos').value;
+  var kg      = document.getElementById('f-kg').value;
+  var local   = document.getElementById('f-local').value;
+  var renting = document.getElementById('f-renting').value;
+  var msg     = document.getElementById('f-msg').value;
 
   if(!nome || !email || !empresa){
     alert('Por favor preencha os campos obrigatórios: Nome, Email e Empresa.');
@@ -2637,45 +2637,43 @@ function submitForm(){
   btn.disabled = true;
   btn.style.opacity = '0.6';
 
-  var notifyParams = {
-    nome: nome, email: email, empresa: empresa,
-    tipo: tipo || 'Não especificado',
-    quartos: quartos || 'Não especificado',
-    kg: kg || 'Não especificado',
-    local: local || 'Não especificado',
-    renting: renting || 'Não especificado',
-    mensagem: msg || 'Sem mensagem'
-  };
-
-  var autoReplyParams = {
-    to_email: email,
-    to_name: nome,
-    nome: nome,
-    empresa: empresa,
-    contact_phone: ARELIA_CONTACT_PHONE,
-    contact_email: ARELIA_CONTACT_EMAIL,
-    reply_window: '24h'
-  };
-
-  // 1) Notificação interna
-  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_NOTIFY, notifyParams)
-    .then(function(){
-      // 2) Auto-reply ao cliente (não bloqueia o sucesso visual)
-      return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, autoReplyParams)
-        .catch(function(err){ console.warn('Auto-reply falhou:', err); });
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      access_key: '4e819797-feb8-4878-a01f-d936ea8ac609',
+      subject: 'Novo pedido de proposta — ' + nome,
+      from_name: nome,
+      email: email,
+      cc: 'Ranjo@ar-elia.com',
+      'Nome': nome,
+      'Email': email,
+      'Empresa': empresa,
+      'Tipo de negócio': tipo || 'Não especificado',
+      'Nº de quartos': quartos || 'Não especificado',
+      'Kg/semana': kg || 'Não especificado',
+      'Localização': local || 'Não especificado',
+      'Interesse em renting': renting || 'Não especificado',
+      'Mensagem': msg || 'Sem mensagem'
     })
-    .then(function(){
+  })
+  .then(function(res){ return res.json(); })
+  .then(function(data){
+    if(data.success){
       document.getElementById('form-content').style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
-      try { if (typeof gtag === 'function') gtag('event', 'form_submit', { form_name: 'pedir_proposta', form_type: 'lead_capture' }); } catch(e){}
-    })
-    .catch(function(err){
-      console.error('EmailJS error:', err);
-      btn.textContent = 'Enviar pedido →';
-      btn.disabled = false;
-      btn.style.opacity = '1';
-      alert('Ocorreu um erro ao enviar. Por favor tente novamente em instantes ou contacte-nos directamente em ' + ARELIA_CONTACT_EMAIL + '.');
-    });
+      try { if(typeof gtag === 'function') gtag('event', 'form_submit', { form_name: 'pedir_proposta', form_type: 'lead_capture' }); } catch(e){}
+    } else {
+      throw new Error(data.message || 'Erro desconhecido');
+    }
+  })
+  .catch(function(err){
+    console.error('Web3Forms error:', err);
+    btn.textContent = 'Enviar pedido →';
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    alert('Ocorreu um erro ao enviar. Por favor tente novamente ou contacte-nos em Aanjo@ar-elia.com.');
+  });
 }
 
 // ── COUNT-UP ──
