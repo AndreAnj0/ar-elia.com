@@ -54,7 +54,7 @@
   --linen-dark: #EAE6DB;    /* Linen Dark — fundo secundário */
   --steel: #6B8A9A;         /* Steel Blue — secundária / texto suave */
   --white: #FFFFFF;         /* Pure White — secções alternadas */
-  --text-muted: rgba(12,26,44,0.55);
+  --text-muted: rgba(12,26,44,0.72);
   --text-light: rgba(244,240,230,0.55);
   --border-light: rgba(244,240,230,0.12);
   --border-dark: rgba(12,26,44,0.1);
@@ -107,7 +107,7 @@ nav {
 }
 .nav-wordmark-sub {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 8.5px; font-weight: 500;
+  font-size: 10px; font-weight: 500;
   letter-spacing: 3.5px; text-transform: uppercase;
   color: var(--gold);
   opacity: 0.9;
@@ -131,7 +131,7 @@ nav {
   letter-spacing: 2.8px; text-transform: uppercase;
   padding: 13px 26px; cursor: pointer;
   font-family: 'Space Grotesk', sans-serif;
-  transition: all .25s;
+  transition: background-color .25s, transform .25s;
 }
 .btn-nav:hover { background: var(--gold-light); transform: translateY(-1px); }
 
@@ -209,9 +209,9 @@ nav {
   letter-spacing: 3px; text-transform: uppercase;
   padding: 16px 36px; cursor: pointer;
   font-family: 'Space Grotesk', sans-serif;
-  transition: all .25s;
+  transition: background-color .25s, transform .25s, box-shadow .25s;
 }
-.btn-primary:hover { background: var(--gold-light); }
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px -4px rgba(196,168,106,0.35); }
 .btn-outline {
   background: transparent;
   border: 1.5px solid rgba(244,240,230,0.3);
@@ -220,10 +220,11 @@ nav {
   letter-spacing: 3px; text-transform: uppercase;
   padding: 15px 32px; cursor: pointer;
   font-family: 'Space Grotesk', sans-serif;
-  transition: all .25s;
+  transition: border-color .25s, color .25s, transform .25s;
 }
 .btn-outline:hover {
   border-color: var(--gold); color: var(--gold);
+  transform: translateY(-2px);
 }
 .hero-scroll {
   position: absolute; bottom: 32px; right: 52px; z-index: 2;
@@ -623,7 +624,8 @@ nav {
 }
 .check-text {
   font-size: 13px;
-  color: var(--steel);
+  color: var(--navy);
+  opacity: 0.65;
   line-height: 1.7;
   font-weight: 500;
 }
@@ -642,7 +644,7 @@ nav {
 .cta-tag {
   font-size: 10px; font-weight: 700;
   letter-spacing: 4px; text-transform: uppercase;
-  color: rgba(12,26,44,0.45);
+  color: rgba(12,26,44,0.65);
   margin-bottom: 16px; display: block;
 }
 .cta-title {
@@ -651,7 +653,7 @@ nav {
   font-weight: 300; color: var(--navy); line-height: 1.0;
 }
 .cta-desc {
-  font-size: 15px; color: rgba(12,26,44,0.5);
+  font-size: 15px; color: rgba(12,26,44,0.75);
   line-height: 1.9; margin-bottom: 32px;
 }
 .btn-cta {
@@ -661,9 +663,9 @@ nav {
   letter-spacing: 3px; text-transform: uppercase;
   padding: 18px 40px; cursor: pointer;
   font-family: 'Space Grotesk', sans-serif;
-  transition: opacity .2s;
+  transition: opacity .2s, transform .25s, box-shadow .25s;
 }
-.btn-cta:hover { opacity: .85; }
+.btn-cta:hover { opacity: .85; transform: translateY(-2px); box-shadow: 0 8px 24px -4px rgba(12,26,44,0.3); }
 
 /* ── FOOTER ── */
 footer {
@@ -698,7 +700,7 @@ footer {
 .footer-links a {
   font-size: 10px; font-weight: 500;
   letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(244,240,230,0.2);
+  color: rgba(244,240,230,0.45);
   text-decoration: none; transition: color .2s;
 }
 .footer-links a:hover { color: rgba(244,240,230,0.6); }
@@ -810,6 +812,23 @@ footer {
 .d1 { transition-delay: .05s; }
 .d2 { transition-delay: .15s; }
 .d3 { transition-delay: .25s; }
+.d4 { transition-delay: .35s; }
+
+/* ── HERO PARTICLES ── */
+#hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 .hero-anim {
   opacity: 0; animation: fadeUp .9s cubic-bezier(.16,1,.3,1) forwards;
@@ -2156,6 +2175,7 @@ gtag('config', 'G-7SKWWCWMZV', {
       <span><strong>Algarve</strong> · Hotelaria Premium</span>
     </div>
   </div>
+  <div id="hero-particles"></div>
   <div class="hero-scroll">
     <span>Scroll</span>
     <div class="hero-scroll-line"></div>
@@ -2186,17 +2206,17 @@ gtag('config', 'G-7SKWWCWMZV', {
 
 <!-- ═══ STATS ═══ -->
 <div class="stats">
-  <div class="stat">
+  <div class="stat reveal d1">
     <span class="stat-num"><span id="s1">0</span></span>
     <span class="stat-label">Anos de herança têxtil</span>
     <span class="stat-sub">Desde 1993 · 3 gerações</span>
   </div>
-  <div class="stat">
+  <div class="stat reveal d2">
     <span class="stat-num"><span id="s2">0</span>h</span>
     <span class="stat-label">Tempo máximo de entrega</span>
     <span class="stat-sub">Recolha &middot; Lavagem &middot; Devolução</span>
   </div>
-  <div class="stat">
+  <div class="stat reveal d3">
     <span class="stat-num is-text">Premium</span>
     <span class="stat-label">Hotelaria de excelência</span>
     <span class="stat-sub">Algarve · Operação dedicada</span>
@@ -2258,7 +2278,7 @@ gtag('config', 'G-7SKWWCWMZV', {
   <div class="processo-3d-grid">
 
     <!-- CARD 1 — RECOLHA -->
-    <div class="process-card" data-tilt>
+    <div class="process-card reveal d1" data-tilt>
       <div class="process-card-img"><img src="https://images.unsplash.com/photo-1601412436009-d964bd02edbc?w=900&q=80" alt="" loading="lazy"/></div>
       <div class="process-card-bg-num">01</div>
       <div class="process-card-top">
@@ -2275,7 +2295,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     </div>
 
     <!-- CARD 2 — LAVAGEM -->
-    <div class="process-card" data-tilt>
+    <div class="process-card reveal d2" data-tilt>
       <div class="process-card-img"><img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?w=900&q=80" alt="" loading="lazy"/></div>
       <div class="process-card-bg-num">02</div>
       <div class="process-card-top">
@@ -2292,7 +2312,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     </div>
 
     <!-- CARD 3 — ACABAMENTO -->
-    <div class="process-card" data-tilt>
+    <div class="process-card reveal d3" data-tilt>
       <div class="process-card-img"><img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=900&q=80" alt="" loading="lazy"/></div>
       <div class="process-card-bg-num">03</div>
       <div class="process-card-top">
@@ -2309,7 +2329,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     </div>
 
     <!-- CARD 4 — ENTREGA -->
-    <div class="process-card" data-tilt>
+    <div class="process-card reveal d4" data-tilt>
       <div class="process-card-img"><img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=900&q=80" alt="" loading="lazy"/></div>
       <div class="process-card-bg-num">04</div>
       <div class="process-card-top">
@@ -3004,6 +3024,39 @@ function toggleMenu(){
 })();
 </script>
 <!-- /Arelia GA4 event tracking -->
+
+<!-- ── HERO SPARKLES ── -->
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+<script>
+(function(){
+  if(typeof tsParticles === 'undefined') return;
+  tsParticles.load({
+    id: "hero-particles",
+    options: {
+      fullScreen: { enable: false },
+      background: { color: { value: "transparent" } },
+      fpsLimit: 60,
+      particles: {
+        color: { value: "#C4A86A" },
+        move: {
+          enable: true,
+          direction: "none",
+          speed: { min: 0.05, max: 0.4 },
+          straight: false,
+          outModes: { default: "out" }
+        },
+        number: { value: 55 },
+        opacity: {
+          value: { min: 0.05, max: 0.45 },
+          animation: { enable: true, sync: false, speed: 0.6 }
+        },
+        size: { value: { min: 0.4, max: 1.4 } }
+      },
+      detectRetina: true
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
