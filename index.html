@@ -2187,7 +2187,7 @@ gtag('config', 'G-7SKWWCWMZV', {
   </video>
   <div class="hero-video-overlay"></div>
   <div class="hero-content">
-    <span class="hero-tag hero-anim a1">Lavandaria Industrial · Algarve · Desde 1993</span>
+    <span class="hero-tag hero-anim a1">Lavandaria Industrial · Algarve</span>
     <h1 class="hero-headline hero-anim a2">A sua roupa,<br>tratada como se<br><em>fosse nossa.</em></h1>
     <p class="hero-sub hero-anim a3">Lavandaria industrial premium para hotelaria, alojamento local e clínicas. Recolha, lavagem e entrega — em 24 horas, sempre.</p>
     <div class="hero-cta-row hero-anim a4">
@@ -2195,7 +2195,7 @@ gtag('config', 'G-7SKWWCWMZV', {
       <button class="btn-outline" onclick="document.getElementById('processo-3d').scrollIntoView({behavior:'smooth'})">Como funciona</button>
     </div>
     <div class="hero-microcred hero-anim a5">
-      <span><strong>32 anos</strong> de herança têxtil</span>
+      <span><strong>Know-how</strong> têxtil especializado</span>
       <span class="dot">·</span>
       <span><strong>24h</strong> garantido</span>
       <span class="dot">·</span>
@@ -2234,9 +2234,9 @@ gtag('config', 'G-7SKWWCWMZV', {
 <!-- ═══ STATS ═══ -->
 <div class="stats">
   <div class="stat reveal d1">
-    <span class="stat-num"><span id="s1">0</span></span>
-    <span class="stat-label">Anos de herança têxtil</span>
-    <span class="stat-sub">Desde 1993 · 3 gerações</span>
+    <span class="stat-num is-text">Know-how</span>
+    <span class="stat-label">Têxtil especializado</span>
+    <span class="stat-sub">Rigor em cada processo</span>
   </div>
   <div class="stat reveal d2">
     <span class="stat-num"><span id="s2">0</span>h</span>
@@ -2256,7 +2256,7 @@ gtag('config', 'G-7SKWWCWMZV', {
   <div class="sobre-intro reveal">
     <span class="sobre-eyebrow">A nossa história</span>
     <h2 class="sobre-headline">Uma marca nova,<br><em>com raízes profundas.</em></h2>
-    <p class="sobre-lede">A Arelia nasce em 2026 da união de três trajectos: décadas de experiência operacional em lavandaria industrial no Algarve, visão estratégica B2B e uma obsessão partilhada pelo detalhe. Construímos a marca premium que sentimos faltar no mercado.</p>
+    <p class="sobre-lede">A Arelia nasce em 2026 da união de dois trajectos: know-how têxtil especializado em lavandaria industrial no Algarve, visão estratégica B2B e uma obsessão partilhada pelo detalhe. Construímos a marca premium que sentimos faltar no mercado.</p>
     <a href="equipa.html" class="sobre-cta-team">
       <span>Conheça a equipa</span>
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -2388,12 +2388,12 @@ gtag('config', 'G-7SKWWCWMZV', {
     <p class="showcase-desc">A Arelia opera com lista controlada de clientes. Cada hotel recebe atenção individual, sem volume excessivo. Esta é a diferença entre uma lavandaria industrial e uma operação verdadeiramente premium.</p>
     <div class="showcase-pillars">
       <div class="pillar">
-        <span class="pillar-label">1993</span>
-        <span class="pillar-sub">Primeira lavandaria família</span>
+        <span class="pillar-label">Know-how</span>
+        <span class="pillar-sub">Herdado da indústria têxtil</span>
       </div>
       <div class="pillar">
-        <span class="pillar-label">3 gerações</span>
-        <span class="pillar-sub">De experiência têxtil</span>
+        <span class="pillar-label">Equipa</span>
+        <span class="pillar-sub">Dedicada e especializada</span>
       </div>
       <div class="pillar">
         <span class="pillar-label">2026</span>
@@ -2505,7 +2505,7 @@ gtag('config', 'G-7SKWWCWMZV', {
         <span class="footer-name">Arelia</span>
       </a>
       <p class="footer-tagline">Lavandaria industrial<br>para hotelaria premium.</p>
-      <p class="footer-since">Desde 1993 · Portugal</p>
+      <p class="footer-since">Portugal</p>
     </div>
     <div class="footer-col">
       <span class="footer-col-title">Contacto</span>
@@ -2719,8 +2719,8 @@ function submitForm(){
 
 // ── COUNT-UP ──
 setTimeout(function(){
-  // Count up the first two normally
-  [{id:'s1',val:32},{id:'s2',val:24}].forEach(function(t){
+  // Count up the delivery-time stat
+  [{id:'s2',val:24}].forEach(function(t){
     var el=document.getElementById(t.id);
     if(!el)return;
     var start=performance.now(),dur=1400;
