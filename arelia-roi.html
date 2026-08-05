@@ -50,7 +50,7 @@
   --text-light: rgba(244,240,230,0.55);
 }
 * { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Space Grotesk', sans-serif;
   background: var(--linen);
@@ -362,7 +362,6 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 6px;
   position: relative;
   overflow: hidden;
-  transform: translateZ(0);
   box-shadow:
     0 1px 1px rgba(12,26,44,0.04),
     0 12px 32px -8px rgba(12,26,44,0.32);
@@ -725,7 +724,7 @@ footer {
   font-size: 11px;
   color: rgba(244,240,230,0.4);
 }
-.footer-links { display: flex; gap: 24px; }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
 .footer-links a {
   font-family:'Space Grotesk',sans-serif;
   font-size: 11px;
@@ -744,6 +743,8 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .mobile-drawer { top: 64px; }
+  footer { padding: 48px 24px 28px; }
+  .footer-links { gap: 14px 20px; justify-content: center; }
   .page-header { padding: 130px 24px 80px; }
   .calc-section { padding: 64px 24px; }
   .calc-wrap { grid-template-columns: 1fr; gap: 32px; }
