@@ -55,6 +55,7 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   background: var(--linen);
   color: var(--navy);
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 ::selection { background: var(--gold); color: var(--navy); }
@@ -103,6 +104,56 @@ nav {
   transition: all .25s;
 }
 .btn-nav:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 8px;
+}
+.hamburger span {
+  display: block; width: 26px; height: 2px;
+  background: var(--linen);
+  transition: transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-drawer {
+  position: fixed;
+  top: 76px; left: 0; right: 0;
+  background: var(--navy);
+  padding: 32px 28px 40px;
+  border-bottom: 1px solid rgba(196,168,106,0.2);
+  transform: translateY(-110%);
+  transition: transform .35s ease;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.mobile-drawer.open { transform: translateY(0); }
+.mobile-drawer a {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px; font-weight: 500;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(244,240,230,0.85);
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(196,168,106,0.1);
+}
+.mobile-drawer a.active { color: var(--gold); }
+.btn-mobile-cta {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 14px 0;
+  margin-top: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 2.8px; text-transform: uppercase;
+  cursor: pointer;
+}
 
 /* ── PAGE HEADER ── */
 .page-header {
@@ -691,6 +742,8 @@ footer {
   .nav-wordmark-name { font-size: 17px; letter-spacing: 3px; }
   .nav-wordmark-sub { font-size: 7px; letter-spacing: 2.5px; }
   .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-drawer { top: 64px; }
   .page-header { padding: 130px 24px 80px; }
   .calc-section { padding: 64px 24px; }
   .calc-wrap { grid-template-columns: 1fr; gap: 32px; }
@@ -751,7 +804,25 @@ gtag('config', 'G-7SKWWCWMZV', {
     <a href="equipa.html">Equipa</a>
     <button class="btn-nav" onclick="window.location.href='index.html#contacto'">Pedir proposta</button>
   </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Início</a>
+  <a href="index.html#sobre">Sobre</a>
+  <a href="arelia-roi.html" class="active">Calcular ROI</a>
+  <a href="arelia-recursos.html">Recursos</a>
+  <a href="equipa.html">Equipa</a>
+  <button class="btn-mobile-cta" onclick="window.location.href='index.html#contacto'">Pedir proposta</button>
+</div>
+<script>
+function toggleMenu(){
+  document.getElementById('mobileDrawer').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+</script>
 
 <!-- PAGE HEADER -->
 <header class="page-header">
