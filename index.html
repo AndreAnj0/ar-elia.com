@@ -162,6 +162,16 @@ nav {
   opacity: 0.35;
   z-index: 0;
 }
+/* Em telemóvel não carregamos o vídeo (1,3 MB): fica só a frame,
+   com a opacidade do vídeo para o hero manter o mesmo aspeto. */
+@media (max-width: 980px) {
+  .hero-video { display: none; }
+  .hero-fallback { opacity: 0.75; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
+  .hero-fallback { opacity: 0.75; }
+}
 .hero-video-overlay {
   position: absolute; inset: 0;
   background:
@@ -2183,10 +2193,39 @@ gtag('config', 'G-7SKWWCWMZV', {
        src="img/hero-frame.jpg"
        alt="Arelia Lavandaria Industrial"
        id="heroFallback"/>
-  <video class="hero-video" autoplay muted loop playsinline preload="metadata" id="heroVideo"
+  <video class="hero-video" muted loop playsinline preload="none" id="heroVideo"
          poster="img/hero-frame.jpg">
-    <source src="img/hero.mp4" type="video/mp4"/>
+    <!-- src só é definido por JS em ecrãs grandes, para o telemóvel não descarregar 1,3 MB -->
+    <source data-src="img/hero.mp4" type="video/mp4"/>
   </video>
+  <script>
+  (function(){
+    var v = document.getElementById('heroVideo');
+    if (!v) return;
+    var src = v.querySelector('source[data-src]');
+    if (!src) return;
+    var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var poupanca = navigator.connection && navigator.connection.saveData;
+    var grande = window.matchMedia('(min-width: 981px)');
+    var carregado = false;
+    function carregar(){
+      // matchMedia pode ainda não ter resolvido quando este script corre,
+      // por isso confirmamos também com innerWidth.
+      var grandeAgora = grande.matches || window.innerWidth >= 981;
+      if (carregado || !grandeAgora || reduzido || poupanca) return;
+      carregado = true;
+      src.setAttribute('src', src.getAttribute('data-src'));
+      v.setAttribute('autoplay', ''); // deixa o browser tratar do arranque
+      v.load();
+      var p = v.play();
+      if (p && p.catch) p.catch(function(){});
+    }
+    carregar();
+    setTimeout(carregar, 0); // rede de segurança se o layout ainda não estivesse pronto
+    if (grande.addEventListener) grande.addEventListener('change', carregar);
+    else if (grande.addListener) grande.addListener(carregar);
+  })();
+  </script>
   <div class="hero-video-overlay"></div>
   <div class="hero-content">
     <h1 class="hero-headline hero-anim a2"><span class="hero-tag">Lavandaria Industrial &middot; Algarve</span>A sua roupa,<br>tratada como se<br><em>fosse nossa.</em></h1>
