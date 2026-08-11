@@ -441,6 +441,12 @@ nav {
   color: var(--navy);
   margin-bottom: 14px;
 }
+/* O título é um link real (bom para SEO e para abrir em nova aba),
+   mas não deve herdar o azul sublinhado do browser. */
+.article-title a {
+  color: inherit;
+  text-decoration: none;
+}
 .article-excerpt {
   font-size: 13px;
   line-height: 1.7;
@@ -743,13 +749,11 @@ function toggleMenu(){
 
     <div class="articles-grid">
       <!-- Article 1 -->
-      <article class="article-card" data-cat="qualidade" onclick="alert('Em breve')">
-        <div class="article-img" style="background-image: url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&q=80');">
-          <span class="article-soon">Em breve</span>
-        </div>
+      <article class="article-card" data-cat="qualidade" onclick="window.location.href='artigo-5-sinais-lencois-degradacao.html'" style="cursor:pointer;">
+        <div class="article-img" style="background-image: url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&q=80');"></div>
         <div class="article-content">
           <div class="article-cat">Qualidade Têxtil</div>
-          <h3 class="article-title">5 sinais de que os seus lençóis estão a degradar-se mais rápido do que deviam</h3>
+          <h3 class="article-title"><a href="artigo-5-sinais-lencois-degradacao.html">5 sinais de que os seus lençóis estão a degradar-se mais rápido do que deviam</a></h3>
           <p class="article-excerpt">A vida útil de um lençol hoteleiro pode variar entre 80 e 250 ciclos. A diferença está em pequenos detalhes do processo de lavagem.</p>
           <div class="article-meta">7 min · Têxteis</div>
         </div>
