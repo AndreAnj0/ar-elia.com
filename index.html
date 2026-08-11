@@ -64,7 +64,7 @@
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Space Grotesk', sans-serif;
   background: var(--linen);
@@ -1156,17 +1156,21 @@ img, video { max-width: 100%; }
   height: 36px;
   width: auto;
   object-fit: contain;
-  opacity: 0.55;
-  filter: brightness(1.1);
-  transition: opacity .4s, filter .4s, transform .4s;
+  /* Os logótipos são azuis e o fundo desta secção é navy: passamos a
+     silhueta branca para garantir contraste e uniformidade. */
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+  transition: opacity .4s, transform .4s;
 }
 .client-item.is-logo:hover img {
   opacity: 1;
   transform: scale(1.03);
 }
-.client-item.is-logo:hover img {
-  opacity: 1;
-  filter: brightness(1.2);
+/* O bloco @media (max-width:768px) mais acima também define esta altura,
+   mas fica antes desta regra e media queries não somam especificidade —
+   por isso era sempre ignorado. Repetido aqui para valer de facto. */
+@media (max-width: 768px) {
+  .client-item.is-logo img { height: 30px; }
 }
 .client-item.is-text {
   font-family: 'Playfair Display', serif;
@@ -2228,7 +2232,7 @@ gtag('config', 'G-7SKWWCWMZV', {
   </script>
   <div class="hero-video-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-headline hero-anim a2"><span class="hero-tag">Lavandaria Industrial &middot; Algarve</span>A sua roupa,<br>tratada como se<br><em>fosse nossa.</em></h1>
+    <h1 class="hero-headline hero-anim a2"><span class="hero-tag">Lavandaria Industrial &middot; Algarve</span>A sua roupa,<br>tratada como se<br><em>fosse nossa</em></h1>
     <p class="hero-sub hero-anim a3">Lavandaria industrial premium para hotelaria, alojamento local e clínicas. Recolha, lavagem e entrega — em 24 horas, sempre.</p>
     <div class="hero-cta-row hero-anim a4">
       <button class="btn-primary" onclick="openModal()">Pedir proposta</button>
@@ -2252,21 +2256,30 @@ gtag('config', 'G-7SKWWCWMZV', {
 
 <!-- ═══ CLIENTES (CARROSSEL) ═══ -->
 <section class="clients">
-  <div class="clients-label">Clientes &amp; Parceiros</div>
+  <div class="clients-label">Parceiros</div>
   <div class="clients-track-wrap">
     <div class="clients-track is-auto" id="clientsTrack">
       <!-- Set 1 -->
+      <div class="client-item is-logo">
+        <img src="img/parceiro-ecolab.webp" alt="Ecolab" width="496" height="180"/>
+      </div>
+      <div class="client-item is-logo">
+        <img src="img/parceiro-lusiadagas.webp" alt="Lusiadag&aacute;s" width="1024" height="333"/>
+      </div>
       <div class="client-item is-placeholder"></div>
       <div class="client-item is-placeholder"></div>
       <div class="client-item is-placeholder"></div>
-      <div class="client-item is-placeholder"></div>
-      <div class="client-item is-placeholder"></div>
-      <!-- Set 2 (duplicate for seamless infinite loop) -->
-      <div class="client-item is-placeholder"></div>
-      <div class="client-item is-placeholder"></div>
-      <div class="client-item is-placeholder"></div>
-      <div class="client-item is-placeholder"></div>
-      <div class="client-item is-placeholder"></div>
+      <!-- Set 2 (duplicado para o loop infinito — tem de ser igual ao Set 1,
+           porque a animação e o JS assumem metades idênticas) -->
+      <div class="client-item is-logo" aria-hidden="true">
+        <img src="img/parceiro-ecolab.webp" alt="" width="496" height="180"/>
+      </div>
+      <div class="client-item is-logo" aria-hidden="true">
+        <img src="img/parceiro-lusiadagas.webp" alt="" width="1024" height="333"/>
+      </div>
+      <div class="client-item is-placeholder" aria-hidden="true"></div>
+      <div class="client-item is-placeholder" aria-hidden="true"></div>
+      <div class="client-item is-placeholder" aria-hidden="true"></div>
     </div>
   </div>
 </section>
