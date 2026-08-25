@@ -188,7 +188,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     <a href="equipa.html">Equipa</a>
     <a class="btn-nav" href="index.html#contacto">Pedir proposta</a>
   </div>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMenu();this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
     <span></span><span></span><span></span>
   </div>
 </nav>

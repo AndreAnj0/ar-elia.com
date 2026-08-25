@@ -4,6 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>5 sinais de que os seus lençóis se degradam cedo | ARELIA</title>
+<link rel="icon" type="image/png" href="img/favicon.png"/>
+<link rel="apple-touch-icon" href="img/favicon.png"/>
 <!-- SEO META -->
 <meta name="description" content="Amarelecimento, rasgões na bainha, toque áspero e furos: o que cada sinal diz sobre a sua lavagem — e o que verificar antes de comprar rouparia nova."/>
 <meta name="keywords" content="lençóis hotel degradação, vida útil rouparia hoteleira, lavandaria industrial qualidade têxtil, amarelecimento lençóis, rouparia hotel algarve"/>
@@ -696,7 +698,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     <a href="equipa.html">Equipa</a>
     <a class="btn-nav" href="index.html#contacto">Pedir proposta</a>
   </div>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMenu();this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
     <span></span><span></span><span></span>
   </div>
 </nav>

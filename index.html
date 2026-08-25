@@ -2166,7 +2166,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     <a href="arelia-recursos.html">Recursos</a>
     <button class="btn-nav" onclick="openModal()">Pedir proposta</button>
   </div>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMenu();this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
     <span id="h1"></span>
     <span id="h2"></span>
     <span id="h3"></span>

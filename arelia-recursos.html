@@ -685,7 +685,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     <a href="equipa.html">Equipa</a>
     <button class="btn-nav" onclick="window.location.href='index.html#contacto'">Pedir proposta</button>
   </div>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMenu();this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
     <span></span><span></span><span></span>
   </div>
 </nav>
@@ -832,12 +832,12 @@ function toggleMenu(){
   <div class="newsletter-inner">
     <span class="newsletter-tag">Newsletter mensal</span>
     <h2 class="newsletter-title">Receba os nossos<br><em>guias práticos.</em></h2>
-    <p class="newsletter-sub">Um email por mês com insights aplicáveis sobre gestão de lavandaria hoteleira. Zero spam, cancelamento em um clique.</p>
+    <p class="newsletter-sub">Estamos a preparar uma newsletter com insights aplicáveis sobre gestão de lavandaria hoteleira. Deixe o email e avisamos quando arrancar.</p>
     <form class="newsletter-form" onsubmit="event.preventDefault();alert('Em breve — vamos lançar a newsletter em 2026.');this.reset();">
       <input type="email" placeholder="o.seu.email@hotel.pt" required/>
       <button type="submit">Subscrever</button>
     </form>
-    <p class="newsletter-note">Junte-se a outros gestores hoteleiros que recebem os nossos insights.</p>
+    <p class="newsletter-note">Ainda não arrancámos — sem spam, e avisamos-lhe primeiro.</p>
   </div>
 </section>
 
