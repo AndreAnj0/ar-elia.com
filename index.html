@@ -148,11 +148,16 @@ nav {
   overflow: hidden;
   background: var(--navy);
 }
+/* O hero é fundo decorativo atrás do título: um ligeiro desfoque dá-lhe
+   profundidade de campo e evita competir com o texto. O scale compensa os
+   bordos suaves que o blur cria — o .hero tem overflow:hidden e corta-os. */
 .hero-video {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
   opacity: 0.75;
+  filter: blur(5px);
+  transform: scale(1.04);
 }
 /* Fallback se o vídeo não carregar */
 .hero-fallback {
@@ -161,6 +166,8 @@ nav {
   object-fit: cover;
   opacity: 0.35;
   z-index: 0;
+  filter: blur(5px);
+  transform: scale(1.04);
 }
 /* Em telemóvel não carregamos o vídeo (1,3 MB): fica só a frame,
    com a opacidade do vídeo para o hero manter o mesmo aspeto. */
