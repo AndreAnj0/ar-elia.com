@@ -31,6 +31,7 @@ Todo o Algarve, com maior frequência de recolha em: Albufeira (Guia, Ferreiras,
 - [Recursos](https://ar-elia.com/arelia-recursos.html): artigos sobre custos, qualidade têxtil e operação.
 - [Quanto custa uma lavandaria interna](https://ar-elia.com/artigo-custo-lavandaria-interna.html): decomposição de CAPEX e OPEX para um hotel português.
 - [5 sinais de degradação de lençóis](https://ar-elia.com/artigo-5-sinais-lencois-degradacao.html): como ler amarelecimento, rasgões, aspereza, furos e encolhimento, e o que cada um indica sobre o processo de lavagem.
+- [Reduzir o consumo de água da lavandaria](https://ar-elia.com/artigo-reduzir-consumo-agua-lavandaria.html): litros por quilo, onde a água se perde, reaproveitamento do enxaguamento, e o contexto de seca no Algarve. Os números são referências públicas do sector, não medições da Arelia.
 - [Equipa](https://ar-elia.com/equipa.html): André Anjo (CEO e co-fundador) e Rita Anjo (co-fundadora).
 
 ## Contacto
