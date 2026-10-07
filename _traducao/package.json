@@ -1,0 +1,6 @@
+{
+  "name": "arelia-traducao",
+  "private": true,
+  "type": "commonjs",
+  "description": "Gerador das paginas /en/ a partir das portuguesas. Este ficheiro existe so para fixar o modulo em CommonJS: sem ele, um package.json de uma pasta acima pode marcar type:module e o require deixa de funcionar."
+}

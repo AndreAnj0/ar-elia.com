@@ -13,6 +13,9 @@
 <meta name="geo.region" content="PT-08"/>
 <meta name="geo.placename" content="Algarve, Portugal"/>
 <link rel="canonical" href="https://ar-elia.com/privacidade.html"/>
+<link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/privacidade.html"/>
+<link rel="alternate" hreflang="en" href="https://ar-elia.com/en/privacy.html"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/privacidade.html"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ar-elia.com/privacidade.html"/>
 <meta property="og:title" content="Política de Privacidade | ARELIA Lavandaria Industrial"/>
@@ -218,6 +221,29 @@ footer{background:var(--navy-deep); color:var(--linen); padding:60px 56px 32px}
   .footer-inner{grid-template-columns:1fr; gap:28px}
   footer{padding:48px 20px 24px}
 }
+
+/* lang-switch:inicio */
+/* ── SELETOR DE IDIOMA ── */
+.lang-switch { display:flex; align-items:center; gap:5px; }
+.nav-links .lang-switch a.lang-opt,
+.mobile-drawer .lang-switch a.lang-opt {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:10.5px; font-weight:600; letter-spacing:1.8px;
+  text-transform:uppercase; text-decoration:none;
+  color:rgba(244,240,230,0.45); opacity:1;
+  padding:3px 1px; border:0; border-bottom:1px solid transparent;
+  transition:color .25s, border-color .25s;
+}
+.nav-links .lang-switch a.lang-opt:hover,
+.mobile-drawer .lang-switch a.lang-opt:hover { color:var(--gold); }
+.nav-links .lang-switch a.lang-opt[aria-current],
+.mobile-drawer .lang-switch a.lang-opt[aria-current] {
+  color:var(--gold); border-bottom-color:rgba(196,168,106,0.55);
+}
+.lang-sep { color:rgba(244,240,230,0.22); font-size:10px; line-height:1; }
+.mobile-drawer .lang-switch { gap:8px; padding:10px 0 2px; }
+.mobile-drawer .lang-switch a.lang-opt { font-size:13px; letter-spacing:2.4px; padding:6px 0; }
+/* lang-switch:fim */
 </style>
 <!-- Google Analytics (GA4) + Consent Mode v2 -->
 <script>
@@ -267,6 +293,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     <a href="arelia-roi.html">Calcular ROI</a>
     <a href="arelia-recursos.html">Recursos</a>
     <a href="equipa.html">Equipa</a>
+    <div class="lang-switch" role="group" aria-label="Idioma"><a class="lang-opt" href="/privacidade.html" hreflang="pt" lang="pt" aria-current="true">PT</a><span class="lang-sep" aria-hidden="true">/</span><a class="lang-opt" href="/en/privacy.html" hreflang="en" lang="en">EN</a></div>
     <a class="btn-nav" href="index.html#contacto">Pedir proposta</a>
   </div>
   <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMenu();this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
@@ -280,6 +307,7 @@ gtag('config', 'G-7SKWWCWMZV', {
   <a href="arelia-recursos.html">Recursos</a>
   <a href="equipa.html">Equipa</a>
   <a href="index.html#contacto">Pedir proposta</a>
+  <div class="lang-switch lang-switch-mobile" role="group" aria-label="Idioma"><a class="lang-opt" href="/privacidade.html" hreflang="pt" lang="pt" aria-current="true">PT</a><span class="lang-sep" aria-hidden="true">/</span><a class="lang-opt" href="/en/privacy.html" hreflang="en" lang="en">EN</a></div>
 </div>
 
 <!-- HERO -->

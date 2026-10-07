@@ -34,6 +34,23 @@ Todo o Algarve, com maior frequência de recolha em: Albufeira (Guia, Ferreiras,
 - [Reduzir o consumo de água da lavandaria](https://ar-elia.com/artigo-reduzir-consumo-agua-lavandaria.html): litros por quilo, onde a água se perde, reaproveitamento do enxaguamento, e o contexto de seca no Algarve. Os números são referências públicas do sector, não medições da Arelia.
 - [Equipa](https://ar-elia.com/equipa.html): André Anjo (CEO e co-fundador) e Rita Anjo (co-fundadora).
 
+## English version
+
+O site existe em português e inglês. Cada página tem equivalente em `/en/`, ligado por `hreflang` recíproco. O conteúdo é o mesmo — não há informação que exista só numa das versões.
+
+- [Home](https://ar-elia.com/en/)
+- [Industrial laundry in Albufeira](https://ar-elia.com/en/industrial-laundry-albufeira.html)
+- [Industrial laundry in Vilamoura and Quarteira](https://ar-elia.com/en/industrial-laundry-vilamoura-quarteira.html)
+- [Industrial laundry in Portimão](https://ar-elia.com/en/industrial-laundry-portimao.html)
+- [ROI calculator](https://ar-elia.com/en/roi-calculator.html)
+- [Resources](https://ar-elia.com/en/resources.html)
+- [What an in-house laundry really costs](https://ar-elia.com/en/article-in-house-laundry-cost.html)
+- [5 signs bed linen is wearing out](https://ar-elia.com/en/article-5-signs-linen-wearing-out.html)
+- [Cutting laundry water use by 35%](https://ar-elia.com/en/article-cut-laundry-water-use.html)
+- [Team](https://ar-elia.com/en/team.html)
+
+As páginas legais em inglês ([privacy](https://ar-elia.com/en/privacy.html), [terms](https://ar-elia.com/en/terms.html)) são traduções de cortesia: em caso de divergência prevalece a versão portuguesa, e as próprias páginas dizem-no.
+
 ## Contacto
 
 - Email: geral@ar-elia.com

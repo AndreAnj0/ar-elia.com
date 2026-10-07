@@ -1,75 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ar-elia.com/</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
   </url>
   <url>
     <loc>https://ar-elia.com/lavandaria-industrial-albufeira.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/lavandaria-industrial-albufeira.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/industrial-laundry-albufeira.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/lavandaria-industrial-albufeira.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/industrial-laundry-albufeira.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/lavandaria-industrial-albufeira.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/industrial-laundry-albufeira.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/lavandaria-industrial-albufeira.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/lavandaria-industrial-vilamoura-quarteira.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/lavandaria-industrial-vilamoura-quarteira.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/industrial-laundry-vilamoura-quarteira.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/lavandaria-industrial-vilamoura-quarteira.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/industrial-laundry-vilamoura-quarteira.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/lavandaria-industrial-vilamoura-quarteira.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/industrial-laundry-vilamoura-quarteira.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/lavandaria-industrial-vilamoura-quarteira.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/lavandaria-industrial-portimao.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/lavandaria-industrial-portimao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/industrial-laundry-portimao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/lavandaria-industrial-portimao.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/industrial-laundry-portimao.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/lavandaria-industrial-portimao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/industrial-laundry-portimao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/lavandaria-industrial-portimao.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/arelia-roi.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-roi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/roi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-roi.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/roi-calculator.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-roi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/roi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-roi.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/arelia-recursos.html</loc>
     <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-recursos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-recursos.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/resources.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-recursos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-recursos.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/artigo-custo-lavandaria-interna.html</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/artigo-custo-lavandaria-interna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/article-in-house-laundry-cost.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-custo-lavandaria-interna.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/article-in-house-laundry-cost.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/artigo-custo-lavandaria-interna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/article-in-house-laundry-cost.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-custo-lavandaria-interna.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/artigo-5-sinais-lencois-degradacao.html</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/artigo-5-sinais-lencois-degradacao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/article-5-signs-linen-wearing-out.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-5-sinais-lencois-degradacao.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/article-5-signs-linen-wearing-out.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/artigo-5-sinais-lencois-degradacao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/article-5-signs-linen-wearing-out.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-5-sinais-lencois-degradacao.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/artigo-reduzir-consumo-agua-lavandaria.html</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/artigo-reduzir-consumo-agua-lavandaria.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/article-cut-laundry-water-use.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-reduzir-consumo-agua-lavandaria.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/article-cut-laundry-water-use.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/artigo-reduzir-consumo-agua-lavandaria.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/article-cut-laundry-water-use.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-reduzir-consumo-agua-lavandaria.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/equipa.html</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/equipa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/team.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/equipa.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/team.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/equipa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/team.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/equipa.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/privacidade.html</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/privacidade.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/privacy.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/privacidade.html"/>
   </url>
   <url>
     <loc>https://ar-elia.com/termos.html</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/termos.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/terms.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/termos.html"/>
   </url>
 </urlset>
