@@ -1,4 +1,21 @@
 module.exports = {
+  "</strong> por:</p>": "</strong> for:</p>",
+  "Telefone:":
+    "Telephone:",
+  "</strong> ou <strong>":
+    "</strong> or <strong>",
+  "</strong> por: <strong>":
+    "</strong> by: <strong>",
+  "Documento Legal":
+    "Legal document",
+  "proposta comercial":
+    "commercial quote",
+  "meramente indicativas":
+    "purely indicative",
+  "Os valores calculados":
+    "The figures it produces",
+  "Ao utilizar este website, o utilizador compromete-se a:":
+    "By using this website, you undertake to:",
   "Conteúdos de websites terceiros para os quais possamos remeter via hiperligações":
     "Content on third-party websites we may link to",
   "A responsabilidade pela":
@@ -39,7 +56,7 @@ module.exports = {
   'A Arelia presta serviços profissionais de lavandaria industrial direcionados ao segmento':
     'Arelia provides professional industrial laundry services aimed at the',
   ', com foco em hotelaria, restauração e setores afins. Os serviços disponíveis incluem, sem caráter exaustivo:':
-    'segment, focused on hospitality, restaurants and related sectors. Available services include, without limitation:',
+    ' segment, focused on hospitality, restaurants and related sectors. Available services include, without limitation:',
   'Lavagem, desinfeção e acabamento de rouparia hoteleira (lençóis, fronhas, toalhas, atoalhados)':
     'Washing, disinfection and finishing of hotel linen (sheets, pillowcases, towels, towelling)',
   'Tratamento de fardamentos profissionais e rouparia de restauração':
@@ -67,7 +84,7 @@ module.exports = {
   'A ferramenta "Calcular ROI" disponibilizada no website fornece estimativas':
     'The “ROI calculator” provided on the website gives',
   ', baseadas em pressupostos médios do setor e nos dados que o utilizador escolhe introduzir.':
-    'estimates, based on sector averages and on the data the user chooses to enter.',
+    ' estimates, based on sector averages and on the data the user chooses to enter.',
   'não constituem oferta comercial': 'do not constitute a commercial offer',
   'nem podem ser invocados como vinculativos. A proposta final pode variar em função de fatores específicos da operação real do cliente, da localização, do volume efetivo e das condições contratuais negociadas.':
     'and cannot be relied on as binding. The final quote may vary according to factors specific to the client’s actual operation, location, real volume and the contractual terms negotiated.',

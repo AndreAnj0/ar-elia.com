@@ -1,4 +1,10 @@
-module.exports = Object.assign({}, require('./dic-geo-comum.js'), {
+module.exports = Object.assign({
+  "Vilamoura e Quarteira":
+    "Vilamoura and Quarteira",
+  "Vale do Lobo e Quinta do Lago":
+    "Vale do Lobo and Quinta do Lago",
+  "Almancil e Loulé":
+    "Almancil and Loulé",}, require('./dic-geo-comum.js'), {
   'Lavandaria Industrial em Vilamoura e Quarteira | ARELIA':
     'Industrial Laundry in Vilamoura and Quarteira | ARELIA',
   'Lavandaria industrial para hotéis, resorts e villas em Vilamoura, Quarteira, Vale do Lobo, Quinta do Lago e Almancil. Unidade na Guia, a 20 km. Entrega em 24 h.':

@@ -1,6 +1,14 @@
 // Indice de artigos. Quatro cartoes continuam marcados "Coming soon" porque os
 // artigos nao existem -- nao se promete leitura que nao ha.
 module.exports = {
+  ">Subscrever<":
+    ">Subscribe<",
+  "— Destaque desta semana":
+    "— This week’s pick",
+  "8 min · Renting":
+    "8 min · Rental",
+  "Newsletter mensal":
+    "Monthly newsletter",
   'data-filter="all">Todos<': 'data-filter="all">All<',
   // rotulos dos filtros do indice
   '>Qualidade<': '>Quality<',

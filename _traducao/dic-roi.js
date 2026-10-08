@@ -1,6 +1,22 @@
 // Calculadora de ROI. Alem do texto visivel ha rotulos construidos em JS
 // (numero de funcionarios) que tambem tem de passar a ingles.
 module.exports = {
+  ">unid.<":
+    ">units<",
+  ">Personalizado<":
+    ">Custom<",
+  "Calculadora gratuita":
+    "Free calculator",
+  "Aloj. Local":
+    "Holiday rental",
+  "toLocaleString('pt-PT')":
+    "toLocaleString('en-GB')",
+  "€0,17 / kg":
+    "€0.17 / kg",
+  "€0,26 / kg":
+    "€0.26 / kg",
+  "€0,16 / kg":
+    "€0.16 / kg",
   'Calculadora de ROI — Lavandaria Hotel | ARELIA': 'ROI Calculator — Hotel Laundry | ARELIA',
   'Compare em segundos o custo de manter uma lavandaria interna versus externalizar com a Arelia. Sem registo, sem compromissos.':
     'Compare in seconds the cost of running an in-house laundry against outsourcing to Arelia. No sign-up, no commitment.',

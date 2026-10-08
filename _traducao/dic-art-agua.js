@@ -1,6 +1,48 @@
 // Artigo da agua. Nenhum numero aqui e medicao da Arelia -- o texto diz isso
 // explicitamente e lista as fontes, e a traducao mantem essa ressalva intacta.
 module.exports = {
+  ">Consumo<":
+    ">Consumption<",
+  ">Temperatura<":
+    ">Temperature<",
+  ">Valor<":
+    ">Value<",
+  ">Transpar&ecirc;ncia<":
+    ">Transparency<",
+  "7,5 &ndash; 12 L/kg":
+    "7.5 &ndash; 12 L/kg",
+  "1,5 &ndash; 4,5 L/kg":
+    "1.5 &ndash; 4.5 L/kg",
+  "&mdash; Ag&ecirc;ncia Portuguesa do Ambiente,":
+    "&mdash; Portuguese Environment Agency,",
+  "</strong>, e <strong>":
+    "</strong>, and <strong>",
+  "O ponto de partida":
+    "The starting point",
+  "o processo de lavagem representa 90 a 92% do consumo total":
+    "the wash process accounts for 90 to 92% of total consumption",
+  "Melhoria adicional de 40 a 80%, conforme o sistema":
+    "A further 40 to 80% improvement, depending on the system",
+  "A maior alavanca":
+    "The biggest lever",
+  "primeiro banho":
+    "first bath",
+  "Carga completa.":
+    "Full loads.",
+  "A conta":
+    "The sum",
+  "Roupa processada por ano":
+    "Linen processed per year",
+  "A 20 L/kg":
+    "At 20 L/kg",
+  "A 13 L/kg":
+    "At 13 L/kg",
+  "quantos litros por quilo consomem":
+    "how many litres per kilo you use",
+  "17 &ndash; 22 L/kg":
+    "17 &ndash; 22 L/kg",
+  "54 750 kg":
+    "54,750 kg",
   "bem operada":
     "well run",
   "consumo agua lavandaria industrial, litros por kg lavandaria, reciclagem agua lavandaria hotel, seca algarve hotelaria, eficiencia hidrica hotel":

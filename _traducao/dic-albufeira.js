@@ -1,4 +1,10 @@
-module.exports = Object.assign({}, require('./dic-geo-comum.js'), {
+module.exports = Object.assign({
+  "Guia, concelho de Albufeira":
+    "Guia, in the Albufeira municipality",
+  "Albufeira centro, Sesmarias e Branqueira":
+    "Albufeira centre, Sesmarias and Branqueira",
+  "Fardamentos — sala, cozinha, housekeeping":
+    "Uniforms — front-of-house, kitchen, housekeeping",}, require('./dic-geo-comum.js'), {
   'lavandaria industrial albufeira, lavandaria hoteis albufeira, lavandaria alojamento local albufeira, lavandaria guia algarve':
     'industrial laundry albufeira, hotel laundry albufeira, holiday rental laundry albufeira, laundry guia algarve',
   'rouparia de cama': 'bed linen',

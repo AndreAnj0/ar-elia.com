@@ -1,4 +1,12 @@
 module.exports = {
+  ">Comercial<":
+    ">Commercial<",
+  ">Consultoria<":
+    ">Consulting<",
+  ">Conectar<":
+    ">Connect<",
+  "Vamos conversar":
+    "Let’s talk",
   "Conselho Arelia":
     "The Arelia Board",
   "O Board":

@@ -1,4 +1,18 @@
 module.exports = {
+  "Telefone:":
+    "Telephone:",
+  "Documento Legal":
+    "Legal document",
+  "Morada: Algarve, Portugal":
+    "Address: Algarve, Portugal",
+  "Calcular estimativas de ROI":
+    "Produce ROI estimates",
+  "Autoridades competentes":
+    "Competent authorities",
+  "Atualmente utilizamos os seguintes subcontratantes principais:":
+    "We currently use the following main processors:",
+  "Implementamos o":
+    "We have implemented",
   "Nome e apelido do contacto profissional":
     "First and last name of the business contact",
   "Nome e tipo de empresa":

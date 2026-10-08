@@ -104,8 +104,25 @@ function injetar(html, lang, hrefPt, hrefEn) {
 }
 
 // ── traducao ─────────────────────────────────────────────────────────────────
+// Uma chave curta pode dar match DENTRO de texto que ja foi traduzido: a chave
+// "Interna" acertou em "Inter|national" e deixou "In-housetional analysis".
+// Ordenar por tamanho protege a origem, nao a saida -- dai este aviso.
+function chavesPerigosas(dic) {
+  const maus = [];
+  for (const k of Object.keys(dic)) {
+    if (k === dic[k] || /[<>]/.test(k) || k.length > 14) continue;
+    for (const [k2, v2] of Object.entries(dic)) {
+      if (k2 !== k && v2.includes(k)) { maus.push(k); break; }
+    }
+  }
+  return maus;
+}
+
 function traduzir(html, dicionarios) {
   const juntos = Object.assign({}, ...dicionarios);
+  const maus = chavesPerigosas(juntos);
+  if (maus.length) console.log('    AVISO: chaves que podem comer texto ja traduzido — ancore-as em markup: ' +
+    maus.map(s => JSON.stringify(s)).join(', '));
   // mais longas primeiro, senao uma cadeia curta parte uma longa pelo meio
   const chaves = Object.keys(juntos).sort((a, b) => b.length - a.length);
   const usadas = new Set();
@@ -150,6 +167,11 @@ function paraEn(html, pag) {
               `\n<link rel="alternate" hreflang="en" href="${urlEn}"/>` +
               `\n<link rel="alternate" hreflang="x-default" href="${urlPt}"/>`;
   html = html.replace(/(<link rel="canonical"[^>]*>)/, '$1' + alt);
+
+  // Formato monetario britanico: o PT escreve "€ 18 000" e "€ 0,17"; o ingles
+  // escreve "€18,000" e "€0.17". Sem isto a mesma pagina mistura os dois.
+  html = html.replace(/€(?:&nbsp;|\s)+/g, '€');
+  html = html.replace(/€(\d{1,3}),(\d{2})\b(?!\d)/g, '€$1.$2');
 
   // Paginas legais: a traducao e de cortesia. Em caso de divergencia o que
   // vincula e o original portugues, e isso tem de estar escrito na propria

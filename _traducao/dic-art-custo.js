@@ -1,6 +1,120 @@
 // Artigo do custo de uma lavandaria interna. Os valores em euro ficam como
 // estao -- sao os mesmos numeros, nao se convertem nem arredondam na traducao.
 module.exports = {
+  'Quanta água se gasta por quilo, onde se perde e que medidas cortam mais — com os valores de referência do sector e o contexto de seca no Algarve.':
+    'How much water goes per kilo, where it is lost and which measures cut the most — with the sector’s reference figures and the Algarve drought as context.',
+  "900&nbsp;kWh/mês":
+    "900&nbsp;kWh/month",
+  "1&nbsp;462&nbsp;kWh/mês":
+    "1,462&nbsp;kWh/month",
+  "250&nbsp;kWh/mês":
+    "250&nbsp;kWh/month",
+  "2&nbsp;600&nbsp;kWh/mês":
+    "2,600&nbsp;kWh/month",
+  "€&nbsp;0,16/kWh":
+    "€0.16/kWh",
+  "€&nbsp;420/mês":
+    "€420/month",
+  "€&nbsp;550–650/mês":
+    "€550–650/month",
+  "€&nbsp;3,80–4,50/m³":
+    "€3.80–4.50/m³",
+  "€&nbsp;300–500/mês":
+    "€300–500/month",
+  "€&nbsp;1&nbsp;000/mês":
+    "€1,000/month",
+  "€&nbsp;120&nbsp;000":
+    "€120,000",
+  "€&nbsp;120k":
+    "€120k",
+  "€&nbsp;3&nbsp;200":
+    "€3,200",
+  "€&nbsp;1&nbsp;000":
+    "€1,000",
+  "€&nbsp;7&nbsp;360":
+    "€7,360",
+  "€&nbsp;5&nbsp;850":
+    "€5,850",
+  "€&nbsp;208&nbsp;320":
+    "€208,320",
+  "€&nbsp;70&nbsp;200":
+    "€70,200",
+  "€&nbsp;1,64":
+    "€1.64",
+  // Os valores simples (€ 500, € 1,30, ...) nao precisam de entrada: a
+  // normalizacao do euro no construir.js ja lhes tira o espaco e troca a
+  // virgula decimal. Tinham-nos aqui e, por serem curtos, davam match dentro
+  // de valores maiores -- "€ 500" comia o fim de "€ 200 a € 500/mes".
+  // So ficam os que tem separador de milhares, que a normalizacao nao mexe.
+  "4&nbsp;500":
+    "4,500",
+  "&nbsp;kg/mês":
+    "&nbsp;kg/month",
+  ">/qto<":
+    ">/room<",
+  ">Alto<":
+    ">High<",
+  "4–6h/semana":
+    "4–6h/week",
+  ">renting<":
+    ">rental<",
+  "150 kg de roupa por dia":
+    "150 kg of linen a day",
+  "TSU 23,75%": "23.75%",
+  "2 operadores":
+    "2 operators",
+  "0,15 e 0,25&nbsp;kWh por kg de roupa":
+    "0.15 and 0.25&nbsp;kWh per kg of linen",
+  "0,55 e 0,80&nbsp;kWh/kg":
+    "0.55 and 0.80&nbsp;kWh/kg",
+  "10 e 18 litros por kg":
+    "10 and 18 litres per kg",
+  "150 × 30 × 14L =":
+    "150 × 30 × 14L =",
+  "63&nbsp;000 L/mês = 63&nbsp;m³":
+    "63,000 L/month = 63&nbsp;m³",
+  "€&nbsp;0,15 e €&nbsp;0,30 por kg":
+    "€&nbsp;0.15 and €&nbsp;0.30 per kg",
+  "3 a 5% do CAPEX por ano":
+    "3 to 5% of CAPEX per year",
+  ". Em equipamentos usados, multiplique por 1,5 a 2.":
+    ". For used equipment, multiply by 1.5 to 2.",
+  "A Soma Final":
+    "The Final Sum",
+  "Conformidade ambiental.":
+    "Environmental compliance.",
+  "Comparativo Real":
+    "Side by Side",
+  "23% e 38%":
+    "23% and 38%",
+  "300–500 kg/dia de processamento constante":
+    "300–500 kg/day of steady throughput",
+  "A Pergunta Certa":
+    "The Right Question",
+  "Resorts isolados":
+    "Remote resorts",
+  "calculadora de ROI":
+    "ROI calculator",
+  "€&nbsp;18&nbsp;000 – 25&nbsp;000":
+    "€18,000 – 25,000",
+  "€&nbsp;8&nbsp;000 – 12&nbsp;000":
+    "€8,000 – 12,000",
+  "€&nbsp;10&nbsp;000 – 14&nbsp;000":
+    "€10,000 – 14,000",
+  "€&nbsp;6&nbsp;000 – 9&nbsp;000":
+    "€6,000 – 9,000",
+  "€&nbsp;15&nbsp;000 – 25&nbsp;000":
+    "€15,000 – 25,000",
+  "€&nbsp;3&nbsp;000 – 6&nbsp;000":
+    "€3,000 – 6,000",
+  "€&nbsp;8&nbsp;000 – 15&nbsp;000":
+    "€8,000 – 15,000",
+  "€&nbsp;15&nbsp;000 – 40&nbsp;000":
+    "€15,000 – 40,000",
+  "€&nbsp;2&nbsp;500 – 5&nbsp;000":
+    "€2,500 – 5,000",
+  "€&nbsp;88&nbsp;500 – 157&nbsp;000":
+    "€88,500 – 157,000",
   "Volume processado":
     "Volume processed",
   "Tem de somar:":
@@ -91,7 +205,8 @@ module.exports = {
     'For a 50-room hotel in the Algarve, with average annual occupancy of 65% and estimated throughput of',
   ', o investimento típico é o seguinte:': ', the typical investment looks like this:',
   'Equipamento / rubrica': 'Equipment / item',
-  'Investimento': 'Investment',
+  '<th>Investimento</th>': '<th>Investment</th>',
+  'Investimento inicial': 'Initial investment',
   'Máquina de lavar industrial 30&nbsp;kg': 'Industrial washer 30&nbsp;kg',
   'Marca europeia, nova, classe energética A': 'European brand, new, energy class A',
   'Máquina de lavar industrial 16&nbsp;kg': 'Industrial washer 16&nbsp;kg',
@@ -231,7 +346,7 @@ module.exports = {
 
   // ── comparacao ──
   'Cenário · Hotel 50 quartos, Algarve': 'Scenario · 50-room hotel, Algarve',
-  'Interna': 'In-house',
+  '<th>Interna</th>': '<th>In-house</th>',
   'OPEX mensal médio anual': 'Average monthly OPEX over the year',
   'Flexibilidade na alta estação': 'Flexibility in high season',
   'Escala automática': 'Scales automatically',

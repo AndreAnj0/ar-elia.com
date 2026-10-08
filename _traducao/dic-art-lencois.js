@@ -1,6 +1,22 @@
 // Artigo dos 5 sinais. O ficheiro usa entidades HTML (&ccedil;, &atilde;...), por
 // isso as chaves tem de vir na forma codificada, tal como estao no original.
 module.exports = {
+  "<strong>&eacute;</strong>":
+    "<strong>is</strong>",
+  "<strong>desgaste</strong>":
+    "<strong>wear</strong>",
+  "amarelado, sobretudo se acentua depois da calandra":
+    "yellowish cast, especially if it sharpens after the calender",
+  "&laquo;j&aacute; n&atilde;o d&aacute;&raquo;":
+    "&ldquo;it doesn&rsquo;t fit any more&rdquo;",
+  "Um tom":
+    "A",
+  "cinzento e uniforme":
+    "uniform grey cast",
+  "concentrados nas bainhas, nos cantos ou ao longo da mesma linha de dobra":
+    "concentrated at the hems, the corners or along the same fold line",
+  "Falar connosco":
+    "Talk to us",
   "amarelado, sobretudo se acentua depois da calandra":
     "yellowish, especially if it sharpens after the calender",
   'sobre-secagem': 'over-drying',

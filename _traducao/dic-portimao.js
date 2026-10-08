@@ -1,4 +1,8 @@
 module.exports = Object.assign({
+  "Praia da Rocha e Vau":
+    "Praia da Rocha and Vau",
+  "Secagem, engomagem e dobragem":
+    "Drying, pressing and folding",
   "Ferragudo, Lagoa e Mexilhoeira Grande":
     "Ferragudo, Lagoa and Mexilhoeira Grande",}, require('./dic-geo-comum.js'), {
   'lavandaria industrial portimao, lavandaria praia da rocha, lavandaria alvor, lavandaria hoteis barlavento algarve':

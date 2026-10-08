@@ -1,6 +1,8 @@
 // Homepage. Nada aqui promete o renting de lencois nem o rastreio de pecas como
 // disponivel -- os dois continuam com badge de "Coming soon", tal como no PT.
 module.exports = {
+  "Lençóis <em>ARELIA</em><br>no seu hotel.":
+    "<em>ARELIA</em> bed linen<br>in your hotel.",
   // ── meta / titulo ──
   'Lavandaria Industrial para Hotéis no Algarve | ARELIA':
     'Industrial Laundry for Hotels in the Algarve | ARELIA',

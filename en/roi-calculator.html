@@ -857,7 +857,7 @@ function toggleMenu(){
 
 <!-- PAGE HEADER -->
 <header class="page-header">
-  <span class="page-header-tag">Calculadora gratuita</span>
+  <span class="page-header-tag">Free calculator</span>
   <h1 class="page-header-title">What does your<br><em>current laundry cost?</em></h1>
   <p class="page-header-sub">Compare in seconds the cost of running an in-house laundry against outsourcing to Arelia. No sign-up, no commitment.</p>
 </header>
@@ -877,7 +877,7 @@ function toggleMenu(){
         </label>
         <div class="calc-segmented" id="seg-tipo">
           <button data-val="hotel" class="active">Hotel</button>
-          <button data-val="al">Aloj. Local</button>
+          <button data-val="al">Holiday rental</button>
           <button data-val="clinica">Clinic</button>
         </div>
       </div>
@@ -885,7 +885,7 @@ function toggleMenu(){
       <div class="calc-field">
         <label class="calc-field-label">
           <span>Number of rooms / beds</span>
-          <span class="calc-field-value"><span id="v-quartos">40</span><span class="calc-field-value-suffix">unid.</span></span>
+          <span class="calc-field-value"><span id="v-quartos">40</span><span class="calc-field-value-suffix">units</span></span>
         </label>
         <input type="range" id="r-quartos" min="5" max="300" value="40" step="1"/>
         <div class="calc-range-marks"><span>5</span><span>300</span></div>
@@ -1002,17 +1002,17 @@ function toggleMenu(){
       </div>
       <div class="assumption-card">
         <div class="assumption-label">Detergents &amp; chemicals</div>
-        <div class="assumption-value">€0,17 / kg</div>
+        <div class="assumption-value">€0.17 / kg</div>
         <div class="assumption-desc">Average cost of main detergent, pre-wash, softener, oxygen bleach and descaler. Varies with the type of textile and how heavily soiled it is.</div>
       </div>
       <div class="assumption-card">
         <div class="assumption-label">Energy &amp; water</div>
-        <div class="assumption-value">€0,26 / kg</div>
+        <div class="assumption-value">€0.26 / kg</div>
         <div class="assumption-desc">Combined average consumption of electricity, gas (water heating) and mains water. Laundries running older equipment use up to 40% more.</div>
       </div>
       <div class="assumption-card">
         <div class="assumption-label">Equipment &amp; maintenance</div>
-        <div class="assumption-value">€0,16 / kg</div>
+        <div class="assumption-value">€0.16 / kg</div>
         <div class="assumption-desc">Depreciation of professional machines (washer, dryer, calender) over 7-10 years, plus preventive maintenance, spare parts and insurance.</div>
       </div>
       <div class="assumption-card">
@@ -1022,7 +1022,7 @@ function toggleMenu(){
       </div>
       <div class="assumption-card">
         <div class="assumption-label">Arelia &mdash; pricing</div>
-        <div class="assumption-value">Personalizado</div>
+        <div class="assumption-value">Custom</div>
         <div class="assumption-desc">Arelia’s price per kg varies with the monthly volume contracted, location and collection frequency. Every quote is one of a kind &mdash; and the typical saving falls between 20% and 35% against an in-house laundry.</div>
       </div>
     </div>
@@ -1109,7 +1109,7 @@ function toggleMenu(){
   };
 
   function fmt(n) {
-    return Math.round(n).toLocaleString('pt-PT');
+    return Math.round(n).toLocaleString('en-GB');
   }
 
   function recalculate() {
