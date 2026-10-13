@@ -1,6 +1,12 @@
 // Homepage. Nada aqui promete o renting de lencois nem o rastreio de pecas como
 // disponivel -- os dois continuam com badge de "Coming soon", tal como no PT.
 module.exports = {
+  "Peça uma proposta gratuita.":
+    "Ask for a free quote.",
+  "personalizada para o seu negócio.":
+    "built around your business.",
+  "Precisão em cada dobra.":
+    "Precision in every fold.",
   "Lençóis <em>ARELIA</em><br>no seu hotel.":
     "<em>ARELIA</em> bed linen<br>in your hotel.",
   // ── meta / titulo ──

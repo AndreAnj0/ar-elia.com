@@ -1,10 +1,18 @@
 // Artigo do custo de uma lavandaria interna. Os valores em euro ficam como
 // estao -- sao os mesmos numeros, nao se convertem nem arredondam na traducao.
 module.exports = {
-  'Quanta água se gasta por quilo, onde se perde e que medidas cortam mais — com os valores de referência do sector e o contexto de seca no Algarve.':
-    'How much water goes per kilo, where it is lost and which measures cut the most — with the sector’s reference figures and the Algarve drought as context.',
-  "900&nbsp;kWh/mês":
-    "900&nbsp;kWh/month",
+  "Quanta água se gasta por quilo, onde se perde e que medidas cortam mais — com os valores de referência do sector e o contexto de seca no Algarve.":
+    "How much water goes per kilo, where it is lost and which measures cut the most — with the sector’s reference figures and the Algarve drought as context.",
+  "Quanta água se gasta por quilo, onde se perde e que medidas cortam mais — com os valores de referência do sector e o contexto de seca no Algarve.":
+    "How much water goes per kilo, where it is lost and which measures cut the most — with the sector’s reference figures and the Algarve drought as context.",
+  "No Ano 1 soma-se o CAPEX inteiro (€&nbsp;120&nbsp;000) ao OPEX <strong>sem</strong> a linha da depreciação: €&nbsp;6&nbsp;360 × 12 = €&nbsp;76&nbsp;320. Contar as duas coisas seria pagar o equipamento duas vezes — a depreciação é esse mesmo CAPEX repartido por dez anos, e só faz sentido nos anos seguintes, em que o custo anual passa a ser o OPEX completo (€&nbsp;88&nbsp;320).":
+    "Year 1 adds the full CAPEX (€&nbsp;120&nbsp;000) to the OPEX <strong>without</strong> the depreciation line: €&nbsp;6&nbsp;360 × 12 = €&nbsp;76&nbsp;320. Counting both would be paying for the equipment twice — depreciation is that same CAPEX spread over ten years, and it only applies from year 2 onwards, when the annual cost becomes the full OPEX (€&nbsp;88&nbsp;320).",
+  "CAPEX + OPEX sem a depreciação":
+    "CAPEX + OPEX excluding depreciation",
+  "Compare em dois minutos o custo interno com o de externalizar, com as premissas &agrave; vista.":
+    "Compare the in-house cost against outsourcing in two minutes, with the assumptions on show.",
+  "O que cada sinal diz sobre o processo de lavagem, e o que verificar antes de comprar rouparia nova.":
+    "What each sign says about the wash process, and what to check before buying new linen.",
   "1&nbsp;462&nbsp;kWh/mês":
     "1,462&nbsp;kWh/month",
   "250&nbsp;kWh/mês":

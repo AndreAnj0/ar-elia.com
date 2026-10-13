@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://ar-elia.com/en/roi-calculator.html"/>
 <link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-roi.html"/>
 <link rel="alternate" hreflang="en" href="https://ar-elia.com/en/roi-calculator.html"/>
-<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-roi.html"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-roi.html"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ar-elia.com/en/roi-calculator.html"/>
 <meta property="og:title" content="ROI Calculator — Hotel Laundry | ARELIA"/>
@@ -760,6 +760,8 @@ footer {
 
 
 
+
+
 /* lang-switch:inicio */
 /* ── SELETOR DE IDIOMA ── */
 .lang-switch { display:flex; align-items:center; gap:5px; }
@@ -1131,7 +1133,12 @@ function toggleMenu(){
     const equipCost     = kgMonth * COST_EQUIPMENT_PER_KG * mult;
     const maintCost     = kgMonth * COST_MAINT_PER_KG * mult;
 
-    const totalInterna = laborCost + detergentCost + energyCost + equipCost + maintCost;
+    // Cada parcela é arredondada ao euro para ser mostrada. Se o total viesse
+    // da soma dos valores por arredondar, as parcelas no ecrã não batiam certo
+    // com ele — até 2 €de diferença numa ferramenta que se apresenta como
+    // transparente. O total passa a ser a soma do que está mesmo visível.
+    const parcelas = [laborCost, detergentCost, energyCost, equipCost, maintCost].map(Math.round);
+    const totalInterna = parcelas.reduce(function(a, b){ return a + b; }, 0);
 
     // Savings range (annual)
     const saveLowYear  = totalInterna * SAVINGS_LOW * 12;
@@ -1139,11 +1146,11 @@ function toggleMenu(){
 
     // ─── Render ───
     document.getElementById('out-interna').textContent = fmt(totalInterna);
-    document.getElementById('bd-mo').textContent = '€' + fmt(laborCost);
-    document.getElementById('bd-det').textContent = '€' + fmt(detergentCost);
-    document.getElementById('bd-en').textContent = '€' + fmt(energyCost);
-    document.getElementById('bd-eq').textContent = '€' + fmt(equipCost);
-    document.getElementById('bd-mnt').textContent = '€' + fmt(maintCost);
+    document.getElementById('bd-mo').textContent = '€' + fmt(parcelas[0]);
+    document.getElementById('bd-det').textContent = '€' + fmt(parcelas[1]);
+    document.getElementById('bd-en').textContent = '€' + fmt(parcelas[2]);
+    document.getElementById('bd-eq').textContent = '€' + fmt(parcelas[3]);
+    document.getElementById('bd-mnt').textContent = '€' + fmt(parcelas[4]);
 
     // FTE displays (both in breakdown and in insight)
     const fteText = fteDisplay(fteInfo.fte);

@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://ar-elia.com/en/"/>
 <link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/"/>
 <link rel="alternate" hreflang="en" href="https://ar-elia.com/en/"/>
-<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ar-elia.com/en/"/>
@@ -2125,6 +2125,8 @@ footer {
 }
 
 
+
+
 /* lang-switch:inicio */
 /* ── SELETOR DE IDIOMA ── */
 .lang-switch { display:flex; align-items:center; gap:5px; }
@@ -2228,10 +2230,7 @@ gtag('config', 'G-7SKWWCWMZV', {
 -->
 <div class="hero">
   <!-- Fallback image (mesma frame do video, fica visivel antes/se o video falhar) -->
-  <img class="hero-fallback"
-       src="../img/hero-frame.jpg"
-       alt="Arelia Industrial Laundry"
-       id="heroFallback"/>
+  <img class="hero-fallback" src="../img/hero-frame.jpg" alt="Arelia Industrial Laundry" id="heroFallback"/>
   <video class="hero-video" muted loop playsinline preload="none" id="heroVideo"
          poster="../img/hero-frame.jpg">
     <!-- src só é definido por JS em ecrãs grandes, para o telemóvel não descarregar 1,3 MB -->
@@ -2335,7 +2334,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     <span class="stat-sub">Rigour in every process</span>
   </div>
   <div class="stat reveal d2">
-    <span class="stat-num"><span id="s2">0</span>h</span>
+    <span class="stat-num"><span id="s2">24</span>h</span>
     <span class="stat-label">Maximum turnaround time</span>
     <span class="stat-sub">Collection &middot; Washing &middot; Return</span>
   </div>
@@ -2402,7 +2401,7 @@ gtag('config', 'G-7SKWWCWMZV', {
 
     <!-- CARD 1 — RECOLHA -->
     <div class="process-card reveal d1" data-tilt>
-      <div class="process-card-img"><img src="https://images.unsplash.com/photo-1601412436009-d964bd02edbc?w=900&q=80" alt="Collection of hotel linen for industrial laundry in the Algarve" loading="lazy"/></div>
+      <div class="process-card-img"><img src="../img/processo-recolha.webp" alt="Collection of hotel linen for industrial laundry in the Algarve" loading="lazy" width="900" height="1125" decoding="async"/></div>
       <div class="process-card-bg-num">01</div>
       <div class="process-card-top">
         <div class="process-card-step">Step 01</div>
@@ -2419,7 +2418,7 @@ gtag('config', 'G-7SKWWCWMZV', {
 
     <!-- CARD 2 — LAVAGEM -->
     <div class="process-card reveal d2" data-tilt>
-      <div class="process-card-img"><img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?w=900&q=80" alt="Industrial washing of hotel linen and towelling in the Algarve" loading="lazy"/></div>
+      <div class="process-card-img"><img src="../img/processo-lavagem.webp" alt="Industrial washing of hotel linen and towelling in the Algarve" loading="lazy" width="900" height="622" decoding="async"/></div>
       <div class="process-card-bg-num">02</div>
       <div class="process-card-top">
         <div class="process-card-step">Step 02</div>
@@ -2436,7 +2435,7 @@ gtag('config', 'G-7SKWWCWMZV', {
 
     <!-- CARD 3 — ACABAMENTO -->
     <div class="process-card reveal d3" data-tilt>
-      <div class="process-card-img"><img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=900&q=80" alt="Professional finishing and treatment of hotel textiles" loading="lazy"/></div>
+      <div class="process-card-img"><img src="../img/processo-acabamento.webp" alt="Professional finishing and treatment of hotel textiles" loading="lazy" width="900" height="600" decoding="async"/></div>
       <div class="process-card-bg-num">03</div>
       <div class="process-card-top">
         <div class="process-card-step">Step 03</div>
@@ -2453,7 +2452,7 @@ gtag('config', 'G-7SKWWCWMZV', {
 
     <!-- CARD 4 — ENTREGA -->
     <div class="process-card reveal d4" data-tilt>
-      <div class="process-card-img"><img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=900&q=80" alt="Delivery of clean linen to a hotel in the Algarve within 24 hours" loading="lazy"/></div>
+      <div class="process-card-img"><img src="../img/processo-entrega.webp" alt="Delivery of clean linen to a hotel in the Algarve within 24 hours" loading="lazy" width="900" height="675" decoding="async"/></div>
       <div class="process-card-bg-num">04</div>
       <div class="process-card-top">
         <div class="process-card-step">Step 04</div>
@@ -2474,10 +2473,12 @@ gtag('config', 'G-7SKWWCWMZV', {
 
 <!-- ═══ SHOWCASE — Brand Banner ═══ -->
 <section id="showcase">
-  <img class="showcase-img"
-       src="https://lh3.googleusercontent.com/d/1B_4xI5E2ta-qnSZD0mvpFCnEdZAd7LA1=s1600"
-       onerror="this.src='https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1000'"
-       alt="Arelia — Precision in every detail"/>
+  <!-- Esta imagem estava alojada no Google Drive e o ficheiro não está
+       partilhado publicamente: o pedido acabava em accounts.google.com/
+       ServiceLogin, por isso nenhum visitante via o banner — viam todos a
+       imagem de recurso do onerror. Passou a ser servida daqui. Para repor a
+       original, exportar do Drive e substituir o ficheiro. -->
+  <img class="showcase-img" src="../img/showcase-banner.webp" width="900" height="600" loading="lazy" decoding="async" alt="Arelia — Precision in every detail"/>
   <div class="showcase-content reveal-right">
     <span class="showcase-tag">Grounded in experience</span>
     <h2 class="showcase-title">Capacity <em>kept in check.</em><br>Attention at its highest.</h2>
@@ -2507,7 +2508,7 @@ gtag('config', 'G-7SKWWCWMZV', {
   </div>
   <div class="setores-grid">
     <div class="setor-card reveal d1">
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" alt="Industrial laundry for hotels and hospitality in the Algarve" loading="lazy"/>
+      <img src="../img/setor-hotelaria.webp" alt="Industrial laundry for hotels and hospitality in the Algarve" loading="lazy" width="900" height="600" decoding="async"/>
       <div class="setor-overlay">
         <span class="setor-num">01</span>
         <h3 class="setor-name">Hospitality</h3>
@@ -2515,7 +2516,7 @@ gtag('config', 'G-7SKWWCWMZV', {
       </div>
     </div>
     <div class="setor-card reveal d2">
-      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Laundry for holiday rentals and tourist apartments in the Algarve" loading="lazy"/>
+      <img src="../img/setor-alojamento-local.webp" alt="Laundry for holiday rentals and tourist apartments in the Algarve" loading="lazy" width="900" height="670" decoding="async"/>
       <div class="setor-overlay">
         <span class="setor-num">02</span>
         <h3 class="setor-name">Holiday Rentals</h3>
@@ -2523,7 +2524,7 @@ gtag('config', 'G-7SKWWCWMZV', {
       </div>
     </div>
     <div class="setor-card reveal d3">
-      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600" alt="Industrial laundry for clinics and spas in the Algarve" loading="lazy"/>
+      <img src="../img/setor-clinicas-spas.webp" alt="Industrial laundry for clinics and spas in the Algarve" loading="lazy" width="900" height="600" decoding="async"/>
       <div class="setor-overlay">
         <span class="setor-num">03</span>
         <h3 class="setor-name">Clinics & Spas</h3>
@@ -2619,13 +2620,15 @@ gtag('config', 'G-7SKWWCWMZV', {
     <div class="footer-col">
       <span class="footer-col-title">Company</span>
       <a class="footer-link" href="#sobre">About us</a>
-      <a class="footer-link" href="#" onclick="openModal();return false;">Request a quote</a>
+      <a class="footer-link" href="#contacto" onclick="openModal();return false;">Request a quote</a>
       <a class="footer-link" href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
   <div class="footer-areas">
     <span class="footer-areas-title">Areas served</span>
-    <p class="footer-areas-list">Industrial laundry in the Algarve · <a href="#contacto">Faro</a> · <a href="industrial-laundry-albufeira.html">Albufeira</a> · <a href="industrial-laundry-portimao.html">Portimão</a> · <a href="#contacto">Lagos</a> · <a href="industrial-laundry-vilamoura-quarteira.html">Vilamoura</a> · <a href="industrial-laundry-vilamoura-quarteira.html">Quarteira</a> · <a href="#contacto">Loulé</a> · <a href="#contacto">Tavira</a> · <a href="#contacto">Olhão</a> · <a href="#contacto">Silves</a> · <a href="#contacto">Armação de Pêra</a></p>
+    <!-- Só leva link a zona que tem mesmo página própria. Apontar as restantes
+         para #contacto prometia páginas que não existem. -->
+    <p class="footer-areas-list">Industrial laundry in the Algarve · Faro · <a href="industrial-laundry-albufeira.html">Albufeira</a> · <a href="industrial-laundry-portimao.html">Portimão</a> · Lagos · <a href="industrial-laundry-vilamoura-quarteira.html">Vilamoura</a> · <a href="industrial-laundry-vilamoura-quarteira.html">Quarteira</a> · <a href="industrial-laundry-vilamoura-quarteira.html">Loulé</a> · Tavira · Olhão · Silves · Armação de Pêra</p>
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">© 2026 Arelia · Industrial Laundry in the Algarve · All rights reserved</span>
@@ -2816,9 +2819,16 @@ function submitForm(){
 // ── COUNT-UP ──
 setTimeout(function(){
   // Count up the delivery-time stat
-  [{id:'s2',val:24}].forEach(function(t){
+  // O valor final está escrito no HTML, não aqui. O Google e os robôs das IAs
+  // não correm JavaScript: liam o valor inicial, e com "0" no HTML ficava
+  // indexado "0h — Maximum turnaround time", que contradiz tudo o resto.
+  // A animação apenas conta até ao valor que já lá está.
+  [{id:'s2'}].forEach(function(t){
     var el=document.getElementById(t.id);
     if(!el)return;
+    var val=parseInt(el.textContent,10);
+    if(!val)return;
+    t.val=val;
     var start=performance.now(),dur=1400;
     function tick(now){
       var p=Math.min((now-start)/dur,1),e=1-Math.pow(1-p,3);
