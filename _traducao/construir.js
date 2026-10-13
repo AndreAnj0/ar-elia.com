@@ -187,7 +187,12 @@ function paraEn(html, pag) {
 }
 
 // ── deteccao de portugues esquecido ──────────────────────────────────────────
-const MARCAS = /\b(não|são|está|também|após|até|você|nós|isso|para|pelo|pela|uma|dos|das|com|que|seu|sua|mais|como|quando|onde|porque|então|cada|entre|sobre|sem|pode|tem|foi|ser|ter|fazer|lavandaria|rouparia|lençóis|hotéis|serviço|preço|custo|água|empresa|cliente|qualidade|recolha|entrega|equipa|obrigado|aqui|ainda|já|muito|todo|toda|nosso|nossa|Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro|Leitura|sábado|domingo|têxtil|têxteis|operação|custos|sazonalidade|ferramenta|cobertura|poupança|pessoal|energia|manutenção|sustentabilidade)\b/giu;
+const MARCAS = /\b(não|são|está|também|após|até|você|nós|isso|para|pelo|pela|uma|dos|das|com|que|seu|sua|mais|como|quando|onde|porque|então|cada|entre|sobre|sem|pode|tem|foi|ser|ter|fazer|lavandaria|rouparia|lençóis|hotéis|serviço|preço|custo|água|empresa|cliente|qualidade|recolha|entrega|equipa|obrigado|aqui|ainda|já|muito|todo|toda|nosso|nossa|Janeiro|Fevereiro|Março|Abril|Maio|Junho|Julho|Agosto|Setembro|Outubro|Novembro|Dezembro|Leitura|sábado|domingo|têxtil|têxteis|operação|custos|sazonalidade|ferramenta|cobertura|poupança|pessoal|energia|manutenção|sustentabilidade|conselho|clientes|fornecedores|parceiros|servicos|serviços|início|inicio|contacto|artigos|guias|zona|região|regiao|apelido|amarelado|calandra|operada|processado|subscrever|personalizado|consultoria|comercial|conectar|consumo|temperatura|valor|transparência|destaque|mensal|telefone|morada|documento)\b/giu;
+// Só entram aqui palavras que NÃO existem em inglês. Já aqui estiveram
+// "volume", "legal", "board" e "newsletter", que se escrevem igual nas duas
+// línguas: enchiam o relatório de falsos positivos e tornavam-no inútil.
+// Esta lista é só a primeira rede. A que não tem pontos cegos é comparar o
+// texto PT com o EN e ver o que ficou igual — ver LEIA-ME.md.
 
 // URLs, emails e nomes de ficheiro dao falsos positivos (".com" casa com "com",
 // "lavandaria-hero.png" casa com "lavandaria"): saem antes da analise.

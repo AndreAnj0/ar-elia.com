@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://ar-elia.com/"/>
 <link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/"/>
 <link rel="alternate" hreflang="en" href="https://ar-elia.com/en/"/>
-<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ar-elia.com/"/>
@@ -1130,6 +1130,24 @@ img, video { max-width: 100%; }
   margin-bottom: 28px;
   opacity: 0.8;
 }
+/* ── Clientes e fornecedores em filas separadas ──
+   Duas filas estáticas em vez do carrossel: com dois logótipos de cada lado,
+   um loop infinito sugeria mais do que há. Tem de poder envolver no telemóvel,
+   senão o logótipo mais largo empurra a página para fora. */
+.clients-group + .clients-group { margin-top: 44px; }
+.clients-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 56px;
+  padding: 0 24px;
+}
+.clients-row .client-item { padding: 0; }
+@media (max-width: 640px) {
+  .clients-group + .clients-group { margin-top: 34px; }
+  .clients-row { gap: 14px 32px; }
+}
 .clients-track-wrap {
   position: relative;
   overflow: hidden;
@@ -2127,6 +2145,8 @@ footer {
 
 
 
+
+
 /* lang-switch:inicio */
 /* ── SELETOR DE IDIOMA ── */
 .lang-switch { display:flex; align-items:center; gap:5px; }
@@ -2288,40 +2308,34 @@ gtag('config', 'G-7SKWWCWMZV', {
 </div>
 
 
-<!-- ═══ CLIENTES (CARROSSEL) ═══ -->
+<!-- ═══ CLIENTES E FORNECEDORES ═══
+     Era um carrossel único rotulado "Parceiros" com hotéis e fornecedores
+     misturados: quem olhava não distinguia um cliente de um fornecedor de
+     químicos, e é o cliente que serve de prova. Com dois logótipos em cada
+     grupo, um carrossel em loop infinito também sugeria mais do que há —
+     passaram a duas filas estáticas e identificadas. O JS do carrossel sai
+     sozinho quando não encontra #clientsTrack. -->
 <section class="clients">
-  <div class="clients-label">Parceiros</div>
-  <div class="clients-track-wrap">
-    <div class="clients-track is-auto" id="clientsTrack">
-      <!-- Set 1 -->
+  <div class="clients-group">
+    <div class="clients-label">Clientes</div>
+    <div class="clients-row">
       <div class="client-item is-logo">
-        <img src="img/parceiro-ecolab.webp" alt="Ecolab" width="496" height="180"/>
-      </div>
-      <div class="client-item is-logo">
-        <img src="img/parceiro-lusiadagas.webp" alt="Lusiadag&aacute;s" width="1024" height="333"/>
+        <img src="img/parceiro-vilalara.webp" alt="Vilalara Grand Hotel Algarve" width="506" height="120" loading="lazy" decoding="async"/>
       </div>
       <div class="client-item is-logo">
-        <img src="img/parceiro-vilalara.webp" alt="Vilalara Grand Hotel Algarve" width="506" height="120"/>
+        <img src="img/parceiro-albufeira-inn.webp" alt="Albufeira Inn" width="254" height="120" loading="lazy" decoding="async"/>
+      </div>
+    </div>
+  </div>
+  <div class="clients-group">
+    <div class="clients-label">Fornecedores</div>
+    <div class="clients-row">
+      <div class="client-item is-logo">
+        <img src="img/parceiro-ecolab.webp" alt="Ecolab" width="496" height="180" loading="lazy" decoding="async"/>
       </div>
       <div class="client-item is-logo">
-        <img src="img/parceiro-albufeira-inn.webp" alt="Albufeira Inn" width="254" height="120"/>
+        <img src="img/parceiro-lusiadagas.webp" alt="Lusiadag&aacute;s" width="1024" height="333" loading="lazy" decoding="async"/>
       </div>
-      <div class="client-item is-placeholder"></div>
-      <!-- Set 2 (duplicado para o loop infinito — tem de ser igual ao Set 1,
-           porque a animação e o JS assumem metades idênticas) -->
-      <div class="client-item is-logo" aria-hidden="true">
-        <img src="img/parceiro-ecolab.webp" alt="" width="496" height="180"/>
-      </div>
-      <div class="client-item is-logo" aria-hidden="true">
-        <img src="img/parceiro-lusiadagas.webp" alt="" width="1024" height="333"/>
-      </div>
-      <div class="client-item is-logo" aria-hidden="true">
-        <img src="img/parceiro-vilalara.webp" alt="" width="506" height="120"/>
-      </div>
-      <div class="client-item is-logo" aria-hidden="true">
-        <img src="img/parceiro-albufeira-inn.webp" alt="" width="254" height="120"/>
-      </div>
-      <div class="client-item is-placeholder" aria-hidden="true"></div>
     </div>
   </div>
 </section>

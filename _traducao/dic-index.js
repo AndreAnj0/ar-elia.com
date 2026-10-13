@@ -1,6 +1,8 @@
 // Homepage. Nada aqui promete o renting de lencois nem o rastreio de pecas como
 // disponivel -- os dois continuam com badge de "Coming soon", tal como no PT.
 module.exports = {
+  '<div class="clients-label">Clientes</div>': '<div class="clients-label">Clients</div>',
+  '<div class="clients-label">Fornecedores</div>': '<div class="clients-label">Suppliers</div>',
   "Peça uma proposta gratuita.":
     "Ask for a free quote.",
   "personalizada para o seu negócio.":
