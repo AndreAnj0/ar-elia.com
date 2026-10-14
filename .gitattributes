@@ -1,0 +1,12 @@
+# Os ficheiros sao escritos ora pelo editor (CRLF, Windows) ora pelos scripts
+# do _traducao (LF). Sem isto, o Git via o ficheiro inteiro como alterado de
+# cada vez que o outro lhe tocava, e um diff de duas linhas aparecia como duas
+# mil. Fixa-se LF para tudo o que e texto; as imagens ficam binarias.
+* text=auto eol=lf
+
+*.webp binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.ico  binary
+*.mp4  binary
