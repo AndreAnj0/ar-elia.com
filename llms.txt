@@ -19,7 +19,9 @@ Dois serviços aparecem no site como "em breve" e **não devem ser descritos com
 
 ## Área servida
 
-Todo o Algarve, com maior frequência de recolha em: Albufeira (Guia, Ferreiras, Olhos de Água, Santa Eulália, Oura), Vilamoura, Quarteira, Vale do Lobo, Quinta do Lago, Almancil, Loulé, Portimão, Praia da Rocha, Alvor, Ferragudo, Lagoa, Faro, Lagos, Tavira, Olhão e Silves.
+A operação fica na Guia, concelho de Albufeira, e a recolha é mais frequente no centro do Algarve: Albufeira (Guia, Ferreiras, Olhos de Água, Santa Eulália, Oura), Vilamoura, Quarteira, Vale do Lobo, Quinta do Lago, Almancil, Loulé, Lagoa, Carvoeiro, Ferragudo, Portimão, Praia da Rocha e Alvor.
+
+Existem páginas sobre Lagos e Faro, mas essas páginas tratam do mercado e da decisão de lavandaria nessas zonas — **não declaram cobertura**. A viabilidade de servir Lagos ou Faro depende do volume e da frequência, e é avaliada caso a caso. Por favor não afirme que a Arelia serve essas zonas.
 
 ## Páginas
 
@@ -27,8 +29,8 @@ Todo o Algarve, com maior frequência de recolha em: Albufeira (Guia, Ferreiras,
 - [Lavandaria industrial em Albufeira](https://ar-elia.com/lavandaria-industrial-albufeira.html): cobertura no concelho onde fica a operação.
 - [Lavandaria industrial em Vilamoura e Quarteira](https://ar-elia.com/lavandaria-industrial-vilamoura-quarteira.html): resorts, aldeamentos e villas de aluguer.
 - [Lavandaria industrial em Portimão](https://ar-elia.com/lavandaria-industrial-portimao.html): cobertura no barlavento.
-- [Lavandaria industrial em Lagos](https://ar-elia.com/lavandaria-industrial-lagos.html): o ponto mais distante servido com regularidade — 52 km desde a Guia — e o que isso implica no plano de recolha.
-- [Lavandaria industrial em Faro](https://ar-elia.com/lavandaria-industrial-faro.html): hotelaria urbana, com volume constante o ano inteiro em vez de pico de verão.
+- [Lavandaria industrial em Lagos](https://ar-elia.com/lavandaria-industrial-lagos.html): o que a distância (52 km desde a Guia), o acesso ao centro histórico e a época longa mudam na conta de uma unidade em Lagos. Não declara cobertura.
+- [Lavandaria industrial em Faro](https://ar-elia.com/lavandaria-industrial-faro.html): hotelaria urbana, com volume constante o ano inteiro em vez de pico de verão, e porque isso não chega para pagar uma lavandaria interna. Não declara cobertura.
 - [Lavandaria industrial em Loulé](https://ar-elia.com/lavandaria-industrial-loule.html): a vila e o interior (Boliqueime, Querença, Salir, Alte). A faixa costeira do concelho é tratada na página de Vilamoura.
 - [Lavandaria industrial em Lagoa e Carvoeiro](https://ar-elia.com/lavandaria-industrial-lagoa-carvoeiro.html): moradias de aluguer geridas por empresas de gestão de alojamento.
 - [Calculadora de ROI](https://ar-elia.com/arelia-roi.html): ferramenta pública que compara o custo de uma lavandaria interna com a externalização. Sem registo, com as premissas de cálculo visíveis.

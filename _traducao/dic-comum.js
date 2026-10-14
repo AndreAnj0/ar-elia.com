@@ -28,7 +28,7 @@ module.exports = {
   // ── rodape ──
   'Navegação': 'Navigation',
   'Empresa': 'Company',
-  'Zonas servidas': 'Areas served',
+  'O Algarve, zona a zona': 'The Algarve, area by area',
   'Lavandaria industrial no Algarve ·': 'Industrial laundry in the Algarve ·',
   'Política de privacidade': 'Privacy policy',
   'Política de Privacidade': 'Privacy Policy',

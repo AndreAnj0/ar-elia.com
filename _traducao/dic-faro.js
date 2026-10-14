@@ -1,13 +1,16 @@
+// Faro: tal como Lagos, a pagina NAO afirma cobertura. Fala do mercado urbano
+// e da conta, e o CTA convida a falar. A traducao mantem isso -- nada de
+// "we serve Faro", que seria prometer o que ainda nao se cumpre.
 module.exports = Object.assign({}, require('./dic-geo-comum.js'), {
   'Lavandaria Industrial em Faro para Hotéis | ARELIA':
     'Industrial Laundry in Faro for Hotels | ARELIA',
-  'Lavandaria industrial para hotelaria urbana, alojamento local e restauração em Faro, Montenegro e Gambelas. Recolha e entrega em até 24 horas.':
-    'Industrial laundry for city hotels, holiday rentals and restaurants in Faro, Montenegro and Gambelas. Collection and delivery within 24 hours.',
+  'Hotelaria urbana em Faro: volume constante o ano inteiro, estadias curtas e pouco espaço de rouparia. O que isso muda na conta de uma lavandaria.':
+    'City hotels in Faro: steady volume all year, short stays and little linen storage. What that changes in the sums for a laundry.',
   'lavandaria industrial faro, lavandaria hoteis faro, lavandaria restauracao faro, lavandaria alojamento local faro, lavandaria hotelaria algarve':
     'industrial laundry faro, hotel laundry faro, restaurant laundry faro, holiday rental laundry faro, hospitality laundry algarve',
   'Faro · Capital do Algarve': 'Faro · Algarve capital',
-  'Hotelaria urbana, alojamento local e restauração em Faro, Montenegro, Gambelas e envolvente. Recolha e entrega em até 24 horas.':
-    'City hotels, holiday rentals and restaurants in Faro, Montenegro, Gambelas and the surrounding area. Collection and delivery within 24 hours.',
+  'O que muda na rouparia de uma unidade urbana em Faro, Montenegro ou Gambelas — e porque é que a conta não é a mesma do litoral.':
+    'What changes in the linen of a city property in Faro, Montenegro or Gambelas — and why the sums are not the coast’s.',
 
   'Faro não é um destino de praia. <em>A rouparia dá por isso.</em>':
     'Faro is not a beach destination. <em>The linen can tell.</em>',
@@ -20,8 +23,6 @@ module.exports = Object.assign({}, require('./dic-geo-comum.js'), {
   'Faro — baixa, Vila Adentro e zona ribeirinha': 'Faro — centre, Vila Adentro and the waterfront',
   'Montenegro e envolvente do aeroporto': 'Montenegro and the area around the airport',
   'Gambelas e Penha': 'Gambelas and Penha',
-  'A cobertura estende-se ao restante concelho de Faro e ao sotavento.':
-    'Coverage extends across the rest of the Faro municipality and the eastern Algarve.',
 
   'O que muda numa <em>unidade urbana</em>': 'What changes at a <em>city property</em>',
   'Um hotel de cidade tem menos área de serviço do que um resort com o mesmo número de quartos. O espaço vale demasiado para ser rouparia, e por isso o stock de reserva é pequeno. Quando a entrega falha, não há armário que absorva a falha — nota-se no mesmo dia.':
@@ -44,16 +45,20 @@ module.exports = Object.assign({}, require('./dic-geo-comum.js'), {
   'A que distância fica a Arelia de Faro?': 'How far is Arelia from Faro?',
   'A operação está na Guia, concelho de Albufeira: são 42 km pela A22, cerca de 35 minutos.':
     'The operation is in Guia, in the Albufeira municipality: 42 km on the A22, about 35 minutes.',
-  'Servem alojamento local na baixa de Faro?': 'Do you serve holiday rentals in central Faro?',
-  'Sim. Servimos hotéis, hotéis boutique, alojamento local e restauração no concelho de Faro.':
-    'Yes. We serve hotels, boutique hotels, holiday rentals and restaurants across the Faro municipality.',
+  'Porque é que a conta de Faro não é a do litoral?':
+    'Why are the sums in Faro not the coast’s?',
+  'No litoral o argumento contra a lavandaria interna é o pico de verão. Em Faro o volume é estável — mas é pequeno, e continua abaixo do ponto de equilíbrio a partir do qual comprar máquinas se paga.':
+    'On the coast the argument against an in-house laundry is the summer peak. In Faro the volume is steady — but it is small, and still below the break-even at which buying machines pays for itself.',
   'A nossa unidade tem pouca área de rouparia. Isso é problema?':
     'Our property has very little linen storage. Is that a problem?',
-  'É precisamente onde a frequência de recolha conta mais do que o volume. Quanto menor for o stock de reserva, mais apertada tem de ser a frequência — e isso define-se na proposta.':
-    'That is exactly where collection frequency matters more than volume. The smaller the reserve stock, the tighter the frequency has to be — and that is set out in the quote.',
-  'Trabalham com restauração?': 'Do you work with restaurants?',
-  'Sim: toalhas de mesa, panos de serviço e fardamentos de sala e cozinha.':
-    'Yes: table linen, service cloths and front-of-house and kitchen uniforms.',
+  'É onde a frequência de recolha conta mais do que o volume. Quanto menor for o stock de reserva, mais apertada tem de ser a frequência — e é isso que uma proposta tem de resolver.':
+    'It is where collection frequency matters more than volume. The smaller the reserve stock, the tighter the frequency has to be — and that is what a quote has to solve.',
+  'Tenho uma unidade em Faro. Como avanço?': 'I have a property in Faro. What is the next step?',
+  'Diga-nos o volume aproximado, o tipo de unidade e a frequência de que precisa. Respondemos com o que é possível fazer e em que condições.':
+    'Tell us your rough volume, the type of property and the frequency you need. We will come back with what is possible and on what terms.',
 
-  'Uma proposta para<br><em>Faro.</em>': 'A quote for<br><em>Faro.</em>',
+  'Tem uma unidade em<br><em>Faro?</em>': 'Have a property in<br><em>Faro?</em>',
+  'Diga-nos o volume aproximado e o tipo de unidade. Respondemos com o que é possível fazer e em que condições.':
+    'Tell us your rough volume and the type of property. We will come back with what is possible and on what terms.',
+  'Falar connosco': 'Talk to us',
 });
