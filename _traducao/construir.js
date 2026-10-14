@@ -12,6 +12,7 @@ const SP = __dirname;
 const PAGINAS = [
   { pt: 'index.html',                                     en: 'index.html',                                dic: 'index' },
   { pt: 'equipa.html',                                    en: 'team.html',                                 dic: 'equipa' },
+  { pt: 'sobre.html',                                        en: 'about.html',                                dic: 'sobre' },
   { pt: 'arelia-roi.html',                                en: 'roi-calculator.html',                       dic: 'roi' },
   { pt: 'arelia-recursos.html',                           en: 'resources.html',                            dic: 'recursos' },
   { pt: 'lavandaria-industrial-albufeira.html',           en: 'industrial-laundry-albufeira.html',         dic: 'albufeira' },

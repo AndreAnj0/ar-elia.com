@@ -2,6 +2,7 @@
 // formulario de contacto. Ingles britanico -- o mercado que isto serve
 // (Vale do Lobo, Quinta do Lago, Vilamoura) e maioritariamente britanico e irlandes.
 module.exports = {
+  'A Arelia em factos': 'Arelia in facts',
   // ── navegacao ──
   'Como funciona': 'How it works',
   'Como Funciona': 'How It Works',
