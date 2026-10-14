@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://ar-elia.com/"/>
 <link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/"/>
 <link rel="alternate" hreflang="en" href="https://ar-elia.com/en/"/>
-<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
 
 
 
@@ -1109,48 +1109,78 @@ img, video { max-width: 100%; }
 
 /* ── CLIENTS CAROUSEL ── */
 .clients {
-  background:
-    radial-gradient(ellipse at center top, rgba(22, 42, 64, 0.45) 0%, transparent 60%),
-    var(--navy);
-  padding: 48px 0 52px;
+  background: var(--navy);
+  padding: 20px 0 22px;
   overflow: hidden;
   position: relative;
-}
-.clients::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 48px; height: 1px;
-  background: var(--gold);
-  opacity: 0.45;
+  border-top: 1px solid rgba(196, 168, 106, 0.13);
+  border-bottom: 1px solid rgba(196, 168, 106, 0.13);
 }
 .clients-label {
-  text-align: center;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 9.5px; font-weight: 500;
-  letter-spacing: 4.5px; text-transform: uppercase;
+  font-size: 8.5px; font-weight: 500;
+  letter-spacing: 3px; text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 28px;
-  opacity: 0.8;
+  opacity: 0.55;
+  white-space: nowrap;
 }
-/* ── Clientes e fornecedores em filas separadas ──
+/* ── Clientes e fornecedores numa faixa discreta ──
    Duas filas estáticas em vez do carrossel: com dois logótipos de cada lado,
-   um loop infinito sugeria mais do que há. Tem de poder envolver no telemóvel,
-   senão o logótipo mais largo empurra a página para fora. */
-.clients-group + .clients-group { margin-top: 44px; }
+   um loop infinito sugeria mais do que há. E não é um destaque — é um detalhe
+   entre o showcase e os números, por isso o rótulo fica à esquerda dos
+   logótipos (não por cima) e tudo cabe numa só linha em ecrã largo.
+   Tem de poder envolver no telemóvel, senão o logótipo mais largo empurra a
+   página para fora. */
+.clients-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 46px;
+  padding: 0 24px;
+}
+.clients-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+/* Fio vertical entre os dois grupos. É o primeiro item flex do segundo
+   grupo, por isso desaparece sozinho quando os grupos deixam de caber
+   lado a lado e passam a linhas separadas. */
+.clients-group + .clients-group::before {
+  content: '';
+  width: 1px; height: 18px;
+  background: rgba(196, 168, 106, 0.2);
+  margin-right: 28px;
+}
 .clients-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 16px 56px;
-  padding: 0 24px;
+  gap: 8px 26px;
+  padding: 0;
 }
-.clients-row .client-item { padding: 0; }
+.clients-row .client-item {
+  padding: 0;
+  height: 28px;
+}
+/* O ponto separador do carrossel encostava ao logótipo nesta escala. */
+.clients-row .client-item::after { display: none; }
+.clients-row .client-item.is-logo img { height: 21px; opacity: 0.5; }
+.clients-row .client-item.is-logo img[src*="danube"] { height: 16px; }
+.clients-row .client-item.is-logo:hover img { opacity: 0.85; transform: none; }
+@media (max-width: 860px) {
+  .clients-inner { gap: 14px 0; }
+  .clients-group { width: 100%; justify-content: center; }
+  .clients-group + .clients-group::before { display: none; }
+}
 @media (max-width: 640px) {
-  .clients-group + .clients-group { margin-top: 34px; }
-  .clients-row { gap: 14px 32px; }
+  .clients { padding: 18px 0 20px; }
+  .clients-group { gap: 12px; flex-wrap: wrap; }
+  .clients-row { gap: 6px 20px; }
+  .clients-row .client-item.is-logo img { height: 18px; }
+  .clients-row .client-item.is-logo img[src*="danube"] { height: 14px; }
 }
 .clients-track-wrap {
   position: relative;
@@ -2158,6 +2188,14 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
 /* lang-switch:inicio */
 /* ── SELETOR DE IDIOMA ── */
 .lang-switch { display:flex; align-items:center; gap:5px; }
@@ -2351,8 +2389,13 @@ gtag('config', 'G-7SKWWCWMZV', {
      químicos, e é o cliente que serve de prova. Com dois logótipos em cada
      grupo, um carrossel em loop infinito também sugeria mais do que há —
      passaram a duas filas estáticas e identificadas. O JS do carrossel sai
-     sozinho quando não encontra #clientsTrack. -->
+     sozinho quando não encontra #clientsTrack.
+
+     Isto não é um destaque: é uma nota de rodapé entre duas secções que sim
+     o são. Por isso é uma faixa única e baixa, com o rótulo ao lado dos
+     logótipos em vez de por cima, sem gradiente de holofote. -->
 <section class="clients">
+ <div class="clients-inner">
   <div class="clients-group">
     <div class="clients-label">Trabalhamos com</div>
     <div class="clients-row">
@@ -2381,6 +2424,7 @@ gtag('config', 'G-7SKWWCWMZV', {
       </div>
     </div>
   </div>
+ </div>
 </section>
 
 <!-- ═══ STATS ═══ -->
