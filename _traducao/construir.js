@@ -72,6 +72,55 @@ function seletor(lang, hrefPt, hrefEn, movel) {
 // o que ele proprio injecta sai primeiro, senao a segunda passagem duplica o
 // hreflang e o seletor -- e o seletor herdado do PT fica com o PT marcado como
 // idioma actual numa pagina inglesa.
+// ── botao flutuante de WhatsApp ──────────────────────────────────────────────
+// Governantas e gestores de alojamento local respondem no WhatsApp e nao no
+// email. O botao e injectado aqui, e nao escrito a mao, para nao haver 24
+// copias para manter.
+const WA_INICIO = '/* wa-fab:inicio */';
+const WA_FIM = '/* wa-fab:fim */';
+const WA_NUMERO = '351925263365';
+const WA_CSS = `
+${WA_INICIO}
+.wa-fab {
+  position: fixed; z-index: 9998;
+  right: 24px; bottom: 24px;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 20px 14px 16px;
+  background: #25D366; color: #0B141A;
+  border-radius: 999px; text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: .6px;
+  box-shadow: 0 10px 30px -8px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08);
+  transition: transform .25s, box-shadow .25s, opacity .25s;
+}
+.wa-fab:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -10px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.14); }
+.wa-fab:focus-visible { outline: 3px solid var(--gold, #C4A86A); outline-offset: 3px; }
+.wa-fab svg { width: 22px; height: 22px; fill: currentColor; flex-shrink: 0; }
+/* O banner de cookies ocupa o fundo do ecra e taparia o botao no telemovel.
+   Enquanto estiver a vista, o botao sai da frente: e um passo unico. */
+body:has(.arelia-cb.visible) .wa-fab { opacity: 0; pointer-events: none; transform: translateY(10px); }
+@media (max-width: 640px) {
+  .wa-fab { right: 16px; bottom: 16px; padding: 14px; gap: 0; }
+  .wa-fab .wa-fab-text { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .wa-fab { transition: none; } }
+${WA_FIM}
+`;
+
+function fabWhatsApp(lang) {
+  const en = lang === 'en';
+  const msg = en
+    ? 'Hello! I would like to ask for a quote for my property.'
+    : 'Olá! Gostaria de pedir uma proposta para a minha unidade.';
+  const rotulo = en ? 'Talk to us on WhatsApp' : 'Falar connosco no WhatsApp';
+  const href = `https://wa.me/${WA_NUMERO}?text=${encodeURIComponent(msg)}`;
+  return `<a class="wa-fab" href="${href}" target="_blank" rel="noopener"` +
+    ` aria-label="${rotulo}" data-wa` +
+    ` onclick="try{if(typeof gtag==='function')gtag('event','whatsapp_click',{link_url:this.href});}catch(e){}">` +
+    `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.34M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41"/></svg>` +
+    `<span class="wa-fab-text">WhatsApp</span></a>`;
+}
+
 function limpar(html) {
   html = html
     .replace(/\n?<link rel="alternate" hreflang="[^"]*" href="[^"]*"\/?>/g, '')
@@ -84,6 +133,15 @@ function limpar(html) {
     if (j === -1) throw new Error('marcador de fim do CSS em falta — ficheiro corrompido');
     html = html.slice(0, i).replace(/\n+$/, '\n') + html.slice(j + CSS_FIM.length).replace(/^\n+/, '');
   }
+  // o mesmo para o botao de WhatsApp: CSS entre marcadores, e o <a> inteiro
+  for (;;) {
+    const i = html.indexOf(WA_INICIO);
+    if (i === -1) break;
+    const j = html.indexOf(WA_FIM, i);
+    if (j === -1) throw new Error('marcador de fim do CSS do WhatsApp em falta');
+    html = html.slice(0, i).replace(/\n+$/, '\n') + html.slice(j + WA_FIM.length).replace(/^\n+/, '');
+  }
+  html = html.replace(/\s*<a class="wa-fab"[\s\S]*?<\/a>/g, '');
   return html;
 }
 
@@ -100,6 +158,18 @@ function injetar(html, lang, hrefPt, hrefEn) {
   // drawer: no fim do bloco
   html = html.replace(/(<div class="mobile-drawer"[\s\S]*?)(\n<\/div>)/,
     (m, corpo, fecho) => corpo + '\n  ' + seletor(lang, hrefPt, hrefEn, true) + fecho);
+
+  // WhatsApp: CSS no mesmo <style>, botao mesmo antes de </body>
+  if (!html.includes(WA_INICIO)) {
+    const i = html.indexOf('</style>');
+    if (i === -1) throw new Error('sem <style> onde por o CSS do WhatsApp');
+    html = html.slice(0, i) + WA_CSS + html.slice(i);
+  }
+  if (!html.includes('class="wa-fab"')) {
+    const b = html.lastIndexOf('</body>');
+    if (b === -1) throw new Error('sem </body> onde por o botao de WhatsApp');
+    html = html.slice(0, b) + fabWhatsApp(lang) + '\n' + html.slice(b);
+  }
   return html;
 }
 
@@ -274,6 +344,28 @@ for (const pag of PAGINAS) {
   h = injetar(h, 'pt', '/' + (pag.pt === 'index.html' ? '' : pag.pt), '/en/' + (pag.en === 'index.html' ? '' : pag.en));
   if (h !== antes) { fs.writeFileSync(f, h); console.log('  ✓ ' + pag.pt); }
   else console.log('  · ' + pag.pt + ' (ja tinha)');
+}
+
+// O 404 nao esta em PAGINAS porque nao tem irma inglesa -- o GitHub Pages serve
+// este mesmo ficheiro para os 404 de /en/, e por isso a pagina e bilingue. Nao
+// leva seletor de idioma (nao ha para onde trocar), mas leva o botao de
+// WhatsApp: quem cai aqui esta perdido e e quem mais precisa de falar connosco.
+{
+  const f = path.join(RAIZ, '404.html');
+  if (fs.existsSync(f)) {
+    const antes = fs.readFileSync(f, 'utf8');
+    let h = limpar(antes);
+    if (!h.includes(WA_INICIO)) {
+      const i = h.indexOf('</style>');
+      if (i !== -1) h = h.slice(0, i) + WA_CSS + h.slice(i);
+    }
+    if (!h.includes('class="wa-fab"')) {
+      const b = h.lastIndexOf('</body>');
+      if (b !== -1) h = h.slice(0, b) + fabWhatsApp('pt') + '\n' + h.slice(b);
+    }
+    if (h !== antes) { fs.writeFileSync(f, h); console.log('  ✓ 404.html (só WhatsApp)'); }
+    else console.log('  · 404.html (ja tinha)');
+  }
 }
 
 console.log(erros ? `\nFALTA TRADUZIR: ${erros} ocorrencias` : '\nSem restos de portugues.');
