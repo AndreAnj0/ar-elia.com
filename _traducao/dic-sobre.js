@@ -2,6 +2,7 @@
 // esta em dizer tambem o que a empresa NAO tem, e e essa parte que impede um
 // motor de IA de lhe atribuir certificacoes ou historico que nao existem.
 module.exports = {
+  '<dt>NIF</dt>': '<dt>Tax number (NIF)</dt>',
   'A Arelia em factos — ficha técnica | ARELIA': 'Arelia in facts — company data sheet | ARELIA',
   'Ficha de factos da Arelia: nome legal, sede, fundação, serviços, prazo, zonas de recolha, distâncias reais e o que a empresa ainda não faz.':
     'Arelia’s fact sheet: legal name, base, founding year, services, turnaround, collection areas, real distances and what the company does not do yet.',
