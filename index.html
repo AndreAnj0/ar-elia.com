@@ -1110,7 +1110,7 @@ img, video { max-width: 100%; }
 /* ── CLIENTS CAROUSEL ── */
 .clients {
   background: var(--navy);
-  padding: 20px 0 22px;
+  padding: 10px 0 11px;
   overflow: hidden;
   position: relative;
   border-top: 1px solid rgba(196, 168, 106, 0.13);
@@ -1118,10 +1118,10 @@ img, video { max-width: 100%; }
 }
 .clients-label {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 8.5px; font-weight: 500;
-  letter-spacing: 3px; text-transform: uppercase;
+  font-size: 8px; font-weight: 500;
+  letter-spacing: 2.6px; text-transform: uppercase;
   color: var(--gold);
-  opacity: 0.55;
+  opacity: 0.5;
   white-space: nowrap;
 }
 /* ── Clientes e fornecedores numa faixa discreta ──
@@ -1136,51 +1136,52 @@ img, video { max-width: 100%; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 12px 46px;
-  padding: 0 24px;
+  gap: 9px 34px;
+  padding: 0 20px;
 }
 .clients-group {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 13px;
 }
 /* Fio vertical entre os dois grupos. É o primeiro item flex do segundo
    grupo, por isso desaparece sozinho quando os grupos deixam de caber
    lado a lado e passam a linhas separadas. */
 .clients-group + .clients-group::before {
   content: '';
-  width: 1px; height: 18px;
+  width: 1px; height: 13px;
   background: rgba(196, 168, 106, 0.2);
-  margin-right: 28px;
+  margin-right: 20px;
 }
 .clients-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px 26px;
+  gap: 6px 22px;
   padding: 0;
 }
 .clients-row .client-item {
   padding: 0;
-  height: 28px;
+  height: 22px;
 }
 /* O ponto separador do carrossel encostava ao logótipo nesta escala. */
 .clients-row .client-item::after { display: none; }
-.clients-row .client-item.is-logo img { height: 21px; opacity: 0.5; }
-.clients-row .client-item.is-logo img[src*="danube"] { height: 16px; }
+.clients-row .client-item.is-logo img { height: 17px; opacity: 0.5; }
+.clients-row .client-item.is-logo img[src*="danube"] { height: 13px; }
 .clients-row .client-item.is-logo:hover img { opacity: 0.85; transform: none; }
 @media (max-width: 860px) {
-  .clients-inner { gap: 14px 0; }
+  .clients-inner { gap: 8px 0; }
   .clients-group { width: 100%; justify-content: center; }
   .clients-group + .clients-group::before { display: none; }
 }
 @media (max-width: 640px) {
-  .clients { padding: 18px 0 20px; }
-  .clients-group { gap: 12px; flex-wrap: wrap; }
-  .clients-row { gap: 6px 20px; }
-  .clients-row .client-item.is-logo img { height: 18px; }
-  .clients-row .client-item.is-logo img[src*="danube"] { height: 14px; }
+  .clients { padding: 9px 0 10px; }
+  .clients-group { gap: 10px; flex-wrap: wrap; }
+  .clients-row { gap: 5px 16px; }
+  .clients-row .client-item { height: 20px; }
+  .clients-row .client-item.is-logo img { height: 15px; }
+  .clients-row .client-item.is-logo img[src*="danube"] { height: 11px; }
 }
 .clients-track-wrap {
   position: relative;
@@ -2176,6 +2177,10 @@ footer {
       transparent 100%);
   }
 }
+
+
+
+
 
 
 
