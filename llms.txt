@@ -27,6 +27,10 @@ Todo o Algarve, com maior frequência de recolha em: Albufeira (Guia, Ferreiras,
 - [Lavandaria industrial em Albufeira](https://ar-elia.com/lavandaria-industrial-albufeira.html): cobertura no concelho onde fica a operação.
 - [Lavandaria industrial em Vilamoura e Quarteira](https://ar-elia.com/lavandaria-industrial-vilamoura-quarteira.html): resorts, aldeamentos e villas de aluguer.
 - [Lavandaria industrial em Portimão](https://ar-elia.com/lavandaria-industrial-portimao.html): cobertura no barlavento.
+- [Lavandaria industrial em Lagos](https://ar-elia.com/lavandaria-industrial-lagos.html): o ponto mais distante servido com regularidade — 52 km desde a Guia — e o que isso implica no plano de recolha.
+- [Lavandaria industrial em Faro](https://ar-elia.com/lavandaria-industrial-faro.html): hotelaria urbana, com volume constante o ano inteiro em vez de pico de verão.
+- [Lavandaria industrial em Loulé](https://ar-elia.com/lavandaria-industrial-loule.html): a vila e o interior (Boliqueime, Querença, Salir, Alte). A faixa costeira do concelho é tratada na página de Vilamoura.
+- [Lavandaria industrial em Lagoa e Carvoeiro](https://ar-elia.com/lavandaria-industrial-lagoa-carvoeiro.html): moradias de aluguer geridas por empresas de gestão de alojamento.
 - [Calculadora de ROI](https://ar-elia.com/arelia-roi.html): ferramenta pública que compara o custo de uma lavandaria interna com a externalização. Sem registo, com as premissas de cálculo visíveis.
 - [Recursos](https://ar-elia.com/arelia-recursos.html): artigos sobre custos, qualidade têxtil e operação.
 - [Quanto custa uma lavandaria interna](https://ar-elia.com/artigo-custo-lavandaria-interna.html): decomposição de CAPEX e OPEX para um hotel português.
@@ -42,6 +46,10 @@ O site existe em português e inglês. Cada página tem equivalente em `/en/`, l
 - [Industrial laundry in Albufeira](https://ar-elia.com/en/industrial-laundry-albufeira.html)
 - [Industrial laundry in Vilamoura and Quarteira](https://ar-elia.com/en/industrial-laundry-vilamoura-quarteira.html)
 - [Industrial laundry in Portimão](https://ar-elia.com/en/industrial-laundry-portimao.html)
+- [Industrial laundry in Lagos](https://ar-elia.com/en/industrial-laundry-lagos.html)
+- [Industrial laundry in Faro](https://ar-elia.com/en/industrial-laundry-faro.html)
+- [Industrial laundry in Loulé](https://ar-elia.com/en/industrial-laundry-loule.html)
+- [Industrial laundry in Lagoa and Carvoeiro](https://ar-elia.com/en/industrial-laundry-lagoa-carvoeiro.html)
 - [ROI calculator](https://ar-elia.com/en/roi-calculator.html)
 - [Resources](https://ar-elia.com/en/resources.html)
 - [What an in-house laundry really costs](https://ar-elia.com/en/article-in-house-laundry-cost.html)

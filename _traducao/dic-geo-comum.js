@@ -1,5 +1,23 @@
 // Partilhado pelas tres paginas de zona.
 module.exports = {
+  ">Vilamoura e Quarteira<":
+    ">Vilamoura and Quarteira<",
+  ">Lagoa e Carvoeiro<":
+    ">Lagoa and Carvoeiro<",
+  "Roupa de cama — lençóis, fronhas, protetores":
+    "Bed linen — sheets, pillowcases, protectors",
+  "Atoalhados — banho, rosto, tapete, roupões":
+    "Towelling — bath, face, mats, robes",
+  "Fardamentos de sala, cozinha e housekeeping":
+    "Front-of-house, kitchen and housekeeping uniforms",
+  "Têxteis de restauração":
+    "Restaurant textiles",
+  "Recolha e entrega integradas no serviço":
+    "Collection and delivery built into the service",
+  "Cama, atoalhados e roupões":
+    "Bed linen, towelling and robes",
+  "Restauração local":
+    "Local restaurants",
   'Perguntas <em>frequentes</em>': '<em>Frequently</em> asked questions',
   'Lavandaria industrial em <em>': 'Industrial laundry in <em>',
   'Uma proposta para<br><em>': 'A quote for<br><em>',
