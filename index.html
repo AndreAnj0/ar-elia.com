@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://ar-elia.com/"/>
 <link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/"/>
 <link rel="alternate" hreflang="en" href="https://ar-elia.com/en/"/>
-<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/"/>
 
 
 
@@ -1110,78 +1110,69 @@ img, video { max-width: 100%; }
 /* ── CLIENTS CAROUSEL ── */
 .clients {
   background: var(--navy);
-  padding: 10px 0 11px;
+  padding: 16px 0 17px;
   overflow: hidden;
   position: relative;
   border-top: 1px solid rgba(196, 168, 106, 0.13);
   border-bottom: 1px solid rgba(196, 168, 106, 0.13);
 }
 .clients-label {
+  flex-shrink: 0;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 8px; font-weight: 500;
-  letter-spacing: 2.6px; text-transform: uppercase;
+  font-size: 8.5px; font-weight: 500;
+  letter-spacing: 3px; text-transform: uppercase;
   color: var(--gold);
-  opacity: 0.5;
+  opacity: 0.6;
   white-space: nowrap;
 }
-/* ── Clientes e fornecedores numa faixa discreta ──
-   Duas filas estáticas em vez do carrossel: com dois logótipos de cada lado,
-   um loop infinito sugeria mais do que há. E não é um destaque — é um detalhe
-   entre o showcase e os números, por isso o rótulo fica à esquerda dos
-   logótipos (não por cima) e tudo cabe numa só linha em ecrã largo.
-   Tem de poder envolver no telemóvel, senão o logótipo mais largo empurra a
-   página para fora. */
-.clients-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 9px 34px;
-  padding: 0 20px;
-}
-.clients-group {
+/* ── Clientes e fornecedores em carrossel ──
+   O carrossel voltou, mas em faixa baixa: é um detalhe entre o showcase e os
+   números, não uma secção. A diferença para o carrossel antigo é que os
+   rótulos viajam dentro da fita, entre os logótipos — assim vê-se sempre
+   quem é cliente e quem é fornecedor, que era o que se perdia quando os
+   logótipos andavam todos misturados sob a palavra "Parceiros".
+   A sequência está duplicada no HTML (a segunda cópia com aria-hidden) para
+   o loop fechar sem salto: a animação percorre -50% e recomeça. O JS de
+   arrasto conta com exactamente duas cópias (scrollWidth / 2). */
+.clients-seq {
   display: flex;
   align-items: center;
-  gap: 13px;
+  flex-shrink: 0;
 }
-/* Fio vertical entre os dois grupos. É o primeiro item flex do segundo
-   grupo, por isso desaparece sozinho quando os grupos deixam de caber
-   lado a lado e passam a linhas separadas. */
-.clients-group + .clients-group::before {
-  content: '';
-  width: 1px; height: 13px;
-  background: rgba(196, 168, 106, 0.2);
-  margin-right: 20px;
+.clients-sep {
+  flex-shrink: 0;
+  width: 1px; height: 16px;
+  margin: 0 6px;
+  background: rgba(196, 168, 106, 0.22);
 }
-.clients-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 6px 22px;
-  padding: 0;
+.clients-track .clients-label { padding: 0 26px 0 6px; }
+.clients-track .client-item {
+  padding: 0 26px;
+  height: 34px;
 }
-.clients-row .client-item {
-  padding: 0;
-  height: 22px;
-}
-/* O ponto separador do carrossel encostava ao logótipo nesta escala. */
-.clients-row .client-item::after { display: none; }
-.clients-row .client-item.is-logo img { height: 17px; opacity: 0.5; }
-.clients-row .client-item.is-logo img[src*="danube"] { height: 13px; }
-.clients-row .client-item.is-logo:hover img { opacity: 0.85; transform: none; }
-@media (max-width: 860px) {
-  .clients-inner { gap: 8px 0; }
-  .clients-group { width: 100%; justify-content: center; }
-  .clients-group + .clients-group::before { display: none; }
-}
+/* O ponto separador entre itens era legível a 56 px de altura; nesta faixa
+   encosta ao logótipo e só suja. Quem separa os grupos é o .clients-sep. */
+.clients-track .client-item::after { display: none; }
+.clients-track .client-item.is-logo img { height: 25px; opacity: 0.5; }
+.clients-track .client-item.is-logo img[src*="danube"] { height: 19px; }
 @media (max-width: 640px) {
-  .clients { padding: 9px 0 10px; }
-  .clients-group { gap: 10px; flex-wrap: wrap; }
-  .clients-row { gap: 5px 16px; }
-  .clients-row .client-item { height: 20px; }
-  .clients-row .client-item.is-logo img { height: 15px; }
-  .clients-row .client-item.is-logo img[src*="danube"] { height: 11px; }
+  .clients { padding: 13px 0 14px; }
+  .clients-track .clients-label { padding: 0 18px 0 4px; font-size: 7.5px; letter-spacing: 2.2px; }
+  .clients-track .client-item { padding: 0 18px; height: 28px; }
+  .clients-track .client-item.is-logo img { height: 21px; }
+  .clients-track .client-item.is-logo img[src*="danube"] { height: 16px; }
+}
+/* Quem pediu menos movimento ao sistema não leva fita a andar: pára a
+   animação e deixa a primeira sequência centrada e quieta. */
+@media (prefers-reduced-motion: reduce) {
+  .clients-track.is-auto { animation: none; }
+  .clients-track {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .clients-seq { flex-wrap: wrap; justify-content: center; }
+  .clients-seq[aria-hidden="true"] { display: none; }
 }
 .clients-track-wrap {
   position: relative;
@@ -1199,8 +1190,12 @@ img, video { max-width: 100%; }
   width: max-content;
   will-change: transform;
 }
+/* 40s, não os 28s de antes: a fita encurtou quando os logótipos passaram a
+   25 px, e à mesma duração passava a correr. Se mudares este valor, muda
+   também o `duration` no JS do arrasto — é o que faz a animação retomar
+   no sítio certo depois de largares. */
 .clients-track.is-auto {
-  animation: clientsScroll 28s linear infinite;
+  animation: clientsScroll 40s linear infinite;
 }
 .clients-track.is-auto:hover { animation-play-state: paused; }
 .client-item img { pointer-events: none; }
@@ -2201,6 +2196,10 @@ footer {
 
 
 
+
+
+
+
 /* lang-switch:inicio */
 /* ── SELETOR DE IDIOMA ── */
 .lang-switch { display:flex; align-items:center; gap:5px; }
@@ -2391,43 +2390,68 @@ gtag('config', 'G-7SKWWCWMZV', {
 <!-- ═══ CLIENTES E FORNECEDORES ═══
      Era um carrossel único rotulado "Parceiros" com hotéis e fornecedores
      misturados: quem olhava não distinguia um cliente de um fornecedor de
-     químicos, e é o cliente que serve de prova. Com dois logótipos em cada
-     grupo, um carrossel em loop infinito também sugeria mais do que há —
-     passaram a duas filas estáticas e identificadas. O JS do carrossel sai
-     sozinho quando não encontra #clientsTrack.
+     químicos, e é o cliente que serve de prova. Agora os rótulos viajam
+     dentro da fita, entre os logótipos, e a distinção mantém-se em
+     movimento.
 
-     Isto não é um destaque: é uma nota de rodapé entre duas secções que sim
-     o são. Por isso é uma faixa única e baixa, com o rótulo ao lado dos
-     logótipos em vez de por cima, sem gradiente de holofote. -->
+     A faixa é baixa de propósito: é um detalhe entre o showcase e os
+     números, não uma secção. Sem gradiente de holofote.
+
+     A sequência está duplicada — a segunda cópia com aria-hidden, para o
+     leitor de ecrã não ler os seis logótipos duas vezes. São exactamente
+     duas cópias porque a animação anda -50% e o JS de arrasto divide o
+     scrollWidth por 2; acrescentar uma terceira parte as duas coisas. -->
 <section class="clients">
- <div class="clients-inner">
-  <div class="clients-group">
+ <div class="clients-track-wrap">
+  <div class="clients-track is-auto" id="clientsTrack">
+   <div class="clients-seq">
     <div class="clients-label">Trabalhamos com</div>
-    <div class="clients-row">
-      <div class="client-item is-logo">
-        <img src="img/parceiro-vilalara.webp" alt="Vilalara Grand Hotel Algarve" width="506" height="120" loading="lazy" decoding="async"/>
-      </div>
-      <div class="client-item is-logo">
-        <img src="img/parceiro-albufeira-inn.webp" alt="Albufeira Inn" width="254" height="120" loading="lazy" decoding="async"/>
-      </div>
+    <div class="client-item is-logo">
+      <img src="img/parceiro-vilalara.webp" alt="Vilalara Grand Hotel Algarve" width="506" height="120" loading="lazy" decoding="async"/>
     </div>
-  </div>
-  <div class="clients-group">
+    <div class="client-item is-logo">
+      <img src="img/parceiro-albufeira-inn.webp" alt="Albufeira Inn" width="254" height="120" loading="lazy" decoding="async"/>
+    </div>
+    <div class="clients-sep"></div>
     <div class="clients-label">Fornecedores</div>
-    <div class="clients-row">
-      <div class="client-item is-logo">
-        <img src="img/parceiro-ecolab.webp" alt="Ecolab" width="496" height="180" loading="lazy" decoding="async"/>
-      </div>
-      <div class="client-item is-logo">
-        <img src="img/parceiro-lusiadagas.webp" alt="Lusiadag&aacute;s" width="1024" height="333" loading="lazy" decoding="async"/>
-      </div>
-      <div class="client-item is-logo">
-        <img src="img/vega.svg" alt="Vega Systems" width="300" height="130" loading="lazy" decoding="async"/>
-      </div>
-      <div class="client-item is-logo">
-        <img src="img/danube.svg" alt="Danube" width="236" height="38" loading="lazy" decoding="async"/>
-      </div>
+    <div class="client-item is-logo">
+      <img src="img/parceiro-ecolab.webp" alt="Ecolab" width="496" height="180" loading="lazy" decoding="async"/>
     </div>
+    <div class="client-item is-logo">
+      <img src="img/parceiro-lusiadagas.webp" alt="Lusiadag&aacute;s" width="1024" height="333" loading="lazy" decoding="async"/>
+    </div>
+    <div class="client-item is-logo">
+      <img src="img/vega.svg" alt="Vega Systems" width="300" height="130" loading="lazy" decoding="async"/>
+    </div>
+    <div class="client-item is-logo">
+      <img src="img/danube.svg" alt="Danube" width="236" height="38" loading="lazy" decoding="async"/>
+    </div>
+    <div class="clients-sep"></div>
+   </div>
+   <div class="clients-seq" aria-hidden="true">
+    <div class="clients-label">Trabalhamos com</div>
+    <div class="client-item is-logo">
+      <img src="img/parceiro-vilalara.webp" alt="" width="506" height="120" loading="lazy" decoding="async"/>
+    </div>
+    <div class="client-item is-logo">
+      <img src="img/parceiro-albufeira-inn.webp" alt="" width="254" height="120" loading="lazy" decoding="async"/>
+    </div>
+    <div class="clients-sep"></div>
+    <div class="clients-label">Fornecedores</div>
+    <div class="client-item is-logo">
+      <img src="img/parceiro-ecolab.webp" alt="" width="496" height="180" loading="lazy" decoding="async"/>
+    </div>
+    <div class="client-item is-logo">
+      <img src="img/parceiro-lusiadagas.webp" alt="" width="1024" height="333" loading="lazy" decoding="async"/>
+    </div>
+    <div class="client-item is-logo">
+      <img src="img/vega.svg" alt="" width="300" height="130" loading="lazy" decoding="async"/>
+    </div>
+    <div class="client-item is-logo">
+      <img src="img/danube.svg" alt="" width="236" height="38" loading="lazy" decoding="async"/>
+    </div>
+    <div class="clients-sep"></div>
+   </div>
   </div>
  </div>
 </section>
@@ -3027,7 +3051,7 @@ setTimeout(function(){
     while (pos > 0) pos -= total;
     while (pos <= -total) pos += total;
     var progress = -pos / total;          // 0..1
-    var duration = 28;                     // seconds — must match CSS
+    var duration = 40;                     // seconds — must match CSS
     var delay = -progress * duration;
     track.style.transform = '';
     track.style.animationDelay = delay + 's';
