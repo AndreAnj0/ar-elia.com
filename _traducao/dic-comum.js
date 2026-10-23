@@ -10,6 +10,14 @@ module.exports = {
   'Equipa': 'Team',
   'Sobre nós': 'About us',
   'Sobre': 'About',
+  // O menu do topo juntou as duas calculadoras num unico item. "Calcular ROI"
+  // e "Calcular agua" ainda aparecem no rodape e nos blocos .geo-links, por
+  // isso ficam.
+  'Calculadoras': 'Calculators',
+  'Calculadora de ROI': 'ROI calculator',
+  'Calculadora de água': 'Water calculator',
+  'Interna ou externa, custo por quilo': 'In-house or outsourced, cost per kilo',
+  'Litros, metros cúbicos e euros': 'Litres, cubic metres and euros',
   'Calcular ROI': 'ROI calculator',
   'Calcular água': 'Water calculator',
   'Recursos': 'Resources',

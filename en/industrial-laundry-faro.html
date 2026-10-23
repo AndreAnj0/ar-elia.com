@@ -787,6 +787,103 @@ footer {
 
 
 
+
+/* ── MENU DE CALCULADORAS ── */
+/* Abre ao passar o rato, ao receber foco de teclado, e ao clicar (o JS poe
+   .open). As tres vias juntas cobrem rato, teclado e toque. */
+.nav-drop { position: relative; display: flex; align-items: center; }
+.nav-drop-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 2.8px; color: var(--linen);
+  text-transform: uppercase;
+  opacity: .55; transition: opacity .25s, color .25s;
+}
+.nav-drop-btn:hover, .nav-drop-btn.active,
+.nav-drop:hover .nav-drop-btn,
+.nav-drop:focus-within .nav-drop-btn { opacity: 1; color: var(--gold); }
+.nav-drop-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.nav-drop-caret {
+  width: 0; height: 0;
+  border-left: 3.5px solid transparent;
+  border-right: 3.5px solid transparent;
+  border-top: 4px solid currentColor;
+  transition: transform .25s;
+}
+.nav-drop:hover .nav-drop-caret,
+.nav-drop.open .nav-drop-caret { transform: rotate(180deg); }
+.nav-drop-menu {
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translate(-50%, 6px);
+  margin-top: 18px;
+  min-width: 268px;
+  background: var(--navy);
+  border: 1px solid rgba(196,168,106,0.22);
+  box-shadow: 0 18px 44px -12px rgba(0,0,0,0.55);
+  padding: 8px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .2s, transform .2s, visibility .2s;
+  z-index: 120;
+}
+/* A ponte invisivel evita que o menu feche quando o rato atravessa o espaco
+   entre o botao e o painel. */
+.nav-drop-menu::before {
+  content: ''; position: absolute;
+  top: -20px; left: 0; right: 0; height: 20px;
+}
+.nav-drop:hover .nav-drop-menu,
+.nav-drop:focus-within .nav-drop-menu,
+.nav-drop.open .nav-drop-menu {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+.nav-drop-menu a {
+  display: block;
+  padding: 13px 16px;
+  text-decoration: none;
+  opacity: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: background .2s;
+}
+.nav-drop-menu a:hover, .nav-drop-menu a:focus-visible { background: rgba(196,168,106,0.1); }
+.nav-drop-menu a[aria-current] { background: rgba(196,168,106,0.14); }
+.nav-drop-name {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 12.5px; font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--linen);
+  margin-bottom: 3px;
+}
+.nav-drop-menu a:hover .nav-drop-name,
+.nav-drop-menu a[aria-current] .nav-drop-name { color: var(--gold); }
+.nav-drop-desc {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 400;
+  letter-spacing: 0.2px; line-height: 1.5;
+  color: rgba(184,204,218,0.55);
+  text-transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-drop-menu, .nav-drop-caret { transition: none; }
+}
+/* No menu de telemovel nao ha espaco nem razao para um painel que abre:
+   as duas entram como um grupo com rotulo. */
+.drawer-group { display: flex; flex-direction: column; }
+.drawer-group-label {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); opacity: .75;
+  margin-bottom: 2px;
+}
+.mobile-drawer .drawer-group a { padding-left: 14px; }
+
 /* lang-switch:inicio */
 /* ── SELETOR DE IDIOMA ── */
 .lang-switch { display:flex; align-items:center; gap:5px; }
@@ -881,8 +978,7 @@ gtag('config', 'G-7SKWWCWMZV', {
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="index.html#sobre">About</a>
-    <a href="roi-calculator.html">ROI calculator</a>
-    <a href="water-calculator.html">Water calculator</a>
+    <div class="nav-drop"><button type="button" class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Calculators<span class="nav-drop-caret" aria-hidden="true"></span></button><div class="nav-drop-menu"><a href="roi-calculator.html"><span class="nav-drop-name">ROI calculator</span><span class="nav-drop-desc">In-house or outsourced, cost per kilo</span></a><a href="water-calculator.html"><span class="nav-drop-name">Water calculator</span><span class="nav-drop-desc">Litres, cubic metres and euros</span></a></div></div>
     <a href="resources.html">Resources</a>
     <a href="team.html">Team</a>
     <div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/lavandaria-industrial-faro.html" hreflang="pt" lang="pt">PT</a><span class="lang-sep" aria-hidden="true">/</span><a class="lang-opt" href="/en/industrial-laundry-faro.html" hreflang="en" lang="en" aria-current="true">EN</a></div>
@@ -896,8 +992,7 @@ gtag('config', 'G-7SKWWCWMZV', {
 <div class="mobile-drawer" id="mobileDrawer">
   <a href="index.html">Home</a>
   <a href="index.html#sobre">About</a>
-  <a href="roi-calculator.html">ROI calculator</a>
-    <a href="water-calculator.html">Water calculator</a>
+  <div class="drawer-group"><span class="drawer-group-label">Calculators</span><a href="roi-calculator.html">ROI calculator</a><a href="water-calculator.html">Water calculator</a></div>
   <a href="resources.html">Resources</a>
   <a href="team.html">Team</a>
   <button class="btn-mobile-cta" onclick="window.location.href='index.html#contacto'">Request a quote</button>
@@ -908,6 +1003,23 @@ function toggleMenu(){
   document.getElementById('mobileDrawer').classList.toggle('open');
   document.getElementById('hamburger').classList.toggle('open');
 }
+// Menu de calculadoras: clique e teclado. O rato e o foco ja sao tratados
+// pelo CSS; isto serve o toque e o Escape.
+(function(){
+  var drop = document.querySelector('.nav-drop');
+  if (!drop) return;
+  var btn = drop.querySelector('.nav-drop-btn');
+  function fechar(){ drop.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var aberto = drop.classList.toggle('open');
+    btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(e){ if (!drop.contains(e.target)) fechar(); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && drop.classList.contains('open')) { fechar(); btn.focus(); }
+  });
+})();
 </script>
 
 <!-- PAGE HEADER -->
