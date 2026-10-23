@@ -15,6 +15,7 @@ const PARES = [
   ['lavandaria-industrial-loule.html', 'en/industrial-laundry-loule.html', '0.9', 'monthly'],
   ['lavandaria-industrial-lagoa-carvoeiro.html', 'en/industrial-laundry-lagoa-carvoeiro.html', '0.9', 'monthly'],
   ['arelia-roi.html', 'en/roi-calculator.html', '0.8', 'monthly'],
+  ['arelia-agua.html', 'en/water-calculator.html', '0.8', 'monthly'],
   ['arelia-recursos.html', 'en/resources.html', '0.8', 'weekly'],
   ['artigo-custo-lavandaria-interna.html', 'en/article-in-house-laundry-cost.html', '0.7', 'monthly'],
   ['artigo-5-sinais-lencois-degradacao.html', 'en/article-5-signs-linen-wearing-out.html', '0.7', 'monthly'],

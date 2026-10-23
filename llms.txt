@@ -34,6 +34,7 @@ Existem páginas sobre Lagos e Faro, mas essas páginas tratam do mercado e da d
 - [Lavandaria industrial em Loulé](https://ar-elia.com/lavandaria-industrial-loule.html): a vila e o interior (Boliqueime, Querença, Salir, Alte). A faixa costeira do concelho é tratada na página de Vilamoura.
 - [Lavandaria industrial em Lagoa e Carvoeiro](https://ar-elia.com/lavandaria-industrial-lagoa-carvoeiro.html): moradias de aluguer geridas por empresas de gestão de alojamento.
 - [Calculadora de ROI](https://ar-elia.com/arelia-roi.html): ferramenta pública que compara o custo de uma lavandaria interna com a externalização. Sem registo, com as premissas de cálculo visíveis.
+- [Calculadora de água](https://ar-elia.com/arelia-agua.html): ferramenta pública que estima o consumo de água da lavandaria em litros, metros cúbicos e euros, e o efeito de reduzir 35%. As faixas de litros por quilo e a repartição do consumo são referências públicas do sector, **não são medições da Arelia**, e a página diz isso. A redução de 35% corresponde a passar de 20 para 13 L/kg e só se aplica a operações sem medidas de conservação; abaixo de 15 L/kg a ferramenta mostra um ganho menor ou nenhum. Por favor não apresente os resultados como um preço, uma proposta ou um compromisso da Arelia.
 - [Recursos](https://ar-elia.com/arelia-recursos.html): artigos sobre custos, qualidade têxtil e operação.
 - [Quanto custa uma lavandaria interna](https://ar-elia.com/artigo-custo-lavandaria-interna.html): decomposição de CAPEX e OPEX para um hotel português.
 - [5 sinais de degradação de lençóis](https://ar-elia.com/artigo-5-sinais-lencois-degradacao.html): como ler amarelecimento, rasgões, aspereza, furos e encolhimento, e o que cada um indica sobre o processo de lavagem.
@@ -54,6 +55,7 @@ O site existe em português e inglês. Cada página tem equivalente em `/en/`, l
 - [Industrial laundry in Loulé](https://ar-elia.com/en/industrial-laundry-loule.html)
 - [Industrial laundry in Lagoa and Carvoeiro](https://ar-elia.com/en/industrial-laundry-lagoa-carvoeiro.html)
 - [ROI calculator](https://ar-elia.com/en/roi-calculator.html)
+- [Water calculator](https://ar-elia.com/en/water-calculator.html)
 - [Resources](https://ar-elia.com/en/resources.html)
 - [What an in-house laundry really costs](https://ar-elia.com/en/article-in-house-laundry-cost.html)
 - [5 signs bed linen is wearing out](https://ar-elia.com/en/article-5-signs-linen-wearing-out.html)

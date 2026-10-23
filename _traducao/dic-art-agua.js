@@ -213,5 +213,6 @@ module.exports = {
   'relat&oacute;rio t&eacute;cnico sobre sistemas de lavandaria com ozono':
     'technical report on ozone laundry systems',
   'Falar connosco': 'Talk to us',
+  'Fazer esta conta com os seus n&uacute;meros': 'Run this with your own numbers',
   'calculadora de ROI': 'ROI calculator',
 };

@@ -14,6 +14,7 @@ const PAGINAS = [
   { pt: 'equipa.html',                                    en: 'team.html',                                 dic: 'equipa' },
   { pt: 'sobre.html',                                        en: 'about.html',                                dic: 'sobre' },
   { pt: 'arelia-roi.html',                                en: 'roi-calculator.html',                       dic: 'roi' },
+  { pt: 'arelia-agua.html',                               en: 'water-calculator.html',                     dic: 'agua' },
   { pt: 'arelia-recursos.html',                           en: 'resources.html',                            dic: 'recursos' },
   { pt: 'lavandaria-industrial-albufeira.html',           en: 'industrial-laundry-albufeira.html',         dic: 'albufeira' },
   { pt: 'lavandaria-industrial-vilamoura-quarteira.html', en: 'industrial-laundry-vilamoura-quarteira.html', dic: 'vilamoura' },

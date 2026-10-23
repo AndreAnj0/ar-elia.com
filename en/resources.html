@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://ar-elia.com/en/resources.html"/>
 <link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-recursos.html"/>
 <link rel="alternate" hreflang="en" href="https://ar-elia.com/en/resources.html"/>
-<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-recursos.html"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-recursos.html"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ar-elia.com/en/resources.html"/>
 <meta property="og:title" content="Costs and quality in hotel laundry | ARELIA"/>
@@ -638,6 +638,75 @@ footer {
   .newsletter-form button { width: 100%; padding: 15px 20px; }
 }
 
+/* ── FERRAMENTAS ── */
+/* As duas calculadoras só existiam no nav e no rodapé, onde ninguém as
+   procura. Aqui ficam com descrição, a seguir aos artigos e antes da
+   newsletter. */
+.tools-section { background: var(--linen-dark); padding: 96px 52px; }
+.tools-wrap { max-width: 1240px; margin: 0 auto; }
+.tools-sub {
+  max-width: 620px;
+  margin: 14px 0 44px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--steel);
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 4px;
+  padding: 36px 34px 32px;
+  text-decoration: none;
+  box-shadow: 0 1px 1px rgba(12,26,44,0.04);
+  transition: transform .35s, box-shadow .35s;
+}
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 1px rgba(12,26,44,0.04), 0 16px 32px -8px rgba(12,26,44,0.18);
+}
+.tool-cat {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 2.6px; text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 14px;
+}
+.tool-title {
+  font-family:'Playfair Display',serif;
+  font-size: 26px; font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.tool-desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--steel);
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+.tool-link {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10.5px; font-weight: 600;
+  letter-spacing: 2.4px; text-transform: uppercase;
+  color: var(--navy);
+  transition: color .25s;
+}
+.tool-card:hover .tool-link { color: var(--gold-dark); }
+@media (max-width: 760px) {
+  .tools-section { padding: 72px 24px; }
+  .tools-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+
+
+
+
 /* lang-switch:inicio */
 /* ── SELETOR DE IDIOMA ── */
 .lang-switch { display:flex; align-items:center; gap:5px; }
@@ -733,6 +802,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     <a href="index.html">Home</a>
     <a href="index.html#sobre">About</a>
     <a href="roi-calculator.html">ROI calculator</a>
+    <a href="water-calculator.html">Water calculator</a>
     <a href="resources.html" class="active">Resources</a>
     <a href="team.html">Team</a>
     <div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/arelia-recursos.html" hreflang="pt" lang="pt">PT</a><span class="lang-sep" aria-hidden="true">/</span><a class="lang-opt" href="/en/resources.html" hreflang="en" lang="en" aria-current="true">EN</a></div>
@@ -747,6 +817,7 @@ gtag('config', 'G-7SKWWCWMZV', {
   <a href="index.html">Home</a>
   <a href="index.html#sobre">About</a>
   <a href="roi-calculator.html">ROI calculator</a>
+    <a href="water-calculator.html">Water calculator</a>
   <a href="resources.html" class="active">Resources</a>
   <a href="team.html">Team</a>
   <button class="btn-mobile-cta" onclick="window.location.href='index.html#contacto'">Request a quote</button>
@@ -879,6 +950,28 @@ function toggleMenu(){
   </div>
 </section>
 
+<!-- FERRAMENTAS -->
+<section class="tools-section">
+  <div class="tools-wrap">
+    <h2 class="articles-title">Two <em>tools</em></h2>
+    <p class="tools-sub">Public, no sign-up, with the assumptions on show. They are there to put numbers into a conversation, not to replace a quote.</p>
+    <div class="tools-grid">
+      <a class="tool-card" href="roi-calculator.html">
+        <span class="tool-cat">Cost</span>
+        <h3 class="tool-title">ROI calculator</h3>
+        <p class="tool-desc">Compare the cost of running an in-house laundry against outsourcing it. Staff, detergents, energy, equipment and maintenance, line by line.</p>
+        <span class="tool-link">Open calculator →</span>
+      </a>
+      <a class="tool-card" href="water-calculator.html">
+        <span class="tool-cat">Sustainability</span>
+        <h3 class="tool-title">Water calculator</h3>
+        <p class="tool-desc">Estimate litres and euros per month, and see what cutting use by 35% is worth. With the litres-per-kilo reference bands on show.</p>
+        <span class="tool-link">Open calculator →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- NEWSLETTER -->
 <section class="newsletter">
   <div class="newsletter-inner">
@@ -901,6 +994,7 @@ function toggleMenu(){
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="roi-calculator.html">ROI calculator</a>
+    <a href="water-calculator.html">Water calculator</a>
       <a href="team.html">Team</a>
       <a href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
       <a href="privacy.html">Privacy</a>

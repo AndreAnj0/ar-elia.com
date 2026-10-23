@@ -69,4 +69,18 @@ module.exports = {
     'We are putting together a newsletter with usable insight on running a hotel laundry. Leave your email and we will tell you when it starts.',
   'Ainda não arrancámos — sem spam, e avisamos-lhe primeiro.':
     'We have not launched yet — no spam, and you will hear first.',
+
+  // ── bloco das duas calculadoras ──
+  'Duas <em>ferramentas</em>': 'Two <em>tools</em>',
+  'Públicas, sem registo, com as premissas à vista. Servem para pôr números numa conversa, não para substituir uma proposta.':
+    'Public, no sign-up, with the assumptions on show. They are there to put numbers into a conversation, not to replace a quote.',
+  '>Custo<': '>Cost<',
+  'Calculadora de ROI': 'ROI calculator',
+  'Compare o custo de manter uma lavandaria interna com o de externalizar. Pessoal, detergentes, energia, equipamento e manutenção, parcela a parcela.':
+    'Compare the cost of running an in-house laundry against outsourcing it. Staff, detergents, energy, equipment and maintenance, line by line.',
+  'Sustentabilidade': 'Sustainability',
+  'Calculadora de água': 'Water calculator',
+  'Estime litros e euros por mês e veja o que vale reduzir 35% no consumo. Com as faixas de referência de litros por quilo à vista.':
+    'Estimate litres and euros per month, and see what cutting use by 35% is worth. With the litres-per-kilo reference bands on show.',
+  'Abrir calculadora →': 'Open calculator →',
 };

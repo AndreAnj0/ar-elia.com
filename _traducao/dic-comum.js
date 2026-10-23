@@ -11,6 +11,7 @@ module.exports = {
   'Sobre nós': 'About us',
   'Sobre': 'About',
   'Calcular ROI': 'ROI calculator',
+  'Calcular água': 'Water calculator',
   'Recursos': 'Resources',
   'Pedir proposta': 'Request a quote',
   'Pedir Proposta': 'Request a Quote',
