@@ -14,12 +14,12 @@ module.exports = {
   // ── meta / titulo ──
   'Lavandaria Industrial para Hotéis no Algarve | ARELIA':
     'Industrial Laundry for Hotels in the Algarve | ARELIA',
-  'Lavandaria industrial para hotéis e alojamento local no Algarve. Recolha, lavagem e entrega em 24 horas. Faro, Albufeira, Portimão, Vilamoura e Lagos.':
-    'Industrial laundry for hotels and holiday rentals in the Algarve. Collection, washing and delivery within 24 hours. Faro, Albufeira, Portimão, Vilamoura and Lagos.',
-  'lavandaria industrial algarve, lavandaria hoteleira, lavandaria hotéis algarve, lavandaria industrial portugal, renting lençóis, lavandaria b2b':
+  'Lavandaria industrial para hotéis e alojamento local no Algarve. Recolha, lavagem e entrega em 24 horas. Albufeira, Vilamoura, Quarteira, Loulé, Lagoa e Portimão.':
+    'Industrial laundry for hotels and holiday rentals in the Algarve. Collection, washing and delivery within 24 hours. Albufeira, Vilamoura, Quarteira, Loulé, Lagoa and Portimão.',
+  'lavandaria industrial algarve, lavandaria hoteleira, lavandaria hotéis algarve, lavandaria industrial portugal, lavandaria b2b':
     'industrial laundry algarve, hotel laundry algarve, commercial laundry portugal, hotel linen service, laundry service algarve, b2b laundry portugal',
-  'Lavandaria industrial para hotelaria premium no Algarve. Recolha e entrega, controlo de qualidade, renting de lençóis. Operação dedicada à hotelaria.':
-    'Industrial laundry for premium hospitality in the Algarve. Collection and delivery, quality control, linen rental. An operation built for hotels.',
+  'Lavandaria industrial para hotelaria premium no Algarve. Recolha e entrega em 24 horas, controlo de qualidade e uma operação dedicada à hotelaria.':
+    'Industrial laundry for premium hospitality in the Algarve. Collection and delivery within 24 hours, quality control, and an operation built for hotels.',
   'Lavandaria industrial para hotelaria premium no Algarve, Portugal.':
     'Industrial laundry for premium hospitality in the Algarve, Portugal.',
 
@@ -155,8 +155,8 @@ module.exports = {
   'para hotelaria premium.': 'for premium hospitality.',
 
   // ── JSON-LD ──
-  'Serviços de lavandaria industrial dedicados à hotelaria premium do Algarve: lavagem, calandragem, renting de lençóis, recolha e entrega em 24h.':
-    'Industrial laundry services dedicated to premium hospitality in the Algarve: washing, calendering, linen rental, collection and delivery within 24 hours.',
+  'Serviços de lavandaria industrial dedicados à hotelaria premium do Algarve: lavagem, calandragem, recolha e entrega em 24h.':
+    'Industrial laundry services dedicated to premium hospitality in the Algarve: washing, calendering, collection and delivery within 24 hours.',
   'Serviços Arelia': 'Arelia services',
   'Lavandaria industrial para hotéis no Algarve': 'Industrial laundry for hotels in the Algarve',
   'Lavagem de rouparia e atoalhados hoteleiros': 'Washing of hotel linen and towelling',
@@ -170,17 +170,17 @@ module.exports = {
     'Arelia is an industrial laundry in the Algarve specialising in hospitality. It washes linen, towelling and uniforms for hotels, holiday rentals and clinics, with collection and delivery within 24 hours.',
   'Qual a área de cobertura da lavandaria industrial no Algarve?':
     'Which areas of the Algarve does the laundry cover?',
-  'A Arelia cobre todo o Algarve, incluindo Faro, Albufeira, Portimão, Lagos, Vilamoura, Quarteira, Loulé, Tavira, Olhão e Silves.':
-    'Arelia covers the whole of the Algarve, including Faro, Albufeira, Portimão, Lagos, Vilamoura, Quarteira, Loulé, Tavira, Olhão and Silves.',
+  'A operação da Arelia fica na Guia, no concelho de Albufeira, e a recolha é mais frequente no centro do Algarve. Fora dessa zona depende do volume e da frequência, e é avaliado caso a caso.':
+    'Arelia’s operation is based in Guia, in the municipality of Albufeira, and collection is most frequent in the central Algarve. Beyond that area it depends on volume and frequency, and is assessed case by case.',
   'Qual o tempo de entrega da lavandaria para hotéis?':
     'What is the turnaround time for hotels?',
   'A Arelia garante recolha, lavagem e entrega em até 24 horas, todos os dias úteis.':
     'Arelia guarantees collection, washing and delivery within 24 hours, every working day.',
   'O que é o renting de lençóis da Arelia?': 'What is Arelia’s bed linen rental?',
-  'O renting é um serviço onde a Arelia fornece, lava e gere os lençóis do hotel com bordado ARELIA na etiqueta, sem investimento inicial por parte do hotel, com preço por unidade.':
-    'Rental is a service in which Arelia supplies, washes and manages the hotel’s bed linen, carrying the ARELIA embroidery on the label, with no upfront investment by the hotel and a price per item.',
+  'O renting é um serviço em preparação e ainda não está disponível. A ideia é a Arelia fornecer, lavar e gerir os lençóis do hotel, com o bordado ARELIA na etiqueta e sem investimento inicial. Quando arrancar, fica anunciado no site.':
+    'Rental is a service in preparation and is not available yet. The idea is for Arelia to supply, wash and manage the hotel’s bed linen, carrying the ARELIA embroidery on the label and with no upfront investment. When it launches, it will be announced on the site.',
   'A Arelia trabalha com alojamento local no Algarve?':
     'Does Arelia work with holiday rentals in the Algarve?',
-  'Sim, a Arelia presta serviços de lavandaria industrial para alojamento local, hotéis boutique, clínicas e spas em todo o Algarve.':
-    'Yes — Arelia provides industrial laundry services to holiday rentals, boutique hotels, clinics and spas across the Algarve.',
+  'Sim, a Arelia presta serviços de lavandaria industrial para alojamento local, hotéis boutique, clínicas e spas no Algarve.':
+    'Yes — Arelia provides industrial laundry services to holiday rentals, boutique hotels, clinics and spas in the Algarve.',
 };

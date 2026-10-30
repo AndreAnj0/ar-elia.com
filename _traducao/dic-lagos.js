@@ -4,8 +4,8 @@
 module.exports = Object.assign({}, require('./dic-geo-comum.js'), {
   'Lavandaria Industrial em Lagos para Hotéis | ARELIA':
     'Industrial Laundry in Lagos for Hotels | ARELIA',
-  'Lavandaria industrial para hotelaria em Lagos, Meia Praia, Praia da Luz e Odiáxere: o que a distância, o acesso ao centro histórico e a época longa mudam na conta.':
-    'Industrial laundry for hospitality in Lagos, Meia Praia, Praia da Luz and Odiáxere: what distance, old-town access and a long season change in the sums.',
+  'Hotelaria em Lagos, Meia Praia, Praia da Luz e Odiáxere: o que a distância até à Guia, o acesso ao centro histórico e a época longa mudam na conta de uma lavandaria.':
+    'Hospitality in Lagos, Meia Praia, Praia da Luz and Odiáxere: what the distance from Guia, old-town access and a long season change in the sums for a laundry.',
   'lavandaria industrial lagos, lavandaria hoteis lagos algarve, lavandaria meia praia, lavandaria praia da luz, lavandaria alojamento local lagos':
     'industrial laundry lagos, hotel laundry lagos algarve, laundry meia praia, laundry praia da luz, holiday rental laundry lagos',
   'Lagos · Barlavento': 'Lagos · Western Algarve',

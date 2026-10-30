@@ -860,6 +860,26 @@ footer {
   color: rgba(184,204,218,0.55);
 }
 
+/* Mostrado no lugar dos números quando a operação já está no alvo e não há
+   ganho de água que se possa estimar. Antes aparecia uma coluna de zeros, que
+   se lê como calculadora avariada e não como resposta. */
+.agua-sem-ganho { display: none; }
+.agua-sem-ganho.visivel { display: block; }
+.agua-sem-ganho strong {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 17px;
+  line-height: 1.35;
+  color: var(--bone, #f4f0e6);
+  margin-bottom: 8px;
+}
+.agua-sem-ganho span {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(184,204,218,0.78);
+}
+
 /* Tabela de faixas de referência, dentro da secção "Como calculamos". */
 .agua-tabela-wrap { overflow-x: auto; margin-top: 10px; }
 .agua-tabela {
@@ -1255,14 +1275,20 @@ function toggleMenu(){
       </div>
 
       <div class="calc-savings-block">
-        <span class="calc-savings-tag">Estimated saving</span>
-        <div class="calc-savings-range">
-          <span class="calc-savings-pct"><span id="out-poup-m3">383</span><span class="calc-savings-unit">m³/year</span></span>
+        <span class="calc-savings-tag" id="out-poup-tag">Estimated saving</span>
+        <div id="agua-ganho">
+          <div class="calc-savings-range">
+            <span class="calc-savings-pct"><span id="out-poup-m3">383</span><span class="calc-savings-unit">m³/year</span></span>
+          </div>
+          <div class="calc-savings-money">
+            <span class="calc-savings-money-label">Off the water bill</span>
+            <span class="calc-savings-money-value">€<span id="out-poup-eur">958</span> <span class="calc-savings-money-sep">/</span> ano</span>
+          </div>
         </div>
-        <div class="calc-savings-money">
-          <span class="calc-savings-money-label">Off the water bill</span>
-          <span class="calc-savings-money-value">€<span id="out-poup-eur">958</span> <span class="calc-savings-money-sep">/</span> ano</span>
-        </div>
+        <p class="agua-sem-ganho" id="agua-sem-ganho">
+          <strong>Your operation já está no nível de referência.</strong>
+          <span>Aos 13 L/kg ou abaixo, não há redução de água que se possa estimar aqui — a partir daí o que sobra depende do equipamento, dos programas e da carga, e só se sabe medindo. Preferimos dizer isto a mostrar-lhe uma poupança que não podemos justificar.</span>
+        </p>
         <p class="agua-nota-35">35% means going from around 20 L/kg to around 13 L/kg, through rinse water reuse and disciplined loading. These are the article’s reference figures, not Arelia measurements.</p>
       </div>
 
@@ -1423,6 +1449,19 @@ function toggleMenu(){
 
     document.getElementById('out-poup-m3').textContent = num(poupM3);
     document.getElementById('out-poup-eur').textContent = num(Math.round(poupEur));
+
+    // Sem ganho, troca-se a coluna de zeros por uma frase.
+    //
+    // Os zeros estavam certos — abaixo dos 13 L/kg o alvo trava a descida e a
+    // calculadora recusa-se a prometer uma redução que não pode justificar.
+    // Mas um "0 m³/ano" e um "€0 / ano" lêem-se como calculadora avariada, e
+    // foi assim que foram lidos. A conta não muda; muda o que se diz dela.
+    const semGanho = poupM3 <= 0;
+    document.getElementById('agua-ganho').hidden = semGanho;
+    document.getElementById('agua-sem-ganho').classList.toggle('visivel', semGanho);
+    document.getElementById('out-poup-tag').textContent = semGanho
+      ? 'Já está no alvo'
+      : 'Estimated saving';
 
     document.getElementById('agua-aviso').classList.toggle('visivel', state.lkg <= LIMIAR_AVISO);
   }
