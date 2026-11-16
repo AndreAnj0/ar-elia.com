@@ -1090,6 +1090,50 @@ body:has(.arelia-cb.visible) .wa-fab { opacity: 0; pointer-events: none; transfo
 @media (prefers-reduced-motion: reduce) { .wa-fab { transition: none; } }
 /* wa-fab:fim */
 
+/* Passos e premissas recolhidas */
+.calc-step {
+  display: flex; align-items: center; gap: 10px;
+  margin: 4px 0 22px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 2.4px; text-transform: uppercase;
+  color: var(--gold-dark);
+}
+.calc-step b {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--navy); color: var(--gold);
+  font-size: 11px; letter-spacing: 0;
+}
+.calc-step + .calc-step-help { margin: -14px 0 22px; font-size: 12px; line-height: 1.6; color: var(--text-muted); }
+.calc-step-gap { height: 10px; border-top: 1px solid rgba(12,26,44,0.08); margin: 6px 0 24px; }
+details.pico-mais { border-top: 1px solid rgba(12,26,44,0.08); padding-top: 18px; margin-top: 8px; }
+details.pico-mais > summary {
+  cursor: pointer; list-style: none;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: 2.4px; text-transform: uppercase;
+  color: var(--steel);
+}
+details.pico-mais > summary::-webkit-details-marker { display: none; }
+details.pico-mais > summary::before { content: '+'; display: inline-block; width: 16px; color: var(--gold-dark); font-size: 13px; }
+details.pico-mais[open] > summary::before { content: '\2212'; }
+details.pico-mais > summary span { display: block; margin: 6px 0 0 16px; text-transform: none; letter-spacing: 0; font-size: 11.5px; font-weight: 400; color: var(--text-muted); }
+details.pico-mais[open] > summary { margin-bottom: 24px; }
+
+/* Frase-resposta */
+.pico-veredito {
+  position: relative; z-index: 1;
+  margin: 0 0 24px;
+  padding: 18px 20px;
+  background: rgba(196,168,106,0.1);
+  border-left: 2px solid var(--gold);
+  border-radius: 3px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 15px; line-height: 1.6;
+  color: var(--linen);
+}
+.pico-veredito strong { color: var(--gold); font-weight: 600; }
+.pico-veredito p + p { margin-top: 10px; font-size: 13px; color: rgba(184,204,218,0.85); }
 /* ── CALCULADORA DE PICO ── */
 .calc-field-help a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 2px; }
 .calc-field-help a:hover { color: var(--navy); }
@@ -1221,7 +1265,7 @@ function toggleMenu(){
 <header class="page-header">
   <span class="page-header-tag">Calculadora gratuita</span>
   <h1 class="page-header-title">Quanto lhe custa<br>o <em>pico de agosto?</em></h1>
-  <p class="page-header-sub">Veja mês a mês o volume de roupa da sua unidade, com a forma do ano tirada dos dados do INE para o Algarve. Sem registo, sem compromissos.</p>
+  <p class="page-header-sub">Diga-nos o tamanho do hotel e a ocupação, e escolha o tamanho da lavandaria. A resposta aparece numa frase, com o ano mês a mês por baixo. Sem registo, sem compromissos.</p>
 </header>
 
 <!-- CALCULATOR -->
@@ -1231,7 +1275,9 @@ function toggleMenu(){
     <!-- LEFT: INPUTS -->
     <div class="calc-inputs">
       <h2 class="calc-inputs-title">A sua unidade</h2>
-      <p class="calc-inputs-sub">Ajuste os valores. O gráfico e as contas atualizam em tempo real.</p>
+      <p class="calc-inputs-sub">Dois passos. O resto das contas já vem preenchido com valores de referência.</p>
+
+      <div class="calc-step"><b>1</b>O seu hotel</div>
 
       <div class="calc-field">
         <label class="calc-field-label" for="r-quartos">
@@ -1243,7 +1289,6 @@ function toggleMenu(){
         <p class="calc-field-help">Número de quartos da unidade.</p>
       </div>
 
-
       <div class="calc-field">
         <label class="calc-field-label" for="r-occlo">
           <span>Ocupação no mês mais fraco</span>
@@ -1253,7 +1298,6 @@ function toggleMenu(){
         <div class="calc-range-marks"><span>0%</span><span>90%</span></div>
         <p class="calc-field-help">Normalmente janeiro. Um hotel de lazer aberto todo o ano anda muitas vezes entre <b>30 e 50%</b>.</p>
       </div>
-
 
       <div class="calc-field">
         <label class="calc-field-label" for="r-occhi">
@@ -1265,6 +1309,22 @@ function toggleMenu(){
         <p class="calc-field-help">O mês de pico. No litoral algarvio é comum ficar acima de <b>90%</b>.</p>
       </div>
 
+      <div class="calc-step-gap"></div>
+      <div class="calc-step"><b>2</b>A lavandaria</div>
+      <p class="calc-step-help">O tamanho da lavandaria que tem, ou que está a pensar montar. Se não sabe, comece por <b>Média +30%</b>, que é como muita gente dimensiona.</p>
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-cap">
+          <span>Capacidade da lavandaria interna</span>
+          <span class="calc-field-value"><span id="v-cap">250</span><span class="calc-field-value-suffix">kg/dia</span></span>
+        </label>
+        <div class="calc-segmented pico-cap" id="seg-cap" role="group" aria-label="Capacidade da lavandaria interna"><button type="button" data-cap="media">Média</button><button type="button" data-cap="media30" class="active">Média +30%</button><button type="button" data-cap="p90">90% pico</button><button type="button" data-cap="pico">Pico</button></div>
+        <input type="range" id="r-cap" min="10" max="400" value="250" step="1"/>
+        <p class="calc-field-help">Escolha um ponto de partida ou arraste a barra. Os dados do INE dizem que o verão fica bem acima da média +30%.</p>
+      </div>
+
+      <details class="pico-mais">
+        <summary>Ajustar premissas<span>Roupa por quarto, preço de lavar fora e custo do equipamento. Já vêm preenchidos.</span></summary>
 
       <div class="calc-field">
         <label class="calc-field-label" for="r-kgw">
@@ -1276,7 +1336,6 @@ function toggleMenu(){
         <p class="calc-field-help">Cama, banho e o resto. <b>5 kg</b> é a premissa da nossa calculadora de ROI.</p>
       </div>
 
-
       <div class="calc-field">
         <label class="calc-field-label" for="r-kgs">
           <span>Roupa por quarto ocupado, agosto</span>
@@ -1285,18 +1344,6 @@ function toggleMenu(){
         <input type="range" id="r-kgs" min="2" max="12" value="6.5" step="0.1"/>
         <div class="calc-range-marks"><span>2 kg</span><span>12 kg</span></div>
         <p class="calc-field-help">Sobe com as toalhas de piscina e praia, as famílias e a restauração. <b>6,5 kg</b> é uma estimativa nossa.</p>
-      </div>
-
-      <div class="calc-field-sep">A decisão</div>
-
-      <div class="calc-field">
-        <label class="calc-field-label" for="r-cap">
-          <span>Capacidade da lavandaria interna</span>
-          <span class="calc-field-value"><span id="v-cap">250</span><span class="calc-field-value-suffix">kg/dia</span></span>
-        </label>
-        <div class="calc-segmented pico-cap" id="seg-cap" role="group" aria-label="Capacidade da lavandaria interna"><button type="button" data-cap="media">Média</button><button type="button" data-cap="media30" class="active">Média +30%</button><button type="button" data-cap="p90">90% pico</button><button type="button" data-cap="pico">Pico</button></div>
-        <input type="range" id="r-cap" min="10" max="400" value="250" step="1"/>
-        <p class="calc-field-help">Escolha um ponto de partida ou arraste. <b>Média +30%</b> é como muita gente dimensiona; os dados do INE dizem que o verão fica bem acima disso.</p>
       </div>
 
       <div class="calc-field">
@@ -1328,14 +1375,17 @@ function toggleMenu(){
         <div class="calc-range-marks"><span>5</span><span>15</span></div>
         <p class="calc-field-help">O artigo usa 8 a 10 anos. Somamos <b>4% do investimento por ano</b> de manutenção, o meio da regra do setor.</p>
       </div>
+      </details>
 
     </div>
 
     <!-- RIGHT: RESULTS -->
     <div class="calc-results">
       <span class="calc-results-tag">Resultado</span>
-      <h2 class="calc-results-title">O ano da sua lavandaria</h2>
-      <p class="calc-results-sub">Roupa por dia em cada mês, contra a capacidade que escolheu.</p>
+      <h2 class="calc-results-title">A resposta</h2>
+      <p class="calc-results-sub">Em baixo, a roupa por dia em cada mês contra a lavandaria que escolheu.</p>
+
+      <div class="pico-veredito" id="pico-veredito" aria-live="polite"></div>
 
       <div class="pico-grafico">
         <svg id="pico-svg" viewBox="0 0 360 190" role="img" aria-labelledby="pico-svg-t"><title id="pico-svg-t">Quilos de roupa por dia em cada mês, contra a capacidade da lavandaria</title></svg>
@@ -1371,11 +1421,11 @@ function toggleMenu(){
           <span class="calc-savings-pct">€<span id="out-parado">7 249</span></span>
         </div>
         <div class="calc-savings-money">
-          <span class="calc-savings-money-label">Custo fixo de toda a capacidade</span>
+          <span class="calc-savings-money-label">Custo anual do equipamento (amortização e manutenção)</span>
           <span class="calc-savings-money-value">€<span id="out-fixo">27 552</span> <span class="calc-savings-money-sep">/</span> ano</span>
         </div>
         <div class="calc-savings-money" id="pico-marg" style="margin-top:14px;">
-          <span class="calc-savings-money-label">Cobrir o resto do pico em casa</span>
+          <span class="calc-savings-money-label">Cada quilo de pico lavado em casa custaria</span>
           <span class="calc-savings-money-value" id="out-marg">€2,38 por quilo, contra €1,30 fora</span>
         </div>
         <p class="agua-nota-35">A capacidade parada é o custo fixo da lavandaria, amortização mais manutenção, na parte que não se usa ao longo do ano. "Cobrir o resto do pico" é quanto custaria, só em equipamento, cada quilo que deixaria de enviar para fora se aumentasse a capacidade até agosto. O preço de fora é o mesmo o ano inteiro: em agosto o risco não é o preço, é haver quem tenha capacidade.</p>
@@ -1501,7 +1551,7 @@ function toggleMenu(){
   // na mesma proporção em que a região está entre janeiro e agosto.
   const FORMA = [0.0, 0.11, 0.221, 0.51, 0.554, 0.715, 0.878, 1.0, 0.711, 0.579, 0.13, 0.036];
   const DIAS = [31,28,31,30,31,30,31,31,30,31,30,31];
-  const T = {"loc": "pt-PT", "kgdia": "kg/dia", "emFalta": "acima da capacidade", "meses": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"], "ini": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], "grafT": "Quilos de roupa por dia em cada mês, contra a capacidade da lavandaria", "margTxt": "€{m} por quilo, contra €{p} fora", "margNada": "Já cobre agosto"};
+  const T = {"loc": "pt-PT", "kgdia": "kg/dia", "emFalta": "acima da capacidade", "meses": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"], "ini": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], "grafT": "Quilos de roupa por dia em cada mês, contra a capacidade da lavandaria", "margTxt": "€{m} por quilo, contra €{p} fora", "margNada": "Já cobre agosto", "vFalta": "Com uma lavandaria de <strong>{cap} kg/dia</strong>, {mesesFrase}: <strong>{falta} kg por ano</strong> têm de ir para fora, cerca de <strong>€{fora}</strong>. Para os lavar em casa precisaria de mais {extra} kg/dia de capacidade, que custam <strong>€{custoExtra} por ano</strong> em equipamento.", "vCaro": "São €{marg} por cada quilo que deixaria de ir para fora, mais do que os €{preco} de o lavar fora. <strong>Aumentar a lavandaria para cobrir o pico não compensa.</strong>", "vBarato": "São €{marg} por cada quilo que deixaria de ir para fora, menos do que os €{preco} de o lavar fora, só em equipamento. Antes de decidir, some o pessoal, a energia e a água desses quilos.", "vCobre": "Com uma lavandaria de <strong>{cap} kg/dia</strong>, cobre agosto, mas fica <strong>{parada}% parada</strong> ao longo do ano: <strong>€{parado} por ano</strong> em equipamento e manutenção que não se usam.", "vCobre2": "Baixar a lavandaria para 90% do pico e enviar o resto para fora em julho e agosto custaria cerca de €{fora90} por ano em roupa lavada fora, e pouparia €{poupa90} por ano em equipamento.", "e": " e ", "mesesNome": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"], "mesesDe": "de {a} a {b}", "mesesEm": "em {m}", "falta": "{m} falta capacidade"};
 
   const MANUT = 0.04;
   let st = { quartos: 50, occlo: 40, occhi: 95, kgw: 5, kgs: 6.5, cap: 250, preco: 1.30, invest: 800, anos: 10, modo: 'media30' };
@@ -1587,6 +1637,25 @@ function toggleMenu(){
     document.getElementById('out-fora').textContent = '€' + num(fora);
     document.getElementById('out-parado').textContent = num(parado);
     document.getElementById('out-fixo').textContent = num(fixo);
+    // Frase-resposta: o que acontece com esta lavandaria, e se compensa crescer.
+    (function(){
+      const fmt = function(t, o){ return t.replace(/\{(\w+)\}/g, function(_, k){ return o[k]; }); };
+      const meses = []; v.forEach(function(x, i){ if (x > st.cap) meses.push(T.mesesNome[i]); });
+      let html;
+      if (falta > 0.5) {
+        const intervalo = meses.length > 2;
+        const lista = intervalo ? fmt(T.mesesDe, { a: meses[0], b: meses[meses.length - 1] }) : fmt(T.mesesEm, { m: meses.join(T.e) });
+        const mesesFrase = fmt(T.falta, { m: lista });
+        const extra = Math.max(0, capPico - st.cap);
+        html = '<p>' + fmt(T.vFalta, { cap: num(st.cap), mesesFrase: mesesFrase, falta: num(falta), fora: num(fora), extra: num(extra), custoExtra: num(extra * fixoKg) }) + '</p><p>' + fmt(marg > st.preco ? T.vCaro : T.vBarato, { marg: num(marg, 2), preco: num(st.preco, 2) }) + '</p>';
+      } else {
+        const cap90 = Math.round(pico * 0.9);
+        let falta90 = 0; v.forEach(function(x, i){ if (x > cap90) falta90 += (x - cap90) * DIAS[i]; });
+        html = '<p>' + fmt(T.vCobre, { cap: num(st.cap), parada: num((1 - uso) * 100), parado: num(parado) }) + '</p>';
+        if (st.cap > cap90 && falta90 > 0) html += '<p>' + fmt(T.vCobre2, { fora90: num(falta90 * st.preco), poupa90: num((st.cap - cap90) * fixoKg) }) + '</p>';
+      }
+      document.getElementById('pico-veredito').innerHTML = html;
+    })();
     document.getElementById('out-marg').textContent = falta > 0.5
       ? T.margTxt.replace('{m}', num(marg, 2)).replace('{p}', num(st.preco, 2))
       : T.margNada;
