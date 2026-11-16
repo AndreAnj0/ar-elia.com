@@ -182,6 +182,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-agua.html"/>
   </url>
   <url>
+    <loc>https://ar-elia.com/arelia-pico.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-pico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/peak-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-pico.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/peak-calculator.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-pico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/peak-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-pico.html"/>
+  </url>
+  <url>
     <loc>https://ar-elia.com/arelia-recursos.html</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>

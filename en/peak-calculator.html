@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="icon" type="image/png" href="../img/favicon.png"/>
+<link rel="apple-touch-icon" href="../img/favicon.png"/>
+<title>Hotel laundry peak season calculator | ARELIA</title>
+<!-- SEO META -->
+<meta name="description" content="See your Algarve hotel's linen volume month by month, how much capacity sits idle and what the August peak costs. Statistics Portugal data. No sign-up."/>
+<meta name="keywords" content="laundry peak calculator, algarve laundry seasonality, hotel laundry capacity, size hotel laundry"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="author" content="Arelia — Lavandaria Industrial"/>
+<meta name="geo.region" content="PT-08"/>
+<meta name="geo.placename" content="Algarve, Portugal"/>
+<link rel="canonical" href="https://ar-elia.com/en/peak-calculator.html"/>
+<link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-pico.html"/>
+<link rel="alternate" hreflang="en" href="https://ar-elia.com/en/peak-calculator.html"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-pico.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ar-elia.com/en/peak-calculator.html"/>
+<meta property="og:title" content="Hotel laundry peak season calculator | ARELIA"/>
+<meta property="og:description" content="See your Algarve hotel's linen volume month by month, how much capacity sits idle and what the August peak costs. Statistics Portugal data. No sign-up."/>
+<meta property="og:image" content="https://ar-elia.com/img/artigo-sazonalidade.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="ARELIA — Lavandaria Industrial"/>
+<meta property="og:locale" content="en_GB"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Hotel laundry peak season calculator | ARELIA"/>
+<meta name="twitter:description" content="See your Algarve hotel's linen volume month by month, how much capacity sits idle and what the August peak costs. Statistics Portugal data. No sign-up."/>
+<meta name="twitter:image" content="https://ar-elia.com/img/artigo-sazonalidade.jpg"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://ar-elia.com/#organization","name":"Arelia — Industrial Laundry","alternateName":"Arelia","url":"https://ar-elia.com","logo":"https://ar-elia.com/img/favicon.png","description":"Industrial laundry para hotelaria premium no Algarve, Portugal.","email":"geral@ar-elia.com","telephone":"+351925263365","foundingDate":"2026","areaServed":{"@type":"AdministrativeArea","name":"Algarve, Portugal"},"address":{"@type":"PostalAddress","addressRegion":"Algarve","addressCountry":"PT"},"sameAs":["https://www.linkedin.com/company/arelia-lavandaria"],"legalName":"ARELIA LAVANDARIA, LDA","vatID":"PT519476417","taxID":"519476417"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://ar-elia.com/en/peak-calculator.html","name":"Hotel laundry peak season calculator | ARELIA","description":"See your Algarve hotel's linen volume month by month, how much capacity sits idle and what the August peak costs. Statistics Portugal data. No sign-up.","isPartOf":{"@id":"https://ar-elia.com/#website"},"inLanguage":"en-GB"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Hotel laundry peak season calculator","url":"https://ar-elia.com/en/peak-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"en-GB","publisher":{"@id":"https://ar-elia.com/#organization"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+:root {
+  --navy: #0C1A2C;
+  --navy-light: #162A40;
+  --navy-deep: #080F18;
+  --gold: #C4A86A;
+  --gold-dark: #A8872A;
+  --gold-light: #D4BC8A;
+  --linen: #F4F0E6;
+  --linen-dark: #EAE6DB;
+  --steel: #6B8A9A;
+  --steel-light: #B8CCDA;
+  --white: #FFFFFF;
+  --text-muted: rgba(12,26,44,0.55);
+  --text-light: rgba(244,240,230,0.55);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--linen);
+  color: var(--navy);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--gold); color: var(--navy); }
+
+/* ── NAV (reused from main) ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(12, 26, 44, 0.95);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  padding: 0 56px; height: 76px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid rgba(196, 168, 106, 0.18);
+}
+.nav-logo { display:flex; align-items:center; gap:14px; text-decoration:none; transition: opacity .25s; }
+.nav-logo:hover { opacity: 0.82; }
+.nav-icon { width:44px; height:44px; object-fit:contain; flex-shrink:0; }
+.nav-wordmark { display:flex; flex-direction:column; gap:2px; line-height:1; }
+.nav-wordmark-name {
+  font-family:'Playfair Display',serif;
+  font-size:22px; font-weight:500;
+  letter-spacing:4px; text-transform:uppercase;
+  color: var(--linen);
+}
+.nav-wordmark-sub {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:8.5px; font-weight:500;
+  letter-spacing:3.5px; text-transform:uppercase;
+  color: var(--gold);
+}
+.nav-links { display:flex; align-items:center; gap:38px; }
+.nav-links a {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:11px; font-weight:500;
+  letter-spacing:2.8px; color: var(--linen);
+  text-transform:uppercase; text-decoration:none;
+  opacity:.55; transition: opacity .25s, color .25s;
+}
+.nav-links a:hover, .nav-links a.active { opacity:1; color: var(--gold); }
+.btn-nav {
+  background: var(--gold); border: none;
+  color: var(--navy); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 2.8px; text-transform: uppercase;
+  padding: 13px 26px; cursor: pointer;
+  font-family:'Space Grotesk',sans-serif;
+  transition: all .25s;
+}
+.btn-nav:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 8px;
+}
+.hamburger span {
+  display: block; width: 26px; height: 2px;
+  background: var(--linen);
+  transition: transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-drawer {
+  position: fixed;
+  top: 76px; left: 0; right: 0;
+  background: var(--navy);
+  padding: 32px 28px 40px;
+  border-bottom: 1px solid rgba(196,168,106,0.2);
+  transform: translateY(-110%);
+  transition: transform .35s ease;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.mobile-drawer.open { transform: translateY(0); }
+.mobile-drawer a {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px; font-weight: 500;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(244,240,230,0.85);
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(196,168,106,0.1);
+}
+.mobile-drawer a.active { color: var(--gold); }
+.btn-mobile-cta {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 14px 0;
+  margin-top: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 2.8px; text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background:
+    radial-gradient(ellipse at center top, rgba(107, 138, 154, 0.25) 0%, transparent 70%),
+    linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+  padding: 180px 52px 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 250px); left: calc(50% - 450px);
+  width: 900px; height: 500px;
+  background: radial-gradient(ellipse, rgba(196,168,106,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.page-header-tag {
+  position: relative;
+  display: inline-block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 5px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  padding: 8px 18px;
+  border: 1px solid rgba(196,168,106,0.3);
+}
+.page-header-title {
+  position: relative;
+  font-family:'Playfair Display',serif;
+  font-size: clamp(44px, 5.5vw, 78px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--linen);
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+.page-header-title em {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 500;
+}
+.page-header-sub {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(184, 204, 218, 0.78);
+  max-width: 560px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ── CALCULATOR LAYOUT ── */
+.calc-section {
+  background: var(--linen);
+  padding: 100px 52px 80px;
+  position: relative;
+}
+.calc-section::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom,
+    var(--navy-light) 0%,
+    rgba(12,26,44,0.5) 35%,
+    rgba(244,240,230,0.7) 80%,
+    var(--linen) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.calc-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ── INPUTS PANEL ── */
+.calc-inputs {
+  background: var(--white);
+  padding: 48px;
+  border-radius: 6px;
+  box-shadow:
+    0 1px 1px rgba(12,26,44,0.04),
+    0 8px 24px -8px rgba(12,26,44,0.12);
+}
+.calc-inputs-title {
+  font-family:'Playfair Display',serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.calc-inputs-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+.calc-field { margin-bottom: 28px; }
+.calc-field-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.calc-field-value {
+  font-family:'Playfair Display',serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--gold-dark);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.calc-field-value-suffix {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px;
+  color: var(--steel);
+  letter-spacing: 1px;
+  margin-left: 4px;
+  text-transform: uppercase;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--linen-dark);
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px; height: 20px;
+  background: var(--gold);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(12,26,44,0.25);
+  transition: transform .15s;
+}
+input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+input[type="range"]::-moz-range-thumb {
+  width: 20px; height: 20px;
+  background: var(--gold);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(12,26,44,0.25);
+}
+.calc-range-marks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--steel);
+  text-transform: uppercase;
+}
+.calc-segmented {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 8px;
+}
+.calc-segmented button {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 12px 8px;
+  background: transparent;
+  border: 1px solid rgba(12,26,44,0.15);
+  color: var(--navy);
+  cursor: pointer;
+  transition: all .2s;
+  border-radius: 3px;
+}
+.calc-segmented button:hover { border-color: var(--steel); }
+.calc-segmented button.active {
+  background: var(--navy);
+  color: var(--gold);
+  border-color: var(--navy);
+}
+
+/* ── RESULTS PANEL ── */
+.calc-results {
+  background: linear-gradient(155deg, var(--navy) 0%, var(--navy-light) 100%);
+  padding: 48px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 1px 1px rgba(12,26,44,0.04),
+    0 12px 32px -8px rgba(12,26,44,0.32);
+}
+.calc-results::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, rgba(196,168,106,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+.calc-results-tag {
+  display: inline-block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  border: 1px solid rgba(196,168,106,0.3);
+}
+.calc-results-title {
+  font-family:'Playfair Display',serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--linen);
+  margin-bottom: 6px;
+}
+.calc-results-sub {
+  font-size: 13px;
+  color: rgba(184,204,218,0.6);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+/* Interna card */
+.calc-interna-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(244,240,230,0.08);
+  border-radius: 5px;
+  padding: 24px 26px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.calc-interna-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 18px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(244,240,230,0.06);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.calc-interna-label {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(184,204,218,0.65);
+}
+.calc-interna-value {
+  font-family:'Playfair Display',serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--linen);
+  line-height: 1;
+}
+.calc-interna-period {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--steel-light);
+  opacity: 0.55;
+  margin-left: 4px;
+  text-transform: uppercase;
+}
+.calc-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.calc-breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 12.5px;
+}
+.bd-label {
+  color: rgba(184,204,218,0.7);
+}
+.bd-detail {
+  color: rgba(196,168,106,0.7);
+  font-size: 11px;
+  margin-left: 2px;
+}
+.bd-value {
+  color: var(--linen);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Staff insight callout */
+.calc-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  background: rgba(196,168,106,0.06);
+  border-left: 2px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+.calc-insight-icon {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  color: var(--gold);
+  opacity: 0.9;
+}
+.calc-insight-icon svg { width: 100%; height: 100%; }
+.calc-insight-text {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(244,240,230,0.85);
+}
+.calc-insight-text strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Savings block */
+.calc-savings-block {
+  position: relative;
+  z-index: 1;
+  padding: 28px;
+  background: linear-gradient(135deg, rgba(196,168,106,0.12) 0%, rgba(196,168,106,0.04) 100%);
+  border: 1px solid rgba(196,168,106,0.25);
+  border-radius: 5px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.calc-savings-tag {
+  display: inline-block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.calc-savings-range {
+  margin-bottom: 18px;
+}
+.calc-savings-pct {
+  font-family:'Playfair Display',serif;
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -2px;
+  display: inline-flex;
+  align-items: baseline;
+}
+.calc-savings-dash {
+  font-size: 36px;
+  margin: 0 12px;
+  color: var(--gold-light);
+  opacity: 0.7;
+  font-weight: 300;
+}
+.calc-savings-unit {
+  font-size: 38px;
+  font-weight: 400;
+  color: var(--gold-light);
+  margin-left: 4px;
+}
+.calc-savings-money {
+  padding-top: 16px;
+  border-top: 1px solid rgba(196,168,106,0.15);
+}
+.calc-savings-money-label {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(212,188,138,0.7);
+  margin-bottom: 6px;
+}
+.calc-savings-money-value {
+  font-family:'Playfair Display',serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--linen);
+  letter-spacing: 0;
+}
+.calc-savings-money-sep {
+  color: var(--gold);
+  margin: 0 4px;
+  opacity: 0.5;
+}
+.calc-savings-note {
+  margin-top: 16px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px;
+  line-height: 1.65;
+  color: rgba(184,204,218,0.5);
+  font-style: italic;
+}
+
+.calc-cta {
+  width: 100%;
+  background: var(--gold);
+  border: none;
+  color: var(--navy);
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  padding: 18px 32px;
+  cursor: pointer;
+  transition: all .25s;
+  position: relative;
+  z-index: 1;
+}
+.calc-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* ── ASSUMPTIONS SECTION ── */
+.assumptions {
+  background: var(--white);
+  padding: 96px 52px;
+  border-top: 1px solid rgba(12,26,44,0.06);
+}
+.assumptions-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.assumptions-title {
+  font-family:'Playfair Display',serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.assumptions-title em { font-style: italic; color: var(--gold); }
+.assumptions-sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 64px;
+}
+.assumptions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+.assumption-card {
+  padding: 32px 28px;
+  background: var(--linen);
+  border-radius: 4px;
+  border-left: 2px solid var(--gold);
+}
+.assumption-label {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 14px;
+}
+.assumption-value {
+  font-family:'Playfair Display',serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.assumption-desc {
+  font-size: 12px;
+  color: var(--steel);
+  line-height: 1.7;
+}
+
+/* ── FINAL CTA SECTION ── */
+.page-cta {
+  background: var(--gold);
+  padding: 100px 52px;
+  text-align: center;
+}
+.page-cta-title {
+  font-family:'Playfair Display',serif;
+  font-size: clamp(38px, 4.5vw, 60px);
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.page-cta-title em { font-style: italic; }
+.page-cta-desc {
+  font-size: 15px;
+  color: rgba(12,26,44,0.7);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto 36px;
+}
+.page-cta-btn {
+  background: var(--navy);
+  border: none;
+  color: var(--linen);
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  padding: 18px 40px;
+  cursor: pointer;
+  transition: opacity .2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.page-cta-btn:hover { opacity: 0.85; }
+
+/* ── FOOTER (simplified) ── */
+footer {
+  background: var(--navy);
+  padding: 56px 52px 32px;
+  border-top: 1px solid rgba(196,168,106,0.12);
+}
+.footer-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.footer-name {
+  font-family:'Playfair Display',serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--linen);
+  text-decoration: none;
+}
+.footer-meta {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px;
+  color: rgba(244,240,230,0.4);
+}
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px;
+  color: rgba(244,240,230,0.5);
+  text-decoration: none;
+  transition: color .2s;
+  letter-spacing: 1px;
+}
+.footer-links a:hover { color: var(--gold); }
+
+@media (max-width: 980px) {
+  nav { padding: 0 24px; height: 64px; }
+  .nav-icon { width: 36px; height: 36px; }
+  .nav-wordmark-name { font-size: 17px; letter-spacing: 3px; }
+  .nav-wordmark-sub { font-size: 7px; letter-spacing: 2.5px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-drawer { top: 64px; }
+  footer { padding: 48px 24px 28px; }
+  .footer-links { gap: 14px 20px; justify-content: center; }
+  .page-header { padding: 130px 24px 80px; }
+  .calc-section { padding: 64px 24px; }
+  .calc-wrap { grid-template-columns: 1fr; gap: 32px; }
+  .calc-inputs, .calc-results { padding: 32px 24px; }
+  .calc-comparison { grid-template-columns: 1fr; }
+  .calc-col + .calc-col { border-left: none; border-top: 1px solid rgba(244,240,230,0.1); }
+  .assumptions { padding: 64px 24px; }
+  .page-cta { padding: 64px 24px; }
+}
+/* ── CALCULADORA DE ÁGUA ── */
+.calc-field-help {
+  margin-top: 9px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.calc-field-help b { font-weight: 600; color: var(--navy); }
+
+/* Os dois cenários lado a lado. Abaixo de 520px passam a um por linha,
+   senão os números de quatro dígitos partem a meio. */
+.agua-cenarios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 520px) { .agua-cenarios { grid-template-columns: 1fr; } }
+.agua-cenario {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(244,240,230,0.08);
+  border-radius: 5px;
+  padding: 20px 20px 16px;
+}
+.agua-cenario.is-melhor {
+  background: linear-gradient(140deg, rgba(196,168,106,0.12) 0%, rgba(196,168,106,0.03) 100%);
+  border-color: rgba(196,168,106,0.25);
+}
+.agua-cenario-label {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 2.4px; text-transform: uppercase;
+  color: rgba(184,204,218,0.65);
+  margin-bottom: 14px;
+}
+.agua-cenario.is-melhor .agua-cenario-label { color: var(--gold); }
+.agua-cenario-destaque {
+  font-family:'Playfair Display',serif;
+  font-size: 34px; font-weight: 500;
+  color: var(--linen);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.agua-cenario.is-melhor .agua-cenario-destaque { color: var(--gold); }
+.agua-cenario-unidade {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 13px; font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+  color: rgba(184,204,218,0.7);
+}
+.agua-metricas {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(244,240,230,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.agua-metrica {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 12.5px;
+}
+.agua-metrica-label { color: rgba(184,204,218,0.6); }
+.agua-metrica-valor { color: var(--linen); font-weight: 600; white-space: nowrap; }
+
+/* Aviso de que os 35% não se aplicam a quem já poupa. Fica escondido por
+   omissão e o JS liga-o; nunca aparece sem razão. */
+.agua-aviso {
+  display: none;
+  position: relative;
+  z-index: 1;
+  gap: 12px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  background: rgba(184,204,218,0.06);
+  border: 1px solid rgba(184,204,218,0.18);
+  border-left: 2px solid var(--steel-light);
+  border-radius: 4px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: rgba(244,240,230,0.82);
+}
+.agua-aviso.visivel { display: flex; }
+.agua-aviso svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; color: var(--steel-light); }
+
+.agua-nota-35 {
+  margin-top: 14px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11.5px;
+  line-height: 1.65;
+  color: rgba(184,204,218,0.55);
+}
+
+/* Mostrado no lugar dos números quando a operação já está no alvo e não há
+   ganho de água que se possa estimar. Antes aparecia uma coluna de zeros, que
+   se lê como calculadora avariada e não como resposta. */
+.agua-sem-ganho { display: none; }
+.agua-sem-ganho.visivel { display: block; }
+.agua-sem-ganho strong {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 17px;
+  line-height: 1.35;
+  color: var(--bone, #f4f0e6);
+  margin-bottom: 8px;
+}
+.agua-sem-ganho span {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(184,204,218,0.78);
+}
+
+/* Tabela de faixas de referência, dentro da secção "Como calculamos". */
+.agua-tabela-wrap { overflow-x: auto; margin-top: 10px; }
+.agua-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 13px;
+  min-width: 460px;
+}
+.agua-tabela th, .agua-tabela td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(12,26,44,0.1);
+  vertical-align: top;
+}
+.agua-tabela th {
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 2.2px; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.agua-tabela td:last-child { white-space: nowrap; font-weight: 600; color: var(--navy); }
+.agua-tabela tr:last-child td { border-bottom: 0; }
+
+.agua-disclaimer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 22px 26px;
+  background: rgba(12,26,44,0.04);
+  border-left: 2px solid rgba(196,168,106,0.5);
+  border-radius: 3px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+.agua-disclaimer b {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 2.4px; text-transform: uppercase;
+  color: var(--navy);
+}
+
+/* Linha de botões no fim: um principal e dois secundários. */
+.page-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.page-cta-alt {
+  display: inline-block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 2.6px; text-transform: uppercase;
+  text-decoration: none;
+  color: var(--linen);
+  padding: 17px 30px;
+  border: 1px solid rgba(244,240,230,0.3);
+  transition: border-color .25s, color .25s;
+}
+.page-cta-alt:hover { border-color: var(--gold); color: var(--gold); }
+
+
+/* ── MENU DE CALCULADORAS ── */
+/* Abre ao passar o rato, ao receber foco de teclado, e ao clicar (o JS poe
+   .open). As tres vias juntas cobrem rato, teclado e toque. */
+.nav-drop { position: relative; display: flex; align-items: center; }
+.nav-drop-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 2.8px; color: var(--linen);
+  text-transform: uppercase;
+  opacity: .55; transition: opacity .25s, color .25s;
+}
+.nav-drop-btn:hover, .nav-drop-btn.active,
+.nav-drop:hover .nav-drop-btn,
+.nav-drop:focus-within .nav-drop-btn { opacity: 1; color: var(--gold); }
+.nav-drop-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.nav-drop-caret {
+  width: 0; height: 0;
+  border-left: 3.5px solid transparent;
+  border-right: 3.5px solid transparent;
+  border-top: 4px solid currentColor;
+  transition: transform .25s;
+}
+.nav-drop:hover .nav-drop-caret,
+.nav-drop.open .nav-drop-caret { transform: rotate(180deg); }
+.nav-drop-menu {
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translate(-50%, 6px);
+  margin-top: 18px;
+  min-width: 268px;
+  background: var(--navy);
+  border: 1px solid rgba(196,168,106,0.22);
+  box-shadow: 0 18px 44px -12px rgba(0,0,0,0.55);
+  padding: 8px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .2s, transform .2s, visibility .2s;
+  z-index: 120;
+}
+/* A ponte invisivel evita que o menu feche quando o rato atravessa o espaco
+   entre o botao e o painel. */
+.nav-drop-menu::before {
+  content: ''; position: absolute;
+  top: -20px; left: 0; right: 0; height: 20px;
+}
+.nav-drop:hover .nav-drop-menu,
+.nav-drop:focus-within .nav-drop-menu,
+.nav-drop.open .nav-drop-menu {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+.nav-drop-menu a {
+  display: block;
+  padding: 13px 16px;
+  text-decoration: none;
+  opacity: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: background .2s;
+}
+.nav-drop-menu a:hover, .nav-drop-menu a:focus-visible { background: rgba(196,168,106,0.1); }
+.nav-drop-menu a[aria-current] { background: rgba(196,168,106,0.14); }
+.nav-drop-name {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 12.5px; font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--linen);
+  margin-bottom: 3px;
+}
+.nav-drop-menu a:hover .nav-drop-name,
+.nav-drop-menu a[aria-current] .nav-drop-name { color: var(--gold); }
+.nav-drop-desc {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 400;
+  letter-spacing: 0.2px; line-height: 1.5;
+  color: rgba(184,204,218,0.55);
+  text-transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-drop-menu, .nav-drop-caret { transition: none; }
+}
+/* No menu de telemovel nao ha espaco nem razao para um painel que abre:
+   as duas entram como um grupo com rotulo. */
+.drawer-group { display: flex; flex-direction: column; }
+.drawer-group-label {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); opacity: .75;
+  margin-bottom: 2px;
+}
+.mobile-drawer .drawer-group a { padding-left: 14px; }
+
+/* lang-switch:inicio */
+/* ── SELETOR DE IDIOMA ── */
+.lang-switch { display:flex; align-items:center; gap:5px; }
+.nav-links .lang-switch a.lang-opt,
+.mobile-drawer .lang-switch a.lang-opt {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:10.5px; font-weight:600; letter-spacing:1.8px;
+  text-transform:uppercase; text-decoration:none;
+  color:rgba(244,240,230,0.45); opacity:1;
+  padding:3px 1px; border:0; border-bottom:1px solid transparent;
+  transition:color .25s, border-color .25s;
+}
+.nav-links .lang-switch a.lang-opt:hover,
+.mobile-drawer .lang-switch a.lang-opt:hover { color:var(--gold); }
+.nav-links .lang-switch a.lang-opt[aria-current],
+.mobile-drawer .lang-switch a.lang-opt[aria-current] {
+  color:var(--gold); border-bottom-color:rgba(196,168,106,0.55);
+}
+.lang-sep { color:rgba(244,240,230,0.22); font-size:10px; line-height:1; }
+.mobile-drawer .lang-switch { gap:8px; padding:10px 0 2px; }
+.mobile-drawer .lang-switch a.lang-opt { font-size:13px; letter-spacing:2.4px; padding:6px 0; }
+/* lang-switch:fim */
+
+/* wa-fab:inicio */
+.wa-fab {
+  position: fixed; z-index: 9998;
+  right: 24px; bottom: 24px;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 20px 14px 16px;
+  background: #25D366; color: #0B141A;
+  border-radius: 999px; text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: .6px;
+  box-shadow: 0 10px 30px -8px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08);
+  transition: transform .25s, box-shadow .25s, opacity .25s;
+}
+.wa-fab:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -10px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.14); }
+.wa-fab:focus-visible { outline: 3px solid var(--gold, #C4A86A); outline-offset: 3px; }
+.wa-fab svg { width: 22px; height: 22px; fill: currentColor; flex-shrink: 0; }
+/* O banner de cookies ocupa o fundo do ecra e taparia o botao no telemovel.
+   Enquanto estiver a vista, o botao sai da frente: e um passo unico. */
+body:has(.arelia-cb.visible) .wa-fab { opacity: 0; pointer-events: none; transform: translateY(10px); }
+@media (max-width: 640px) {
+  .wa-fab { right: 16px; bottom: 16px; padding: 14px; gap: 0; }
+  .wa-fab .wa-fab-text { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .wa-fab { transition: none; } }
+/* wa-fab:fim */
+
+/* ── CALCULADORA DE PICO ── */
+.calc-field-sep {
+  margin: 8px 0 26px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(12,26,44,0.08);
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 2.4px; text-transform: uppercase;
+  color: var(--steel);
+}
+.calc-segmented.pico-cap { grid-template-columns: repeat(4, 1fr); margin-bottom: 14px; }
+.calc-segmented.pico-cap button { padding: 10px 4px; font-size: 10px; letter-spacing: 1px; }
+@media (max-width: 520px) { .calc-segmented.pico-cap { grid-template-columns: 1fr 1fr; } }
+
+.pico-grafico { position: relative; z-index: 1; margin: 6px 0 22px; }
+.pico-grafico svg { display: block; width: 100%; height: auto; overflow: visible; }
+.pico-grafico .bar { fill: rgba(184,204,218,0.32); }
+.pico-grafico .bar-falta { fill: var(--gold); }
+.pico-grafico .cap-linha { stroke: var(--gold-light); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.pico-grafico .cap-texto { fill: var(--gold-light); font: 600 9.5px 'Space Grotesk',sans-serif; letter-spacing: .5px; }
+.pico-grafico .mes { fill: rgba(184,204,218,0.6); font: 500 9.5px 'Space Grotesk',sans-serif; }
+.pico-legenda {
+  display: flex; flex-wrap: wrap; gap: 6px 18px;
+  margin-top: 10px;
+  font-family:'Space Grotesk',sans-serif; font-size: 11px;
+  color: rgba(184,204,218,0.7);
+}
+.pico-legenda i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.pico-legenda .l-vol { background: rgba(184,204,218,0.32); }
+.pico-legenda .l-falta { background: var(--gold); }
+.pico-legenda .l-cap { width: 14px; height: 0; border-top: 2px dashed var(--gold-light); border-radius: 0; vertical-align: 3px; }
+
+.agua-sem-ganho strong { color: var(--linen); }
+.agua-tabela td + td, .agua-tabela th + th { text-align: right; white-space: nowrap; }
+.agua-tabela td:last-child { font-weight: 600; }
+</style>
+<!-- Google Analytics (GA4) + Consent Mode v2 -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'wait_for_update': 500
+});
+try {
+  if (localStorage.getItem('arelia_consent') === 'granted') {
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+  }
+} catch(e){}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SKWWCWMZV"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-7SKWWCWMZV', {
+  'anonymize_ip': true,
+  'allow_google_signals': false,
+  'cookie_flags': 'SameSite=None;Secure'
+});
+</script>
+<!-- /GA -->
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img class="nav-icon" src="../img/favicon.png" alt="Arelia"/>
+    <span class="nav-wordmark">
+      <span class="nav-wordmark-name">Arelia</span>
+      <span class="nav-wordmark-sub">Industrial Laundry</span>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#sobre">About</a>
+    <div class="nav-drop"><button type="button" class="nav-drop-btn active" aria-expanded="false" aria-haspopup="true">Calculators<span class="nav-drop-caret" aria-hidden="true"></span></button><div class="nav-drop-menu"><a href="roi-calculator.html"><span class="nav-drop-name">ROI calculator</span><span class="nav-drop-desc">In-house or outsourced, cost per kilo</span></a><a href="water-calculator.html"><span class="nav-drop-name">Water calculator</span><span class="nav-drop-desc">Litres, cubic metres and euros</span></a><a href="peak-calculator.html" aria-current="page"><span class="nav-drop-name">Peak season calculator</span><span class="nav-drop-desc">Capacity, summer and extra cost</span></a></div></div>
+    <a href="resources.html">Resources</a>
+    <a href="team.html">Team</a>
+    <div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/arelia-pico.html" hreflang="pt" lang="pt">PT</a><span class="lang-sep" aria-hidden="true">/</span><a class="lang-opt" href="/en/peak-calculator.html" hreflang="en" lang="en" aria-current="true">EN</a></div>
+    <button class="btn-nav" onclick="window.location.href='index.html#contacto'">Request a quote</button>
+  </div>
+  <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMenu();this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a>
+  <a href="index.html#sobre">About</a>
+  <div class="drawer-group"><span class="drawer-group-label">Calculators</span><a href="roi-calculator.html">ROI calculator</a><a href="water-calculator.html">Water calculator</a><a href="peak-calculator.html" class="active">Peak season calculator</a></div>
+  <a href="resources.html">Resources</a>
+  <a href="team.html">Team</a>
+  <button class="btn-mobile-cta" onclick="window.location.href='index.html#contacto'">Request a quote</button>
+  <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language"><a class="lang-opt" href="/arelia-pico.html" hreflang="pt" lang="pt">PT</a><span class="lang-sep" aria-hidden="true">/</span><a class="lang-opt" href="/en/peak-calculator.html" hreflang="en" lang="en" aria-current="true">EN</a></div>
+</div>
+<script>
+function toggleMenu(){
+  document.getElementById('mobileDrawer').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+// Menu de calculadoras: clique e teclado. O rato e o foco ja sao tratados
+// pelo CSS; isto serve o toque e o Escape.
+(function(){
+  var drop = document.querySelector('.nav-drop');
+  if (!drop) return;
+  var btn = drop.querySelector('.nav-drop-btn');
+  function fechar(){ drop.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var aberto = drop.classList.toggle('open');
+    btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(e){ if (!drop.contains(e.target)) fechar(); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && drop.classList.contains('open')) { fechar(); btn.focus(); }
+  });
+})();
+</script>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <span class="page-header-tag">Free calculator</span>
+  <h1 class="page-header-title">What does the<br><em>August peak</em> cost you?</h1>
+  <p class="page-header-sub">See your property's linen volume month by month, with the shape of the year taken from Statistics Portugal data for the Algarve. No sign-up, no commitment.</p>
+</header>
+
+<!-- CALCULATOR -->
+<section class="calc-section">
+  <div class="calc-wrap">
+
+    <!-- LEFT: INPUTS -->
+    <div class="calc-inputs">
+      <h2 class="calc-inputs-title">Your property</h2>
+      <p class="calc-inputs-sub">Adjust the values. The chart and the sums update as you go.</p>
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-quartos">
+          <span>Rooms</span>
+          <span class="calc-field-value"><span id="v-quartos">50</span></span>
+        </label>
+        <input type="range" id="r-quartos" min="10" max="400" value="50" step="5"/>
+        <div class="calc-range-marks"><span>10</span><span>400</span></div>
+        <p class="calc-field-help">Number of rooms at the property.</p>
+      </div>
+
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-occlo">
+          <span>Occupancy in the weakest month</span>
+          <span class="calc-field-value"><span id="v-occlo">40</span><span class="calc-field-value-suffix">%</span></span>
+        </label>
+        <input type="range" id="r-occlo" min="0" max="90" value="40" step="1"/>
+        <div class="calc-range-marks"><span>0%</span><span>90%</span></div>
+        <p class="calc-field-help">Usually January. A leisure hotel open all year often runs between <b>30 and 50%</b>.</p>
+      </div>
+
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-occhi">
+          <span>Occupancy in August</span>
+          <span class="calc-field-value"><span id="v-occhi">95</span><span class="calc-field-value-suffix">%</span></span>
+        </label>
+        <input type="range" id="r-occhi" min="30" max="100" value="95" step="1"/>
+        <div class="calc-range-marks"><span>30%</span><span>100%</span></div>
+        <p class="calc-field-help">The peak month. On the Algarve coast it is common to be above <b>90%</b>.</p>
+      </div>
+
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-kgw">
+          <span>Linen per occupied room, winter</span>
+          <span class="calc-field-value"><span id="v-kgw">5</span><span class="calc-field-value-suffix">kg</span></span>
+        </label>
+        <input type="range" id="r-kgw" min="2" max="10" value="5" step="0.1"/>
+        <div class="calc-range-marks"><span>2 kg</span><span>10 kg</span></div>
+        <p class="calc-field-help">Bed, bath and the rest. <b>5 kg</b> is the assumption in our ROI calculator.</p>
+      </div>
+
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-kgs">
+          <span>Linen per occupied room, August</span>
+          <span class="calc-field-value"><span id="v-kgs">6,5</span><span class="calc-field-value-suffix">kg</span></span>
+        </label>
+        <input type="range" id="r-kgs" min="2" max="12" value="6.5" step="0.1"/>
+        <div class="calc-range-marks"><span>2 kg</span><span>12 kg</span></div>
+        <p class="calc-field-help">Rises with pool and beach towels, families and food service. <b>6.5 kg</b> is our estimate.</p>
+      </div>
+
+      <div class="calc-field-sep">The decision</div>
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-cap">
+          <span>In-house laundry capacity</span>
+          <span class="calc-field-value"><span id="v-cap">250</span><span class="calc-field-value-suffix">kg/day</span></span>
+        </label>
+        <div class="calc-segmented pico-cap" id="seg-cap" role="group" aria-label="In-house laundry capacity"><button type="button" data-cap="media">Average</button><button type="button" data-cap="media30" class="active">Average +30%</button><button type="button" data-cap="p90">90% of peak</button><button type="button" data-cap="pico">Peak</button></div>
+        <input type="range" id="r-cap" min="10" max="400" value="250" step="1"/>
+        <p class="calc-field-help">Pick a starting point or drag. <b>Average +30%</b> is how many people size it; Statistics Portugal data say summer runs well above that.</p>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-preco">
+          <span>Price of linen bought in at the peak</span>
+          <span class="calc-field-value">€<span id="v-preco">3,75</span><span class="calc-field-value-suffix">/kg</span></span>
+        </label>
+        <input type="range" id="r-preco" min="1" max="6" value="3.75" step="0.05"/>
+        <div class="calc-range-marks"><span>€1.00</span><span>€6.00</span></div>
+        <p class="calc-field-help">Emergency outside laundry in August: <b>€3.00 to €4.50</b>. If the shortfall lasts months, use a contract price.</p>
+      </div>
+
+
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-interno">
+          <span>In-house cost per kilo</span>
+          <span class="calc-field-value">€<span id="v-interno">1,64</span><span class="calc-field-value-suffix">/kg</span></span>
+        </label>
+        <input type="range" id="r-interno" min="0.5" max="3" value="1.64" step="0.01"/>
+        <div class="calc-range-marks"><span>€0.50</span><span>€3.00</span></div>
+        <p class="calc-field-help">What each kilo costs you to wash in-house. <b>€1.64</b> is the figure from our <a href="article-in-house-laundry-cost.html">article on in-house laundry</a>.</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: RESULTS -->
+    <div class="calc-results">
+      <span class="calc-results-tag">Result</span>
+      <h2 class="calc-results-title">Your laundry's year</h2>
+      <p class="calc-results-sub">Linen per day in each month, against the capacity you chose.</p>
+
+      <div class="pico-grafico">
+        <svg id="pico-svg" viewBox="0 0 360 190" role="img" aria-labelledby="pico-svg-t"><title id="pico-svg-t">Kilos of linen per day in each month, against laundry capacity</title></svg>
+        <div class="pico-legenda"><span><i class="l-vol"></i>Linen per day</span><span><i class="l-falta"></i>Above capacity</span><span><i class="l-cap"></i>Capacity</span></div>
+      </div>
+
+      <div class="agua-cenarios">
+        <div class="agua-cenario">
+          <span class="agua-cenario-label">August ÷ weakest month</span>
+          <div><span class="agua-cenario-destaque" id="out-ratio">3,1</span><span class="agua-cenario-unidade">times</span></div>
+          <div class="agua-metricas">
+            <div class="agua-metrica"><span class="agua-metrica-label">Peak, per day</span><span class="agua-metrica-valor" id="out-pico">309 kg</span></div>
+            <div class="agua-metrica"><span class="agua-metrica-label">Yearly average, per day</span><span class="agua-metrica-valor" id="out-media">189 kg</span></div>
+            <div class="agua-metrica"><span class="agua-metrica-label">Weakest month, per day</span><span class="agua-metrica-valor" id="out-fraco">100 kg</span></div>
+            <div class="agua-metrica"><span class="agua-metrica-label">Year total</span><span class="agua-metrica-valor" id="out-ano">69 t</span></div>
+          </div>
+        </div>
+        <div class="agua-cenario is-melhor">
+          <span class="agua-cenario-label">Capacity used over the year</span>
+          <div><span class="agua-cenario-destaque" id="out-uso">77</span><span class="agua-cenario-unidade">%</span></div>
+          <div class="agua-metricas">
+            <div class="agua-metrica"><span class="agua-metrica-label">Months below half</span><span class="agua-metrica-valor" id="out-baixo">4</span></div>
+            <div class="agua-metrica"><span class="agua-metrica-label">Days with surplus linen</span><span class="agua-metrica-valor" id="out-dias">62</span></div>
+            <div class="agua-metrica"><span class="agua-metrica-label">Kilos to buy in</span><span class="agua-metrica-valor" id="out-falta">2 965 kg</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-savings-block">
+        <span class="calc-savings-tag" id="out-tag">Peak extra cost, per year</span>
+        <div id="pico-ganho">
+          <div class="calc-savings-range">
+            <span class="calc-savings-pct">€<span id="out-sobre">6 256</span></span>
+          </div>
+          <div class="calc-savings-money">
+            <span class="calc-savings-money-label">Paid for linen bought in</span>
+            <span class="calc-savings-money-value">€<span id="out-fora">11 119</span> <span class="calc-savings-money-sep">/</span> year</span>
+          </div>
+        </div>
+        <p class="agua-sem-ganho" id="pico-sem">
+          <strong>Capacity covers August.</strong>
+          <span id="pico-sem-txt"></span>
+        </p>
+        <p class="agua-nota-35">The extra cost is what you pay on top per kilo bought in, against what it would cost to wash in-house. The shape of the year comes from Statistics Portugal; the rest are the values you chose.</p>
+      </div>
+
+      <button class="calc-cta" onclick="try{if(typeof gtag==='function')gtag('event','pico_calculated',{cta_clicked:true,source:'pico_calculator'});}catch(e){};window.location.href='index.html#contacto'">Get a tailored quote →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ASSUMPTIONS -->
+<section class="assumptions">
+  <div class="assumptions-inner">
+    <h2 class="assumptions-title">How we <em>work it out.</em></h2>
+    <p class="assumptions-sub">The shape of the year comes from official data. Everything else is your choice. Here are the sums, so you can judge them.</p>
+
+    <div class="assumptions-grid">
+      <div class="assumption-card">
+        <div class="assumption-label">The shape of the year</div>
+        <div class="assumption-value">INE 2025</div>
+        <div class="assumption-desc">Overnight stays per day in Algarve hotels, month by month (<a href="https://www.ine.pt/xportal/xmain?xpid=INE&amp;xpgid=ine_tema&amp;tema_cod=1713&amp;xlang=en" target="_blank" rel="noopener">indicator 0012088</a>). August has 5.6 times January's stays per day, and June to September run 55% above the yearly average.</div>
+      </div>
+      <div class="assumption-card">
+        <div class="assumption-label">How it applies to you</div>
+        <div class="assumption-value">Between two points</div>
+        <div class="assumption-desc">Each month sits between your weakest-month occupancy and your August occupancy, in the same proportion as the region sits between January and August. The same for linen per room. So the shape is the Algarve's and the amplitude is yours.</div>
+      </div>
+      <div class="assumption-card">
+        <div class="assumption-label">Why we don't use the curve as is</div>
+        <div class="assumption-value">Hotels close</div>
+        <div class="assumption-desc">Part of the regional winter drop is hotels closing. A hotel open all year feels less than the region's 5.6 times, which is why the amplitude comes from your occupancy, not from the statistics.</div>
+      </div>
+      <div class="assumption-card">
+        <div class="assumption-label">Daily volume</div>
+        <div class="assumption-value">rooms × occupancy × kg</div>
+        <div class="assumption-desc">Occupied rooms times linen per occupied room, in each month. The same rule as the ROI calculator, month by month instead of one average.</div>
+      </div>
+      <div class="assumption-card">
+        <div class="assumption-label">Surplus linen and extra cost</div>
+        <div class="assumption-value">Above the line</div>
+        <div class="assumption-desc">In the months where volume exceeds capacity, the excess is bought in. The extra cost is that excess times the gap between the outside price and your in-house cost.</div>
+      </div>
+      <div class="assumption-card">
+        <div class="assumption-label">Capacity used</div>
+        <div class="assumption-value">Yearly average</div>
+        <div class="assumption-desc">Linen washed in-house over the year, divided by what the laundry could do working at its limit every day. Whatever is short of 100% is capacity paid for and idle.</div>
+      </div>
+    </div>
+
+    <h3 class="assumptions-title" style="font-size:26px;margin-top:64px;margin-bottom:10px;">The shape of <em>the Algarve year.</em></h3>
+    <p class="assumptions-sub">Overnight stays in Algarve hotel establishments in 2025, per Statistics Portugal. The last column compares each month's stays per day with August's.</p>
+    <div class="agua-tabela-wrap">
+      <table class="agua-tabela">
+        <thead>
+          <tr><th scope="col">Month</th><th scope="col">Overnight stays</th><th scope="col">Per day, vs August</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>January</td><td>507,404</td><td>18%</td></tr>
+          <tr><td>February</td><td>689,231</td><td>27%</td></tr>
+          <tr><td>March</td><td>1,018,681</td><td>36%</td></tr>
+          <tr><td>April</td><td>1,633,647</td><td>60%</td></tr>
+          <tr><td>May</td><td>1,789,350</td><td>63%</td></tr>
+          <tr><td>June</td><td>2,092,316</td><td>77%</td></tr>
+          <tr><td>July</td><td>2,540,240</td><td>90%</td></tr>
+          <tr><td>August</td><td>2,822,284</td><td>100%</td></tr>
+          <tr><td>September</td><td>2,084,895</td><td>76%</td></tr>
+          <tr><td>October</td><td>1,847,262</td><td>65%</td></tr>
+          <tr><td>November</td><td>783,332</td><td>29%</td></tr>
+          <tr><td>December</td><td>589,694</td><td>21%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="agua-disclaimer" style="margin-top:48px;">
+      <b>Disclaimer</b>
+      This tool gives indicative estimates from the values you choose and the regional shape of the year. It is not a commercial offer or a commitment by Arelia. Your property's real volume depends on its guests, stays and services, and is only known by measuring.
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <h2 class="page-cta-title">Want to secure August<br><em>before August?</em></h2>
+  <p class="page-cta-desc">The simulation shows the order of magnitude. A quote built on your real volume, month by month, shows the rest. Winter is the time to ask.</p>
+  <div class="page-cta-row">
+    <a class="page-cta-btn" href="index.html#contacto">Request a quote</a>
+    <a class="page-cta-alt" href="article-algarve-laundry-seasonality.html">Read the full article</a>
+    <a class="page-cta-alt" href="roi-calculator.html">See the ROI calculator</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a class="footer-name" href="index.html">Arelia</a>
+    <span class="footer-meta">© 2026 Arelia · Industrial Laundry</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="resources.html">Resources</a>
+      <a href="team.html">Team</a>
+      <a href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener">Complaints Book</a>
+          <a href="industrial-laundry-albufeira.html">Albufeira</a>
+      <a href="industrial-laundry-vilamoura-quarteira.html">Vilamoura</a>
+      <a href="industrial-laundry-portimao.html">Portimão</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── CALCULADORA DE PICO ──
+(function(){
+  // Forma do ano: dormidas por dia na hotelaria do Algarve, INE 2025
+  // (indicador 0012088), escalada entre o mês mais fraco (0) e agosto (1).
+  // Cada mês da unidade fica entre a ocupação/roupa do mês fraco e a de agosto
+  // na mesma proporção em que a região está entre janeiro e agosto.
+  const FORMA = [0.0, 0.11, 0.221, 0.51, 0.554, 0.715, 0.878, 1.0, 0.711, 0.579, 0.13, 0.036];
+  const DIAS = [31,28,31,30,31,30,31,31,30,31,30,31];
+  const T = {"loc": "en-GB", "kgdia": "kg/day", "emFalta": "above capacity", "meses": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "ini": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], "grafT": "Kilos of linen per day in each month, against laundry capacity", "tagSobre": "Peak extra cost, per year", "tagSem": "No surplus linen", "semTxt": "The cost sits on the other side: on average, {p}% of this capacity is idle over the year. It was paid for, and it depreciates and needs maintenance anyway."};
+
+  let st = { quartos: 50, occlo: 40, occhi: 95, kgw: 5, kgs: 6.5, cap: 250, preco: 3.75, interno: 1.64, modo: 'media30' };
+
+  function num(n, c) { return n.toLocaleString(T.loc, { minimumFractionDigits: c || 0, maximumFractionDigits: c || 0, useGrouping: 'always' }); }
+  function dec(v) { return num(parseFloat(v), 2); }
+
+  function volumes() {
+    return FORMA.map(function(f){
+      const occ = (st.occlo + (st.occhi - st.occlo) * f) / 100;
+      const kg = st.kgw + (st.kgs - st.kgw) * f;
+      return st.quartos * occ * kg;
+    });
+  }
+
+  function capPorModo(v, media, pico) {
+    if (st.modo === 'media') return Math.round(media);
+    if (st.modo === 'media30') return Math.round(media * 1.3);
+    if (st.modo === 'p90') return Math.round(pico * 0.9);
+    if (st.modo === 'pico') return Math.ceil(pico);
+    return st.cap;
+  }
+
+  function desenhar(v, cap) {
+    const svg = document.getElementById('pico-svg');
+    const W = 360, H = 190, base = 168, topo = 14, larg = W / 12;
+    const max = Math.max(cap, Math.max.apply(null, v)) * 1.08 || 1;
+    const y = function(x){ return base - (x / max) * (base - topo); };
+    let h = '<title id="pico-svg-t">' + T.grafT + '</title>';
+    v.forEach(function(x, i){
+      const x0 = i * larg + 4, w = larg - 8;
+      const dentro = Math.min(x, cap);
+      h += '<rect class="bar" x="' + x0 + '" y="' + y(dentro) + '" width="' + w + '" height="' + (base - y(dentro)) + '" rx="2"><title>' + T.meses[i] + ': ' + num(x) + ' ' + T.kgdia + '</title></rect>';
+      if (x > cap) h += '<rect class="bar-falta" x="' + x0 + '" y="' + y(x) + '" width="' + w + '" height="' + (y(cap) - y(x)) + '" rx="2"><title>' + T.meses[i] + ': ' + num(x - cap) + ' ' + T.kgdia + ' ' + T.emFalta + '</title></rect>';
+      h += '<text class="mes" x="' + (x0 + w / 2) + '" y="' + (base + 15) + '" text-anchor="middle">' + T.ini[i] + '</text>';
+    });
+    const yc = y(cap);
+    h += '<line class="cap-linha" x1="0" x2="' + W + '" y1="' + yc + '" y2="' + yc + '"/>';
+    h += '<text class="cap-texto" x="' + W + '" y="' + (yc - 5) + '" text-anchor="end">' + num(cap) + ' ' + T.kgdia + '</text>';
+    svg.innerHTML = h;
+  }
+
+  function recalcular() {
+    const v = volumes();
+    let ano = 0; v.forEach(function(x, i){ ano += x * DIAS[i]; });
+    const media = ano / 365, pico = Math.max.apply(null, v), fraco = Math.min.apply(null, v);
+
+    const r = document.getElementById('r-cap');
+    const maxCap = Math.max(50, Math.ceil(pico * 1.3 / 10) * 10);
+    r.max = maxCap;
+    st.cap = Math.max(10, Math.min(capPorModo(v, media, pico), maxCap));
+    r.value = st.cap;
+    document.getElementById('v-cap').textContent = num(st.cap);
+
+    let falta = 0, dias = 0, baixo = 0;
+    v.forEach(function(x, i){
+      if (x > st.cap) { falta += (x - st.cap) * DIAS[i]; dias += DIAS[i]; }
+      if (Math.min(x, st.cap) < st.cap * 0.5) baixo++;
+    });
+    const processado = ano - falta;
+    const uso = st.cap > 0 ? processado / (st.cap * 365) : 0;
+    const margem = Math.max(0, st.preco - st.interno);
+    const sobre = falta * margem;
+
+    desenhar(v, st.cap);
+    document.getElementById('out-ratio').textContent = fraco > 0 ? num(pico / fraco, 1) : '—';
+    document.getElementById('out-pico').textContent = num(pico) + ' kg';
+    document.getElementById('out-media').textContent = num(media) + ' kg';
+    document.getElementById('out-fraco').textContent = num(fraco) + ' kg';
+    document.getElementById('out-ano').textContent = num(ano / 1000, 1) + ' t';
+    document.getElementById('out-uso').textContent = num(uso * 100);
+    document.getElementById('out-baixo').textContent = baixo;
+    document.getElementById('out-dias').textContent = dias;
+    document.getElementById('out-falta').textContent = num(falta) + ' kg';
+    document.getElementById('out-sobre').textContent = num(sobre);
+    document.getElementById('out-fora').textContent = num(falta * st.preco);
+
+    // Sem défice, um "€0" lê-se como calculadora avariada. Diz-se o que se passa.
+    const semFalta = falta <= 0.5;
+    document.getElementById('pico-ganho').hidden = semFalta;
+    document.getElementById('pico-sem').classList.toggle('visivel', semFalta);
+    document.getElementById('out-tag').textContent = semFalta ? T.tagSem : T.tagSobre;
+    document.getElementById('pico-sem-txt').textContent = T.semTxt.replace('{p}', num((1 - uso) * 100));
+  }
+
+  function ligar(id, chave, fmt, depois) {
+    const r = document.getElementById('r-' + id), d = document.getElementById('v-' + id);
+    r.addEventListener('input', function(){
+      st[chave] = parseFloat(this.value);
+      if (depois) depois();
+      d.textContent = fmt ? fmt(st[chave]) : num(st[chave]);
+      recalcular();
+    });
+  }
+  function sincr(id, val, fmt) { document.getElementById('r-' + id).value = val; document.getElementById('v-' + id).textContent = fmt ? fmt(val) : num(val); }
+
+  ligar('quartos', 'quartos');
+  ligar('occlo', 'occlo', null, function(){ if (st.occlo > st.occhi) { st.occhi = Math.max(30, st.occlo); sincr('occhi', st.occhi); } });
+  ligar('occhi', 'occhi', null, function(){ if (st.occhi < st.occlo) { st.occlo = st.occhi; sincr('occlo', st.occlo); } });
+  ligar('kgw', 'kgw', function(x){ return num(x, 1); }, function(){ if (st.kgw > st.kgs) { st.kgs = st.kgw; sincr('kgs', st.kgs, function(x){ return num(x, 1); }); } });
+  ligar('kgs', 'kgs', function(x){ return num(x, 1); }, function(){ if (st.kgs < st.kgw) { st.kgw = st.kgs; sincr('kgw', st.kgw, function(x){ return num(x, 1); }); } });
+  ligar('preco', 'preco', dec);
+  ligar('interno', 'interno', dec);
+
+  const botoes = document.querySelectorAll('#seg-cap button');
+  function marcar(m) { botoes.forEach(function(b){ b.classList.toggle('active', b.dataset.cap === m); }); }
+  botoes.forEach(function(b){
+    b.addEventListener('click', function(){ st.modo = this.dataset.cap; marcar(st.modo); recalcular(); });
+  });
+  document.getElementById('r-cap').addEventListener('input', function(){
+    st.modo = 'manual'; marcar(''); st.cap = parseFloat(this.value); recalcular();
+  });
+
+  (function(){
+    var disparado = false;
+    document.querySelectorAll('.calc-inputs input, .calc-inputs button').forEach(function(el){
+      el.addEventListener('change', function(){
+        if (disparado) return;
+        disparado = true;
+        try { if (typeof gtag === 'function') gtag('event', 'pico_engaged', { source: 'pico_calculator' }); } catch(e){}
+      });
+      el.addEventListener('click', function(){ el.dispatchEvent(new Event('change')); });
+    });
+  })();
+
+  sincr('kgs', st.kgs, function(x){ return num(x, 1); });
+  sincr('kgw', st.kgw, function(x){ return num(x, 1); });
+  sincr('preco', st.preco, dec);
+  sincr('interno', st.interno, dec);
+  recalcular();
+})();
+</script>
+<!-- Cookie consent banner (Arelia) -->
+<style>
+.arelia-cb{
+  position:fixed;
+  bottom:24px; left:24px; right:24px;
+  max-width:560px;
+  margin-left:auto; margin-right:auto;
+  z-index:9999;
+  background:#0C1A2C;
+  color:#F4F0E6;
+  border-radius:20px;
+  padding:22px 26px;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.55), 0 0 0 1px rgba(196,168,106,.18);
+  font-family:'Space Grotesk',sans-serif;
+  display:flex; align-items:center; gap:22px;
+  transform:translateY(150%);
+  transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.arelia-cb.visible{transform:translateY(0)}
+.arelia-cb__icon{
+  flex-shrink:0; width:44px; height:44px;
+  border-radius:50%; background:rgba(196,168,106,.15);
+  display:flex; align-items:center; justify-content:center;
+  color:#C4A86A;
+}
+.arelia-cb__icon svg{width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+.arelia-cb__text{flex:1; font-size:13.5px; line-height:1.55; color:rgba(244,240,230,.85)}
+.arelia-cb__text strong{display:block; margin-bottom:4px; font-weight:600; color:#F4F0E6; font-size:14px}
+.arelia-cb__text a{color:#C4A86A; text-decoration:none; border-bottom:1px solid rgba(196,168,106,.4)}
+.arelia-cb__text a:hover{color:#D4BC8A}
+.arelia-cb__actions{display:flex; gap:8px; flex-shrink:0}
+.arelia-cb__btn{
+  border:none; cursor:pointer;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:11px; font-weight:600;
+  letter-spacing:1.8px; text-transform:uppercase;
+  padding:11px 18px;
+  border-radius:999px;
+  transition:all .25s;
+}
+.arelia-cb__btn--accept{background:#C4A86A; color:#0C1A2C}
+.arelia-cb__btn--accept:hover{background:#D4BC8A; transform:translateY(-1px)}
+.arelia-cb__btn--reject{background:transparent; color:rgba(244,240,230,.7); border:1px solid rgba(244,240,230,.18)}
+.arelia-cb__btn--reject:hover{color:#F4F0E6; border-color:rgba(244,240,230,.4)}
+@media (max-width:640px){
+  .arelia-cb{
+    flex-direction:column; align-items:flex-start;
+    bottom:12px; left:12px; right:12px;
+    padding:20px 22px; gap:16px;
+  }
+  .arelia-cb__icon{display:none}
+  .arelia-cb__actions{width:100%; justify-content:flex-end}
+  .arelia-cb__btn{flex:1; max-width:140px}
+}
+</style>
+<div class="arelia-cb" id="areliaCookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="arelia-cb__icon">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10c0-.46-.04-.92-.1-1.36a3 3 0 0 1-3.38-3.38A3 3 0 0 1 13.5 3a10 10 0 0 0-1.5-1z"/><circle cx="8.5" cy="8.5" r="1"/><circle cx="15.5" cy="15.5" r="1"/><circle cx="9" cy="14" r="1"/></svg>
+  </div>
+  <div class="arelia-cb__text">
+    <strong>Cookies &amp; traffic analytics</strong>
+    We use cookies to understand how the site is used and to improve the experience. The data is anonymised. Read more in our <a href="privacy.html">Privacy Policy</a>.
+  </div>
+  <div class="arelia-cb__actions">
+    <button type="button" class="arelia-cb__btn arelia-cb__btn--reject" onclick="areliaConsent('denied')">Decline</button>
+    <button type="button" class="arelia-cb__btn arelia-cb__btn--accept" onclick="areliaConsent('granted')">Accept</button>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('areliaCookieBanner');
+  if(!banner) return;
+  try {
+    if (!localStorage.getItem('arelia_consent')) {
+      setTimeout(function(){ banner.classList.add('visible'); }, 600);
+    }
+  } catch(e){ setTimeout(function(){ banner.classList.add('visible'); }, 600); }
+  window.areliaConsent = function(value){
+    try { localStorage.setItem('arelia_consent', value); } catch(e){}
+    if (value === 'granted' && typeof gtag === 'function') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
+    banner.classList.remove('visible');
+    setTimeout(function(){ banner.style.display = 'none'; }, 400);
+  };
+})();
+</script>
+<!-- /Cookie banner -->
+
+<!-- Arelia GA4 event tracking -->
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  function track(eventName, params){
+    try { gtag('event', eventName, params || {}); } catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a || !a.href) return;
+    var href = a.href.toLowerCase();
+    if (href.indexOf('mailto:') === 0){
+      track('email_click', {link_url: a.href, link_text: (a.textContent||'').trim().slice(0,80)});
+    } else if (href.indexOf('tel:') === 0){
+      track('phone_click', {link_url: a.href, link_text: (a.textContent||'').trim().slice(0,80)});
+    } else if (href.indexOf('linkedin.com') !== -1){
+      track('linkedin_click', {link_url: a.href, link_text: (a.textContent||'').trim().slice(0,80)});
+    } else if (a.target === '_blank' && href.indexOf(location.hostname) === -1){
+      track('outbound_click', {link_url: a.href, link_domain: (function(){try{return new URL(a.href).hostname;}catch(e){return '';}})()});
+    }
+  });
+})();
+</script>
+<!-- /Arelia GA4 event tracking -->
+<a class="wa-fab" href="https://wa.me/351925263365?text=Hello!%20I%20would%20like%20to%20ask%20for%20a%20quote%20for%20my%20property." target="_blank" rel="noopener" aria-label="Talk to us on WhatsApp" data-wa onclick="try{if(typeof gtag==='function')gtag('event','whatsapp_click',{link_url:this.href});}catch(e){}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.34M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41"/></svg><span class="wa-fab-text">WhatsApp</span></a>
+</body>
+</html>
