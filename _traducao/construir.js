@@ -26,6 +26,7 @@ const PAGINAS = [
   { pt: 'artigo-custo-lavandaria-interna.html',           en: 'article-in-house-laundry-cost.html',        dic: 'art-custo' },
   { pt: 'artigo-5-sinais-lencois-degradacao.html',        en: 'article-5-signs-linen-wearing-out.html',    dic: 'art-lencois' },
   { pt: 'artigo-reduzir-consumo-agua-lavandaria.html',    en: 'article-cut-laundry-water-use.html',        dic: 'art-agua' },
+  { pt: 'artigo-sazonalidade-lavandaria-algarve.html',     en: 'article-algarve-laundry-seasonality.html',  dic: 'art-sazonalidade' },
   { pt: 'privacidade.html',                               en: 'privacy.html',                              dic: 'privacidade' },
   { pt: 'termos.html',                                    en: 'terms.html',                                dic: 'termos' },
 ];

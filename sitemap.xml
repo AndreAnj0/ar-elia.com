@@ -254,6 +254,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-reduzir-consumo-agua-lavandaria.html"/>
   </url>
   <url>
+    <loc>https://ar-elia.com/artigo-sazonalidade-lavandaria-algarve.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/artigo-sazonalidade-lavandaria-algarve.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/article-algarve-laundry-seasonality.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-sazonalidade-lavandaria-algarve.html"/>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/en/article-algarve-laundry-seasonality.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/artigo-sazonalidade-lavandaria-algarve.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/article-algarve-laundry-seasonality.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/artigo-sazonalidade-lavandaria-algarve.html"/>
+  </url>
+  <url>
     <loc>https://ar-elia.com/equipa.html</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>

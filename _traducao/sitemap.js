@@ -20,6 +20,7 @@ const PARES = [
   ['artigo-custo-lavandaria-interna.html', 'en/article-in-house-laundry-cost.html', '0.7', 'monthly'],
   ['artigo-5-sinais-lencois-degradacao.html', 'en/article-5-signs-linen-wearing-out.html', '0.7', 'monthly'],
   ['artigo-reduzir-consumo-agua-lavandaria.html', 'en/article-cut-laundry-water-use.html', '0.7', 'monthly'],
+  ['artigo-sazonalidade-lavandaria-algarve.html', 'en/article-algarve-laundry-seasonality.html', '0.7', 'monthly'],
   ['equipa.html', 'en/team.html', '0.6', 'monthly'],
   ['sobre.html', 'en/about.html', '0.7', 'monthly'],
   ['privacidade.html', 'en/privacy.html', '0.3', 'yearly'],

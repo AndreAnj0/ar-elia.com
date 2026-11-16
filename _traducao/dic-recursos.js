@@ -12,7 +12,7 @@ module.exports = {
   'data-filter="all">Todos<': 'data-filter="all">All<',
   // rotulos dos filtros do indice
   '>Qualidade<': '>Quality<',
-  '10 min · Sazonalidade': '10 min · Seasonality',
+  '9 min · Sazonalidade': '9 min · Seasonality',
   'Custos e qualidade na lavandaria hoteleira | ARELIA': 'Costs and quality in hotel laundry | ARELIA',
   'Artigos práticos sobre custos, qualidade têxtil e operação na lavandaria hoteleira. Conhecimento aplicado ao dia a dia de um hotel.':
     'Practical articles on costs, textile quality and running a hotel laundry. Knowledge you can apply to the day-to-day of a hotel.',
@@ -44,8 +44,8 @@ module.exports = {
 
   'O custo escondido da sazonalidade no Algarve (e como geri-lo)':
     'The hidden cost of seasonality in the Algarve (and how to manage it)',
-  'Em Agosto, o seu volume triplica. A sua lavandaria interna não. Estratégias reais para gerir picos sem investir em capacidade ociosa.':
-    'In August your volume triples. Your in-house laundry does not. Practical ways to handle the peak without paying for capacity that sits idle.',
+  'Em agosto o volume triplica. A lavandaria interna não. O que custa dimensionar para o pico, e o que custa não dimensionar.':
+    'In August the volume triples. The in-house laundry does not. What it costs to size for the peak, and what it costs not to.',
 
   'Como reduzir o consumo de água da sua lavandaria em 35%':
     'How to cut your laundry’s water use by 35%',
