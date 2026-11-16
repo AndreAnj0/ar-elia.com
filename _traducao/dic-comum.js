@@ -13,6 +13,9 @@ module.exports = {
   // O menu do topo juntou as duas calculadoras num unico item. "Calcular ROI"
   // e "Calcular agua" ainda aparecem no rodape e nos blocos .geo-links, por
   // isso ficam.
+  // Instrumento legal portugues. Em ingles usa-se o nome corrente, e a
+  // ligacao vai na mesma para a plataforma oficial.
+  'Livro de Reclamações': 'Complaints Book',
   'Calculadoras': 'Calculators',
   'Calculadora de ROI': 'ROI calculator',
   'Calculadora de água': 'Water calculator',

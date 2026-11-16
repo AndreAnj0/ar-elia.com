@@ -61,6 +61,13 @@ module.exports = {
   '>m³ / ano<': '>m³ / year<',
   '>€ / mês<': '>€ / month<',
   '>€ / ano<': '>€ / year<',
+  // Bloco que substitui os numeros quando a operacao ja esta no alvo.
+  // Acrescentado em 5a56ce2 sem entrada no dicionario, e tinha ficado em
+  // portugues na pagina inglesa.
+  'A sua operação já está no nível de referência.':
+    'Your operation is already at the reference level.',
+  'Aos 13 L/kg ou abaixo, não há redução de água que se possa estimar aqui — a partir daí o que sobra depende do equipamento, dos programas e da carga, e só se sabe medindo. Preferimos dizer isto a mostrar-lhe uma poupança que não podemos justificar.':
+    'At 13 L/kg or below there is no water saving we can estimate here. Beyond that point what remains depends on the equipment, the programmes and the loading, and the only way to know it is to measure it. We would rather say so than show you a saving we cannot justify.',
   'Poupança estimada': 'Estimated saving',
   '>m³/ano<': '>m³/year<',
   'Menos na fatura da água': 'Off the water bill',

@@ -32,8 +32,8 @@ module.exports = Object.assign({
     'Arelia operates from Lanka Park, in Tavagueira, Guia, in the Albufeira municipality. From our door to Vilamoura marina is about 20 km on the N125 — under half an hour.',
   'Não é um detalhe de morada. Numa lavandaria industrial, a distância é o que define aquilo que se pode prometer sem mentir. Uma recolha que obriga a atravessar o Algarve de ponta a ponta entra num circuito longo e rígido, onde qualquer alteração de última hora se paga no dia seguinte. A vinte quilómetros, a rota continua a ser uma rota — mas é curta o suficiente para que um ajuste deixe de ser um problema de logística e passe a ser um telefonema.':
     'That is not a detail of address. In an industrial laundry, distance is what decides what you can promise without lying. A collection that means crossing the Algarve end to end goes into a long, rigid circuit where any last-minute change is paid for the following day. At twenty kilometres the route is still a route — but it is short enough that a change stops being a logistics problem and becomes a phone call.',
-  'Morada: Lanka Park, loja I&nbsp;–&nbsp;Sul, Tavagueira, 8200-425 Guia ·':
-    'Address: Lanka Park, unit I&nbsp;–&nbsp;Sul, Tavagueira, 8200-425 Guia ·',
+  'Morada: Rua Tavagueira, Lote I Sul, Lanka Park II, 8200-425 Guia ·':
+    'Address: Rua Tavagueira, Lote I Sul, Lanka Park II, 8200-425 Guia ·',
 
   'Quatro realidades diferentes <em>no mesmo punhado de quilómetros</em>.':
     'Four different realities <em>within the same few kilometres</em>.',

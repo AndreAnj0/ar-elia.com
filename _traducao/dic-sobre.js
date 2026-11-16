@@ -20,8 +20,9 @@ module.exports = {
   '<dt>Marca</dt>': '<dt>Brand</dt>',
   '<dt>Fundada em</dt>': '<dt>Founded</dt>',
   '<dt>Sede e operação</dt>': '<dt>Base and operation</dt>',
-  'Lanka Park, loja I&nbsp;–&nbsp;Sul, Tavagueira, 8200-425 Guia<br>Concelho de Albufeira, Algarve, Portugal':
-    'Lanka Park, unit I&nbsp;–&nbsp;Sul, Tavagueira, 8200-425 Guia<br>Albufeira municipality, Algarve, Portugal',
+  // A morada e a do registo oficial e nao se traduz.
+  'Rua Tavagueira, Lote I Sul, Lanka Park II, 8200-425 Guia<br>Concelho de Albufeira, Algarve, Portugal':
+    'Rua Tavagueira, Lote I Sul, Lanka Park II, 8200-425 Guia<br>Albufeira municipality, Algarve, Portugal',
   '<dt>Telefone e WhatsApp</dt>': '<dt>Phone and WhatsApp</dt>',
   '<dt>Website</dt>': '<dt>Website</dt>',
   'ar-elia.com — em português e inglês': 'ar-elia.com — in Portuguese and English',
