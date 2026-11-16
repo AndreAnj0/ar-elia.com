@@ -1091,6 +1091,8 @@ body:has(.arelia-cb.visible) .wa-fab { opacity: 0; pointer-events: none; transfo
 /* wa-fab:fim */
 
 /* ── CALCULADORA DE PICO ── */
+.calc-field-help a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 2px; }
+.calc-field-help a:hover { color: var(--navy); }
 .calc-field-sep {
   margin: 8px 0 26px;
   padding-top: 26px;
@@ -1298,13 +1300,22 @@ function toggleMenu(){
       </div>
 
       <div class="calc-field">
-        <label class="calc-field-label" for="r-preco">
-          <span>Price of linen bought in at the peak</span>
-          <span class="calc-field-value">€<span id="v-preco">3,75</span><span class="calc-field-value-suffix">/kg</span></span>
+        <label class="calc-field-label" for="r-precopico">
+          <span>Outside price, July and August</span>
+          <span class="calc-field-value">€<span id="v-precopico">3.75</span><span class="calc-field-value-suffix">/kg</span></span>
         </label>
-        <input type="range" id="r-preco" min="1" max="6" value="3.75" step="0.05"/>
+        <input type="range" id="r-precopico" min="1" max="6" value="3.75" step="0.05"/>
         <div class="calc-range-marks"><span>€1.00</span><span>€6.00</span></div>
-        <p class="calc-field-help">Emergency outside laundry in August: <b>€3.00 to €4.50</b>. If the shortfall lasts months, use a contract price.</p>
+        <p class="calc-field-help">Emergency outside laundry in the height of the season: <b>€3.00 to €4.50</b>.</p>
+      </div>
+      <div class="calc-field">
+        <label class="calc-field-label" for="r-precooutros">
+          <span>Outside price, other months</span>
+          <span class="calc-field-value">€<span id="v-precooutros">1.30</span><span class="calc-field-value-suffix">/kg</span></span>
+        </label>
+        <input type="range" id="r-precooutros" min="0.5" max="4" value="1.3" step="0.05"/>
+        <div class="calc-range-marks"><span>€0.50</span><span>€4.00</span></div>
+        <p class="calc-field-help">Outside the peak you sign a contract at a normal price. <b>€1.30</b> is the Algarve market average we use in the <a href="article-in-house-laundry-cost.html">article on in-house laundry</a>.</p>
       </div>
 
 
@@ -1368,7 +1379,7 @@ function toggleMenu(){
           <strong>Capacity covers August.</strong>
           <span id="pico-sem-txt"></span>
         </p>
-        <p class="agua-nota-35">The extra cost is what you pay on top per kilo bought in, against what it would cost to wash in-house. The shape of the year comes from Statistics Portugal; the rest are the values you chose.</p>
+        <p class="agua-nota-35">The extra cost is what you pay on top per kilo bought in, against what it would cost to wash in-house. In months where buying in is cheaper than washing in-house, it counts as zero. The shape of the year comes from Statistics Portugal; the rest are the values you chose.</p>
       </div>
 
       <button class="calc-cta" onclick="try{if(typeof gtag==='function')gtag('event','pico_calculated',{cta_clicked:true,source:'pico_calculator'});}catch(e){};window.location.href='index.html#contacto'">Get a tailored quote →</button>
@@ -1406,7 +1417,7 @@ function toggleMenu(){
       <div class="assumption-card">
         <div class="assumption-label">Surplus linen and extra cost</div>
         <div class="assumption-value">Above the line</div>
-        <div class="assumption-desc">In the months where volume exceeds capacity, the excess is bought in. The extra cost is that excess times the gap between the outside price and your in-house cost.</div>
+        <div class="assumption-desc">In the months where volume exceeds capacity, the excess is bought in: at emergency prices in July and August, at a contract price in the other months. The extra cost is that excess times the gap between the outside price and your in-house cost, and never counts below zero.</div>
       </div>
       <div class="assumption-card">
         <div class="assumption-label">Capacity used</div>
@@ -1486,9 +1497,9 @@ function toggleMenu(){
   // na mesma proporção em que a região está entre janeiro e agosto.
   const FORMA = [0.0, 0.11, 0.221, 0.51, 0.554, 0.715, 0.878, 1.0, 0.711, 0.579, 0.13, 0.036];
   const DIAS = [31,28,31,30,31,30,31,31,30,31,30,31];
-  const T = {"loc": "en-GB", "kgdia": "kg/day", "emFalta": "above capacity", "meses": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "ini": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], "grafT": "Kilos of linen per day in each month, against laundry capacity", "tagSobre": "Peak extra cost, per year", "tagSem": "No surplus linen", "semTxt": "The cost sits on the other side: on average, {p}% of this capacity is idle over the year. It was paid for, and it depreciates and needs maintenance anyway."};
+  const T = {"loc": "en-GB", "kgdia": "kg/day", "emFalta": "above capacity", "meses": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "ini": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], "grafT": "Kilos of linen per day in each month, against laundry capacity", "tagSobre": "Peak extra cost, per year", "tagZero": "No extra cost: buying in is cheaper", "tagSem": "No surplus linen", "semTxt": "The cost sits on the other side: on average, {p}% of this capacity is idle over the year. It was paid for, and it depreciates and needs maintenance anyway."};
 
-  let st = { quartos: 50, occlo: 40, occhi: 95, kgw: 5, kgs: 6.5, cap: 250, preco: 3.75, interno: 1.64, modo: 'media30' };
+  let st = { quartos: 50, occlo: 40, occhi: 95, kgw: 5, kgs: 6.5, cap: 250, precoPico: 3.75, precoOutros: 1.30, interno: 1.64, modo: 'media30' };
 
   function num(n, c) { return n.toLocaleString(T.loc, { minimumFractionDigits: c || 0, maximumFractionDigits: c || 0, useGrouping: 'always' }); }
   function dec(v) { return num(parseFloat(v), 2); }
@@ -1540,15 +1551,22 @@ function toggleMenu(){
     r.value = st.cap;
     document.getElementById('v-cap').textContent = num(st.cap);
 
-    let falta = 0, dias = 0, baixo = 0;
+    // Julho e agosto (6, 7) compram-se a preço de emergência; os outros meses
+    // a preço de contrato. Quando comprar fora sai mais barato do que lavar em
+    // casa, o sobrecusto desse mês conta zero, não poupança.
+    let falta = 0, dias = 0, baixo = 0, sobre = 0, pago = 0;
     v.forEach(function(x, i){
-      if (x > st.cap) { falta += (x - st.cap) * DIAS[i]; dias += DIAS[i]; }
+      const preco = (i === 6 || i === 7) ? st.precoPico : st.precoOutros;
+      if (x > st.cap) {
+        const kg = (x - st.cap) * DIAS[i];
+        falta += kg; dias += DIAS[i];
+        pago += kg * preco;
+        sobre += kg * Math.max(0, preco - st.interno);
+      }
       if (Math.min(x, st.cap) < st.cap * 0.5) baixo++;
     });
     const processado = ano - falta;
     const uso = st.cap > 0 ? processado / (st.cap * 365) : 0;
-    const margem = Math.max(0, st.preco - st.interno);
-    const sobre = falta * margem;
 
     desenhar(v, st.cap);
     document.getElementById('out-ratio').textContent = fraco > 0 ? num(pico / fraco, 1) : '—';
@@ -1561,13 +1579,13 @@ function toggleMenu(){
     document.getElementById('out-dias').textContent = dias;
     document.getElementById('out-falta').textContent = num(falta) + ' kg';
     document.getElementById('out-sobre').textContent = num(sobre);
-    document.getElementById('out-fora').textContent = num(falta * st.preco);
+    document.getElementById('out-fora').textContent = num(pago);
 
     // Sem défice, um "€0" lê-se como calculadora avariada. Diz-se o que se passa.
     const semFalta = falta <= 0.5;
     document.getElementById('pico-ganho').hidden = semFalta;
     document.getElementById('pico-sem').classList.toggle('visivel', semFalta);
-    document.getElementById('out-tag').textContent = semFalta ? T.tagSem : T.tagSobre;
+    document.getElementById('out-tag').textContent = semFalta ? T.tagSem : (sobre < 0.5 ? T.tagZero : T.tagSobre);
     document.getElementById('pico-sem-txt').textContent = T.semTxt.replace('{p}', num((1 - uso) * 100));
   }
 
@@ -1587,7 +1605,8 @@ function toggleMenu(){
   ligar('occhi', 'occhi', null, function(){ if (st.occhi < st.occlo) { st.occlo = st.occhi; sincr('occlo', st.occlo); } });
   ligar('kgw', 'kgw', function(x){ return num(x, 1); }, function(){ if (st.kgw > st.kgs) { st.kgs = st.kgw; sincr('kgs', st.kgs, function(x){ return num(x, 1); }); } });
   ligar('kgs', 'kgs', function(x){ return num(x, 1); }, function(){ if (st.kgs < st.kgw) { st.kgw = st.kgs; sincr('kgw', st.kgw, function(x){ return num(x, 1); }); } });
-  ligar('preco', 'preco', dec);
+  ligar('precopico', 'precoPico', dec);
+  ligar('precooutros', 'precoOutros', dec);
   ligar('interno', 'interno', dec);
 
   const botoes = document.querySelectorAll('#seg-cap button');
@@ -1613,7 +1632,8 @@ function toggleMenu(){
 
   sincr('kgs', st.kgs, function(x){ return num(x, 1); });
   sincr('kgw', st.kgw, function(x){ return num(x, 1); });
-  sincr('preco', st.preco, dec);
+  sincr('precopico', st.precoPico, dec);
+  sincr('precooutros', st.precoOutros, dec);
   sincr('interno', st.interno, dec);
   recalcular();
 })();
