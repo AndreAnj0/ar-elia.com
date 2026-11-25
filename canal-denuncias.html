@@ -357,105 +357,226 @@ body:has(.arelia-cb.visible) .wa-fab { opacity: 0; pointer-events: none; transfo
 
 /* ── CANAL DE DENÚNCIAS ── */
 [hidden]{display:none !important}
-.cd-intro{max-width:640px; margin:0 auto; font-size:15px; line-height:1.75; color:var(--steel); position:relative}
-.cd-body{padding-top:64px}
-.cd-garantias{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:56px}
-.cd-garantia{background:var(--linen); border-top:2px solid var(--gold); padding:24px 22px}
-.cd-garantia .num{display:block; font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:10px}
-.cd-garantia h3{font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:500; color:var(--navy); margin-bottom:8px}
-.cd-garantia p{font-size:13.5px; line-height:1.65; color:var(--steel)}
-.cd-datas{margin:24px 0 32px}
-.cd-datas .cd-garantia p{font-size:15px; color:var(--navy); font-weight:500}
+.cd-largo{max-width:1120px; margin:0 auto}
 
-.cd-tabs{display:flex; border-bottom:1px solid var(--border-dark); margin-bottom:40px; gap:8px}
-.cd-tab{background:none; border:0; border-bottom:2px solid transparent; margin-bottom:-1px; padding:14px 4px; margin-right:28px; cursor:pointer;
-  font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--text-muted); transition:color .25s, border-color .25s}
+/* Hero escuro, como a página inicial */
+.cd-hero{position:relative; overflow:hidden; background:var(--navy-deep); color:var(--linen); text-align:center; padding:170px 56px 150px}
+.cd-hero::before{content:''; position:absolute; top:-260px; left:50%; transform:translateX(-50%); width:1100px; height:1100px;
+  background:radial-gradient(circle, rgba(196,168,106,0.16) 0%, rgba(196,168,106,0.04) 35%, transparent 62%); pointer-events:none}
+.cd-hero::after{content:''; position:absolute; left:0; right:0; bottom:0; height:1px; background:linear-gradient(90deg,transparent,rgba(196,168,106,0.5),transparent)}
+.cd-hero-inner{position:relative; max-width:760px; margin:0 auto}
+.cd-selo{display:flex; width:64px; height:64px; margin-left:auto; margin-right:auto; border-radius:50%; align-items:center; justify-content:center;
+  border:1px solid rgba(196,168,106,0.45); background:rgba(196,168,106,0.08); margin-bottom:28px}
+.cd-selo svg{width:30px; height:30px; fill:none; stroke:var(--gold); stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round}
+.cd-eyebrow{color:var(--gold)}
+.cd-hero h1{font-family:'Playfair Display',serif; font-weight:500; font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.05; letter-spacing:-1px; margin-bottom:24px}
+.cd-hero h1 em{font-style:italic; font-weight:400; color:var(--gold)}
+.cd-intro{max-width:600px; margin:0 auto; font-size:16px; line-height:1.8; color:rgba(244,240,230,0.7)}
+.cd-hero-acoes{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:40px}
+
+/* Garantias por cima do fim do hero */
+.cd-garantias-faixa{background:var(--white); padding:0 56px}
+.cd-garantias{max-width:1120px; margin:-80px auto 0; position:relative; display:grid; grid-template-columns:repeat(3,1fr);
+  background:var(--white); box-shadow:0 30px 60px -30px rgba(12,26,44,0.35); border-top:2px solid var(--gold)}
+.cd-garantia{padding:36px 34px}
+.cd-garantia + .cd-garantia{border-left:1px solid var(--border-dark)}
+.cd-garantia svg{width:30px; height:30px; fill:none; stroke:var(--gold-dark); stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round; margin-bottom:18px}
+.cd-garantia h3{font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:500; color:var(--navy); margin-bottom:8px}
+.cd-garantia p{font-size:14px; line-height:1.65; color:var(--steel)}
+
+/* Como funciona */
+.cd-passos-sec{background:var(--white); padding:100px 56px 90px; text-align:center}
+.cd-titulo{font-family:'Playfair Display',serif; font-weight:500; font-size:clamp(1.9rem,3.6vw,2.8rem); color:var(--navy); letter-spacing:-0.5px; margin-bottom:56px}
+.cd-titulo em{font-style:italic; font-weight:400; color:var(--gold-dark)}
+.cd-passos{list-style:none; display:grid; grid-template-columns:repeat(4,1fr); gap:32px; text-align:left; position:relative; counter-reset:none}
+.cd-passos::before{content:''; position:absolute; top:22px; left:22px; right:22px; height:1px; background:linear-gradient(90deg,var(--gold),rgba(196,168,106,0.2))}
+.cd-passos li{position:relative}
+.cd-passo-n{display:inline-flex; width:44px; height:44px; align-items:center; justify-content:center; border-radius:50%;
+  background:var(--navy); color:var(--gold); font-size:12px; font-weight:600; letter-spacing:1.5px; margin-bottom:22px; position:relative; box-shadow:0 0 0 6px var(--white)}
+.cd-passos h3{font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:500; color:var(--navy); margin-bottom:8px}
+.cd-passos p{font-size:14px; line-height:1.7; color:var(--steel)}
+.cd-passos strong{color:var(--navy)}
+
+/* Corpo: formulário + lateral */
+.cd-body{background:var(--linen); padding:90px 56px 120px; scroll-margin-top:76px}
+.cd-colunas{display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:48px; align-items:start}
+.cd-cartao{background:var(--white); border:1px solid rgba(12,26,44,0.08); box-shadow:0 24px 50px -36px rgba(12,26,44,0.4)}
+.cd-bloco{padding:40px 44px; border-bottom:1px solid var(--border-dark)}
+.cd-bloco:last-child{border-bottom:0}
+.cd-bloco-final{background:rgba(244,240,230,0.45)}
+.cd-bloco-titulo{display:flex; align-items:baseline; gap:14px; font-family:'Playfair Display',serif; font-size:1.45rem; font-weight:500; color:var(--navy); margin-bottom:26px}
+.cd-bloco-titulo span{font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; letter-spacing:3px; color:var(--gold-dark)}
+.cd-bloco-titulo em{font-family:'Space Grotesk',sans-serif; font-style:normal; font-size:13px; color:var(--text-muted)}
+
+.cd-tabs{display:flex; margin-bottom:28px; background:rgba(12,26,44,0.06); padding:5px; gap:5px}
+.cd-tab{flex:1; background:none; border:0; padding:15px 12px; cursor:pointer;
+  font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--text-muted); transition:all .25s}
 .cd-tab:hover{color:var(--navy)}
-.cd-tab[aria-selected="true"]{color:var(--navy); border-bottom-color:var(--gold)}
-.cd-tab:focus-visible{outline:2px solid var(--gold); outline-offset:4px}
+.cd-tab[aria-selected="true"]{background:var(--navy); color:var(--linen)}
+.cd-tab:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
 
-.cd-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px}
-.cd-grid-3{grid-template-columns:1fr 1fr 1fr; margin:6px 0 4px 30px}
-.cd-campo{display:block; margin-bottom:28px; border:0}
-.cd-rotulo{display:block; font-size:11px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--navy); margin-bottom:10px}
-.cd-rotulo em{font-style:normal; font-weight:400; letter-spacing:1px; text-transform:none; color:var(--text-muted)}
+.cd-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 20px}
+.cd-grid-3{grid-template-columns:1fr 1fr 1fr; gap:12px; margin:18px 0 6px}
+.cd-campo{display:block; margin-bottom:24px; border:0}
+.cd-campo-ultimo{margin-bottom:0}
+.cd-rotulo{display:block; font-size:10.5px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--navy); margin-bottom:10px}
 .cd-body input:not([type=radio]):not([type=checkbox]):not([type=file]), .cd-body select, .cd-body textarea{
   width:100%; font-family:'Space Grotesk',sans-serif; font-size:15px; color:var(--navy);
-  background:var(--white); border:1px solid rgba(12,26,44,0.18); border-radius:0; padding:13px 15px; transition:border-color .2s, box-shadow .2s; appearance:none}
+  background:#FDFCF9; border:1px solid rgba(12,26,44,0.16); border-radius:0; padding:14px 16px; transition:border-color .2s, box-shadow .2s, background .2s; appearance:none}
 .cd-body select{background-image:linear-gradient(45deg,transparent 50%,var(--gold-dark) 50%),linear-gradient(135deg,var(--gold-dark) 50%,transparent 50%);
-  background-position:calc(100% - 20px) 52%, calc(100% - 15px) 52%; background-size:5px 5px; background-repeat:no-repeat; padding-right:40px}
+  background-position:calc(100% - 20px) 52%, calc(100% - 15px) 52%; background-size:5px 5px; background-repeat:no-repeat; padding-right:40px; cursor:pointer}
 .cd-body textarea{resize:vertical; line-height:1.65}
-.cd-body input:focus, .cd-body select:focus, .cd-body textarea:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(196,168,106,0.18)}
-.cd-ajuda{display:block; font-size:12.5px; color:var(--text-muted); margin-top:8px; line-height:1.55}
-.cd-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace !important; letter-spacing:2px; text-transform:uppercase}
+.cd-body input:focus, .cd-body select:focus, .cd-body textarea:focus{outline:none; background:var(--white); border-color:var(--gold); box-shadow:0 0 0 3px rgba(196,168,106,0.18)}
+.cd-ajuda{display:block; font-size:12.5px; color:var(--text-muted); margin-top:10px; line-height:1.55}
+.cd-ajuda-topo{margin:-14px 0 24px}
+.cd-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace !important; letter-spacing:3px; text-transform:uppercase; font-size:17px !important}
 
-.cd-anexar{display:inline-flex; align-items:center; cursor:pointer; border:1px dashed var(--steel); padding:13px 18px; font-size:13px; font-weight:500; color:var(--navy); transition:border-color .2s, background .2s}
+.cd-anexar{display:flex; align-items:center; gap:18px; cursor:pointer; border:1px dashed rgba(107,138,154,0.7); padding:22px 24px; background:#FDFCF9; transition:border-color .2s, background .2s}
 .cd-anexar:hover{border-color:var(--gold); background:var(--linen)}
 .cd-anexar input{position:absolute; width:1px; height:1px; opacity:0}
 .cd-anexar:focus-within{outline:2px solid var(--gold); outline-offset:3px}
-.cd-ficheiros{list-style:none; margin:12px 0 0}
-.cd-ficheiros li{display:flex; align-items:center; gap:12px; font-size:13.5px; color:var(--navy); padding:6px 0; border-bottom:1px solid var(--border-dark)}
+.cd-anexar svg{width:28px; height:28px; flex-shrink:0; fill:none; stroke:var(--gold-dark); stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round}
+.cd-anexar strong{display:block; font-size:14px; color:var(--navy); font-weight:600}
+.cd-anexar small{display:block; font-size:12.5px; color:var(--text-muted)}
+.cd-ficheiros{list-style:none; margin:14px 0 0}
+.cd-ficheiros li{display:flex; align-items:center; gap:12px; font-size:13.5px; color:var(--navy); padding:10px 14px; background:var(--linen); margin-bottom:6px}
 .cd-ficheiros li span{flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
-.cd-ficheiros button{background:none; border:0; cursor:pointer; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold-dark)}
+.cd-ficheiros button{background:none; border:0; cursor:pointer; font-family:'Space Grotesk',sans-serif; font-size:10.5px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold-dark)}
 
-.cd-opcao{display:flex; gap:12px; align-items:flex-start; font-size:14.5px; line-height:1.6; color:var(--steel); margin-bottom:14px; cursor:pointer}
+.cd-escolhas{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:8px}
+.cd-escolha{cursor:pointer; position:relative}
+.cd-escolha input{position:absolute; opacity:0}
+.cd-escolha-caixa{display:block; height:100%; border:1px solid rgba(12,26,44,0.16); padding:20px 22px 20px 50px; position:relative; transition:all .2s; background:#FDFCF9}
+.cd-escolha-caixa::before{content:''; position:absolute; left:20px; top:23px; width:16px; height:16px; border-radius:50%; border:1px solid rgba(12,26,44,0.35); background:var(--white); transition:all .2s}
+.cd-escolha-caixa strong{display:block; font-size:14.5px; color:var(--navy); margin-bottom:4px}
+.cd-escolha-caixa small{display:block; font-size:12.5px; line-height:1.55; color:var(--steel)}
+.cd-escolha:hover .cd-escolha-caixa{border-color:var(--gold)}
+.cd-escolha input:checked + .cd-escolha-caixa{border-color:var(--navy); background:var(--white); box-shadow:inset 0 0 0 1px var(--navy)}
+.cd-escolha input:checked + .cd-escolha-caixa::before{border-color:var(--navy); background:radial-gradient(circle, var(--gold-dark) 0 4px, var(--white) 5px)}
+.cd-escolha input:focus-visible + .cd-escolha-caixa{outline:2px solid var(--gold); outline-offset:2px}
+
+.cd-opcao{display:flex; gap:12px; align-items:flex-start; font-size:14px; line-height:1.6; color:var(--steel); margin-top:18px; cursor:pointer}
 .cd-opcao strong{color:var(--navy); font-weight:600}
-.cd-opcao input{margin-top:5px; accent-color:var(--gold-dark); width:16px; height:16px; flex-shrink:0}
+.cd-opcao input{margin-top:4px; accent-color:var(--gold-dark); width:16px; height:16px; flex-shrink:0}
 .cd-opcao a{color:var(--gold-dark); text-decoration:none; border-bottom:1px solid rgba(168,135,42,0.4)}
-.cd-aceito{margin:8px 0 28px}
+.cd-bloco-final .cd-opcao{margin:0 0 24px}
 .cd-isco{position:absolute !important; left:-9999px; width:1px; height:1px; opacity:0}
 
-.cd-botao{background:var(--navy); color:var(--linen); border:1px solid var(--navy); padding:15px 32px; cursor:pointer;
+.cd-botao{display:inline-flex; align-items:center; justify-content:center; text-decoration:none; background:var(--navy); color:var(--linen); border:1px solid var(--navy); padding:15px 32px; cursor:pointer;
   font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; letter-spacing:2.8px; text-transform:uppercase; transition:all .25s}
 .cd-botao:hover{background:var(--navy-light); transform:translateY(-1px)}
 .cd-botao:disabled{opacity:.6; cursor:wait; transform:none}
 .cd-botao:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.cd-botao-grande{padding:18px 40px; font-size:12px}
+.cd-botao-ouro{background:var(--gold); border-color:var(--gold); color:var(--navy)}
+.cd-botao-ouro:hover{background:var(--gold-light); border-color:var(--gold-light)}
+.cd-botao-claro{background:transparent; border-color:rgba(244,240,230,0.35); color:var(--linen)}
+.cd-botao-claro:hover{background:rgba(244,240,230,0.08); border-color:var(--gold); color:var(--gold)}
 .cd-botao-linha{background:transparent; color:var(--navy)}
 .cd-botao-linha:hover{background:var(--linen)}
-.cd-acoes{display:flex; flex-wrap:wrap; gap:12px; margin-top:24px}
+.cd-acoes{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px}
 
 .cd-erro{background:#FBEDEA; border-left:3px solid #B4442F; color:#7A2A1C; padding:14px 18px; font-size:14px; margin-bottom:22px}
 .cd-aviso{background:var(--linen); border-left:3px solid var(--gold); padding:18px 22px; font-size:14.5px; color:var(--navy); line-height:1.65}
 
-.cd-recebida{outline:none}
+/* Recebida */
+.cd-recebida{outline:none; padding:52px 48px; text-align:center}
+.cd-visto{display:inline-flex; width:60px; height:60px; border-radius:50%; align-items:center; justify-content:center; background:var(--navy); margin-bottom:22px}
+.cd-visto svg{width:28px; height:28px; fill:none; stroke:var(--gold); stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
 .cd-recebida h2, .cd-cabecalho h2{font-family:'Playfair Display',serif; font-weight:500; font-size:clamp(1.6rem,3vw,2.2rem); color:var(--navy); margin-bottom:12px}
-.cd-recebida > p{font-size:15px; color:var(--steel); margin-bottom:22px}
-.cd-codigo{background:var(--navy-deep); padding:30px 28px; margin-bottom:22px; border-top:2px solid var(--gold)}
-.cd-codigo-titulo{display:block; font-size:10.5px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:12px}
-.cd-codigo-valor{display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:clamp(1.3rem,4.4vw,2.1rem); letter-spacing:3px; color:var(--linen); word-break:break-all}
+.cd-recebida > p{font-size:15px; color:var(--steel); margin-bottom:26px}
+.cd-recebida .cd-aviso{text-align:left}
+.cd-recebida .cd-acoes{justify-content:center}
+.cd-codigo{background:var(--navy-deep); padding:34px 28px; margin-bottom:22px; border-top:2px solid var(--gold); position:relative; overflow:hidden}
+.cd-codigo::before{content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% -40%, rgba(196,168,106,0.22), transparent 60%)}
+.cd-codigo-titulo{position:relative; display:block; font-size:10.5px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:14px}
+.cd-codigo-valor{position:relative; display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:clamp(1.3rem,4.4vw,2.3rem); letter-spacing:4px; color:var(--linen); word-break:break-all}
 
-.cd-form-codigo{max-width:520px}
-.cd-cabecalho{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap}
+/* Acompanhar */
+.cd-form-codigo{padding:44px; max-width:560px}
+#andamento{padding:44px}
+.cd-cabecalho{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap}
 .cd-ref{display:block; font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:6px}
-.cd-estado{background:var(--navy); color:var(--linen); font-size:10.5px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; padding:8px 16px; margin-bottom:16px}
-.contact-box h3, .cd-sub{font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:500; color:var(--navy); margin:0 0 10px}
-.cd-sub{margin-top:36px}
+.cd-estado{background:var(--navy); color:var(--linen); font-size:10.5px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; padding:9px 16px}
+.cd-progresso{list-style:none; display:grid; grid-template-columns:repeat(3,1fr); margin:30px 0 28px; position:relative}
+.cd-progresso li{position:relative; padding-top:26px; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted)}
+.cd-progresso li::before{content:''; position:absolute; top:7px; left:0; right:0; height:2px; background:var(--linen-dark)}
+.cd-progresso li span{position:absolute; top:0; left:0; width:16px; height:16px; border-radius:50%; background:var(--white); border:2px solid var(--linen-dark); z-index:1}
+.cd-progresso li.feito{color:var(--navy)}
+.cd-progresso li.feito::before{background:var(--gold)}
+.cd-progresso li.feito span{background:var(--gold); border-color:var(--gold)}
+.cd-progresso li.atual span{background:var(--navy); border-color:var(--gold); box-shadow:0 0 0 4px rgba(196,168,106,0.25)}
+.cd-datas{display:grid; grid-template-columns:repeat(3,1fr); background:var(--linen); margin-bottom:24px}
+.cd-datas div{padding:18px 20px}
+.cd-datas div + div{border-left:1px solid var(--linen-dark)}
+.cd-datas small{display:block; font-size:10px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:6px}
+.cd-datas strong{font-size:15px; font-weight:500; color:var(--navy)}
+.cd-conclusao{border-left:3px solid var(--gold); padding:18px 22px; background:#FDFCF9; margin-bottom:24px}
+.cd-sub{margin:34px 0 18px}
 .cd-pre{white-space:pre-wrap; font-size:14.5px; color:var(--steel); line-height:1.75}
-.cd-detalhes{margin-top:24px; border-top:1px solid var(--border-dark); border-bottom:1px solid var(--border-dark); padding:16px 0}
-.cd-detalhes summary{cursor:pointer; font-size:11.5px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--navy)}
+.cd-detalhes{border-top:1px solid var(--border-dark); border-bottom:1px solid var(--border-dark); padding:16px 0}
+.cd-detalhes summary{cursor:pointer; font-size:11px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--navy)}
 .cd-detalhes p{margin-top:14px}
 .cd-mensagens{list-style:none; margin:0 0 28px}
 .cd-mensagens li{padding:16px 20px; margin-bottom:12px; font-size:14.5px; line-height:1.7}
-.cd-mensagens li.empresa{background:var(--linen); border-left:3px solid var(--gold); margin-right:48px; color:var(--navy)}
-.cd-mensagens li.denunciante{background:var(--navy); color:var(--linen); margin-left:48px}
-.cd-mensagens li small{display:block; font-size:10.5px; letter-spacing:2px; text-transform:uppercase; opacity:.65; margin-bottom:6px}
+.cd-mensagens li.empresa{background:var(--linen); border-left:3px solid var(--gold); margin-right:56px; color:var(--navy)}
+.cd-mensagens li.denunciante{background:var(--navy); color:var(--linen); margin-left:56px}
+.cd-mensagens li small{display:block; font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; opacity:.65; margin-bottom:6px}
 .cd-mensagens li.vazio{background:none; padding:0; color:var(--text-muted)}
-.cd-nota{margin-top:64px; padding-top:28px; border-top:1px solid var(--border-dark); font-size:13px; line-height:1.7; color:var(--text-muted)}
-.cd-nota a{color:var(--gold-dark); text-decoration:none; border-bottom:1px solid rgba(168,135,42,0.35)}
 
+/* Lateral */
+.cd-lateral{position:sticky; top:104px; display:flex; flex-direction:column; gap:18px}
+.cd-lateral-caixa{background:var(--white); padding:28px 26px; border-top:2px solid var(--gold)}
+.cd-lateral-caixa ul{list-style:none}
+.cd-lateral-caixa li, .cd-lateral-caixa p{font-size:13.5px; line-height:1.65; color:var(--steel)}
+.cd-lateral-caixa li{padding-left:18px; position:relative; margin-bottom:10px}
+.cd-lateral-caixa li::before{content:''; position:absolute; left:0; top:10px; width:8px; height:1px; background:var(--gold)}
+.cd-lateral-caixa a{color:var(--gold-dark); text-decoration:none; border-bottom:1px solid rgba(168,135,42,0.35)}
+.cd-lateral-escura{background:var(--navy); border-top-color:var(--gold)}
+.cd-lateral-escura .cd-rotulo{color:var(--gold)}
+.cd-lateral-escura p{color:rgba(244,240,230,0.72)}
+.cd-lateral-escura a{color:var(--gold); border-bottom-color:rgba(196,168,106,0.4)}
+.cd-link{display:inline-block; margin-top:12px; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; border:0 !important}
+
+@media (max-width:1100px){
+  .cd-hero, .cd-passos-sec, .cd-body, .cd-garantias-faixa{padding-left:28px; padding-right:28px}
+}
+@media (max-width:980px){
+  .cd-colunas{grid-template-columns:1fr}
+  .cd-lateral{position:static; display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px}
+  .cd-passos{grid-template-columns:1fr 1fr; gap:36px 28px}
+  .cd-passos::before{display:none}
+}
 @media (max-width:760px){
-  .cd-garantias, .cd-grid, .cd-grid-3{grid-template-columns:1fr}
-  .cd-grid-3{margin-left:0}
-  .cd-grid:not(.cd-grid-3){row-gap:0}
-  .cd-garantias{gap:14px; margin-bottom:40px}
-  .cd-tab{margin-right:12px; font-size:11px; letter-spacing:1.8px}
+  .cd-hero{padding:120px 20px 120px}
+  .cd-eyebrow{letter-spacing:2.5px; font-size:10px}
+  .cd-eyebrow::before, .cd-eyebrow::after{display:none}
+  .cd-hero-acoes .cd-botao{flex:1 1 100%}
+  .cd-garantias-faixa{padding:0 16px}
+  .cd-garantias{grid-template-columns:1fr; margin-top:-70px}
+  .cd-garantia{padding:26px 24px}
+  .cd-garantia + .cd-garantia{border-left:0; border-top:1px solid var(--border-dark)}
+  .cd-passos-sec{padding:72px 20px 60px}
+  .cd-titulo{margin-bottom:40px}
+  .cd-passos{grid-template-columns:1fr; gap:26px}
+  .cd-passos li{display:grid; grid-template-columns:44px 1fr; column-gap:18px}
+  .cd-passo-n{grid-row:span 2; margin-bottom:0}
+  .cd-body{padding:56px 14px 80px}
+  .cd-bloco, .cd-form-codigo, #andamento{padding:28px 20px}
+  .cd-recebida{padding:36px 20px}
+  .cd-grid, .cd-grid-3, .cd-escolhas, .cd-datas{grid-template-columns:1fr}
+  .cd-datas div + div{border-left:0; border-top:1px solid var(--linen-dark)}
+  .cd-tab{font-size:10.5px; letter-spacing:1.6px; padding:13px 8px}
+  .cd-lateral{grid-template-columns:1fr}
   .cd-mensagens li.empresa{margin-right:16px}
   .cd-mensagens li.denunciante{margin-left:16px}
-  .cd-botao{width:100%}
-  .cd-acoes .cd-botao{width:auto; flex:1 1 auto}
+  .cd-botao-grande{width:100%}
+  .cd-acoes .cd-botao{flex:1 1 auto}
 }
 @media print{
-  nav, .mobile-drawer, footer, .legal-hero, .cd-garantias, .cd-tabs, .cd-acoes, .cd-nota{display:none !important}
+  nav, .mobile-drawer, footer, .cd-hero, .cd-garantias-faixa, .cd-passos-sec, .cd-tabs, .cd-acoes, .cd-lateral{display:none !important}
+  .cd-body{background:#fff; padding:0}
+  .cd-cartao{box-shadow:none; border:0}
   .cd-codigo{background:#fff; border:2px solid #000}
   .cd-codigo-valor, .cd-codigo-titulo{color:#000}
 }
@@ -494,175 +615,255 @@ body:has(.arelia-cb.visible) .wa-fab { opacity: 0; pointer-events: none; transfo
   </div>
 
 <!-- HERO -->
-<section class="legal-hero">
-  <span class="eyebrow">Canal seguro</span>
-  <h1>Canal de <em>denúncias</em></h1>
-  <p class="cd-intro">Comunique, em segurança e se quiser de forma anónima, infrações de que tenha conhecimento na Arelia. Quem denuncia de boa-fé está protegido contra qualquer retaliação (Lei n.º 93/2021).</p>
+<section class="cd-hero">
+  <div class="cd-hero-inner">
+    <span class="cd-selo" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2.5 4 5.6v6.1c0 4.7 3.3 8.9 8 9.8 4.7-.9 8-5.1 8-9.8V5.6L12 2.5Z"/><path d="m8.6 12 2.4 2.4 4.6-4.8"/></svg>
+    </span>
+    <span class="eyebrow cd-eyebrow">Canal seguro · Lei n.º 93/2021</span>
+    <h1>Canal de <em>denúncias</em></h1>
+    <p class="cd-intro">Comunique, em segurança e se quiser de forma anónima, infrações de que tenha conhecimento na Arelia. Quem denuncia de boa-fé está protegido contra qualquer retaliação.</p>
+    <div class="cd-hero-acoes">
+      <a href="#formulario" class="cd-botao cd-botao-ouro" data-abrir="denunciar">Fazer uma denúncia</a>
+      <a href="#acompanhar" class="cd-botao cd-botao-claro" data-abrir="acompanhar">Já tenho um código</a>
+    </div>
+  </div>
 </section>
 
-<section class="legal-body cd-body">
-  <div class="legal-inner">
-
-    <div class="cd-garantias">
-      <div class="cd-garantia">
-        <span class="num">01</span>
-        <h3>Anónimo, se quiser</h3>
-        <p>Não pedimos dados seus e não registamos o seu endereço IP. Esta página não usa cookies nem ferramentas de análise.</p>
-      </div>
-      <div class="cd-garantia">
-        <span class="num">02</span>
-        <h3>Acesso restrito</h3>
-        <p>Só as pessoas designadas pela administração leem a denúncia, com total confidencialidade.</p>
-      </div>
-      <div class="cd-garantia">
-        <span class="num">03</span>
-        <h3>Código de acompanhamento</h3>
-        <p>Recebe um código para ver o andamento e trocar mensagens connosco, sem criar conta.</p>
-      </div>
+<!-- GARANTIAS -->
+<section class="cd-garantias-faixa">
+  <div class="cd-garantias">
+    <div class="cd-garantia">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.6 3.9-5.6 7.5-5.6s6.6 2 7.5 5.6"/><path d="M3 3l18 18"/></svg>
+      <h3>Anónimo, se quiser</h3>
+      <p>Não pedimos dados seus e não registamos o seu endereço IP. Esta página não usa cookies nem análise de tráfego.</p>
     </div>
-
-    <div class="cd-tabs" role="tablist">
-      <button type="button" role="tab" class="cd-tab" id="tab-denunciar" aria-selected="true" aria-controls="painel-denunciar">Fazer uma denúncia</button>
-      <button type="button" role="tab" class="cd-tab" id="tab-acompanhar" aria-selected="false" aria-controls="painel-acompanhar">Acompanhar uma denúncia</button>
+    <div class="cd-garantia">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.3"/></svg>
+      <h3>Acesso restrito</h3>
+      <p>Só as pessoas designadas pela administração leem a denúncia, com total confidencialidade.</p>
     </div>
+    <div class="cd-garantia">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16.5 6.5l2.5 2.5M14 9l2 2"/></svg>
+      <h3>Código de acompanhamento</h3>
+      <p>Recebe um código para ver o andamento e trocar mensagens connosco, sem criar conta.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- DENUNCIAR -->
-    <div class="cd-painel" id="painel-denunciar" role="tabpanel" aria-labelledby="tab-denunciar">
-      <form id="form-denuncia" novalidate>
-        <div class="cd-grid">
-          <label class="cd-campo">
-            <span class="cd-rotulo">Qual é a sua relação com a Arelia?</span>
-            <select name="relacao" required>
-              <option value="">Escolha…</option>
-              <option value="colaborador">Colaborador</option>
-              <option value="ex_colaborador">Ex-colaborador</option>
-              <option value="cliente">Cliente</option>
-              <option value="fornecedor">Fornecedor / prestador de serviços</option>
-              <option value="candidato">Candidato a emprego</option>
-              <option value="outro">Outra</option>
-            </select>
-          </label>
-          <label class="cd-campo">
-            <span class="cd-rotulo">Tipo de situação</span>
-            <select name="tipo" required>
-              <option value="">Escolha…</option>
-              <option value="corrupcao">Corrupção / suborno</option>
-              <option value="fraude">Fraude / irregularidade financeira</option>
-              <option value="assedio">Assédio / má conduta no trabalho</option>
-              <option value="discriminacao">Discriminação</option>
-              <option value="seguranca_saude">Segurança e saúde no trabalho</option>
-              <option value="ambiente">Ambiente</option>
-              <option value="dados">Proteção de dados / privacidade</option>
-              <option value="consumidor">Proteção do consumidor / segurança do serviço</option>
-              <option value="concorrencia">Concorrência / contratação pública</option>
-              <option value="outro">Outro</option>
-            </select>
-          </label>
-        </div>
+<!-- COMO FUNCIONA -->
+<section class="cd-passos-sec">
+  <div class="cd-largo">
+    <span class="eyebrow">Como funciona</span>
+    <h2 class="cd-titulo">Do relato à <em>resposta</em></h2>
+    <ol class="cd-passos">
+      <li><span class="cd-passo-n">01</span><h3>Relata</h3><p>Descreve o que aconteceu e junta provas, se as tiver. Demora poucos minutos.</p></li>
+      <li><span class="cd-passo-n">02</span><h3>Guarda o código</h3><p>No fim recebe um código único. É a sua chave: nós não o guardamos.</p></li>
+      <li><span class="cd-passo-n">03</span><h3>Confirmamos</h3><p>Confirmamos a receção em até <strong>7 dias</strong> e podemos pedir-lhe mais pormenores.</p></li>
+      <li><span class="cd-passo-n">04</span><h3>Respondemos</h3><p>Em até <strong>3 meses</strong> comunicamos as medidas tomadas e a fundamentação.</p></li>
+    </ol>
+  </div>
+</section>
 
-        <label class="cd-campo">
-          <span class="cd-rotulo">Descrição</span>
-          <textarea name="descricao" rows="8" required minlength="20" placeholder="O que aconteceu, quando, onde, quem esteve envolvido, se há testemunhas ou provas…"></textarea>
-          <span class="cd-ajuda">Se quer ficar anónimo, evite pormenores que o identifiquem.</span>
-        </label>
+<!-- FORMULÁRIO -->
+<section class="cd-body" id="formulario">
+  <div class="cd-largo cd-colunas">
+    <div class="cd-principal">
 
-        <div class="cd-campo">
-          <span class="cd-rotulo">Anexos <em>(opcional)</em></span>
-          <label class="cd-anexar">
-            <input type="file" id="anexos" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,.heic,.heif,.mp3,.m4a,.mp4,.webm,.ogg,.wav,.doc,.docx,.txt"/>
-            <span>+ Juntar documentos, fotografias ou áudio</span>
-          </label>
-          <ul class="cd-ficheiros" id="lista-anexos"></ul>
-          <span class="cd-ajuda">Até 5 ficheiros, 20 MB cada. Os ficheiros podem conter dados que o identifiquem (autor do documento, localização da fotografia, a sua voz).</span>
-        </div>
+      <div class="cd-tabs" role="tablist">
+        <button type="button" role="tab" class="cd-tab" id="tab-denunciar" aria-selected="true" aria-controls="painel-denunciar">Fazer uma denúncia</button>
+        <button type="button" role="tab" class="cd-tab" id="tab-acompanhar" aria-selected="false" aria-controls="painel-acompanhar">Acompanhar uma denúncia</button>
+      </div>
 
-        <fieldset class="cd-campo cd-identificacao">
-          <legend class="cd-rotulo">Identificação</legend>
-          <label class="cd-opcao"><input type="radio" name="anonimo" value="sim" checked/><span><strong>Quero ficar anónimo.</strong> Acompanha a denúncia apenas com o código.</span></label>
-          <label class="cd-opcao"><input type="radio" name="anonimo" value="nao"/><span><strong>Quero identificar-me.</strong> A sua identidade fica confidencial e só é conhecida das pessoas designadas.</span></label>
-          <div class="cd-grid cd-grid-3" id="dados-pessoais" hidden>
-            <input name="nome" placeholder="Nome" aria-label="Nome" autocomplete="name"/>
-            <input name="email" type="email" placeholder="Email" aria-label="Email" autocomplete="email"/>
-            <input name="telefone" placeholder="Telefone" aria-label="Telefone" autocomplete="tel"/>
+      <!-- DENUNCIAR -->
+      <div class="cd-painel" id="painel-denunciar" role="tabpanel" aria-labelledby="tab-denunciar">
+        <form id="form-denuncia" class="cd-cartao" novalidate>
+
+          <div class="cd-bloco">
+            <h3 class="cd-bloco-titulo"><span>01</span> O que aconteceu</h3>
+            <div class="cd-grid">
+              <label class="cd-campo">
+                <span class="cd-rotulo">A sua relação com a Arelia</span>
+                <select name="relacao" required>
+                  <option value="">Escolha…</option>
+                  <option value="colaborador">Colaborador</option>
+                  <option value="ex_colaborador">Ex-colaborador</option>
+                  <option value="cliente">Cliente</option>
+                  <option value="fornecedor">Fornecedor / prestador de serviços</option>
+                  <option value="candidato">Candidato a emprego</option>
+                  <option value="outro">Outra</option>
+                </select>
+              </label>
+              <label class="cd-campo">
+                <span class="cd-rotulo">Tipo de situação</span>
+                <select name="tipo" required>
+                  <option value="">Escolha…</option>
+                  <option value="corrupcao">Corrupção / suborno</option>
+                  <option value="fraude">Fraude / irregularidade financeira</option>
+                  <option value="assedio">Assédio / má conduta no trabalho</option>
+                  <option value="discriminacao">Discriminação</option>
+                  <option value="seguranca_saude">Segurança e saúde no trabalho</option>
+                  <option value="ambiente">Ambiente</option>
+                  <option value="dados">Proteção de dados / privacidade</option>
+                  <option value="consumidor">Proteção do consumidor / segurança do serviço</option>
+                  <option value="concorrencia">Concorrência / contratação pública</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </label>
+            </div>
+            <label class="cd-campo cd-campo-ultimo">
+              <span class="cd-rotulo">Descrição</span>
+              <textarea name="descricao" rows="8" required minlength="20" placeholder="O que aconteceu, quando, onde, quem esteve envolvido, se há testemunhas ou provas…"></textarea>
+              <span class="cd-ajuda"><span id="contador">0</span> caracteres · mínimo 20. Se quer ficar anónimo, evite pormenores que o identifiquem.</span>
+            </label>
           </div>
-          <label class="cd-opcao"><input type="checkbox" name="quer_reuniao"/><span>Prefiro também relatar a situação presencialmente ou por telefone. Combinamos através das mensagens do acompanhamento.</span></label>
-        </fieldset>
 
-        <input type="text" name="website" class="cd-isco" tabindex="-1" autocomplete="off" aria-hidden="true"/>
-
-        <label class="cd-opcao cd-aceito"><input type="checkbox" name="aceitou" required/><span>Li a <a href="politica-denuncias.html" target="_blank">política do canal de denúncias e de privacidade</a>.</span></label>
-
-        <p class="cd-erro" id="erro-denuncia" role="alert" hidden></p>
-        <button type="submit" class="cd-botao" id="botao-enviar">Enviar denúncia</button>
-      </form>
-
-      <div class="cd-recebida" id="recebida" hidden tabindex="-1">
-        <span class="eyebrow">Denúncia recebida</span>
-        <h2>Referência <span id="ref-recebida"></span></h2>
-        <p>Confirmamos a receção no prazo de 7 dias e comunicamos as medidas tomadas no prazo de 3 meses.</p>
-        <div class="cd-codigo">
-          <span class="cd-codigo-titulo">O seu código de acompanhamento</span>
-          <span class="cd-codigo-valor" id="codigo-recebido"></span>
-        </div>
-        <p class="cd-aviso"><strong>Guarde este código agora.</strong> É a única forma de acompanhar a denúncia e de ler as nossas respostas. Não o guardamos: se o perder, não o conseguimos recuperar.</p>
-        <p class="cd-erro" id="erro-anexos" hidden></p>
-        <div class="cd-acoes">
-          <button type="button" class="cd-botao" id="copiar">Copiar código</button>
-          <button type="button" class="cd-botao cd-botao-linha" onclick="window.print()">Imprimir</button>
-          <button type="button" class="cd-botao cd-botao-linha" id="ir-acompanhar">Acompanhar a denúncia</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- ACOMPANHAR -->
-    <div class="cd-painel" id="painel-acompanhar" role="tabpanel" aria-labelledby="tab-acompanhar" hidden>
-      <form id="form-codigo" class="cd-form-codigo">
-        <label class="cd-campo">
-          <span class="cd-rotulo">Código de acompanhamento</span>
-          <input name="codigo" id="campo-codigo" required autocomplete="off" spellcheck="false" placeholder="XXXX-XXXX-XXXX-XXXX" class="cd-mono"/>
-        </label>
-        <p class="cd-erro" id="erro-codigo" role="alert" hidden></p>
-        <button type="submit" class="cd-botao">Consultar</button>
-      </form>
-
-      <div id="andamento" hidden>
-        <div class="cd-cabecalho">
-          <div>
-            <span class="cd-ref" id="and-ref"></span>
-            <h2 id="and-tipo"></h2>
+          <div class="cd-bloco">
+            <h3 class="cd-bloco-titulo"><span>02</span> Provas <em>(opcional)</em></h3>
+            <label class="cd-anexar">
+              <input type="file" id="anexos" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,.heic,.heif,.mp3,.m4a,.mp4,.webm,.ogg,.wav,.doc,.docx,.txt"/>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg>
+              <span><strong>Juntar ficheiros</strong><small>Documentos, fotografias ou áudio · até 5 ficheiros de 20 MB</small></span>
+            </label>
+            <ul class="cd-ficheiros" id="lista-anexos"></ul>
+            <span class="cd-ajuda">Os ficheiros podem conter dados que o identifiquem (autor do documento, localização da fotografia, a sua voz).</span>
           </div>
-          <span class="cd-estado" id="and-estado"></span>
-        </div>
-        <div class="cd-garantias cd-datas">
-          <div class="cd-garantia"><span class="num">Recebida</span><p id="and-recebida"></p></div>
-          <div class="cd-garantia"><span class="num">Receção confirmada</span><p id="and-confirmada"></p></div>
-          <div class="cd-garantia"><span class="num" id="and-fim-titulo"></span><p id="and-fim"></p></div>
-        </div>
-        <div class="contact-box" id="and-conclusao-caixa" hidden>
-          <h3>Medidas comunicadas</h3>
-          <p id="and-conclusao" class="cd-pre"></p>
-        </div>
-        <details class="cd-detalhes">
-          <summary>A sua denúncia</summary>
-          <p id="and-descricao" class="cd-pre"></p>
-        </details>
-        <h3 class="cd-sub">Mensagens</h3>
-        <ul class="cd-mensagens" id="and-mensagens"></ul>
-        <form id="form-mensagem">
-          <label class="cd-campo">
-            <span class="cd-rotulo">Responder ou acrescentar informação</span>
-            <textarea name="texto" rows="4" required></textarea>
-          </label>
-          <p class="cd-erro" id="erro-mensagem" role="alert" hidden></p>
-          <div class="cd-acoes">
-            <button type="submit" class="cd-botao">Enviar mensagem</button>
-            <button type="button" class="cd-botao cd-botao-linha" id="sair">Sair</button>
+
+          <div class="cd-bloco">
+            <h3 class="cd-bloco-titulo"><span>03</span> Identificação</h3>
+            <div class="cd-escolhas" role="radiogroup" aria-label="Identificação">
+              <label class="cd-escolha">
+                <input type="radio" name="anonimo" value="sim" checked/>
+                <span class="cd-escolha-caixa">
+                  <strong>Ficar anónimo</strong>
+                  <small>Acompanha a denúncia apenas com o código.</small>
+                </span>
+              </label>
+              <label class="cd-escolha">
+                <input type="radio" name="anonimo" value="nao"/>
+                <span class="cd-escolha-caixa">
+                  <strong>Identificar-me</strong>
+                  <small>A sua identidade fica confidencial, só conhecida das pessoas designadas.</small>
+                </span>
+              </label>
+            </div>
+            <div class="cd-grid cd-grid-3" id="dados-pessoais" hidden>
+              <input name="nome" placeholder="Nome" aria-label="Nome" autocomplete="name"/>
+              <input name="email" type="email" placeholder="Email" aria-label="Email" autocomplete="email"/>
+              <input name="telefone" placeholder="Telefone" aria-label="Telefone" autocomplete="tel"/>
+            </div>
+            <label class="cd-opcao"><input type="checkbox" name="quer_reuniao"/><span>Prefiro também relatar a situação presencialmente ou por telefone. Combinamos através das mensagens do acompanhamento.</span></label>
+          </div>
+
+          <input type="text" name="website" class="cd-isco" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+
+          <div class="cd-bloco cd-bloco-final">
+            <label class="cd-opcao"><input type="checkbox" name="aceitou" required/><span>Li a <a href="politica-denuncias.html" target="_blank">política do canal de denúncias e de privacidade</a>.</span></label>
+            <p class="cd-erro" id="erro-denuncia" role="alert" hidden></p>
+            <button type="submit" class="cd-botao cd-botao-grande" id="botao-enviar">Enviar denúncia</button>
           </div>
         </form>
+
+        <div class="cd-recebida cd-cartao" id="recebida" hidden tabindex="-1">
+          <span class="cd-visto" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg></span>
+          <span class="eyebrow">Denúncia recebida</span>
+          <h2>Referência <span id="ref-recebida"></span></h2>
+          <p>Confirmamos a receção no prazo de 7 dias e comunicamos as medidas tomadas no prazo de 3 meses.</p>
+          <div class="cd-codigo">
+            <span class="cd-codigo-titulo">O seu código de acompanhamento</span>
+            <span class="cd-codigo-valor" id="codigo-recebido"></span>
+          </div>
+          <p class="cd-aviso"><strong>Guarde este código agora.</strong> É a única forma de acompanhar a denúncia e de ler as nossas respostas. Não o guardamos: se o perder, não o conseguimos recuperar.</p>
+          <p class="cd-erro" id="erro-anexos" hidden></p>
+          <div class="cd-acoes">
+            <button type="button" class="cd-botao" id="copiar">Copiar código</button>
+            <button type="button" class="cd-botao cd-botao-linha" onclick="window.print()">Imprimir</button>
+            <button type="button" class="cd-botao cd-botao-linha" id="ir-acompanhar">Acompanhar a denúncia</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACOMPANHAR -->
+      <div class="cd-painel" id="painel-acompanhar" role="tabpanel" aria-labelledby="tab-acompanhar" hidden>
+        <form id="form-codigo" class="cd-cartao cd-form-codigo">
+          <h3 class="cd-bloco-titulo">Entrar com o código</h3>
+          <p class="cd-ajuda cd-ajuda-topo">Use o código que recebeu quando fez a denúncia.</p>
+          <label class="cd-campo">
+            <span class="cd-rotulo">Código de acompanhamento</span>
+            <input name="codigo" id="campo-codigo" required autocomplete="off" spellcheck="false" placeholder="XXXX-XXXX-XXXX-XXXX" class="cd-mono"/>
+          </label>
+          <p class="cd-erro" id="erro-codigo" role="alert" hidden></p>
+          <button type="submit" class="cd-botao cd-botao-grande">Consultar</button>
+        </form>
+
+        <div id="andamento" class="cd-cartao" hidden>
+          <div class="cd-cabecalho">
+            <div>
+              <span class="cd-ref" id="and-ref"></span>
+              <h2 id="and-tipo"></h2>
+            </div>
+            <span class="cd-estado" id="and-estado"></span>
+          </div>
+
+          <ol class="cd-progresso" id="and-progresso" aria-label="Andamento">
+            <li data-passo="recebida"><span></span>Recebida</li>
+            <li data-passo="em_analise"><span></span>Em análise</li>
+            <li data-passo="concluida"><span></span>Concluída</li>
+          </ol>
+
+          <div class="cd-datas">
+            <div><small>Recebida</small><strong id="and-recebida"></strong></div>
+            <div><small>Receção confirmada</small><strong id="and-confirmada"></strong></div>
+            <div><small id="and-fim-titulo"></small><strong id="and-fim"></strong></div>
+          </div>
+
+          <div class="cd-conclusao" id="and-conclusao-caixa" hidden>
+            <span class="cd-rotulo">Medidas comunicadas</span>
+            <p id="and-conclusao" class="cd-pre"></p>
+          </div>
+
+          <details class="cd-detalhes">
+            <summary>A sua denúncia</summary>
+            <p id="and-descricao" class="cd-pre"></p>
+          </details>
+
+          <h3 class="cd-bloco-titulo cd-sub">Mensagens</h3>
+          <ul class="cd-mensagens" id="and-mensagens"></ul>
+          <form id="form-mensagem">
+            <label class="cd-campo">
+              <span class="cd-rotulo">Responder ou acrescentar informação</span>
+              <textarea name="texto" rows="4" required></textarea>
+            </label>
+            <p class="cd-erro" id="erro-mensagem" role="alert" hidden></p>
+            <div class="cd-acoes">
+              <button type="submit" class="cd-botao">Enviar mensagem</button>
+              <button type="button" class="cd-botao cd-botao-linha" id="sair">Sair</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
-    <p class="cd-nota">Para reclamações sobre o serviço (roupa, prazos, faturas) contacte-nos diretamente ou use o <a href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener">Livro de Reclamações</a>. Este canal destina-se a infrações. Pode também recorrer aos canais externos das autoridades competentes. Ver a <a href="politica-denuncias.html">política do canal</a>.</p>
+    <!-- LATERAL -->
+    <aside class="cd-lateral">
+      <div class="cd-lateral-caixa">
+        <span class="cd-rotulo">Antes de começar</span>
+        <ul>
+          <li>Seja concreto: datas, locais, pessoas e o que viu ou ouviu.</li>
+          <li>Junte provas se as tiver, mas não se exponha para as obter.</li>
+          <li>Pode acrescentar informação depois, com o código.</li>
+        </ul>
+      </div>
+      <div class="cd-lateral-caixa cd-lateral-escura">
+        <span class="cd-rotulo">Não é uma denúncia?</span>
+        <p>Para reclamações sobre o serviço (roupa, prazos, faturas) contacte-nos diretamente ou use o <a href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener">Livro de Reclamações</a>.</p>
+      </div>
+      <div class="cd-lateral-caixa">
+        <span class="cd-rotulo">Os seus direitos</span>
+        <p>Proteção contra retaliação, confidencialidade e acesso a canais externos (Ministério Público, MENAC, ACT, CNPD).</p>
+        <a class="cd-link" href="politica-denuncias.html">Ler a política do canal →</a>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -762,12 +963,23 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   $('tab-denunciar').addEventListener('click', function(){ abrir('denunciar'); });
   $('tab-acompanhar').addEventListener('click', function(){ abrir('acompanhar'); });
   if (location.hash === '#acompanhar') abrir('acompanhar');
+  // Botões do topo: abrem o separador certo e descem até ao formulário.
+  Array.prototype.forEach.call(document.querySelectorAll('[data-abrir]'), function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      abrir(a.getAttribute('data-abrir'));
+      document.getElementById('formulario').scrollIntoView({ behavior:'smooth' });
+    });
+  });
 
   // Identificação
   var form = $('form-denuncia');
   Array.prototype.forEach.call(form.querySelectorAll('input[name=anonimo]'), function(r){
     r.addEventListener('change', function(){ $('dados-pessoais').hidden = form.anonimo.value === 'sim'; });
   });
+
+  // Contador da descrição
+  form.descricao.addEventListener('input', function(){ $('contador').textContent = form.descricao.value.trim().length; });
 
   // Anexos
   var ficheiros = [];
@@ -827,7 +1039,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
       form.hidden = true;
       $('recebida').hidden = false;
       $('recebida').focus();
-      window.scrollTo({ top: $('recebida').getBoundingClientRect().top + window.pageYOffset - 120 });
+      window.scrollTo({ top: $('recebida').getBoundingClientRect().top + window.pageYOffset - 110 });
     }).catch(function(err){
       mostrarErro('erro-denuncia', err.message);
     }).then(function(){ botao.disabled = false; botao.textContent = 'Enviar denúncia'; });
@@ -853,6 +1065,13 @@ document.getElementById('yr').textContent = new Date().getFullYear();
       $('and-ref').textContent = 'Denúncia ' + a.referencia;
       $('and-tipo').textContent = TIPOS[a.tipo] || a.tipo;
       $('and-estado').textContent = ESTADOS[a.estado] || a.estado;
+      // Barra de progresso: arquivada conta como fim do percurso.
+      var ordem = ['recebida','em_analise','concluida'];
+      var n = a.estado === 'arquivada' ? 2 : ordem.indexOf(a.estado);
+      Array.prototype.forEach.call($('and-progresso').children, function(li, i){
+        li.className = i < n ? 'feito' : (i === n ? 'atual' : '');
+        if (i === 2) li.lastChild.textContent = a.estado === 'arquivada' ? 'Arquivada' : 'Concluída';
+      });
       $('and-recebida').textContent = data(a.recebida_em);
       $('and-confirmada').textContent = a.confirmada_em ? data(a.confirmada_em) : 'Ainda não (prazo: 7 dias)';
       $('and-fim-titulo').textContent = a.concluida_em ? 'Concluída' : 'Resposta até';
