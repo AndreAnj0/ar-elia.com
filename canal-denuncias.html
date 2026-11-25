@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Canal de Denúncias | ARELIA Lavandaria Industrial</title>
+<meta name="description" content="Canal interno de denúncias da Arelia (Lei n.º 93/2021). Comunique infrações em segurança e, se quiser, de forma anónima."/>
+<meta name="robots" content="index, follow"/>
+<!-- Página do canal de denúncias: sem Google Analytics nem cookies, de propósito.
+     Quem denuncia não pode ser seguido. Gerada a partir de privacidade.html. -->
+<meta name="referrer" content="no-referrer"/>
+<link rel="canonical" href="https://ar-elia.com/canal-denuncias.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ar-elia.com/canal-denuncias.html"/>
+<meta property="og:title" content="Canal de Denúncias | ARELIA Lavandaria Industrial"/>
+<meta property="og:description" content="Canal interno de denúncias da Arelia (Lei n.º 93/2021). Comunique infrações em segurança e, se quiser, de forma anónima."/>
+<meta property="og:image" content="https://ar-elia.com/img/favicon.png"/>
+<meta property="og:site_name" content="ARELIA — Lavandaria Industrial"/>
+<meta property="og:locale" content="pt_PT"/>
+<link rel="icon" type="image/png" href="img/favicon.png"/>
+<link rel="apple-touch-icon" href="img/favicon.png"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+:root{
+  --navy:#0C1A2C; --navy-light:#162A40; --navy-deep:#080F18;
+  --gold:#C4A86A; --gold-dark:#A8872A; --gold-light:#D4BC8A;
+  --linen:#F4F0E6; --linen-dark:#EAE6DB;
+  --steel:#6B8A9A; --white:#FFFFFF;
+  --text-muted:rgba(12,26,44,0.55);
+  --text-light:rgba(244,240,230,0.55);
+  --border-dark:rgba(12,26,44,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Space Grotesk',sans-serif;
+  background:var(--linen); color:var(--navy);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.7;
+}
+::selection{background:var(--gold); color:var(--navy)}
+
+/* NAV */
+nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(12,26,44,0.95);
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  padding:0 56px; height:76px;
+  display:flex; align-items:center; justify-content:space-between;
+  border-bottom:1px solid rgba(196,168,106,0.18);
+}
+.nav-logo{display:flex; align-items:center; gap:14px; text-decoration:none; cursor:pointer; transition:opacity .25s}
+.nav-logo:hover{opacity:.82}
+.nav-icon{width:44px; height:44px; object-fit:contain; flex-shrink:0}
+.nav-wordmark{display:flex; flex-direction:column; gap:2px; line-height:1}
+.nav-wordmark-name{font-family:'Playfair Display',serif; font-size:22px; font-weight:500; letter-spacing:4px; text-transform:uppercase; color:var(--linen)}
+.nav-wordmark-sub{font-size:8.5px; font-weight:500; letter-spacing:3.5px; text-transform:uppercase; color:var(--gold); opacity:.9}
+.nav-links{display:flex; align-items:center; gap:38px}
+.nav-links a{font-size:12px; font-weight:500; letter-spacing:2.5px; text-transform:uppercase; color:rgba(244,240,230,0.7); text-decoration:none; transition:color .25s}
+.nav-links a:hover{color:var(--gold)}
+.btn-nav{background:var(--gold); color:var(--navy); border:none; padding:11px 26px; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; letter-spacing:2.8px; text-transform:uppercase; cursor:pointer; transition:all .25s; text-decoration:none}
+.btn-nav:hover{background:var(--gold-light); transform:translateY(-1px)}
+.nav-links a.btn-nav, .nav-links a.btn-nav:hover{color:var(--navy); font-size:10.5px; font-weight:600; letter-spacing:2.8px}
+.hamburger{display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px}
+.hamburger span{display:block; width:26px; height:2px; background:var(--linen); transition:transform .3s, opacity .3s}
+.mobile-drawer{position:fixed; top:76px; left:0; right:0; background:var(--navy); padding:32px 28px 40px; border-bottom:1px solid rgba(196,168,106,0.2); transform:translateY(-110%); transition:transform .35s ease; z-index:99; display:flex; flex-direction:column; gap:22px}
+.mobile-drawer.open{transform:translateY(0)}
+.mobile-drawer a{font-size:14px; font-weight:500; letter-spacing:2.5px; text-transform:uppercase; color:rgba(244,240,230,0.85); text-decoration:none; padding:8px 0; border-bottom:1px solid rgba(196,168,106,0.1)}
+
+/* HERO */
+.legal-hero{
+  padding:160px 56px 60px;
+  background:linear-gradient(180deg,var(--linen) 0%, var(--white) 100%);
+  text-align:center; position:relative; overflow:hidden;
+}
+.legal-hero::before{
+  content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%);
+  width:900px; height:900px;
+  background:radial-gradient(circle, rgba(196,168,106,0.08) 0%, transparent 60%);
+  pointer-events:none;
+}
+.eyebrow{
+  display:inline-block; font-size:11px; font-weight:600;
+  letter-spacing:4px; text-transform:uppercase;
+  color:var(--gold-dark); margin-bottom:24px;
+}
+.eyebrow::before, .eyebrow::after{
+  content:''; display:inline-block;
+  width:36px; height:1px; background:var(--gold);
+  vertical-align:middle; margin:0 16px; opacity:.6;
+}
+.legal-hero h1{
+  font-family:'Playfair Display',serif;
+  font-weight:500; font-size:clamp(2.4rem, 5vw, 3.8rem);
+  line-height:1.1; color:var(--navy); letter-spacing:-1px;
+  margin-bottom:18px; max-width:880px; margin-left:auto; margin-right:auto;
+}
+.legal-hero h1 em{font-style:italic; font-weight:400; color:var(--gold-dark)}
+.legal-meta{font-size:13px; color:var(--text-muted); letter-spacing:1.5px; text-transform:uppercase}
+
+/* CONTENT */
+.legal-body{
+  background:var(--white);
+  padding:80px 56px 120px;
+}
+.legal-inner{
+  max-width:820px; margin:0 auto;
+}
+.legal-section{
+  margin-bottom:48px;
+  padding-bottom:48px;
+  border-bottom:1px solid var(--border-dark);
+}
+.legal-section:last-child{border-bottom:none}
+.legal-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.4rem,2.2vw,1.85rem);
+  font-weight:500; color:var(--navy);
+  margin-bottom:6px; letter-spacing:-0.3px;
+  display:flex; align-items:baseline; gap:14px;
+}
+.legal-section h2 .num{
+  font-size:12px; font-weight:600; letter-spacing:3px;
+  color:var(--gold-dark); font-family:'Space Grotesk',sans-serif;
+}
+.legal-section .lead{
+  font-size:14px; color:var(--text-muted);
+  margin-bottom:22px; line-height:1.6;
+}
+.legal-section h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:14px; font-weight:600;
+  color:var(--navy); margin-top:24px; margin-bottom:10px;
+  letter-spacing:0.5px;
+}
+.legal-section p{
+  font-size:15px; line-height:1.85;
+  color:var(--steel); margin-bottom:14px;
+}
+.legal-section ul{
+  margin:8px 0 18px 0; padding-left:0; list-style:none;
+}
+.legal-section ul li{
+  font-size:15px; line-height:1.8; color:var(--steel);
+  padding-left:22px; position:relative; margin-bottom:8px;
+}
+.legal-section ul li::before{
+  content:''; position:absolute; left:0; top:11px;
+  width:8px; height:1px; background:var(--gold);
+}
+.legal-section a{color:var(--gold-dark); text-decoration:none; border-bottom:1px solid rgba(168,135,42,0.3); transition:border-color .25s}
+.legal-section a:hover{border-color:var(--gold-dark)}
+.legal-section strong{color:var(--navy); font-weight:600}
+
+/* CONTACT BOX */
+.contact-box{
+  background:var(--linen);
+  border-left:3px solid var(--gold);
+  padding:24px 28px;
+  margin-top:18px;
+}
+.contact-box p{margin-bottom:6px}
+.contact-box p:last-child{margin-bottom:0}
+
+/* FOOTER */
+footer{background:var(--navy-deep); color:var(--linen); padding:60px 56px 32px}
+.footer-inner{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:48px; max-width:1320px; margin:0 auto 48px}
+.footer-name{font-family:'Playfair Display',serif; font-size:22px; font-weight:500; letter-spacing:5px; text-transform:uppercase; color:var(--linen); text-decoration:none}
+.footer-tagline{font-size:13px; line-height:1.7; color:rgba(244,240,230,0.55); margin:14px 0}
+.footer-since{font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); opacity:.7}
+.footer-col-title{display:block; font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:18px}
+.footer-link{display:block; font-size:13px; color:rgba(244,240,230,0.6); text-decoration:none; margin-bottom:10px; transition:color .2s}
+.footer-link:hover{color:var(--gold)}
+.footer-address{display:block; font-size:13px; color:rgba(244,240,230,0.6); margin-top:4px}
+.footer-bottom{max-width:1320px; margin:0 auto; padding-top:24px; border-top:1px solid rgba(244,240,230,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px}
+.footer-copy{font-size:11px; color:rgba(244,240,230,0.4)}
+.footer-legal{display:flex; gap:24px}
+.footer-legal a{font-size:11px; color:rgba(244,240,230,0.4); text-decoration:none; transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+
+/* RESPONSIVE */
+@media (max-width:1100px){
+  nav{padding:0 28px}
+  .legal-hero, .legal-body{padding-left:28px; padding-right:28px}
+  footer{padding-left:28px; padding-right:28px}
+}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .legal-hero{padding-top:130px}
+  .footer-inner{grid-template-columns:1fr 1fr; gap:36px}
+  .footer-bottom{flex-direction:column; align-items:flex-start}
+}
+@media (max-width:560px){
+  nav{padding:0 20px; height:68px}
+  .nav-icon{width:38px; height:38px}
+  .nav-wordmark-name{font-size:18px; letter-spacing:3px}
+  .nav-wordmark-sub{font-size:7.5px; letter-spacing:3px}
+  .mobile-drawer{top:68px; padding:24px 20px 32px}
+  .legal-hero{padding:110px 20px 48px}
+  .legal-hero h1{font-size:1.9rem}
+  .legal-body{padding:56px 20px 80px}
+  .legal-section h2{font-size:1.3rem; gap:10px; flex-wrap:wrap}
+  .legal-section ul li, .legal-section p{font-size:14px}
+  .footer-inner{grid-template-columns:1fr; gap:28px}
+  footer{padding:48px 20px 24px}
+}
+
+
+/* ── MENU DE CALCULADORAS ── */
+/* Abre ao passar o rato, ao receber foco de teclado, e ao clicar (o JS poe
+   .open). As tres vias juntas cobrem rato, teclado e toque. */
+.nav-drop { position: relative; display: flex; align-items: center; }
+.nav-drop-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 2.8px; color: var(--linen);
+  text-transform: uppercase;
+  opacity: .55; transition: opacity .25s, color .25s;
+}
+.nav-drop-btn:hover, .nav-drop-btn.active,
+.nav-drop:hover .nav-drop-btn,
+.nav-drop:focus-within .nav-drop-btn { opacity: 1; color: var(--gold); }
+.nav-drop-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.nav-drop-caret {
+  width: 0; height: 0;
+  border-left: 3.5px solid transparent;
+  border-right: 3.5px solid transparent;
+  border-top: 4px solid currentColor;
+  transition: transform .25s;
+}
+.nav-drop:hover .nav-drop-caret,
+.nav-drop.open .nav-drop-caret { transform: rotate(180deg); }
+.nav-drop-menu {
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translate(-50%, 6px);
+  margin-top: 18px;
+  min-width: 268px;
+  background: var(--navy);
+  border: 1px solid rgba(196,168,106,0.22);
+  box-shadow: 0 18px 44px -12px rgba(0,0,0,0.55);
+  padding: 8px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .2s, transform .2s, visibility .2s;
+  z-index: 120;
+}
+/* A ponte invisivel evita que o menu feche quando o rato atravessa o espaco
+   entre o botao e o painel. */
+.nav-drop-menu::before {
+  content: ''; position: absolute;
+  top: -20px; left: 0; right: 0; height: 20px;
+}
+.nav-drop:hover .nav-drop-menu,
+.nav-drop:focus-within .nav-drop-menu,
+.nav-drop.open .nav-drop-menu {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+.nav-drop-menu a {
+  display: block;
+  padding: 13px 16px;
+  text-decoration: none;
+  opacity: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: background .2s;
+}
+.nav-drop-menu a:hover, .nav-drop-menu a:focus-visible { background: rgba(196,168,106,0.1); }
+.nav-drop-menu a[aria-current] { background: rgba(196,168,106,0.14); }
+.nav-drop-name {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 12.5px; font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--linen);
+  margin-bottom: 3px;
+}
+.nav-drop-menu a:hover .nav-drop-name,
+.nav-drop-menu a[aria-current] .nav-drop-name { color: var(--gold); }
+.nav-drop-desc {
+  display: block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 11px; font-weight: 400;
+  letter-spacing: 0.2px; line-height: 1.5;
+  color: rgba(184,204,218,0.55);
+  text-transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-drop-menu, .nav-drop-caret { transition: none; }
+}
+/* No menu de telemovel nao ha espaco nem razao para um painel que abre:
+   as duas entram como um grupo com rotulo. */
+.drawer-group { display: flex; flex-direction: column; }
+.drawer-group-label {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: 9.5px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); opacity: .75;
+  margin-bottom: 2px;
+}
+.mobile-drawer .drawer-group a { padding-left: 14px; }
+
+/* lang-switch:inicio */
+/* ── SELETOR DE IDIOMA ── */
+.lang-switch { display:flex; align-items:center; gap:5px; }
+.nav-links .lang-switch a.lang-opt,
+.mobile-drawer .lang-switch a.lang-opt {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:10.5px; font-weight:600; letter-spacing:1.8px;
+  text-transform:uppercase; text-decoration:none;
+  color:rgba(244,240,230,0.45); opacity:1;
+  padding:3px 1px; border:0; border-bottom:1px solid transparent;
+  transition:color .25s, border-color .25s;
+}
+.nav-links .lang-switch a.lang-opt:hover,
+.mobile-drawer .lang-switch a.lang-opt:hover { color:var(--gold); }
+.nav-links .lang-switch a.lang-opt[aria-current],
+.mobile-drawer .lang-switch a.lang-opt[aria-current] {
+  color:var(--gold); border-bottom-color:rgba(196,168,106,0.55);
+}
+.lang-sep { color:rgba(244,240,230,0.22); font-size:10px; line-height:1; }
+.mobile-drawer .lang-switch { gap:8px; padding:10px 0 2px; }
+.mobile-drawer .lang-switch a.lang-opt { font-size:13px; letter-spacing:2.4px; padding:6px 0; }
+/* lang-switch:fim */
+
+/* wa-fab:inicio */
+.wa-fab {
+  position: fixed; z-index: 9998;
+  right: 24px; bottom: 24px;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 20px 14px 16px;
+  background: #25D366; color: #0B141A;
+  border-radius: 999px; text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: .6px;
+  box-shadow: 0 10px 30px -8px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08);
+  transition: transform .25s, box-shadow .25s, opacity .25s;
+}
+.wa-fab:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -10px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.14); }
+.wa-fab:focus-visible { outline: 3px solid var(--gold, #C4A86A); outline-offset: 3px; }
+.wa-fab svg { width: 22px; height: 22px; fill: currentColor; flex-shrink: 0; }
+/* O banner de cookies ocupa o fundo do ecra e taparia o botao no telemovel.
+   Enquanto estiver a vista, o botao sai da frente: e um passo unico. */
+body:has(.arelia-cb.visible) .wa-fab { opacity: 0; pointer-events: none; transform: translateY(10px); }
+@media (max-width: 640px) {
+  .wa-fab { right: 16px; bottom: 16px; padding: 14px; gap: 0; }
+  .wa-fab .wa-fab-text { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .wa-fab { transition: none; } }
+/* wa-fab:fim */
+
+/* ── CANAL DE DENÚNCIAS ── */
+[hidden]{display:none !important}
+.cd-intro{max-width:640px; margin:0 auto; font-size:15px; line-height:1.75; color:var(--steel); position:relative}
+.cd-body{padding-top:64px}
+.cd-garantias{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:56px}
+.cd-garantia{background:var(--linen); border-top:2px solid var(--gold); padding:24px 22px}
+.cd-garantia .num{display:block; font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:10px}
+.cd-garantia h3{font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:500; color:var(--navy); margin-bottom:8px}
+.cd-garantia p{font-size:13.5px; line-height:1.65; color:var(--steel)}
+.cd-datas{margin:24px 0 32px}
+.cd-datas .cd-garantia p{font-size:15px; color:var(--navy); font-weight:500}
+
+.cd-tabs{display:flex; border-bottom:1px solid var(--border-dark); margin-bottom:40px; gap:8px}
+.cd-tab{background:none; border:0; border-bottom:2px solid transparent; margin-bottom:-1px; padding:14px 4px; margin-right:28px; cursor:pointer;
+  font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--text-muted); transition:color .25s, border-color .25s}
+.cd-tab:hover{color:var(--navy)}
+.cd-tab[aria-selected="true"]{color:var(--navy); border-bottom-color:var(--gold)}
+.cd-tab:focus-visible{outline:2px solid var(--gold); outline-offset:4px}
+
+.cd-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+.cd-grid-3{grid-template-columns:1fr 1fr 1fr; margin:6px 0 4px 30px}
+.cd-campo{display:block; margin-bottom:28px; border:0}
+.cd-rotulo{display:block; font-size:11px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--navy); margin-bottom:10px}
+.cd-rotulo em{font-style:normal; font-weight:400; letter-spacing:1px; text-transform:none; color:var(--text-muted)}
+.cd-body input:not([type=radio]):not([type=checkbox]):not([type=file]), .cd-body select, .cd-body textarea{
+  width:100%; font-family:'Space Grotesk',sans-serif; font-size:15px; color:var(--navy);
+  background:var(--white); border:1px solid rgba(12,26,44,0.18); border-radius:0; padding:13px 15px; transition:border-color .2s, box-shadow .2s; appearance:none}
+.cd-body select{background-image:linear-gradient(45deg,transparent 50%,var(--gold-dark) 50%),linear-gradient(135deg,var(--gold-dark) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 52%, calc(100% - 15px) 52%; background-size:5px 5px; background-repeat:no-repeat; padding-right:40px}
+.cd-body textarea{resize:vertical; line-height:1.65}
+.cd-body input:focus, .cd-body select:focus, .cd-body textarea:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(196,168,106,0.18)}
+.cd-ajuda{display:block; font-size:12.5px; color:var(--text-muted); margin-top:8px; line-height:1.55}
+.cd-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace !important; letter-spacing:2px; text-transform:uppercase}
+
+.cd-anexar{display:inline-flex; align-items:center; cursor:pointer; border:1px dashed var(--steel); padding:13px 18px; font-size:13px; font-weight:500; color:var(--navy); transition:border-color .2s, background .2s}
+.cd-anexar:hover{border-color:var(--gold); background:var(--linen)}
+.cd-anexar input{position:absolute; width:1px; height:1px; opacity:0}
+.cd-anexar:focus-within{outline:2px solid var(--gold); outline-offset:3px}
+.cd-ficheiros{list-style:none; margin:12px 0 0}
+.cd-ficheiros li{display:flex; align-items:center; gap:12px; font-size:13.5px; color:var(--navy); padding:6px 0; border-bottom:1px solid var(--border-dark)}
+.cd-ficheiros li span{flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.cd-ficheiros button{background:none; border:0; cursor:pointer; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold-dark)}
+
+.cd-opcao{display:flex; gap:12px; align-items:flex-start; font-size:14.5px; line-height:1.6; color:var(--steel); margin-bottom:14px; cursor:pointer}
+.cd-opcao strong{color:var(--navy); font-weight:600}
+.cd-opcao input{margin-top:5px; accent-color:var(--gold-dark); width:16px; height:16px; flex-shrink:0}
+.cd-opcao a{color:var(--gold-dark); text-decoration:none; border-bottom:1px solid rgba(168,135,42,0.4)}
+.cd-aceito{margin:8px 0 28px}
+.cd-isco{position:absolute !important; left:-9999px; width:1px; height:1px; opacity:0}
+
+.cd-botao{background:var(--navy); color:var(--linen); border:1px solid var(--navy); padding:15px 32px; cursor:pointer;
+  font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:600; letter-spacing:2.8px; text-transform:uppercase; transition:all .25s}
+.cd-botao:hover{background:var(--navy-light); transform:translateY(-1px)}
+.cd-botao:disabled{opacity:.6; cursor:wait; transform:none}
+.cd-botao:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.cd-botao-linha{background:transparent; color:var(--navy)}
+.cd-botao-linha:hover{background:var(--linen)}
+.cd-acoes{display:flex; flex-wrap:wrap; gap:12px; margin-top:24px}
+
+.cd-erro{background:#FBEDEA; border-left:3px solid #B4442F; color:#7A2A1C; padding:14px 18px; font-size:14px; margin-bottom:22px}
+.cd-aviso{background:var(--linen); border-left:3px solid var(--gold); padding:18px 22px; font-size:14.5px; color:var(--navy); line-height:1.65}
+
+.cd-recebida{outline:none}
+.cd-recebida h2, .cd-cabecalho h2{font-family:'Playfair Display',serif; font-weight:500; font-size:clamp(1.6rem,3vw,2.2rem); color:var(--navy); margin-bottom:12px}
+.cd-recebida > p{font-size:15px; color:var(--steel); margin-bottom:22px}
+.cd-codigo{background:var(--navy-deep); padding:30px 28px; margin-bottom:22px; border-top:2px solid var(--gold)}
+.cd-codigo-titulo{display:block; font-size:10.5px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:12px}
+.cd-codigo-valor{display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:clamp(1.3rem,4.4vw,2.1rem); letter-spacing:3px; color:var(--linen); word-break:break-all}
+
+.cd-form-codigo{max-width:520px}
+.cd-cabecalho{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap}
+.cd-ref{display:block; font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:6px}
+.cd-estado{background:var(--navy); color:var(--linen); font-size:10.5px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; padding:8px 16px; margin-bottom:16px}
+.contact-box h3, .cd-sub{font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:500; color:var(--navy); margin:0 0 10px}
+.cd-sub{margin-top:36px}
+.cd-pre{white-space:pre-wrap; font-size:14.5px; color:var(--steel); line-height:1.75}
+.cd-detalhes{margin-top:24px; border-top:1px solid var(--border-dark); border-bottom:1px solid var(--border-dark); padding:16px 0}
+.cd-detalhes summary{cursor:pointer; font-size:11.5px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--navy)}
+.cd-detalhes p{margin-top:14px}
+.cd-mensagens{list-style:none; margin:0 0 28px}
+.cd-mensagens li{padding:16px 20px; margin-bottom:12px; font-size:14.5px; line-height:1.7}
+.cd-mensagens li.empresa{background:var(--linen); border-left:3px solid var(--gold); margin-right:48px; color:var(--navy)}
+.cd-mensagens li.denunciante{background:var(--navy); color:var(--linen); margin-left:48px}
+.cd-mensagens li small{display:block; font-size:10.5px; letter-spacing:2px; text-transform:uppercase; opacity:.65; margin-bottom:6px}
+.cd-mensagens li.vazio{background:none; padding:0; color:var(--text-muted)}
+.cd-nota{margin-top:64px; padding-top:28px; border-top:1px solid var(--border-dark); font-size:13px; line-height:1.7; color:var(--text-muted)}
+.cd-nota a{color:var(--gold-dark); text-decoration:none; border-bottom:1px solid rgba(168,135,42,0.35)}
+
+@media (max-width:760px){
+  .cd-garantias, .cd-grid, .cd-grid-3{grid-template-columns:1fr}
+  .cd-grid-3{margin-left:0}
+  .cd-garantias{gap:14px; margin-bottom:40px}
+  .cd-tab{margin-right:12px; font-size:11px; letter-spacing:1.8px}
+  .cd-mensagens li.empresa{margin-right:16px}
+  .cd-mensagens li.denunciante{margin-left:16px}
+  .cd-botao{width:100%}
+  .cd-acoes .cd-botao{width:auto; flex:1 1 auto}
+}
+@media print{
+  nav, .mobile-drawer, footer, .legal-hero, .cd-garantias, .cd-tabs, .cd-acoes, .cd-nota{display:none !important}
+  .cd-codigo{background:#fff; border:2px solid #000}
+  .cd-codigo-valor, .cd-codigo-titulo{color:#000}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img class="nav-icon" src="img/favicon.png" alt="Arelia"/>
+    <span class="nav-wordmark">
+      <span class="nav-wordmark-name">Arelia</span>
+      <span class="nav-wordmark-sub">Lavandaria Industrial</span>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Início</a>
+    <a href="index.html#sobre">Sobre</a>
+    <div class="nav-drop"><button type="button" class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Calculadoras<span class="nav-drop-caret" aria-hidden="true"></span></button><div class="nav-drop-menu"><a href="arelia-roi.html"><span class="nav-drop-name">Calculadora de ROI</span><span class="nav-drop-desc">Interna ou externa, custo por quilo</span></a><a href="arelia-agua.html"><span class="nav-drop-name">Calculadora de água</span><span class="nav-drop-desc">Litros, metros cúbicos e euros</span></a><a href="arelia-pico.html"><span class="nav-drop-name">Calculadora de pico</span><span class="nav-drop-desc">Capacidade parada e pico de verão</span></a></div></div>
+    <a href="arelia-recursos.html">Recursos</a>
+    <a href="equipa.html">Equipa</a>
+        <a class="btn-nav" href="index.html#contacto">Pedir proposta</a>
+  </div>
+  <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMenu();this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Início</a>
+  <a href="index.html#sobre">Sobre</a>
+  <div class="drawer-group"><span class="drawer-group-label">Calculadoras</span><a href="arelia-roi.html">Calculadora de ROI</a><a href="arelia-agua.html">Calculadora de água</a><a href="arelia-pico.html">Calculadora de pico</a></div>
+  <a href="arelia-recursos.html">Recursos</a>
+  <a href="equipa.html">Equipa</a>
+  <a href="index.html#contacto">Pedir proposta</a>
+  </div>
+
+<!-- HERO -->
+<section class="legal-hero">
+  <span class="eyebrow">Canal seguro</span>
+  <h1>Canal de <em>denúncias</em></h1>
+  <p class="cd-intro">Comunique, em segurança e se quiser de forma anónima, infrações de que tenha conhecimento na Arelia. Quem denuncia de boa-fé está protegido contra qualquer retaliação (Lei n.º 93/2021).</p>
+</section>
+
+<section class="legal-body cd-body">
+  <div class="legal-inner">
+
+    <div class="cd-garantias">
+      <div class="cd-garantia">
+        <span class="num">01</span>
+        <h3>Anónimo, se quiser</h3>
+        <p>Não pedimos dados seus e não registamos o seu endereço IP. Esta página não usa cookies nem ferramentas de análise.</p>
+      </div>
+      <div class="cd-garantia">
+        <span class="num">02</span>
+        <h3>Acesso restrito</h3>
+        <p>Só as pessoas designadas pela administração leem a denúncia, com total confidencialidade.</p>
+      </div>
+      <div class="cd-garantia">
+        <span class="num">03</span>
+        <h3>Código de acompanhamento</h3>
+        <p>Recebe um código para ver o andamento e trocar mensagens connosco, sem criar conta.</p>
+      </div>
+    </div>
+
+    <div class="cd-tabs" role="tablist">
+      <button type="button" role="tab" class="cd-tab" id="tab-denunciar" aria-selected="true" aria-controls="painel-denunciar">Fazer uma denúncia</button>
+      <button type="button" role="tab" class="cd-tab" id="tab-acompanhar" aria-selected="false" aria-controls="painel-acompanhar">Acompanhar uma denúncia</button>
+    </div>
+
+    <!-- DENUNCIAR -->
+    <div class="cd-painel" id="painel-denunciar" role="tabpanel" aria-labelledby="tab-denunciar">
+      <form id="form-denuncia" novalidate>
+        <div class="cd-grid">
+          <label class="cd-campo">
+            <span class="cd-rotulo">Qual é a sua relação com a Arelia?</span>
+            <select name="relacao" required>
+              <option value="">Escolha…</option>
+              <option value="colaborador">Colaborador</option>
+              <option value="ex_colaborador">Ex-colaborador</option>
+              <option value="cliente">Cliente</option>
+              <option value="fornecedor">Fornecedor / prestador de serviços</option>
+              <option value="candidato">Candidato a emprego</option>
+              <option value="outro">Outra</option>
+            </select>
+          </label>
+          <label class="cd-campo">
+            <span class="cd-rotulo">Tipo de situação</span>
+            <select name="tipo" required>
+              <option value="">Escolha…</option>
+              <option value="corrupcao">Corrupção / suborno</option>
+              <option value="fraude">Fraude / irregularidade financeira</option>
+              <option value="assedio">Assédio / má conduta no trabalho</option>
+              <option value="discriminacao">Discriminação</option>
+              <option value="seguranca_saude">Segurança e saúde no trabalho</option>
+              <option value="ambiente">Ambiente</option>
+              <option value="dados">Proteção de dados / privacidade</option>
+              <option value="consumidor">Proteção do consumidor / segurança do serviço</option>
+              <option value="concorrencia">Concorrência / contratação pública</option>
+              <option value="outro">Outro</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="cd-campo">
+          <span class="cd-rotulo">Descrição</span>
+          <textarea name="descricao" rows="8" required minlength="20" placeholder="O que aconteceu, quando, onde, quem esteve envolvido, se há testemunhas ou provas…"></textarea>
+          <span class="cd-ajuda">Se quer ficar anónimo, evite pormenores que o identifiquem.</span>
+        </label>
+
+        <div class="cd-campo">
+          <span class="cd-rotulo">Anexos <em>(opcional)</em></span>
+          <label class="cd-anexar">
+            <input type="file" id="anexos" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,.heic,.heif,.mp3,.m4a,.mp4,.webm,.ogg,.wav,.doc,.docx,.txt"/>
+            <span>+ Juntar documentos, fotografias ou áudio</span>
+          </label>
+          <ul class="cd-ficheiros" id="lista-anexos"></ul>
+          <span class="cd-ajuda">Até 5 ficheiros, 20 MB cada. Os ficheiros podem conter dados que o identifiquem (autor do documento, localização da fotografia, a sua voz).</span>
+        </div>
+
+        <fieldset class="cd-campo cd-identificacao">
+          <legend class="cd-rotulo">Identificação</legend>
+          <label class="cd-opcao"><input type="radio" name="anonimo" value="sim" checked/><span><strong>Quero ficar anónimo.</strong> Acompanha a denúncia apenas com o código.</span></label>
+          <label class="cd-opcao"><input type="radio" name="anonimo" value="nao"/><span><strong>Quero identificar-me.</strong> A sua identidade fica confidencial e só é conhecida das pessoas designadas.</span></label>
+          <div class="cd-grid cd-grid-3" id="dados-pessoais" hidden>
+            <input name="nome" placeholder="Nome" aria-label="Nome" autocomplete="name"/>
+            <input name="email" type="email" placeholder="Email" aria-label="Email" autocomplete="email"/>
+            <input name="telefone" placeholder="Telefone" aria-label="Telefone" autocomplete="tel"/>
+          </div>
+          <label class="cd-opcao"><input type="checkbox" name="quer_reuniao"/><span>Prefiro também relatar a situação presencialmente ou por telefone. Combinamos através das mensagens do acompanhamento.</span></label>
+        </fieldset>
+
+        <input type="text" name="website" class="cd-isco" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+
+        <label class="cd-opcao cd-aceito"><input type="checkbox" name="aceitou" required/><span>Li a <a href="politica-denuncias.html" target="_blank">política do canal de denúncias e de privacidade</a>.</span></label>
+
+        <p class="cd-erro" id="erro-denuncia" role="alert" hidden></p>
+        <button type="submit" class="cd-botao" id="botao-enviar">Enviar denúncia</button>
+      </form>
+
+      <div class="cd-recebida" id="recebida" hidden tabindex="-1">
+        <span class="eyebrow">Denúncia recebida</span>
+        <h2>Referência <span id="ref-recebida"></span></h2>
+        <p>Confirmamos a receção no prazo de 7 dias e comunicamos as medidas tomadas no prazo de 3 meses.</p>
+        <div class="cd-codigo">
+          <span class="cd-codigo-titulo">O seu código de acompanhamento</span>
+          <span class="cd-codigo-valor" id="codigo-recebido"></span>
+        </div>
+        <p class="cd-aviso"><strong>Guarde este código agora.</strong> É a única forma de acompanhar a denúncia e de ler as nossas respostas. Não o guardamos: se o perder, não o conseguimos recuperar.</p>
+        <p class="cd-erro" id="erro-anexos" hidden></p>
+        <div class="cd-acoes">
+          <button type="button" class="cd-botao" id="copiar">Copiar código</button>
+          <button type="button" class="cd-botao cd-botao-linha" onclick="window.print()">Imprimir</button>
+          <button type="button" class="cd-botao cd-botao-linha" id="ir-acompanhar">Acompanhar a denúncia</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACOMPANHAR -->
+    <div class="cd-painel" id="painel-acompanhar" role="tabpanel" aria-labelledby="tab-acompanhar" hidden>
+      <form id="form-codigo" class="cd-form-codigo">
+        <label class="cd-campo">
+          <span class="cd-rotulo">Código de acompanhamento</span>
+          <input name="codigo" id="campo-codigo" required autocomplete="off" spellcheck="false" placeholder="XXXX-XXXX-XXXX-XXXX" class="cd-mono"/>
+        </label>
+        <p class="cd-erro" id="erro-codigo" role="alert" hidden></p>
+        <button type="submit" class="cd-botao">Consultar</button>
+      </form>
+
+      <div id="andamento" hidden>
+        <div class="cd-cabecalho">
+          <div>
+            <span class="cd-ref" id="and-ref"></span>
+            <h2 id="and-tipo"></h2>
+          </div>
+          <span class="cd-estado" id="and-estado"></span>
+        </div>
+        <div class="cd-garantias cd-datas">
+          <div class="cd-garantia"><span class="num">Recebida</span><p id="and-recebida"></p></div>
+          <div class="cd-garantia"><span class="num">Receção confirmada</span><p id="and-confirmada"></p></div>
+          <div class="cd-garantia"><span class="num" id="and-fim-titulo"></span><p id="and-fim"></p></div>
+        </div>
+        <div class="contact-box" id="and-conclusao-caixa" hidden>
+          <h3>Medidas comunicadas</h3>
+          <p id="and-conclusao" class="cd-pre"></p>
+        </div>
+        <details class="cd-detalhes">
+          <summary>A sua denúncia</summary>
+          <p id="and-descricao" class="cd-pre"></p>
+        </details>
+        <h3 class="cd-sub">Mensagens</h3>
+        <ul class="cd-mensagens" id="and-mensagens"></ul>
+        <form id="form-mensagem">
+          <label class="cd-campo">
+            <span class="cd-rotulo">Responder ou acrescentar informação</span>
+            <textarea name="texto" rows="4" required></textarea>
+          </label>
+          <p class="cd-erro" id="erro-mensagem" role="alert" hidden></p>
+          <div class="cd-acoes">
+            <button type="submit" class="cd-botao">Enviar mensagem</button>
+            <button type="button" class="cd-botao cd-botao-linha" id="sair">Sair</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <p class="cd-nota">Para reclamações sobre o serviço (roupa, prazos, faturas) contacte-nos diretamente ou use o <a href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener">Livro de Reclamações</a>. Este canal destina-se a infrações. Pode também recorrer aos canais externos das autoridades competentes. Ver a <a href="politica-denuncias.html">política do canal</a>.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a class="footer-name" href="index.html">Arelia</a>
+      <p class="footer-tagline">Lavandaria industrial<br>para hotelaria premium.</p>
+      <p class="footer-since">Portugal</p>
+    </div>
+    <div>
+      <span class="footer-col-title">Contacto</span>
+      <a class="footer-link" href="mailto:geral@ar-elia.com">geral@ar-elia.com</a>
+      <a class="footer-link" href="tel:+351925263365">+351 925 263 365</a>
+      <span class="footer-address">Algarve, Portugal</span>
+    </div>
+    <div>
+      <span class="footer-col-title">Navegação</span>
+      <a class="footer-link" href="index.html">Início</a>
+      <a class="footer-link" href="arelia-roi.html">Calcular ROI</a>
+      <a class="footer-link" href="arelia-recursos.html">Recursos</a>
+      <a class="footer-link" href="equipa.html">Equipa</a>
+    </div>
+    <div>
+      <span class="footer-col-title">Empresa</span>
+      <a class="footer-link" href="index.html#sobre">Sobre nós</a>
+      <a class="footer-link" href="index.html#contacto">Pedir proposta</a>
+      <a class="footer-link" href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© <span id="yr"></span> Arelia · Lavandaria Industrial · Todos os direitos reservados</span>
+    <div class="footer-legal">
+      <a href="privacidade.html">Política de privacidade</a>
+      <a href="termos.html">Termos &amp; condições</a>
+      <a href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener">Livro de Reclamações</a>
+      <a href="canal-denuncias.html">Canal de denúncias</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('mobileDrawer').classList.toggle('open');
+}
+// Menu de calculadoras: clique e teclado. O rato e o foco ja sao tratados
+// pelo CSS; isto serve o toque e o Escape.
+(function(){
+  var drop = document.querySelector('.nav-drop');
+  if (!drop) return;
+  var btn = drop.querySelector('.nav-drop-btn');
+  function fechar(){ drop.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var aberto = drop.classList.toggle('open');
+    btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+  });
+  document.addEventListener('click', function(e){ if (!drop.contains(e.target)) fechar(); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && drop.classList.contains('open')) { fechar(); btn.focus(); }
+  });
+})();
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+<script>
+// Canal de denúncias. As denúncias ficam guardadas na plataforma interna da
+// Arelia; esta página fala com ela diretamente. Sem cookies, sem análise de
+// tráfego: o código de acompanhamento só existe na memória desta página.
+(function(){
+  var API = 'https://arelia-gestao.vercel.app/api/denuncias/publico/';
+  var MAX_ANEXOS = 5, MAX_BYTES = 20 * 1024 * 1024;
+  var EXT = ['pdf','jpg','jpeg','png','webp','heic','heif','mp3','m4a','mp4','webm','ogg','wav','doc','docx','txt'];
+  var ESTADOS = { recebida:'Recebida', em_analise:'Em análise', concluida:'Concluída', arquivada:'Arquivada' };
+  var TIPOS = {};
+  Array.prototype.forEach.call(document.querySelectorAll('select[name=tipo] option'), function(o){ if (o.value) TIPOS[o.value] = o.textContent; });
+  var $ = function(id){ return document.getElementById(id); };
+  var codigoAtual = '';
+
+  function post(rota, corpo){
+    return fetch(API + rota, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(corpo) })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ if (!r.ok) throw new Error(j.erro || 'Não foi possível concluir o pedido.'); return j; }); },
+            function(){ throw new Error('Sem ligação. Verifique a internet e tente outra vez.'); });
+  }
+  function mostrarErro(id, msg){ var e = $(id); e.textContent = msg || ''; e.hidden = !msg; }
+  function data(iso){ return iso ? new Date(iso).toLocaleDateString('pt-PT', { timeZone:'Europe/Lisbon' }) : '—'; }
+  function dataHora(iso){ return new Date(iso).toLocaleString('pt-PT', { timeZone:'Europe/Lisbon', dateStyle:'short', timeStyle:'short' }); }
+
+  // Separadores
+  function abrir(qual){
+    ['denunciar','acompanhar'].forEach(function(n){
+      $('tab-' + n).setAttribute('aria-selected', n === qual ? 'true' : 'false');
+      $('painel-' + n).hidden = n !== qual;
+    });
+    if (history.replaceState) history.replaceState(null, '', qual === 'acompanhar' ? '#acompanhar' : location.pathname);
+  }
+  $('tab-denunciar').addEventListener('click', function(){ abrir('denunciar'); });
+  $('tab-acompanhar').addEventListener('click', function(){ abrir('acompanhar'); });
+  if (location.hash === '#acompanhar') abrir('acompanhar');
+
+  // Identificação
+  var form = $('form-denuncia');
+  Array.prototype.forEach.call(form.querySelectorAll('input[name=anonimo]'), function(r){
+    r.addEventListener('change', function(){ $('dados-pessoais').hidden = form.anonimo.value === 'sim'; });
+  });
+
+  // Anexos
+  var ficheiros = [];
+  function desenharAnexos(){
+    var ul = $('lista-anexos'); ul.innerHTML = '';
+    ficheiros.forEach(function(f, i){
+      var li = document.createElement('li');
+      var s = document.createElement('span'); s.textContent = f.name;
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = 'Retirar';
+      b.addEventListener('click', function(){ ficheiros.splice(i, 1); desenharAnexos(); });
+      li.appendChild(s); li.appendChild(b); ul.appendChild(li);
+    });
+  }
+  $('anexos').addEventListener('change', function(e){
+    mostrarErro('erro-denuncia', '');
+    var novos = Array.prototype.slice.call(e.target.files || []);
+    for (var i = 0; i < novos.length; i++) {
+      var f = novos[i], ext = (f.name.split('.').pop() || '').toLowerCase();
+      if (EXT.indexOf(ext) < 0) { mostrarErro('erro-denuncia', '"' + f.name + '": tipo de ficheiro não aceite.'); continue; }
+      if (f.size > MAX_BYTES) { mostrarErro('erro-denuncia', '"' + f.name + '": máximo 20 MB por ficheiro.'); continue; }
+      if (ficheiros.length >= MAX_ANEXOS) { mostrarErro('erro-denuncia', 'No máximo ' + MAX_ANEXOS + ' anexos.'); break; }
+      ficheiros.push(f);
+    }
+    e.target.value = '';
+    desenharAnexos();
+  });
+
+  // Enviar
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    mostrarErro('erro-denuncia', '');
+    var anonimo = form.anonimo.value === 'sim';
+    if (!form.relacao.value || !form.tipo.value) return mostrarErro('erro-denuncia', 'Indique a sua relação com a Arelia e o tipo de situação.');
+    if (form.descricao.value.trim().length < 20) return mostrarErro('erro-denuncia', 'Descreva o que aconteceu (pelo menos 20 caracteres).');
+    if (!form.aceitou.checked) return mostrarErro('erro-denuncia', 'Confirme que leu a política do canal de denúncias.');
+    var botao = $('botao-enviar'); botao.disabled = true; botao.textContent = 'A enviar…';
+    post('enviar', {
+      relacao: form.relacao.value, tipo: form.tipo.value, descricao: form.descricao.value,
+      anonimo: anonimo,
+      nome: anonimo ? '' : form.nome.value, email: anonimo ? '' : form.email.value, telefone: anonimo ? '' : form.telefone.value,
+      quer_reuniao: form.quer_reuniao.checked, aceitou: form.aceitou.checked, website: form.website.value,
+      anexos: ficheiros.map(function(f){ return { nome: f.name, tamanho: f.size }; })
+    }).then(function(r){
+      // Os anexos vão direto para o armazenamento, cada um com o seu link assinado.
+      var envios = r.envios || [];
+      var falhados = ficheiros.filter(function(_, i){ return !envios.some(function(x){ return x.i === i; }); }).map(function(f){ return f.name; });
+      return Promise.all(envios.map(function(env){
+        var f = ficheiros[env.i];
+        return fetch(env.url, { method:'PUT', headers:{ 'Content-Type': f.type || 'application/octet-stream' }, body: f })
+          .then(function(x){ if (!x.ok) falhados.push(env.nome); }, function(){ falhados.push(env.nome); });
+      })).then(function(){ return { r: r, falhados: falhados }; });
+    }).then(function(res){
+      codigoAtual = res.r.codigo;
+      $('ref-recebida').textContent = res.r.referencia;
+      $('codigo-recebido').textContent = res.r.codigo;
+      if (res.falhados.length) mostrarErro('erro-anexos', 'Não foi possível enviar: ' + res.falhados.join(', ') + '. A denúncia ficou registada; pode descrever o conteúdo numa mensagem no acompanhamento.');
+      form.hidden = true;
+      $('recebida').hidden = false;
+      $('recebida').focus();
+      window.scrollTo({ top: $('recebida').getBoundingClientRect().top + window.pageYOffset - 120 });
+    }).catch(function(err){
+      mostrarErro('erro-denuncia', err.message);
+    }).then(function(){ botao.disabled = false; botao.textContent = 'Enviar denúncia'; });
+  });
+
+  $('copiar').addEventListener('click', function(){
+    var b = this;
+    (navigator.clipboard ? navigator.clipboard.writeText(codigoAtual) : Promise.reject())
+      .then(function(){ b.textContent = 'Copiado'; }, function(){ b.textContent = 'Selecione e copie o código'; });
+  });
+  $('ir-acompanhar').addEventListener('click', function(){
+    abrir('acompanhar'); $('campo-codigo').value = codigoAtual; consultar();
+  });
+
+  // Acompanhar
+  function consultar(){
+    mostrarErro('erro-codigo', '');
+    var cod = $('campo-codigo').value;
+    return post('consultar', { codigo: cod }).then(function(a){
+      codigoAtual = cod;
+      $('form-codigo').hidden = true;
+      $('andamento').hidden = false;
+      $('and-ref').textContent = 'Denúncia ' + a.referencia;
+      $('and-tipo').textContent = TIPOS[a.tipo] || a.tipo;
+      $('and-estado').textContent = ESTADOS[a.estado] || a.estado;
+      $('and-recebida').textContent = data(a.recebida_em);
+      $('and-confirmada').textContent = a.confirmada_em ? data(a.confirmada_em) : 'Ainda não (prazo: 7 dias)';
+      $('and-fim-titulo').textContent = a.concluida_em ? 'Concluída' : 'Resposta até';
+      $('and-fim').textContent = data(a.concluida_em || a.responder_ate);
+      $('and-conclusao-caixa').hidden = !a.conclusao;
+      $('and-conclusao').textContent = a.conclusao || '';
+      $('and-descricao').textContent = a.descricao;
+      var ul = $('and-mensagens'); ul.innerHTML = '';
+      if (!a.mensagens.length) { var v = document.createElement('li'); v.className = 'vazio'; v.textContent = 'Ainda não há mensagens.'; ul.appendChild(v); }
+      a.mensagens.forEach(function(m){
+        var li = document.createElement('li'); li.className = m.autor;
+        var s = document.createElement('small'); s.textContent = (m.autor === 'empresa' ? 'Arelia' : 'Você') + ' · ' + dataHora(m.criada_em);
+        var p = document.createElement('div'); p.className = 'cd-pre'; p.style.color = 'inherit'; p.textContent = m.texto;
+        li.appendChild(s); li.appendChild(p); ul.appendChild(li);
+      });
+      $('form-mensagem').hidden = a.estado === 'arquivada';
+    }).catch(function(err){ mostrarErro('erro-codigo', err.message); });
+  }
+  $('form-codigo').addEventListener('submit', function(e){ e.preventDefault(); consultar(); });
+  $('form-mensagem').addEventListener('submit', function(e){
+    e.preventDefault();
+    var t = this.texto;
+    mostrarErro('erro-mensagem', '');
+    if (!t.value.trim()) return mostrarErro('erro-mensagem', 'Escreva a mensagem.');
+    post('mensagem', { codigo: codigoAtual, texto: t.value }).then(function(){ t.value = ''; return consultar(); })
+      .catch(function(err){ mostrarErro('erro-mensagem', err.message); });
+  });
+  $('sair').addEventListener('click', function(){
+    codigoAtual = ''; $('campo-codigo').value = '';
+    $('andamento').hidden = true; $('form-codigo').hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
