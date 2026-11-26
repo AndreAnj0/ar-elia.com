@@ -1167,6 +1167,13 @@ gtag('config', 'G-7SKWWCWMZV', {
 </section>
 
 <footer>
+<style>/* lr-simbolo:inicio — símbolo do Livro de Reclamações Eletrónico, obrigatório e visível */
+.lr-simbolo{display:inline-flex !important; align-items:center; gap:5px; text-decoration:none !important; opacity:.85; transition:opacity .2s}
+.lr-simbolo:hover, .lr-simbolo:focus-visible{opacity:1}
+.lr-simbolo:focus-visible{outline:2px solid #C4A86A; outline-offset:3px}
+.lr-circ{display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; background:#000; color:#fff; font:700 7.5px/1 Arial,Helvetica,sans-serif; letter-spacing:0; white-space:nowrap; box-shadow:0 0 0 1px rgba(244,240,230,.35)}
+.lr-txt{font:700 11px/1 Arial,Helvetica,sans-serif; letter-spacing:0; color:rgba(244,240,230,.8); text-transform:none}
+/* lr-simbolo:fim */</style>
   <div class="footer-inner">
     <div>
       <a class="footer-name" href="index.html">Arelia</a>
@@ -1198,7 +1205,7 @@ gtag('config', 'G-7SKWWCWMZV', {
     <div class="footer-legal">
       <a href="privacidade.html">Política de privacidade</a>
       <a href="termos.html">Termos &amp; condições</a>
-      <a href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener">Livro de Reclamações</a>
+      <a class="lr-simbolo" href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener" aria-label="Livro de Reclamações (abre noutra janela)"><span class="lr-circ" aria-hidden="true">Livro de</span><span class="lr-txt" aria-hidden="true">Reclamações</span></a>
       <a href="canal-denuncias.html">Canal de denúncias</a>
     </div>
   </div>
