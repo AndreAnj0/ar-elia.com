@@ -34,6 +34,8 @@
 <link rel="icon" type="image/png" href="img/favicon.png"/>
 <link rel="apple-touch-icon" href="img/favicon.png"/>
 
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
 <style>
@@ -555,7 +557,28 @@ gtag('config', 'G-7SKWWCWMZV', {
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="rf">
+<style>/* rf:inicio — rodapé comum do site (gerado por site-rodape.cjs) */
+.rf{background:#080F18; color:#F4F0E6; padding:64px 56px 28px; font-family:'Space Grotesk',sans-serif; line-height:1.5}
+.rf-grade{max-width:1320px; margin:0 auto 40px; display:grid; grid-template-columns:1.5fr 1.2fr 1fr 1fr; gap:44px}
+.rf-nome{font-family:'Playfair Display',serif; font-size:22px; font-weight:500; letter-spacing:5px; text-transform:uppercase; color:#F4F0E6; text-decoration:none}
+.rf-tag{font-size:13px; line-height:1.7; color:rgba(244,240,230,.68); margin:14px 0 12px; max-width:290px}
+.rf-empresa{font-size:11px; color:rgba(244,240,230,.55); letter-spacing:.3px; margin:0}
+.rf-tit{display:block; font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#C4A86A; margin-bottom:16px}
+.rf a.rf-l{display:block; font-size:13px; color:rgba(244,240,230,.72); text-decoration:none; margin-bottom:9px; transition:color .2s}
+.rf a.rf-l:hover, .rf-zonas a:hover, .rf-legais a:hover{color:#C4A86A}
+.rf-morada{display:block; font-size:13px; line-height:1.6; color:rgba(244,240,230,.62); margin-top:6px}
+.rf-zonas{max-width:1320px; margin:0 auto 22px; padding-top:22px; border-top:1px solid rgba(244,240,230,.08)}
+.rf-zonas p{margin:0; font-size:11.5px; line-height:1.9; color:rgba(244,240,230,.55)}
+.rf-zonas a{color:rgba(244,240,230,.7); text-decoration:none; transition:color .2s}
+.rf-fundo{max-width:1320px; margin:0 auto; padding-top:20px; border-top:1px solid rgba(244,240,230,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px}
+.rf-copy{font-size:11px; color:rgba(244,240,230,.6)}
+.rf-legais{display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px}
+.rf-legais a{font-size:11px; color:rgba(244,240,230,.68); text-decoration:none; transition:color .2s}
+@media (max-width:1100px){ .rf{padding-left:28px; padding-right:28px} }
+@media (max-width:900px){ .rf-grade{grid-template-columns:1fr 1fr; gap:34px} .rf-fundo{flex-direction:column; align-items:flex-start} }
+@media (max-width:560px){ .rf{padding:48px 20px 96px} .rf-grade{grid-template-columns:1fr; gap:26px} }
+/* rf:fim */</style>
 <style>/* lr-simbolo:inicio — símbolo do Livro de Reclamações Eletrónico, obrigatório e visível */
 .lr-simbolo{display:inline-flex !important; align-items:center; gap:5px; text-decoration:none !important; opacity:.85; transition:opacity .2s}
 .footer-legal{align-items:center}
@@ -570,40 +593,54 @@ gtag('config', 'G-7SKWWCWMZV', {
 .footer-areas-title{color:rgba(244,240,230,.55) !important}
 .footer-areas-list, .footer-areas-list a{color:rgba(244,240,230,.55) !important}
 .footer-areas-list a:hover{color:#C4A86A !important}
+/* aviso de cookies mais pequeno no telemóvel: tapava metade do primeiro ecrã */
+@media (max-width:640px){
+  .arelia-cb{padding:14px 16px !important; gap:10px !important; bottom:10px !important; left:10px !important; right:10px !important; border-radius:14px !important}
+  .arelia-cb__text{font-size:12px !important; line-height:1.45 !important}
+  .arelia-cb__text strong{font-size:12.5px !important; margin-bottom:2px !important}
+  .arelia-cb__btn{padding:9px 14px !important}
+}
 /* lr-simbolo:fim */</style>
-  <div class="footer-inner">
+  <div class="rf-grade">
     <div>
-      <a class="footer-name" href="index.html">Arelia</a>
-      <p class="footer-tagline">Lavandaria industrial<br>para hotelaria premium.</p>
-      <p class="footer-since">Portugal</p>
+      <a class="rf-nome" href="/">Arelia</a>
+      <p class="rf-tag">Lavandaria industrial para hotelaria, alojamento local e clínicas no Algarve.</p>
+      <p class="rf-empresa">ARELIA LAVANDARIA, LDA · NIF 519476417</p>
     </div>
     <div>
-      <span class="footer-col-title">Contacto</span>
-      <a class="footer-link" href="mailto:geral@ar-elia.com">geral@ar-elia.com</a>
-      <a class="footer-link" href="tel:+351925263365">+351 925 263 365</a>
-      <span class="footer-address">Algarve, Portugal</span>
+      <span class="rf-tit">Contacto</span>
+      <a class="rf-l" href="mailto:geral@ar-elia.com">geral@ar-elia.com</a>
+      <a class="rf-l" href="tel:+351925263365">+351 925 263 365</a>
+      <span class="rf-morada">Rua Tavagueira, Lote I Sul, Lanka Park II<br>8200-425 Guia (Albufeira)</span>
     </div>
     <div>
-      <span class="footer-col-title">Navegação</span>
-      <a class="footer-link" href="index.html">Início</a>
-      <a class="footer-link" href="arelia-roi.html">Calcular ROI</a>
-      <a class="footer-link" href="arelia-recursos.html">Recursos</a>
-      <a class="footer-link" href="equipa.html">Equipa</a>
+      <span class="rf-tit">Navegação</span>
+      <a class="rf-l" href="/">Início</a>
+      <a class="rf-l" href="/#processo-3d">Como funciona</a>
+      <a class="rf-l" href="/sobre.html">A Arelia em factos</a>
+      <a class="rf-l" href="/equipa.html">Equipa</a>
+      <a class="rf-l" href="/arelia-recursos.html">Recursos</a>
     </div>
     <div>
-      <span class="footer-col-title">Empresa</span>
-      <a class="footer-link" href="index.html#sobre">Sobre nós</a>
-      <a class="footer-link" href="index.html#contacto">Pedir proposta</a>
-      <a class="footer-link" href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="rf-tit">Ferramentas</span>
+      <a class="rf-l" href="/arelia-roi.html">Calculadora de ROI</a>
+      <a class="rf-l" href="/arelia-agua.html">Calculadora de água</a>
+      <a class="rf-l" href="/arelia-pico.html">Calculadora de pico</a>
+      <a class="rf-l" href="/#contacto">Pedir proposta</a>
+      <a class="rf-l" href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© <span id="yr"></span> Arelia · Lavandaria Industrial · Todos os direitos reservados</span>
-    <div class="footer-legal">
-      <a href="privacidade.html">Política de privacidade</a>
-      <a href="termos.html">Termos &amp; condições</a>
+  <div class="rf-zonas">
+    <span class="rf-tit">O Algarve, zona a zona</span>
+    <p>Lavandaria industrial no Algarve · <a href="/lavandaria-industrial-faro.html">Faro</a> · <a href="/lavandaria-industrial-albufeira.html">Albufeira</a> · <a href="/lavandaria-industrial-portimao.html">Portimão</a> · <a href="/lavandaria-industrial-lagos.html">Lagos</a> · <a href="/lavandaria-industrial-vilamoura-quarteira.html">Vilamoura e Quarteira</a> · <a href="/lavandaria-industrial-loule.html">Loulé</a> · <a href="/lavandaria-industrial-lagoa-carvoeiro.html">Lagoa e Carvoeiro</a></p>
+  </div>
+  <div class="rf-fundo">
+    <span class="rf-copy">© <span id="yr">2026</span> Arelia · Lavandaria Industrial no Algarve · Todos os direitos reservados</span>
+    <div class="rf-legais footer-legal">
+      <a href="/privacidade.html">Política de privacidade</a>
+      <a href="/termos.html">Termos &amp; condições</a>
       <a class="lr-simbolo" href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener" aria-label="Livro de Reclamações (abre noutra janela)"><span class="lr-circ" aria-hidden="true">Livro de</span><span class="lr-txt" aria-hidden="true">Reclamações</span></a>
-      <a href="canal-denuncias.html">Canal de denúncias</a>
+      <a href="/canal-denuncias.html">Canal de denúncias</a>
     </div>
   </div>
 </footer>

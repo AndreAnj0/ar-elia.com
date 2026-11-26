@@ -34,6 +34,8 @@
 <meta name="twitter:image" content="https://ar-elia.com/img/og-partilha.jpg"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://ar-elia.com/#organization","name":"Arelia — Lavandaria Industrial","alternateName":"Arelia","url":"https://ar-elia.com","logo":"https://ar-elia.com/img/favicon.png","description":"Lavandaria industrial para hotelaria premium no Algarve, Portugal.","email":"geral@ar-elia.com","telephone":"+351925263365","foundingDate":"2026","areaServed":{"@type":"AdministrativeArea","name":"Algarve, Portugal"},"address":{"@type":"PostalAddress","addressRegion":"Algarve","addressCountry":"PT"},"sameAs":["https://www.linkedin.com/company/arelia-lavandaria"],"legalName":"ARELIA LAVANDARIA, LDA","vatID":"PT519476417","taxID":"519476417"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","url":"https://ar-elia.com/arelia-recursos.html","name":"Custos e qualidade na lavandaria hoteleira | ARELIA","description":"Artigos práticos sobre custos, qualidade têxtil e operação na lavandaria hoteleira. Conhecimento aplicado ao dia a dia de um hotel.","isPartOf":{"@id":"https://ar-elia.com/#website"},"inLanguage":"pt-PT"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
 <style>
@@ -952,7 +954,7 @@ function toggleMenu(){
 <!-- FEATURED -->
 <section class="featured-section">
   <div class="featured-wrap">
-    <div class="featured-label">— Destaque desta semana</div>
+    <div class="featured-label">— Em destaque</div>
     <article class="featured-card" onclick="window.location.href='artigo-custo-lavandaria-interna.html'" style="cursor:pointer;">
       <div class="featured-img" style="background-image:url('img/artigo-custo-interna.jpg'); background-size:cover; background-position:center;"></div>
       <div class="featured-content">
@@ -979,7 +981,6 @@ function toggleMenu(){
         <button class="active" data-filter="all">Todos</button>
         <button data-filter="custos">Custos</button>
         <button data-filter="qualidade">Qualidade</button>
-        <button data-filter="operacao">Operação</button>
         <button data-filter="sustent">Sustentabilidade</button>
       </div>
     </div>
@@ -1015,45 +1016,6 @@ function toggleMenu(){
           <h3 class="article-title"><a href="artigo-5-sinais-lencois-degradacao.html">5 sinais de que os seus lençóis estão a degradar-se mais rápido do que deviam</a></h3>
           <p class="article-excerpt">A vida útil de um lençol hoteleiro pode variar entre 80 e 250 ciclos. A diferença está em pequenos detalhes do processo de lavagem.</p>
           <div class="article-meta">7 min · Têxteis</div>
-        </div>
-      </article>
-
-      <!-- Article 4 -->
-      <article class="article-card" data-cat="operacao" onclick="alert('Em breve')">
-        <div class="article-img" style="background-image: url('img/processo-acabamento.webp');">
-          <span class="article-soon">Em breve</span>
-        </div>
-        <div class="article-content">
-          <div class="article-cat">Operação</div>
-          <h3 class="article-title">Lavandaria interna vs externa: 8 perguntas para tomar a decisão certa</h3>
-          <p class="article-excerpt">Não há resposta universal. Depende do volume, da localização, da disponibilidade de mão de obra e do nível de exigência do seu hóspede.</p>
-          <div class="article-meta">6 min · Decisão</div>
-        </div>
-      </article>
-
-      <!-- Article 5 -->
-      <article class="article-card" data-cat="qualidade" onclick="alert('Em breve')">
-        <div class="article-img" style="background-image: url('img/artigo-algodao.webp');">
-          <span class="article-soon">Em breve</span>
-        </div>
-        <div class="article-content">
-          <div class="article-cat">Qualidade Têxtil</div>
-          <h3 class="article-title">Algodão egípcio vs algodão português: o que faz sentido no seu hotel?</h3>
-          <p class="article-excerpt">Não é só o número de fios. Densidade, torção, acabamento e durabilidade ao cloro fazem mais diferença do que a origem.</p>
-          <div class="article-meta">9 min · Têxteis</div>
-        </div>
-      </article>
-
-      <!-- Article 6 -->
-      <article class="article-card" data-cat="operacao" onclick="alert('Em breve')">
-        <div class="article-img" style="background-image: url('img/processo-acabamento.webp');">
-          <span class="article-soon">Em breve</span>
-        </div>
-        <div class="article-content">
-          <div class="article-cat">Operação</div>
-          <h3 class="article-title">Renting de lençóis: o que é, como funciona, quando faz sentido</h3>
-          <p class="article-excerpt">Modelo de leasing aplicado a têxteis hoteleiros. Zero investimento inicial, qualidade controlada, substituição automática. Uma alternativa ao tradicional.</p>
-          <div class="article-meta">8 min · Renting</div>
         </div>
       </article>
     </div>
@@ -1103,7 +1065,28 @@ function toggleMenu(){
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="rf">
+<style>/* rf:inicio — rodapé comum do site (gerado por site-rodape.cjs) */
+.rf{background:#080F18; color:#F4F0E6; padding:64px 56px 28px; font-family:'Space Grotesk',sans-serif; line-height:1.5}
+.rf-grade{max-width:1320px; margin:0 auto 40px; display:grid; grid-template-columns:1.5fr 1.2fr 1fr 1fr; gap:44px}
+.rf-nome{font-family:'Playfair Display',serif; font-size:22px; font-weight:500; letter-spacing:5px; text-transform:uppercase; color:#F4F0E6; text-decoration:none}
+.rf-tag{font-size:13px; line-height:1.7; color:rgba(244,240,230,.68); margin:14px 0 12px; max-width:290px}
+.rf-empresa{font-size:11px; color:rgba(244,240,230,.55); letter-spacing:.3px; margin:0}
+.rf-tit{display:block; font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#C4A86A; margin-bottom:16px}
+.rf a.rf-l{display:block; font-size:13px; color:rgba(244,240,230,.72); text-decoration:none; margin-bottom:9px; transition:color .2s}
+.rf a.rf-l:hover, .rf-zonas a:hover, .rf-legais a:hover{color:#C4A86A}
+.rf-morada{display:block; font-size:13px; line-height:1.6; color:rgba(244,240,230,.62); margin-top:6px}
+.rf-zonas{max-width:1320px; margin:0 auto 22px; padding-top:22px; border-top:1px solid rgba(244,240,230,.08)}
+.rf-zonas p{margin:0; font-size:11.5px; line-height:1.9; color:rgba(244,240,230,.55)}
+.rf-zonas a{color:rgba(244,240,230,.7); text-decoration:none; transition:color .2s}
+.rf-fundo{max-width:1320px; margin:0 auto; padding-top:20px; border-top:1px solid rgba(244,240,230,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px}
+.rf-copy{font-size:11px; color:rgba(244,240,230,.6)}
+.rf-legais{display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px}
+.rf-legais a{font-size:11px; color:rgba(244,240,230,.68); text-decoration:none; transition:color .2s}
+@media (max-width:1100px){ .rf{padding-left:28px; padding-right:28px} }
+@media (max-width:900px){ .rf-grade{grid-template-columns:1fr 1fr; gap:34px} .rf-fundo{flex-direction:column; align-items:flex-start} }
+@media (max-width:560px){ .rf{padding:48px 20px 96px} .rf-grade{grid-template-columns:1fr; gap:26px} }
+/* rf:fim */</style>
 <style>/* lr-simbolo:inicio — símbolo do Livro de Reclamações Eletrónico, obrigatório e visível */
 .lr-simbolo{display:inline-flex !important; align-items:center; gap:5px; text-decoration:none !important; opacity:.85; transition:opacity .2s}
 .footer-legal{align-items:center}
@@ -1118,24 +1101,54 @@ function toggleMenu(){
 .footer-areas-title{color:rgba(244,240,230,.55) !important}
 .footer-areas-list, .footer-areas-list a{color:rgba(244,240,230,.55) !important}
 .footer-areas-list a:hover{color:#C4A86A !important}
+/* aviso de cookies mais pequeno no telemóvel: tapava metade do primeiro ecrã */
+@media (max-width:640px){
+  .arelia-cb{padding:14px 16px !important; gap:10px !important; bottom:10px !important; left:10px !important; right:10px !important; border-radius:14px !important}
+  .arelia-cb__text{font-size:12px !important; line-height:1.45 !important}
+  .arelia-cb__text strong{font-size:12.5px !important; margin-bottom:2px !important}
+  .arelia-cb__btn{padding:9px 14px !important}
+}
 /* lr-simbolo:fim */</style>
-  <div class="footer-inner">
-    <a class="footer-name" href="index.html">Arelia</a>
-    <span class="footer-meta">© 2026 Arelia · Lavandaria Industrial</span>
-    <div class="footer-links">
-      <a href="index.html">Início</a>
-      <a href="arelia-roi.html">Calcular ROI</a>
-    <a href="arelia-agua.html">Calcular água</a>
-    <a href="arelia-pico.html">Calcular pico</a>
-      <a href="equipa.html">Equipa</a>
-      <a href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="privacidade.html">Privacidade</a>
-      <a href="termos.html">Termos</a>
+  <div class="rf-grade">
+    <div>
+      <a class="rf-nome" href="/">Arelia</a>
+      <p class="rf-tag">Lavandaria industrial para hotelaria, alojamento local e clínicas no Algarve.</p>
+      <p class="rf-empresa">ARELIA LAVANDARIA, LDA · NIF 519476417</p>
+    </div>
+    <div>
+      <span class="rf-tit">Contacto</span>
+      <a class="rf-l" href="mailto:geral@ar-elia.com">geral@ar-elia.com</a>
+      <a class="rf-l" href="tel:+351925263365">+351 925 263 365</a>
+      <span class="rf-morada">Rua Tavagueira, Lote I Sul, Lanka Park II<br>8200-425 Guia (Albufeira)</span>
+    </div>
+    <div>
+      <span class="rf-tit">Navegação</span>
+      <a class="rf-l" href="/">Início</a>
+      <a class="rf-l" href="/#processo-3d">Como funciona</a>
+      <a class="rf-l" href="/sobre.html">A Arelia em factos</a>
+      <a class="rf-l" href="/equipa.html">Equipa</a>
+      <a class="rf-l" href="/arelia-recursos.html">Recursos</a>
+    </div>
+    <div>
+      <span class="rf-tit">Ferramentas</span>
+      <a class="rf-l" href="/arelia-roi.html">Calculadora de ROI</a>
+      <a class="rf-l" href="/arelia-agua.html">Calculadora de água</a>
+      <a class="rf-l" href="/arelia-pico.html">Calculadora de pico</a>
+      <a class="rf-l" href="/#contacto">Pedir proposta</a>
+      <a class="rf-l" href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="rf-zonas">
+    <span class="rf-tit">O Algarve, zona a zona</span>
+    <p>Lavandaria industrial no Algarve · <a href="/lavandaria-industrial-faro.html">Faro</a> · <a href="/lavandaria-industrial-albufeira.html">Albufeira</a> · <a href="/lavandaria-industrial-portimao.html">Portimão</a> · <a href="/lavandaria-industrial-lagos.html">Lagos</a> · <a href="/lavandaria-industrial-vilamoura-quarteira.html">Vilamoura e Quarteira</a> · <a href="/lavandaria-industrial-loule.html">Loulé</a> · <a href="/lavandaria-industrial-lagoa-carvoeiro.html">Lagoa e Carvoeiro</a></p>
+  </div>
+  <div class="rf-fundo">
+    <span class="rf-copy">© <span id="yr">2026</span> Arelia · Lavandaria Industrial no Algarve · Todos os direitos reservados</span>
+    <div class="rf-legais footer-legal">
+      <a href="/privacidade.html">Política de privacidade</a>
+      <a href="/termos.html">Termos &amp; condições</a>
       <a class="lr-simbolo" href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener" aria-label="Livro de Reclamações (abre noutra janela)"><span class="lr-circ" aria-hidden="true">Livro de</span><span class="lr-txt" aria-hidden="true">Reclamações</span></a>
-      <a href="canal-denuncias.html">Canal de denúncias</a>
-          <a href="lavandaria-industrial-albufeira.html">Albufeira</a>
-      <a href="lavandaria-industrial-vilamoura-quarteira.html">Vilamoura</a>
-      <a href="lavandaria-industrial-portimao.html">Portimão</a>
+      <a href="/canal-denuncias.html">Canal de denúncias</a>
     </div>
   </div>
 </footer>

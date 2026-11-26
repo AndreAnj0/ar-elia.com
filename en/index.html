@@ -44,6 +44,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ar-elia.com/en/"},{"@type":"ListItem","position":2,"name":"Industrial Laundry Services","item":"https://ar-elia.com/#servicos"},{"@type":"ListItem","position":3,"name":"How It Works","item":"https://ar-elia.com/#processo-3d"},{"@type":"ListItem","position":4,"name":"Request a Quote","item":"https://ar-elia.com/#contacto"}]}</script>
 
 
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
 <style>
@@ -1517,6 +1519,11 @@ img, video { max-width: 100%; }
   color: rgba(196,168,106,0.4);
 }
 .hero-anim.a5 { animation-delay: 1.0s; }
+/* topo-rapido: no telemóvel o título e os botões aparecem logo (antes só ao fim de ~1,5 s) */
+@media (max-width: 760px) {
+  .hero-anim { animation-duration: .45s; }
+  .a1 { animation-delay: 0s; } .a2 { animation-delay: .06s; } .a3 { animation-delay: .12s; } .a4 { animation-delay: .18s; } .hero-anim.a5 { animation-delay: .24s; }
+}
 @media (max-width: 640px) {
   .hero-microcred { font-size: 10px; gap: 10px; }
   .hero-microcred .dot { display: none; }
@@ -2822,7 +2829,28 @@ gtag('config', 'G-7SKWWCWMZV', {
 </section>
 
 <!-- ═══ FOOTER ═══ -->
-<footer>
+<footer class="rf">
+<style>/* rf:inicio — rodapé comum do site (gerado por site-rodape.cjs) */
+.rf{background:#080F18; color:#F4F0E6; padding:64px 56px 28px; font-family:'Space Grotesk',sans-serif; line-height:1.5}
+.rf-grade{max-width:1320px; margin:0 auto 40px; display:grid; grid-template-columns:1.5fr 1.2fr 1fr 1fr; gap:44px}
+.rf-nome{font-family:'Playfair Display',serif; font-size:22px; font-weight:500; letter-spacing:5px; text-transform:uppercase; color:#F4F0E6; text-decoration:none}
+.rf-tag{font-size:13px; line-height:1.7; color:rgba(244,240,230,.68); margin:14px 0 12px; max-width:290px}
+.rf-empresa{font-size:11px; color:rgba(244,240,230,.55); letter-spacing:.3px; margin:0}
+.rf-tit{display:block; font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#C4A86A; margin-bottom:16px}
+.rf a.rf-l{display:block; font-size:13px; color:rgba(244,240,230,.72); text-decoration:none; margin-bottom:9px; transition:color .2s}
+.rf a.rf-l:hover, .rf-zonas a:hover, .rf-legais a:hover{color:#C4A86A}
+.rf-morada{display:block; font-size:13px; line-height:1.6; color:rgba(244,240,230,.62); margin-top:6px}
+.rf-zonas{max-width:1320px; margin:0 auto 22px; padding-top:22px; border-top:1px solid rgba(244,240,230,.08)}
+.rf-zonas p{margin:0; font-size:11.5px; line-height:1.9; color:rgba(244,240,230,.55)}
+.rf-zonas a{color:rgba(244,240,230,.7); text-decoration:none; transition:color .2s}
+.rf-fundo{max-width:1320px; margin:0 auto; padding-top:20px; border-top:1px solid rgba(244,240,230,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px}
+.rf-copy{font-size:11px; color:rgba(244,240,230,.6)}
+.rf-legais{display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px}
+.rf-legais a{font-size:11px; color:rgba(244,240,230,.68); text-decoration:none; transition:color .2s}
+@media (max-width:1100px){ .rf{padding-left:28px; padding-right:28px} }
+@media (max-width:900px){ .rf-grade{grid-template-columns:1fr 1fr; gap:34px} .rf-fundo{flex-direction:column; align-items:flex-start} }
+@media (max-width:560px){ .rf{padding:48px 20px 96px} .rf-grade{grid-template-columns:1fr; gap:26px} }
+/* rf:fim */</style>
 <style>/* lr-simbolo:inicio — símbolo do Livro de Reclamações Eletrónico, obrigatório e visível */
 .lr-simbolo{display:inline-flex !important; align-items:center; gap:5px; text-decoration:none !important; opacity:.85; transition:opacity .2s}
 .footer-legal{align-items:center}
@@ -2837,48 +2865,53 @@ gtag('config', 'G-7SKWWCWMZV', {
 .footer-areas-title{color:rgba(244,240,230,.55) !important}
 .footer-areas-list, .footer-areas-list a{color:rgba(244,240,230,.55) !important}
 .footer-areas-list a:hover{color:#C4A86A !important}
+/* aviso de cookies mais pequeno no telemóvel: tapava metade do primeiro ecrã */
+@media (max-width:640px){
+  .arelia-cb{padding:14px 16px !important; gap:10px !important; bottom:10px !important; left:10px !important; right:10px !important; border-radius:14px !important}
+  .arelia-cb__text{font-size:12px !important; line-height:1.45 !important}
+  .arelia-cb__text strong{font-size:12.5px !important; margin-bottom:2px !important}
+  .arelia-cb__btn{padding:9px 14px !important}
+}
 /* lr-simbolo:fim */</style>
-  <div class="footer-inner">
-    <div class="footer-col footer-brand-col">
-      <a class="footer-logo" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
-        <span class="footer-name">Arelia</span>
-      </a>
-      <p class="footer-tagline">Industrial laundry<br>for premium hospitality.</p>
-      <p class="footer-since">Portugal</p>
+  <div class="rf-grade">
+    <div>
+      <a class="rf-nome" href="/en/">Arelia</a>
+      <p class="rf-tag">Industrial laundry for hotels, holiday rentals and clinics in the Algarve.</p>
+      <p class="rf-empresa">ARELIA LAVANDARIA, LDA · NIF 519476417</p>
     </div>
-    <div class="footer-col">
-      <span class="footer-col-title">Contact</span>
-      <a class="footer-link" href="mailto:geral@ar-elia.com">geral@ar-elia.com</a>
-      <a class="footer-link" href="tel:+351925263365">+351 925 263 365</a>
-      <span class="footer-address">Algarve, Portugal</span>
+    <div>
+      <span class="rf-tit">Contact</span>
+      <a class="rf-l" href="mailto:geral@ar-elia.com">geral@ar-elia.com</a>
+      <a class="rf-l" href="tel:+351925263365">+351 925 263 365</a>
+      <span class="rf-morada">Rua Tavagueira, Lote I Sul, Lanka Park II<br>8200-425 Guia (Albufeira), Portugal</span>
     </div>
-    <div class="footer-col">
-      <span class="footer-col-title">Navigation</span>
-      <a class="footer-link" href="#processo-3d">How it works</a>
-      <a class="footer-link" href="#setores">Sectors</a>
-      <a class="footer-link" href="#servicos">Services</a>
-      <a class="footer-link" href="team.html">Team</a>
+    <div>
+      <span class="rf-tit">Navigation</span>
+      <a class="rf-l" href="/en/">Home</a>
+      <a class="rf-l" href="/en/#processo-3d">How it works</a>
+      <a class="rf-l" href="/en/about.html">Arelia in facts</a>
+      <a class="rf-l" href="/en/team.html">Team</a>
+      <a class="rf-l" href="/en/resources.html">Resources</a>
     </div>
-    <div class="footer-col">
-      <span class="footer-col-title">Company</span>
-      <a class="footer-link" href="#sobre">About us</a>
-      <a class="footer-link" href="about.html">Arelia in facts</a>
-      <a class="footer-link" href="#contacto" onclick="openModal();return false;">Request a quote</a>
-      <a class="footer-link" href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
+    <div>
+      <span class="rf-tit">Tools</span>
+      <a class="rf-l" href="/en/roi-calculator.html">ROI calculator</a>
+      <a class="rf-l" href="/en/water-calculator.html">Water calculator</a>
+      <a class="rf-l" href="/en/peak-calculator.html">Peak season calculator</a>
+      <a class="rf-l" href="/en/#contacto">Request a quote</a>
+      <a class="rf-l" href="https://www.linkedin.com/company/arelia-lavandaria" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
-  <div class="footer-areas">
-    <span class="footer-areas-title">The Algarve, area by area</span>
-    <!-- Só leva link a zona que tem mesmo página própria. Apontar as restantes
-         para #contacto prometia páginas que não existem. -->
-    <p class="footer-areas-list">Industrial laundry in the Algarve · <a href="industrial-laundry-faro.html">Faro</a> · <a href="industrial-laundry-albufeira.html">Albufeira</a> · <a href="industrial-laundry-portimao.html">Portimão</a> · <a href="industrial-laundry-lagos.html">Lagos</a> · <a href="industrial-laundry-vilamoura-quarteira.html">Vilamoura</a> · <a href="industrial-laundry-vilamoura-quarteira.html">Quarteira</a> · <a href="industrial-laundry-loule.html">Loulé</a> · <a href="industrial-laundry-lagoa-carvoeiro.html">Lagoa e Carvoeiro</a> · Silves · Armação de Pêra</p>
+  <div class="rf-zonas">
+    <span class="rf-tit">The Algarve, area by area</span>
+    <p>Industrial laundry in the Algarve · <a href="/en/industrial-laundry-faro.html">Faro</a> · <a href="/en/industrial-laundry-albufeira.html">Albufeira</a> · <a href="/en/industrial-laundry-portimao.html">Portimão</a> · <a href="/en/industrial-laundry-lagos.html">Lagos</a> · <a href="/en/industrial-laundry-vilamoura-quarteira.html">Vilamoura and Quarteira</a> · <a href="/en/industrial-laundry-loule.html">Loulé</a> · <a href="/en/industrial-laundry-lagoa-carvoeiro.html">Lagoa and Carvoeiro</a></p>
   </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2026 Arelia · Industrial Laundry in the Algarve · All rights reserved</span>
-    <div class="footer-legal">
-      <a href="privacy.html">Privacy policy</a>
-      <a href="terms.html">Terms &amp; conditions</a>
-      <a class="lr-simbolo" href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener" aria-label="Livro de Reclamações (abre noutra janela)"><span class="lr-circ" aria-hidden="true">Livro de</span><span class="lr-txt" aria-hidden="true">Reclamações</span></a>
+  <div class="rf-fundo">
+    <span class="rf-copy">© <span id="yr">2026</span> Arelia · Industrial Laundry in the Algarve · All rights reserved</span>
+    <div class="rf-legais footer-legal">
+      <a href="/en/privacy.html">Privacy policy</a>
+      <a href="/en/terms.html">Terms &amp; conditions</a>
+      <a class="lr-simbolo" href="https://livroreclamacoes.pt/inicio/qrcode_operator?economicoperator=43127707" target="_blank" rel="noopener" aria-label="Complaints Book (opens in a new window)"><span class="lr-circ" aria-hidden="true">Livro de</span><span class="lr-txt" aria-hidden="true">Reclamações</span></a>
       <a href="/canal-denuncias.html" hreflang="pt">Whistleblowing channel</a>
     </div>
   </div>
@@ -3039,7 +3072,7 @@ function submitForm(){
       subject: 'New quote request (EN) — ' + nome,
       from_name: nome,
       email: email,
-      cc: 'Ranjo@ar-elia.com',
+      cc: 'ranjo@ar-elia.com',
       'Name': nome,
       'Email': email,
       'Phone': telefone || 'Not specified',
@@ -3446,9 +3479,10 @@ function toggleMenu(){
 <!-- /Arelia GA4 event tracking -->
 
 <!-- ── HERO SPARKLES ── -->
-<script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3.9.1/tsparticles.slim.bundle.min.js"></script>
 <script>
-(function(){
+// A biblioteca carrega com defer: espera-se por ela.
+window.addEventListener('DOMContentLoaded', function(){
   if(typeof tsParticles === 'undefined') return;
   tsParticles.load({
     id: "hero-particles",
@@ -3475,7 +3509,7 @@ function toggleMenu(){
       detectRetina: true
     }
   });
-})();
+});
 </script>
 <a class="wa-fab" href="https://wa.me/351925263365?text=Hello!%20I%20would%20like%20to%20ask%20for%20a%20quote%20for%20my%20property." target="_blank" rel="noopener" aria-label="Talk to us on WhatsApp" data-wa onclick="try{if(typeof gtag==='function')gtag('event','whatsapp_click',{link_url:this.href});}catch(e){}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.34M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41"/></svg><span class="wa-fab-text">WhatsApp</span></a>
 </body>
