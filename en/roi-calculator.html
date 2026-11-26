@@ -8,7 +8,7 @@
 <link rel="apple-touch-icon" href="../img/favicon.png"/>
 <title>ROI Calculator — Hotel Laundry | ARELIA</title>
 <!-- SEO META (auto-generated) -->
-<meta name="description" content="Work out in 2 minutes what your laundry operation could save. In-house vs outsourced, cost per kg, return on investment. Instant results, no sign-up."/>
+<meta name="description" content="Work out in 2 minutes what your in-house laundry costs, per month and per kilo, to compare with an outside quote. Instant results, no sign-up."/>
 <meta name="keywords" content="laundry roi calculator, hotel laundry cost, outsourced laundry savings, in-house laundry cost calculator"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta name="author" content="Arelia — Industrial Laundry"/>
@@ -18,11 +18,11 @@
 <link rel="canonical" href="https://ar-elia.com/en/roi-calculator.html"/>
 <link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-roi.html"/>
 <link rel="alternate" hreflang="en" href="https://ar-elia.com/en/roi-calculator.html"/>
-<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-roi.html"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-roi.html"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ar-elia.com/en/roi-calculator.html"/>
 <meta property="og:title" content="ROI Calculator — Hotel Laundry | ARELIA"/>
-<meta property="og:description" content="Work out in 2 minutes what your laundry operation could save. In-house vs outsourced, cost per kg, return on investment. Instant results, no sign-up."/>
+<meta property="og:description" content="Work out in 2 minutes what your in-house laundry costs, per month and per kilo, to compare with an outside quote. Instant results, no sign-up."/>
 <meta property="og:image" content="https://ar-elia.com/img/og-share-en.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -30,10 +30,10 @@
 <meta property="og:locale" content="en_GB"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="ROI Calculator — Hotel Laundry | ARELIA"/>
-<meta name="twitter:description" content="Work out in 2 minutes what your laundry operation could save. In-house vs outsourced, cost per kg, return on investment. Instant results, no sign-up."/>
+<meta name="twitter:description" content="Work out in 2 minutes what your in-house laundry costs, per month and per kilo, to compare with an outside quote. Instant results, no sign-up."/>
 <meta name="twitter:image" content="https://ar-elia.com/img/og-share-en.jpg"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://ar-elia.com/#organization","name":"Arelia — Industrial Laundry","alternateName":"Arelia","url":"https://ar-elia.com","logo":"https://ar-elia.com/img/favicon.png","description":"Industrial laundry para hotelaria premium no Algarve, Portugal.","email":"geral@ar-elia.com","telephone":"+351925263365","foundingDate":"2026","areaServed":{"@type":"AdministrativeArea","name":"Algarve, Portugal"},"address":{"@type":"PostalAddress","addressRegion":"Algarve","addressCountry":"PT"},"sameAs":["https://www.linkedin.com/company/arelia-lavandaria"],"legalName":"ARELIA LAVANDARIA, LDA","vatID":"PT519476417","taxID":"519476417"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://ar-elia.com/en/roi-calculator.html","name":"ROI Calculator — Hotel Laundry | ARELIA","description":"Work out in 2 minutes what your laundry operation could save. In-house vs outsourced, cost per kg, return on investment. Instant results, no sign-up.","isPartOf":{"@id":"https://ar-elia.com/#website"},"inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://ar-elia.com/en/roi-calculator.html","name":"ROI Calculator — Hotel Laundry | ARELIA","description":"Work out in 2 minutes what your in-house laundry costs, per month and per kilo, to compare with an outside quote. Instant results, no sign-up.","isPartOf":{"@id":"https://ar-elia.com/#website"},"inLanguage":"en"}</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
 <style>
@@ -1112,17 +1112,17 @@ function toggleMenu(){
         </div>
       </div>
 
-      <!-- SAVINGS RANGE -->
+      <!-- CUSTO POR KG (para comparar com uma proposta) -->
       <div class="calc-savings-block">
-        <span class="calc-savings-tag">Savings with Arelia</span>
+        <span class="calc-savings-tag">To compare</span>
         <div class="calc-savings-range">
-          <span class="calc-savings-pct">20<span class="calc-savings-dash">—</span>35<span class="calc-savings-unit">%</span></span>
+          <span class="calc-savings-pct">€<span id="out-kgcusto">1,64</span><span class="calc-savings-unit">/kg</span></span>
         </div>
         <div class="calc-savings-money">
-          <span class="calc-savings-money-label">Estimated annual savings</span>
-          <span class="calc-savings-money-value">€<span id="out-save-low">5.880</span> <span class="calc-savings-money-sep">—</span> €<span id="out-save-high">10.290</span></span>
+          <span class="calc-savings-money-label">Annual cost of the in-house laundry</span>
+          <span class="calc-savings-money-value">€<span id="out-anual">0</span> <span class="calc-savings-money-sep">/</span> year</span>
         </div>
-        <p class="calc-savings-note">Actual savings depend on the volume contracted, location and usage patterns. Every quote is built individually.</p>
+        <p class="calc-savings-note">This is the cost per kilo to set against the price per kg of an outside quote, which already includes collection and delivery. Ask for ours for your volume.</p>
       </div>
 
       <button class="calc-cta" onclick="try{if(typeof gtag==='function')gtag('event','roi_calculated',{cta_clicked:true,source:'roi_calculator'});}catch(e){};window.location.href='index.html#contacto'">Get a tailored quote →</button>
@@ -1165,7 +1165,7 @@ function toggleMenu(){
       <div class="assumption-card">
         <div class="assumption-label">Arelia &mdash; pricing</div>
         <div class="assumption-value">Custom</div>
-        <div class="assumption-desc">Arelia’s price per kg varies with the monthly volume contracted, location and collection frequency. Every quote is one of a kind &mdash; and the typical saving falls between 20% and 35% against an in-house laundry.</div>
+        <div class="assumption-desc">Arelia’s price per kg varies with the monthly volume contracted, location and collection frequency. Every quote is one of a kind.</div>
       </div>
     </div>
   </div>
@@ -1255,10 +1255,8 @@ function toggleMenu(){
     return fte.toString();
   }
 
-  // Savings range — fixed band 20% to 35%
-  const SAVINGS_LOW = 0.20;
-  const SAVINGS_HIGH = 0.35;
 
+  const LOCAL_KG = 'en-GB';
   let state = {
     tipo: 'hotel',
     quartos: 40,
@@ -1297,9 +1295,9 @@ function toggleMenu(){
     const parcelas = [laborCost, detergentCost, energyCost, equipCost, maintCost].map(Math.round);
     const totalInterna = parcelas.reduce(function(a, b){ return a + b; }, 0);
 
-    // Savings range (annual)
-    const saveLowYear  = totalInterna * SAVINGS_LOW * 12;
-    const saveHighYear = totalInterna * SAVINGS_HIGH * 12;
+    // O custo por quilo da lavandaria interna: o número a pôr ao lado do
+    // preço por kg de uma proposta externa (que já inclui recolha e entrega).
+    const custoKg = kgMonth > 0 ? totalInterna / kgMonth : 0;
 
     // ─── Render ───
     document.getElementById('out-interna').textContent = fmt(totalInterna);
@@ -1320,9 +1318,8 @@ function toggleMenu(){
     // dizia "½ staff member (part-time) a tempo inteiro", que se contradiz.
     document.getElementById('ins-fte-regime').textContent = fteInfo.fte < 1 ? ' part-time' : ' full-time';
 
-    // Savings amounts
-    document.getElementById('out-save-low').textContent = fmt(saveLowYear);
-    document.getElementById('out-save-high').textContent = fmt(saveHighYear);
+    document.getElementById('out-kgcusto').textContent = custoKg.toLocaleString(LOCAL_KG, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    document.getElementById('out-anual').textContent = fmt(totalInterna * 12);
   }
 
   function bindRange(id, key, displayId, transform) {

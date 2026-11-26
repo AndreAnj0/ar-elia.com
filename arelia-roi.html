@@ -8,7 +8,7 @@
 <link rel="apple-touch-icon" href="img/favicon.png"/>
 <title>Calculadora de ROI — Lavandaria Hotel | ARELIA</title>
 <!-- SEO META (auto-generated) -->
-<meta name="description" content="Calcule em 2 minutos a poupança da sua operação de lavandaria. Interna vs externa, custo por kg, retorno do investimento. Análise instantânea, sem cadastro."/>
+<meta name="description" content="Calcule em 2 minutos quanto custa a sua lavandaria interna, por mês e por quilo, para comparar com uma proposta externa. Análise instantânea, sem registo."/>
 <meta name="keywords" content="calculadora roi lavandaria, custo lavandaria hotel, poupança lavandaria externa, calcular custo lavandaria interna"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta name="author" content="Arelia — Lavandaria Industrial"/>
@@ -18,11 +18,11 @@
 <link rel="canonical" href="https://ar-elia.com/arelia-roi.html"/>
 <link rel="alternate" hreflang="pt-PT" href="https://ar-elia.com/arelia-roi.html"/>
 <link rel="alternate" hreflang="en" href="https://ar-elia.com/en/roi-calculator.html"/>
-<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-roi.html"/>
+<link rel="alternate" hreflang="x-default" href="https://ar-elia.com/arelia-roi.html"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ar-elia.com/arelia-roi.html"/>
 <meta property="og:title" content="Calculadora de ROI — Lavandaria Hotel | ARELIA"/>
-<meta property="og:description" content="Calcule em 2 minutos a poupança da sua operação de lavandaria. Interna vs externa, custo por kg, retorno do investimento. Análise instantânea, sem cadastro."/>
+<meta property="og:description" content="Calcule em 2 minutos quanto custa a sua lavandaria interna, por mês e por quilo, para comparar com uma proposta externa. Análise instantânea, sem registo."/>
 <meta property="og:image" content="https://ar-elia.com/img/og-partilha.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -30,10 +30,10 @@
 <meta property="og:locale" content="pt_PT"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Calculadora de ROI — Lavandaria Hotel | ARELIA"/>
-<meta name="twitter:description" content="Calcule em 2 minutos a poupança da sua operação de lavandaria. Interna vs externa, custo por kg, retorno do investimento. Análise instantânea, sem cadastro."/>
+<meta name="twitter:description" content="Calcule em 2 minutos quanto custa a sua lavandaria interna, por mês e por quilo, para comparar com uma proposta externa. Análise instantânea, sem registo."/>
 <meta name="twitter:image" content="https://ar-elia.com/img/og-partilha.jpg"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://ar-elia.com/#organization","name":"Arelia — Lavandaria Industrial","alternateName":"Arelia","url":"https://ar-elia.com","logo":"https://ar-elia.com/img/favicon.png","description":"Lavandaria industrial para hotelaria premium no Algarve, Portugal.","email":"geral@ar-elia.com","telephone":"+351925263365","foundingDate":"2026","areaServed":{"@type":"AdministrativeArea","name":"Algarve, Portugal"},"address":{"@type":"PostalAddress","addressRegion":"Algarve","addressCountry":"PT"},"sameAs":["https://www.linkedin.com/company/arelia-lavandaria"],"legalName":"ARELIA LAVANDARIA, LDA","vatID":"PT519476417","taxID":"519476417"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://ar-elia.com/arelia-roi.html","name":"Calculadora de ROI — Lavandaria Hotel | ARELIA","description":"Calcule em 2 minutos a poupança da sua operação de lavandaria. Interna vs externa, custo por kg, retorno do investimento. Análise instantânea, sem cadastro.","isPartOf":{"@id":"https://ar-elia.com/#website"},"inLanguage":"pt-PT"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://ar-elia.com/arelia-roi.html","name":"Calculadora de ROI — Lavandaria Hotel | ARELIA","description":"Calcule em 2 minutos quanto custa a sua lavandaria interna, por mês e por quilo, para comparar com uma proposta externa. Análise instantânea, sem registo.","isPartOf":{"@id":"https://ar-elia.com/#website"},"inLanguage":"pt-PT"}</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
 <style>
@@ -1112,17 +1112,17 @@ function toggleMenu(){
         </div>
       </div>
 
-      <!-- SAVINGS RANGE -->
+      <!-- CUSTO POR KG (para comparar com uma proposta) -->
       <div class="calc-savings-block">
-        <span class="calc-savings-tag">Poupança com a Arelia</span>
+        <span class="calc-savings-tag">Para comparar</span>
         <div class="calc-savings-range">
-          <span class="calc-savings-pct">20<span class="calc-savings-dash">—</span>35<span class="calc-savings-unit">%</span></span>
+          <span class="calc-savings-pct">€<span id="out-kgcusto">1,64</span><span class="calc-savings-unit">/kg</span></span>
         </div>
         <div class="calc-savings-money">
-          <span class="calc-savings-money-label">Poupança anual estimada</span>
-          <span class="calc-savings-money-value">€<span id="out-save-low">5.880</span> <span class="calc-savings-money-sep">—</span> €<span id="out-save-high">10.290</span></span>
+          <span class="calc-savings-money-label">Custo anual da lavandaria interna</span>
+          <span class="calc-savings-money-value">€<span id="out-anual">0</span> <span class="calc-savings-money-sep">/</span> ano</span>
         </div>
-        <p class="calc-savings-note">A poupança real depende do volume contratado, localização e padrões de utilização. Cada proposta é personalizada.</p>
+        <p class="calc-savings-note">É este o custo por quilo a pôr ao lado do preço por kg de uma proposta externa, que já inclui recolha e entrega. Peça a nossa para o seu volume.</p>
       </div>
 
       <button class="calc-cta" onclick="try{if(typeof gtag==='function')gtag('event','roi_calculated',{cta_clicked:true,source:'roi_calculator'});}catch(e){};window.location.href='index.html#contacto'">Receber proposta personalizada →</button>
@@ -1165,7 +1165,7 @@ function toggleMenu(){
       <div class="assumption-card">
         <div class="assumption-label">Arelia &mdash; preço</div>
         <div class="assumption-value">Personalizado</div>
-        <div class="assumption-desc">O preço por kg da Arelia varia conforme volume mensal contratado, localização e frequência de recolha. Cada proposta é única &mdash; e a poupança típica fica entre 20% e 35% face a uma lavandaria interna.</div>
+        <div class="assumption-desc">O preço por kg da Arelia varia conforme o volume mensal contratado, a localização e a frequência de recolha. Cada proposta é única.</div>
       </div>
     </div>
   </div>
@@ -1255,10 +1255,8 @@ function toggleMenu(){
     return fte.toString();
   }
 
-  // Savings range — fixed band 20% to 35%
-  const SAVINGS_LOW = 0.20;
-  const SAVINGS_HIGH = 0.35;
 
+  const LOCAL_KG = 'pt-PT';
   let state = {
     tipo: 'hotel',
     quartos: 40,
@@ -1297,9 +1295,9 @@ function toggleMenu(){
     const parcelas = [laborCost, detergentCost, energyCost, equipCost, maintCost].map(Math.round);
     const totalInterna = parcelas.reduce(function(a, b){ return a + b; }, 0);
 
-    // Savings range (annual)
-    const saveLowYear  = totalInterna * SAVINGS_LOW * 12;
-    const saveHighYear = totalInterna * SAVINGS_HIGH * 12;
+    // O custo por quilo da lavandaria interna: o número a pôr ao lado do
+    // preço por kg de uma proposta externa (que já inclui recolha e entrega).
+    const custoKg = kgMonth > 0 ? totalInterna / kgMonth : 0;
 
     // ─── Render ───
     document.getElementById('out-interna').textContent = fmt(totalInterna);
@@ -1320,9 +1318,8 @@ function toggleMenu(){
     // dizia "½ funcionário (part-time) a tempo inteiro", que se contradiz.
     document.getElementById('ins-fte-regime').textContent = fteInfo.fte < 1 ? ' em part-time' : ' a tempo inteiro';
 
-    // Savings amounts
-    document.getElementById('out-save-low').textContent = fmt(saveLowYear);
-    document.getElementById('out-save-high').textContent = fmt(saveHighYear);
+    document.getElementById('out-kgcusto').textContent = custoKg.toLocaleString(LOCAL_KG, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    document.getElementById('out-anual').textContent = fmt(totalInterna * 12);
   }
 
   function bindRange(id, key, displayId, transform) {

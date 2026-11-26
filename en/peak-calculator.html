@@ -1349,11 +1349,11 @@ function toggleMenu(){
       <div class="calc-field">
         <label class="calc-field-label" for="r-preco">
           <span>Price of linen washed outside</span>
-          <span class="calc-field-value">€<span id="v-preco">1.30</span><span class="calc-field-value-suffix">/kg</span></span>
+          <span class="calc-field-value">€<span id="v-preco">3.00</span><span class="calc-field-value-suffix">/kg</span></span>
         </label>
-        <input type="range" id="r-preco" min="0.5" max="4" value="1.3" step="0.05"/>
-        <div class="calc-range-marks"><span>€0.50</span><span>€4.00</span></div>
-        <p class="calc-field-help">The same all year. <b>€1.30</b> is the Algarve market average we use in the <a href="article-in-house-laundry-cost.html">article on in-house laundry</a>.</p>
+        <input type="range" id="r-preco" min="0.5" max="5" value="3" step="0.05"/>
+        <div class="calc-range-marks"><span>€0.50</span><span>€5.00</span></div>
+        <p class="calc-field-help">The same all year. Use the price per kilo in the quote you have; the starting value is only an example.</p>
       </div>
 
       <div class="calc-field">
@@ -1426,7 +1426,7 @@ function toggleMenu(){
         </div>
         <div class="calc-savings-money" id="pico-marg" style="margin-top:14px;">
           <span class="calc-savings-money-label">Each peak kilo washed in-house would cost</span>
-          <span class="calc-savings-money-value" id="out-marg">€2.38 a kilo, against €1.30 outside</span>
+          <span class="calc-savings-money-value" id="out-marg">€2.38 a kilo, against €3.00 outside</span>
         </div>
         <p class="agua-nota-35">Idle capacity is the laundry's fixed cost, depreciation plus maintenance, on the part that goes unused over the year. "Covering the rest of the peak" is what each kilo you would stop sending out would cost, in equipment alone, if you raised capacity to August's level. The outside price is the same all year: in August the risk is not price, it is finding someone with capacity.</p>
       </div>
@@ -1570,7 +1570,7 @@ function toggleMenu(){
   const T = {"loc": "en-GB", "kgdia": "kg/day", "emFalta": "above capacity", "meses": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "ini": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], "grafT": "Kilos of linen per day in each month, against laundry capacity", "margTxt": "€{m} a kilo, against €{p} outside", "margNada": "Already covers August", "vFalta": "With a laundry of <strong>{cap} kg/day</strong>, {mesesFrase}: <strong>{falta} kg a year</strong> have to go out, about <strong>€{fora}</strong>. To wash them in-house you would need {extra} kg/day more capacity, costing <strong>€{custoExtra} a year</strong> in equipment.", "vCaro": "That is €{marg} for each kilo you would stop sending out, more than the €{preco} to wash it outside. <strong>Enlarging the laundry to cover the peak does not pay.</strong>", "vBarato": "That is €{marg} for each kilo you would stop sending out, less than the €{preco} to wash it outside, in equipment alone. Before deciding, add the staff, energy and water for those kilos.", "vCobre": "With a laundry of <strong>{cap} kg/day</strong>, you cover August, but it sits <strong>{parada}% idle</strong> over the year: <strong>€{parado} a year</strong> of equipment and maintenance going unused.", "vCobre2": "Cutting the laundry to 90% of the peak and sending the rest out in July and August would cost about €{fora90} a year in linen washed outside, and save €{poupa90} a year in equipment.", "e": " and ", "mesesNome": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "mesesDe": "from {a} to {b}", "mesesEm": "in {m}", "falta": "capacity falls short {m}"};
 
   const MANUT = 0.04;
-  let st = { quartos: 50, occlo: 40, occhi: 95, kgw: 5, kgs: 6.5, cap: 250, preco: 1.30, invest: 800, anos: 10, modo: 'media30' };
+  let st = { quartos: 50, occlo: 40, occhi: 95, kgw: 5, kgs: 6.5, cap: 250, preco: 3.00, invest: 800, anos: 10, modo: 'media30' };
 
   function num(n, c) { return n.toLocaleString(T.loc, { minimumFractionDigits: c || 0, maximumFractionDigits: c || 0, useGrouping: 'always' }); }
   function dec(v) { return num(parseFloat(v), 2); }
