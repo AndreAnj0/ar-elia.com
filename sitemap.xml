@@ -361,4 +361,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ar-elia.com/en/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ar-elia.com/termos.html"/>
   </url>
+  <url>
+    <loc>https://ar-elia.com/canal-denuncias.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://ar-elia.com/politica-denuncias.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

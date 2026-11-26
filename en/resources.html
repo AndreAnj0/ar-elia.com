@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://ar-elia.com/en/resources.html"/>
 <meta property="og:title" content="Costs and quality in hotel laundry | ARELIA"/>
 <meta property="og:description" content="Practical articles on costs, textile quality and running a hotel laundry. Knowledge you can apply to the day-to-day of a hotel."/>
-<meta property="og:image" content="https://ar-elia.com/img/lavandaria-hero.png"/>
+<meta property="og:image" content="https://ar-elia.com/img/og-share-en.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:site_name" content="ARELIA — Industrial Laundry"/>
@@ -31,7 +31,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Costs and quality in hotel laundry | ARELIA"/>
 <meta name="twitter:description" content="Practical articles on costs, textile quality and running a hotel laundry. Knowledge you can apply to the day-to-day of a hotel."/>
-<meta name="twitter:image" content="https://ar-elia.com/img/lavandaria-hero.png"/>
+<meta name="twitter:image" content="https://ar-elia.com/img/og-share-en.jpg"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://ar-elia.com/#organization","name":"Arelia — Industrial Laundry","alternateName":"Arelia","url":"https://ar-elia.com","logo":"https://ar-elia.com/img/favicon.png","description":"Industrial laundry para hotelaria premium no Algarve, Portugal.","email":"geral@ar-elia.com","telephone":"+351925263365","foundingDate":"2026","areaServed":{"@type":"AdministrativeArea","name":"Algarve, Portugal"},"address":{"@type":"PostalAddress","addressRegion":"Algarve","addressCountry":"PT"},"sameAs":["https://www.linkedin.com/company/arelia-lavandaria"],"legalName":"ARELIA LAVANDARIA, LDA","vatID":"PT519476417","taxID":"519476417"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","url":"https://ar-elia.com/en/resources.html","name":"Costs and quality in hotel laundry | ARELIA","description":"Practical articles on costs, textile quality and running a hotel laundry. Knowledge you can apply to the day-to-day of a hotel.","isPartOf":{"@id":"https://ar-elia.com/#website"},"inLanguage":"en"}</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -1094,8 +1094,8 @@ function toggleMenu(){
     <span class="newsletter-tag">Monthly newsletter</span>
     <h2 class="newsletter-title">Get our<br><em>practical guides.</em></h2>
     <p class="newsletter-sub">We are putting together a newsletter with usable insight on running a hotel laundry. Leave your email and we will tell you when it starts.</p>
-    <form class="newsletter-form" onsubmit="event.preventDefault();alert('Coming soon — the newsletter launches in 2026.');this.reset();">
-      <input type="email" placeholder="o.seu.email@hotel.pt" required/>
+    <form class="newsletter-form" onsubmit="return inscreverNewsletter(event, this)">
+      <input type="email" name="email" autocomplete="email" aria-label="Email" placeholder="your.email@hotel.com" required/>
       <button type="submit">Subscribe</button>
     </form>
     <p class="newsletter-note">We have not launched yet — no spam, and you will hear first.</p>
@@ -1111,6 +1111,13 @@ function toggleMenu(){
 .lr-simbolo:focus-visible{outline:2px solid #C4A86A; outline-offset:3px}
 .lr-circ{display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; background:#000; color:#fff; font:700 7.5px/1 Arial,Helvetica,sans-serif; letter-spacing:0; white-space:nowrap; box-shadow:0 0 0 1px rgba(244,240,230,.35)}
 .lr-txt{font:700 11px/1 Arial,Helvetica,sans-serif; letter-spacing:0; color:rgba(244,240,230,.8); text-transform:none}
+/* contraste do rodapé (WCAG AA): o texto pequeno estava a 0,15–0,4 de opacidade */
+.footer-copy{color:rgba(244,240,230,.6) !important}
+.footer-legal a, .footer-links a{color:rgba(244,240,230,.65) !important}
+.footer-legal a:hover, .footer-links a:hover{color:#C4A86A !important}
+.footer-areas-title{color:rgba(244,240,230,.55) !important}
+.footer-areas-list, .footer-areas-list a{color:rgba(244,240,230,.55) !important}
+.footer-areas-list a:hover{color:#C4A86A !important}
 /* lr-simbolo:fim */</style>
   <div class="footer-inner">
     <a class="footer-name" href="index.html">Arelia</a>
@@ -1268,5 +1275,25 @@ function toggleMenu(){
 </script>
 <!-- /Arelia GA4 event tracking -->
 <a class="wa-fab" href="https://wa.me/351925263365?text=Hello!%20I%20would%20like%20to%20ask%20for%20a%20quote%20for%20my%20property." target="_blank" rel="noopener" aria-label="Talk to us on WhatsApp" data-wa onclick="try{if(typeof gtag==='function')gtag('event','whatsapp_click',{link_url:this.href});}catch(e){}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.34M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41"/></svg><span class="wa-fab-text">WhatsApp</span></a>
+<script>
+// Newsletter: o email segue para geral@ pelo Web3Forms, como o pedido de proposta.
+function inscreverNewsletter(e, form){
+  e.preventDefault();
+  var botao = form.querySelector('button'), texto = botao.textContent, email = form.email.value;
+  botao.disabled = true; botao.textContent = "Sending…";
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ access_key: '4e819797-feb8-4878-a01f-d936ea8ac609', subject: "Newsletter sign-up (EN)" + ' — ' + email, email: email, 'Pedido': "Newsletter sign-up (EN)" })
+  }).then(function(r){ return r.json(); }).then(function(d){
+    if (!d.success) throw new Error(d.message || 'erro');
+    form.innerHTML = '<p style="margin:0; padding:14px 0; font-size:15px;">' + "Thank you — we will let you know when the first one is out." + '</p>';
+  }).catch(function(){
+    botao.disabled = false; botao.textContent = texto;
+    alert("Could not sign you up. Email us at geral@ar-elia.com.");
+  });
+  return false;
+}
+</script>
 </body>
 </html>
